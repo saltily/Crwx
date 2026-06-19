@@ -1,0 +1,89 @@
+//
+//  FuelEditorRow.swift
+//  Mewx (iOS)
+//
+//  Created by Matthew Goacher on 4/6/24.
+//
+
+import SwiftUI
+
+struct FuelEditorRow: View {
+    @Binding var model: FuelSounding?
+    @State private var inches: Double = 0
+    @State private var gals: Double = 0
+    var body: some View {
+        VStack(alignment: .leading, spacing: 1) {
+            HStack {
+                Stepper("Fuel", value: $inches, step: 0.125)
+                (Text(inches.eighths) + Text(" in"))
+                    .frame(width: 75, alignment: .trailing)
+            }
+            HStack {
+                Slider(value: $inches, in: 0...22, step: 0.125)
+                    .tint(.yellow)
+                (Text(gals, format: .number.precision(.fractionLength(0...1))) + Text(" gal"))
+                    .frame(width: 75, alignment: .trailing)
+                    .foregroundStyle(gals > 45 ? .red : .primary)
+            }
+        }
+        .onAppear {
+            importData()
+        }
+        .onChange(of: model) { oldValue, newValue in
+            importData()
+        }
+        .onChange(of: inches) { oldValue, newValue in
+            if model == nil {
+                model = .init(inches: inches, gallons: gals)
+            } else {
+                model?.inches = newValue
+            }
+//            gals = 50 * newValue / 22
+//            if newValue > 0 {
+//                model = .init(inches: inches, gallons: gals)
+//            }
+//            else {
+//                model = nil
+//            }
+        }
+    }
+    private func importData() {
+        inches = model?.inches ?? 0
+        inches = inches.rounded(0.125)
+        gals = model?.gallons ?? 0
+    }
+}
+extension Double {
+    var eighths: String {
+        let (whole, fraction) = (8 * self).rounded.quotientAndRemainder(dividingBy: 8)
+        if whole == 0 && fraction == 0 { return "0" }
+        if fraction == 8 { return "\(whole + 1)" }
+        let fractionString =
+        switch fraction {
+        case 1: "1/8"
+        case 2: "1/4"
+        case 3: "3/8"
+        case 4: "1/2"
+        case 5: "5/8"
+        case 6: "3/4"
+        case 7: "7/8"
+        default: ""
+        }
+        if whole == 0 {
+            return fractionString
+        }
+        else if fractionString.isEmpty {
+            return "\(whole)"
+        }
+        else {
+            return "\(whole)-\(fractionString)"
+        }
+    }
+}
+
+#Preview {
+    Form {
+        FuelEditorRow(model: .constant(.random))
+    }
+    .preferredColorScheme(.dark)
+}

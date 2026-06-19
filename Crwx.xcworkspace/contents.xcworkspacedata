@@ -4,4 +4,13 @@
    <FileRef
       location = "group:Crwx.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "container:../FoundationSalt">
+   </FileRef>
+   <FileRef
+      location = "container:../FoundationUI">
+   </FileRef>
+   <FileRef
+      location = "container:../WxSalt">
+   </FileRef>
 </Workspace>
