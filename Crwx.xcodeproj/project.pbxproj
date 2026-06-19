@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FD091F882FE590F3001706D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F822FE590F3001706D6 /* ContentView.swift */; };
+		FD091F892FE590F3001706D6 /* CrwxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F842FE590F3001706D6 /* CrwxApp.swift */; };
+		FD091F8A2FE590F3001706D6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F862FE590F3001706D6 /* Item.swift */; };
+		FD091F8B2FE590F3001706D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD091F812FE590F3001706D6 /* Assets.xcassets */; };
+		FD091F8F2FE590F6001706D6 /* CrwxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F8D2FE590F6001706D6 /* CrwxTests.swift */; };
+		FD091F932FE590FA001706D6 /* CrwxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F902FE590FA001706D6 /* CrwxUITests.swift */; };
+		FD091F942FE590FA001706D6 /* CrwxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FD091F422FE57B70001706D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,38 +37,16 @@
 		FD091F302FE57B6F001706D6 /* Crwx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crwx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD091F412FE57B70001706D6 /* CrwxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrwxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD091F4B2FE57B70001706D6 /* CrwxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrwxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD091F812FE590F3001706D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD091F822FE590F3001706D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FD091F832FE590F3001706D6 /* Crwx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crwx.entitlements; sourceTree = "<group>"; };
+		FD091F842FE590F3001706D6 /* CrwxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxApp.swift; sourceTree = "<group>"; };
+		FD091F852FE590F3001706D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD091F862FE590F3001706D6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FD091F8D2FE590F6001706D6 /* CrwxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxTests.swift; sourceTree = "<group>"; };
+		FD091F902FE590FA001706D6 /* CrwxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITests.swift; sourceTree = "<group>"; };
+		FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		FD091F532FE57B70001706D6 /* Exceptions for "Crwx" folder in "Crwx" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = FD091F2F2FE57B6F001706D6 /* Crwx */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		FD091F322FE57B6F001706D6 /* Crwx */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				FD091F532FE57B70001706D6 /* Exceptions for "Crwx" folder in "Crwx" target */,
-			);
-			path = Crwx;
-			sourceTree = "<group>";
-		};
-		FD091F442FE57B70001706D6 /* CrwxTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CrwxTests;
-			sourceTree = "<group>";
-		};
-		FD091F4E2FE57B70001706D6 /* CrwxUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CrwxUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FD091F2D2FE57B6F001706D6 /* Frameworks */ = {
@@ -88,9 +76,9 @@
 		FD091F272FE57B6F001706D6 = {
 			isa = PBXGroup;
 			children = (
-				FD091F322FE57B6F001706D6 /* Crwx */,
-				FD091F442FE57B70001706D6 /* CrwxTests */,
-				FD091F4E2FE57B70001706D6 /* CrwxUITests */,
+				FD091F872FE590F3001706D6 /* Crwx */,
+				FD091F8E2FE590F6001706D6 /* CrwxTests */,
+				FD091F922FE590FA001706D6 /* CrwxUITests */,
 				FD091F312FE57B6F001706D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +91,36 @@
 				FD091F4B2FE57B70001706D6 /* CrwxUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FD091F872FE590F3001706D6 /* Crwx */ = {
+			isa = PBXGroup;
+			children = (
+				FD091F812FE590F3001706D6 /* Assets.xcassets */,
+				FD091F822FE590F3001706D6 /* ContentView.swift */,
+				FD091F832FE590F3001706D6 /* Crwx.entitlements */,
+				FD091F842FE590F3001706D6 /* CrwxApp.swift */,
+				FD091F852FE590F3001706D6 /* Info.plist */,
+				FD091F862FE590F3001706D6 /* Item.swift */,
+			);
+			path = Crwx;
+			sourceTree = "<group>";
+		};
+		FD091F8E2FE590F6001706D6 /* CrwxTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD091F8D2FE590F6001706D6 /* CrwxTests.swift */,
+			);
+			path = CrwxTests;
+			sourceTree = "<group>";
+		};
+		FD091F922FE590FA001706D6 /* CrwxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD091F902FE590FA001706D6 /* CrwxUITests.swift */,
+				FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */,
+			);
+			path = CrwxUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +137,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				FD091F322FE57B6F001706D6 /* Crwx */,
 			);
 			name = Crwx;
 			packageProductDependencies = (
@@ -143,9 +158,6 @@
 			dependencies = (
 				FD091F432FE57B70001706D6 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				FD091F442FE57B70001706D6 /* CrwxTests */,
-			);
 			name = CrwxTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +177,6 @@
 			);
 			dependencies = (
 				FD091F4D2FE57B70001706D6 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				FD091F4E2FE57B70001706D6 /* CrwxUITests */,
 			);
 			name = CrwxUITests;
 			packageProductDependencies = (
@@ -225,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD091F8B2FE590F3001706D6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD091F882FE590F3001706D6 /* ContentView.swift in Sources */,
+				FD091F892FE590F3001706D6 /* CrwxApp.swift in Sources */,
+				FD091F8A2FE590F3001706D6 /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD091F8F2FE590F6001706D6 /* CrwxTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD091F932FE590FA001706D6 /* CrwxUITests.swift in Sources */,
+				FD091F942FE590FA001706D6 /* CrwxUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
