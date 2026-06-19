@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2735F72D479B7616A592F08F /* WxSalt in Frameworks */ = {isa = PBXBuildFile; productRef = 3A5EF7F29FD689CA3D285C15 /* WxSalt */; };
 		43840A0E08EDFE764B0D90EC /* FoundationUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8E992BCD553F9A6B429F6E69 /* FoundationUI */; };
 		F9B7AEC0155C0AB63F9EB6D6 /* FoundationSalt in Frameworks */ = {isa = PBXBuildFile; productRef = A055ACDAA9D3D87785FCD25E /* FoundationSalt */; };
 		FD091F882FE590F3001706D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F822FE590F3001706D6 /* ContentView.swift */; };
@@ -57,6 +58,7 @@
 			files = (
 				F9B7AEC0155C0AB63F9EB6D6 /* FoundationSalt in Frameworks */,
 				43840A0E08EDFE764B0D90EC /* FoundationUI in Frameworks */,
+				2735F72D479B7616A592F08F /* WxSalt in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +148,7 @@
 			packageProductDependencies = (
 				A055ACDAA9D3D87785FCD25E /* FoundationSalt */,
 				8E992BCD553F9A6B429F6E69 /* FoundationUI */,
+				3A5EF7F29FD689CA3D285C15 /* WxSalt */,
 			);
 			productName = Crwx;
 			productReference = FD091F302FE57B6F001706D6 /* Crwx.app */;
@@ -222,6 +225,7 @@
 			packageReferences = (
 				0DCB7B5F836A4254F4781F67 /* XCRemoteSwiftPackageReference "FoundationSalt" */,
 				BD5B6FFB262C70F737536DE6 /* XCRemoteSwiftPackageReference "FoundationUI" */,
+				E8A12B45D18F4B3736A233CA /* XCRemoteSwiftPackageReference "WxSalt" */,
 			);
 			productRefGroup = FD091F312FE57B6F001706D6 /* Products */;
 			projectDirPath = "";
@@ -669,9 +673,22 @@
 				kind = branch;
 			};
 		};
+		E8A12B45D18F4B3736A233CA /* XCRemoteSwiftPackageReference "WxSalt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/saltily/WxSalt.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3A5EF7F29FD689CA3D285C15 /* WxSalt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8A12B45D18F4B3736A233CA /* XCRemoteSwiftPackageReference "WxSalt" */;
+			productName = WxSalt;
+		};
 		8E992BCD553F9A6B429F6E69 /* FoundationUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BD5B6FFB262C70F737536DE6 /* XCRemoteSwiftPackageReference "FoundationUI" */;

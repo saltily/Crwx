@@ -30,6 +30,7 @@ Dates to summer 2026 and the development of …
 
 * [FoundationSalt](http://local.apple.docs/common/foundationsalt/)
 * [FoundationUI](http://local.apple.docs/common/foundationui/)
+* [WxSalt](http://local.apple.docs/common/wxsalt/)
 * See related at <http://local.apple.docs/>
 
 ## Releases
