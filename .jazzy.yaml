@@ -9,6 +9,7 @@ theme: fullwidth
 author: Matthew Goacher
 author_url: http://www.saltily.com/
 title: Crwx
+github_url: https://github.com/saltily/Crwx.git
 custom_categories:
 - name: Crwx
   children:
