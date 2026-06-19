@@ -29,6 +29,7 @@ Dates to summer 2026 and the development of …
 ## Dependencies
 
 * [FoundationSalt](http://local.apple.docs/common/foundationsalt/)
+* [FoundationUI](http://local.apple.docs/common/foundationui/)
 * See related at <http://local.apple.docs/>
 
 ## Releases
