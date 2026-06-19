@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9B7AEC0155C0AB63F9EB6D6 /* FoundationSalt in Frameworks */ = {isa = PBXBuildFile; productRef = A055ACDAA9D3D87785FCD25E /* FoundationSalt */; };
 		FD091F882FE590F3001706D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F822FE590F3001706D6 /* ContentView.swift */; };
 		FD091F892FE590F3001706D6 /* CrwxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F842FE590F3001706D6 /* CrwxApp.swift */; };
 		FD091F8A2FE590F3001706D6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F862FE590F3001706D6 /* Item.swift */; };
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B7AEC0155C0AB63F9EB6D6 /* FoundationSalt in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +142,7 @@
 			);
 			name = Crwx;
 			packageProductDependencies = (
+				A055ACDAA9D3D87785FCD25E /* FoundationSalt */,
 			);
 			productName = Crwx;
 			productReference = FD091F302FE57B6F001706D6 /* Crwx.app */;
@@ -159,8 +162,6 @@
 				FD091F432FE57B70001706D6 /* PBXTargetDependency */,
 			);
 			name = CrwxTests;
-			packageProductDependencies = (
-			);
 			productName = CrwxTests;
 			productReference = FD091F412FE57B70001706D6 /* CrwxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -179,8 +180,6 @@
 				FD091F4D2FE57B70001706D6 /* PBXTargetDependency */,
 			);
 			name = CrwxUITests;
-			packageProductDependencies = (
-			);
 			productName = CrwxUITests;
 			productReference = FD091F4B2FE57B70001706D6 /* CrwxUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -217,7 +216,9 @@
 				Base,
 			);
 			mainGroup = FD091F272FE57B6F001706D6;
-			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0DCB7B5F836A4254F4781F67 /* XCRemoteSwiftPackageReference "FoundationSalt" */,
+			);
 			productRefGroup = FD091F312FE57B6F001706D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -646,6 +647,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0DCB7B5F836A4254F4781F67 /* XCRemoteSwiftPackageReference "FoundationSalt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/saltily/FoundationSalt.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A055ACDAA9D3D87785FCD25E /* FoundationSalt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DCB7B5F836A4254F4781F67 /* XCRemoteSwiftPackageReference "FoundationSalt" */;
+			productName = FoundationSalt;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD091F282FE57B6F001706D6 /* Project object */;
 }
