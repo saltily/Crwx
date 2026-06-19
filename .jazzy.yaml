@@ -1,0 +1,15 @@
+min_acl: private
+swift_build_tool: xcodebuild
+xcodebuild_arguments:
+- -project
+- Crwx.xcodeproj
+- -scheme
+- Crwx
+theme: fullwidth
+author: Matthew Goacher
+author_url: http://www.saltily.com/
+title: Crwx
+custom_categories:
+- name: Crwx
+  children:
+  - Crwx
