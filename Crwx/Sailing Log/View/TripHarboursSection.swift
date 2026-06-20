@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct TripHarboursSection: View {
     let harbours: [Harbour]

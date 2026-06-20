@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FoundationSalt
 
 struct SegmentRow: View {
     let points: [TrackPoint]
@@ -20,7 +21,8 @@ struct SegmentRow: View {
             let (distance, duration, speed, gain) = points.measure()
             VStack(alignment: .leading) {
                 HStack {
-                    Text(distance, format: .number.precision(.fractionLength(0...1))) + Text(" nm")
+                    let s = distance.formatted(.number.precision(.fractionLength(0...1)))
+                    Text("\(s) nm")
                     Spacer()
                     if let duration {
                         Text(duration, format: .duration.driving)
@@ -31,16 +33,19 @@ struct SegmentRow: View {
                     if let startTime,
                        let endTime
                     {
-                        Text(startTime, format: .dateTime.month(.defaultDigits).day().year(.twoDigits)) + Text(", ") +
-                        Text(startTime, format: .dateTime.hour().minute()) + Text("-") +
-                        Text(endTime, format: .dateTime.hour().minute())
+                        let s1 = startTime.formatted(.dateTime.month(.defaultDigits).day().year(.twoDigits))
+                        let s2 = startTime.formatted(.dateTime.hour().minute())
+                        let s3 = endTime.formatted(.dateTime.hour().minute())
+                        Text("\(s1), \(s2)-\(s3)")
                     }
                     Spacer()
                     if let speed {
-                        Text(speed, format: .number.precision(.fractionLength(1))) + Text(" kts")
+                        let s = speed.formatted(.number.precision(.fractionLength(1)))
+                        Text("\(s) kts")
                     }
                     if let gain {
-                        Text(gain, format: .number.precision(.fractionLength(0))) + Text(" ft")
+                        let s = gain.formatted(.number.precision(.fractionLength(0)))
+                        Text("\(s) ft")
                     }
                 }
                 .font(.caption)

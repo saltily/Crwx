@@ -12,6 +12,7 @@ import SwiftData
 import CoreLocation
 import MapKit
 import WxSalt
+import os
 
 /// The basic idea on this is so that we can look at a whole cruise at once.
 /// Look at it before, during, and after.

@@ -9,6 +9,7 @@ import SwiftUI
 import FoundationUI
 import MapKit
 import FoundationSalt
+import os
 
 struct AnchorageDot: MapContent {
     @Binding var anchorage: AnchoragePotential

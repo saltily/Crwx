@@ -9,6 +9,8 @@ import SwiftUI
 import FoundationUI
 import MapKit
 import SwiftData
+import FoundationSalt
+import WxSalt
 
 struct HarboursMap: View {
     @Query private var harbours: [Harbour]

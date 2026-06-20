@@ -10,7 +10,7 @@ import FoundationSalt
 import FoundationUI
 
 /// Really just to cache the length
-struct RouteSnippet: Comparable, Identifiable, Hashable, Codable {
+struct RouteSnippet: Comparable, Identifiable, nonisolated Hashable, Codable, Sendable {
     let id: String
     var points: [WaypointSnippet]
     let distance: Double
@@ -19,7 +19,7 @@ struct RouteSnippet: Comparable, Identifiable, Hashable, Codable {
 }
 
 extension RouteSnippet {
-    func hash(into hasher: inout Hasher) {
+    nonisolated func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
     var legs: [RouteSnippet] {

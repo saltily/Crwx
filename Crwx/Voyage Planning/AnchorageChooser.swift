@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FoundationUI
+import SwiftData
 
 /// This outside wrapper serves to just load an initial intent based on history in the context
 struct AnchorageChooser: View {

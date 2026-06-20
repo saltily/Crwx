@@ -8,6 +8,8 @@
 import SwiftUI
 import SwiftData
 import FoundationUI
+import FoundationSalt
+import WxSalt
 
 struct CruisesList: View {
     @Query(sort: [.init(\Cruise._start, order: .reverse)]) private var cruises: [Cruise]

@@ -10,6 +10,7 @@ import FoundationUI
 import SwiftData
 import FoundationSalt
 import MapKit
+import WxSalt
 
 struct TripRouteForm: View {
     @Binding var model: TripRouteViewModel

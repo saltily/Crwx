@@ -8,6 +8,8 @@
 import SwiftUI
 import FoundationUI
 import CoreLocation
+import SwiftData
+import WxSalt
 
 struct SailingLookaheadOverlay: ViewModifier {
     let centre: CLLocationCoordinate2D

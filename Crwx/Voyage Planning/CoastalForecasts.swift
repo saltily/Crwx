@@ -158,7 +158,7 @@ final actor CoastalForecasts {
     }
     func predictions(for station: TideStation, during: ClosedRange<Date>) async throws -> [TidePredictionSnippet] {
         let tides = try await tides(at: station, covering: during)
-        let s = station.snippet
+        let s = await station.snippet
         return tides.predictions(for: during).map {
             $0.snippet(station: s)
         }

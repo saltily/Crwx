@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import FoundationUI
 import FoundationSalt
+import WxSalt
 
 struct HarbourChooserList: View {
     @Query<Harbour>(sort: .eastToWest) private var harbours: [Harbour]

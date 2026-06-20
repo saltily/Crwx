@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FoundationSalt
 
 struct EventLine: View {
     @Binding var event: VoyageEvent

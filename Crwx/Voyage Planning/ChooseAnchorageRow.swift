@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct ChooseAnchorageRow: View {
     @AnchorageIntent private var intent

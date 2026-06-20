@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FoundationSalt
 
 extension Trip {
     func validate(tripDate: Date) throws {

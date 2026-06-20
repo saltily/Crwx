@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import FoundationSalt
 
 typealias Sounding = CurrentSchema.Sounding
 

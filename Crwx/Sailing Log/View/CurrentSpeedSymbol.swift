@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 import CoreLocation
 import FoundationUI
+import FoundationSalt
 
 struct CurrentSpeedSymbol: MapContent {
     let coordinate: CLLocationCoordinate2D

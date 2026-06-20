@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import FoundationUI
 
 struct ReceiveGpxModifier: ViewModifier {
     init(container: ModelContainer) {
@@ -32,4 +33,8 @@ extension View {
     func receiveGpx(_ container: ModelContainer) -> some View {
         modifier(ReceiveGpxModifier(container: container))
     }
+}
+
+extension URL {
+    static let receiveGpx = URL(string: "mewx://receive-gpx")!
 }

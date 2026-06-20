@@ -7,6 +7,9 @@
 
 import SwiftUI
 import FoundationUI
+import FoundationSalt
+import WxSalt
+import SwiftData
 
 struct AnchorageDetail: View {
     let anchorage: AnchoragePotential
@@ -34,7 +37,8 @@ struct AnchorageDetail: View {
                         Group {
                             Text(anchorage.duration, format: .duration.driving)
                                 .font(.footnote)
-                            (Text(anchorage.distance, format: .number.precision(.fractionLength(0...1))) + Text(" nm"))
+                            let s = anchorage.distance.formatted(.number.precision(.fractionLength(0...1)))
+                            Text("\(s) nm")
                         }
                         .foregroundStyle(.secondary)
                     }
@@ -49,7 +53,8 @@ struct AnchorageDetail: View {
                                 TideMapIcon(snapshot: tideAtArrival)
                             }
                             if let ukcAtArrival = anchorage.ukcAtArrival {
-                                (Text("UKC ") + Text(ukcAtArrival, format: .number.precision(.fractionLength(0...1))) + Text(" ft"))
+                                let s = ukcAtArrival.formatted(.number.precision(.fractionLength(0...1)))
+                                Text("UKC \(s) ft")
                                     .font(.footnote)
                                     .foregroundStyle(ukcAtArrival < 1 ? Color.orange : .secondary)
                             }
@@ -73,7 +78,8 @@ struct AnchorageDetail: View {
                         Group {
                             Group {
                                 if let minimumUKC = anchorage.minimumUKC {
-                                    (Text("UKC ") + Text(minimumUKC, format: .number.precision(.fractionLength(0...1))) + Text(" ft"))
+                                    let s = minimumUKC.formatted(.number.precision(.fractionLength(0...1)))
+                                    Text("UKC \(s) ft")
                                         .foregroundStyle(minimumUKC < 0 ? Color.red : (minimumUKC < 1 ? .orange : .secondary))
                                 }
                                 Text(anchorage.holdingSummary)
@@ -97,11 +103,10 @@ struct AnchorageDetail: View {
                 } footer: {
                     HStack {
                         Spacer()
-                        Text(anchorage.eta, format: .dateTime.weekday(.wide).hour().minute()) +
-                        Text(" to ") +
-                        Text(anchorage.etd, format: .dateTime.weekday(.wide).hour().minute()) +
-                        Text(", ") +
-                        Text((anchorage.etd.timeIntervalSince(anchorage.eta) / .Hour).rounded.appending("hour", "hours"))
+                        let s1 = anchorage.eta.formatted(.dateTime.weekday(.wide).hour().minute())
+                        let s2 = anchorage.etd.formatted(.dateTime.weekday(.wide).hour().minute())
+                        let s3 = (anchorage.etd.timeIntervalSince(anchorage.eta) / .Hour).rounded.appending("hour", "hours")
+                        Text("\(s1) to \(s2), \(s3)")
                     }
                 }
                 
@@ -158,7 +163,7 @@ struct AnchorageDetail: View {
                                 .frame(height: 125)
                             if let tideStation = anchorage.tideStation {
                                 HStack {
-                                    Text(tideStation.name) + Text(", ")
+                                    Text("\(tideStation.name), ")
                                     Spacer()
                                     Text(tideStation.relativeSentence(from: anchorage))
                                 }
@@ -171,8 +176,9 @@ struct AnchorageDetail: View {
                                 Text("Tide at Arrival")
                                 Spacer()
                                 Group {
-                                    Text(tideAtArrival.height.converted(to: .feet).value, format: .number.precision(.fractionLength(1))) +
-                                    Text(" ft")
+                                    let n = tideAtArrival.height.converted(to: .feet).value
+                                    let s = n.formatted(.number.precision(.fractionLength(1)))
+                                    Text("\(s) ft")
                                     Image(systemName: tideAtArrival.movement.symbolName)
                                     Text(anchorage.eta, format: .dateTime.hour().minute())
                                 }

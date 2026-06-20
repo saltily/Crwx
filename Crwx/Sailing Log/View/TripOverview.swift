@@ -8,6 +8,9 @@
 import SwiftUI
 import FoundationUI
 import WxSalt
+import SwiftData
+import FoundationSalt
+import MapKit
 
 struct TripOverview: View {
     @Bindable var trip: Trip
@@ -40,7 +43,8 @@ struct TripOverview: View {
                 HStack {
                     ForecastConditionsSymbol(forecast: trip.localForecast)
                     if let highTemperature = trip.localForecast?.highTemperature {
-                        Text(highTemperature, format: .number.precision(.fractionLength(0))) + Text("º")
+                        let s = highTemperature.formatted(.number.precision(.fractionLength(0)))
+                        Text("\(s)º")
                     }
                     Spacer()
                     Text(trip.passengers)

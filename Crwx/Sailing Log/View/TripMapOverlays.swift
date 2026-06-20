@@ -8,6 +8,7 @@
 import SwiftUI
 import FoundationUI
 import WxSalt
+import FoundationSalt
 
 struct TripMapOverlays: View {
     @Bindable var trip: Trip
@@ -44,9 +45,11 @@ struct TripMapOverlays: View {
                         .gridColumnAlignment(.center)
                     if let percentFlooding = trip.percentFlooding?.rounded(0.01) {
                         if percentFlooding < 0.5 {
-                            Text(1 - percentFlooding, format: .percent) + Text(" ebb")
+                            let s = (1 - percentFlooding).formatted(.percent)
+                            Text("\(s) ebb")
                         } else {
-                            Text(percentFlooding, format: .percent) + Text(" fld")
+                            let s = percentFlooding.formatted(.percent)
+                            Text("\(s) fld")
                         }
                     }
                 }

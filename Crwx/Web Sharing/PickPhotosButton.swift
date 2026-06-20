@@ -10,6 +10,7 @@ import FoundationSalt
 import Photos
 import FoundationUI
 import SwiftData
+import os
 
 struct PickPhotosButton: View {
     let trip: Trip

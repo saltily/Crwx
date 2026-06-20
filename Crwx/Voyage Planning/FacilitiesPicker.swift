@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct FacilitiesPicker: View {
     @Binding var facilities: Facilities

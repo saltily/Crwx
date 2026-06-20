@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FoundationUI
 
 struct AnchorageFacilitiesFilterMenu: View {
     @Binding var facilities: Facilities

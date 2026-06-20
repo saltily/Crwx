@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FoundationSalt
 
 struct VoyageIntentQuickForm: View {
     @Binding var intent: VoyageIntent
@@ -89,4 +90,8 @@ fileprivate struct SunHint: View {
             }
         }
     }
+}
+
+extension String {
+    static let voyageIntentQuickFieldKey = "com.saltily.Mewx.voyageIntentQuickFieldKey" // VoyageIntentQuickForm.Field
 }

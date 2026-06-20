@@ -9,6 +9,9 @@ import SwiftUI
 import FoundationUI
 import MapKit
 import SwiftData
+import WxSalt
+import FoundationSalt
+import os
 
 struct HarbourChooserMap: View {
     @Query private var harbours: [Harbour]
@@ -126,4 +129,9 @@ struct DestinationRegion: DynamicProperty {
             wrappedValue = newValue
         }
     }
+}
+
+extension String {
+    static let filterHarboursRegionKey = "com.saltily.Mewx.filterHarboursRegionKey" // String?
+    static let filterDestinationsRegionKey = "com.saltily.Mewx.filterDestinationsRegionKey" // String?
 }

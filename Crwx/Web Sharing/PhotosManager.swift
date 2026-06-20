@@ -10,6 +10,8 @@ import Photos
 import FoundationSalt
 import UIKit
 import SwiftData
+import os
+import FoundationUI
 
 @Observable
 final class PhotosManager: Identifiable, RandomAccessCollection {
@@ -167,7 +169,7 @@ final class PhotosManager: Identifiable, RandomAccessCollection {
                     let (id, stamp) = try await actor.save(asset: asset, to: tripId)
                     if isShared {
                         let url = try await actor.upload(photoId: id)
-                        logger.info("Uploaded the photo to \(url)")
+                        await logger.info("Uploaded the photo to \(url)")
                     }
                     return (id, stamp)
                 }
@@ -176,7 +178,7 @@ final class PhotosManager: Identifiable, RandomAccessCollection {
             for id in needsUploading {
                 let task = Task.detached {
                     let url = try await actor.upload(photoId: id)
-                    logger.info("Uploaded the photo to \(url)")
+                    await logger.info("Uploaded the photo to \(url)")
                     return (id, nil as PhotoViewModel.Stamp?)
                 }
                 tasks.insert(task)
@@ -241,15 +243,15 @@ fileprivate final actor PhotoActor {
               let packet = photo.packet
         else { throw E.TripNotShared }
         
-        guard let image = photo.image
+        guard let image = await photo.image
         else { throw E.NoImage }
         
-        var multipart = MultipartRequest()
-        multipart.add(key: "metadata", value: packet.jsonText)
+        var multipart = await MultipartRequest()
+        await multipart.add(key: "metadata", value: packet.jsonText)
         let web = try image.resize(to: .init(width: image.width, height: image.height).fit(max: 2048, allowsZoom: true))
         let square = try image.cropSquare()
         let url: URL
-        multipart.add(
+        await multipart.add(
             key: "full_size",
             fileName: "\(photo.id.uuidString)-full_size.jpg",
             fileMimeType: "image/jpeg",
@@ -268,7 +270,7 @@ fileprivate final actor PhotoActor {
             fileData: try square.resize(to: .init(width: 72, height: 72)).jpegData(compressionQuality: 0.5)
         )
         if photo.isVideo {
-            if let data = photo.videoWrapper?.videoData {
+            if let data = await photo.videoWrapper?.videoData {
                 multipart.add(
                     key: "video",
                     fileName: "\(photo.id.uuidString)-full_size.mp4",

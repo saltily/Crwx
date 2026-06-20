@@ -7,6 +7,8 @@
 
 import Foundation
 import SwiftData
+import FoundationSalt
+import os
 
 @MainActor
 @Observable

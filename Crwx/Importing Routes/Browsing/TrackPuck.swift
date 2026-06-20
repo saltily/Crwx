@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FoundationUI
+import MapKit
 
 struct TrackPuck: View {
     @Bindable var track: Track
@@ -15,7 +16,8 @@ struct TrackPuck: View {
             HStack {
                 PlaceholderText(track.date?.formatted(.dateTime.month(.defaultDigits).day().year(.twoDigits)) ?? "", placeholder: "Unknown Date")
                 Spacer()
-                (Text(track.totalLength, format: .number.precision(.fractionLength(1))) + Text(" nm"))
+                let s = track.totalLength.formatted(.number.precision(.fractionLength(1)))
+                Text("\(s) nm")
                     .foregroundStyle(.secondary)
             }
             ZStack {

@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 import FoundationUI
 import SwiftData
+import FoundationSalt
 
 struct CoordinateBrowser: View {
     @Query private var harbours: [Harbour]

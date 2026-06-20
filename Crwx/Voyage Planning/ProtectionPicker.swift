@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct ProtectionPicker: View {
     init(_ label: String = "Protection", value: Binding<ProtectionScore?>) {

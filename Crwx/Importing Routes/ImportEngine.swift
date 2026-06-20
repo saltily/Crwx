@@ -10,6 +10,7 @@ import SwiftData
 import FoundationSalt
 import FoundationUI
 import os
+import WxSalt
 
 @Observable
 final class ImportEngine: ProgressEngine {

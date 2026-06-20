@@ -43,3 +43,6 @@ struct HarbourChooser: View {
 #Preview {
     HarbourChooser()
 }
+extension String {
+    static let harbourChooserUseMapKey = "com.saltily.Mewx.harbourChooserUseMapKey" // Bool
+}

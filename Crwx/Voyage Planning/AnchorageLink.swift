@@ -10,6 +10,7 @@ import MapKit
 import FoundationUI
 import FoundationSalt
 import WxSalt
+import os
 
 struct AnchorageLink: MapContent {
     @Binding var anchorage: AnchoragePotential
@@ -164,3 +165,6 @@ extension AnchorageLink {
     }
 }
 
+extension String {
+    static let anchorageLinkIconTypeKey = "com.saltily.Mewx.anchorageLinkIconTypeKey" // AnchorageLink.IconImage.IconType
+}

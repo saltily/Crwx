@@ -7,6 +7,9 @@
 
 import SwiftUI
 import FoundationUI
+import SwiftData
+import FoundationSalt
+import os
 
 struct HubInfo: View {
     @Bindable var waypoint: Waypoint
@@ -29,10 +32,12 @@ struct HubInfo: View {
             }
             let regions = regions
             if regions.count > 1 {
-                Text("Connects regions ") + Text(regions.sorted().map { $0.rawValue }, format: .list(type: .and)) + Text(".")
+                let s = regions.sorted().map { $0.rawValue }.formatted(.list(type: .and))
+                Text("Connects regions \(s).")
             }
             if !endpoints.isEmpty {
-                Text("Connects harbours ") + Text(endpoints.map { $0.name }, format: .list(type: .and)) + Text(".")
+                let s = endpoints.map { $0.name }.formatted(.list(type: .and))
+                Text("Connects harbours \(s).")
             }
         }
         .onChange(of: waypoint, initial: true) { oldValue, newValue in

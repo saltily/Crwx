@@ -9,6 +9,7 @@ import SwiftUI
 import FoundationUI
 import FoundationSalt
 import CoreLocation
+internal import Combine
 
 struct SailingFollowMeModifier: ViewModifier {
     @Bindable var model: SailingSnapshotViewModel

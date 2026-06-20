@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 import CoreLocation
 import FoundationSalt
+import os
 
 @ModelActor
 final actor RouteLoader {
@@ -47,7 +48,7 @@ final actor RouteLoader {
         if let points = try common.map({
             try shortest(from: start.id, to: end.id, via: $0)
         }).sorted().first?.points {
-            return .init(points, generated: true)
+            return await .init(points, generated: true)
         }
         return nil
     }
@@ -67,7 +68,7 @@ final actor RouteLoader {
         // 1. See if we need to insert any new waypoints
         for point in points {
             if waypoint_lookup[point.id] == nil {
-                let new = Waypoint(
+                let new = await Waypoint(
                     id: point.id,
                     source: "",
                     latitude: point.latitude,
@@ -293,7 +294,7 @@ final actor RouteLoader {
         
         // 6. Delete the unused waypoints
         for waypoint in waypoints {
-            logger.warning("Deleting \(describing(waypoint))")
+            await logger.warning("Deleting \(describing(waypoint))")
             modelContext.delete(waypoint)
         }
         

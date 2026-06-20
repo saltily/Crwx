@@ -8,6 +8,7 @@
 import SwiftUI
 import FoundationUI
 import MapKit
+import WxSalt
 
 struct HarbourDetail: View {
     @Bindable var harbour: Harbour
@@ -39,3 +40,7 @@ struct HarbourDetail: View {
     }
 }
 
+extension String {
+    static let harbourInfoIsExpandedKey = "com.saltily.Mewx.harbourInfoIsExpandedKey" // Bool
+    static let harbourDetailTabKey = "com.saltily.Mewx.harbourDetailTabKey" // HarbourTab (Int)
+}

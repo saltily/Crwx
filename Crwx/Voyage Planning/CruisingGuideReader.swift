@@ -7,6 +7,8 @@
 
 import SwiftUI
 import FoundationUI
+import FoundationSalt
+import WxSalt
 
 struct CruisingGuideReader: View {
     init(_ label: String, cruisingGuide: Binding<CruisingGuide>) {

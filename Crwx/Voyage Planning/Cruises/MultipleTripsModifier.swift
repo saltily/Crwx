@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import FoundationUI
+import SwiftData
+import FoundationSalt
 
 struct MultipleTripsModifier: ViewModifier {
     let countSentence: String

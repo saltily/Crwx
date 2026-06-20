@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct CruisingGuideEditor: View {
     @Binding var value: CruisingGuide

@@ -11,6 +11,8 @@ import FoundationUI
 import SwiftData
 import CoreLocation
 import FoundationSalt
+import WxSalt
+import os
 
 struct HubsMap: View {
     @Query private var waypoints: [Waypoint]

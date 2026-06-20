@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FoundationUI
+import FoundationSalt
 
 struct HarbourAtAGlance: View {
     @Bindable var harbour: Harbour
@@ -63,8 +64,9 @@ fileprivate struct RatingChunk: View {
             .alert("Cruising Guide", isPresented: $showMessage) {
                 Button("Thanks") {}
             } message: {
-                Text((guideRating?.rawValue ?? 0).appending("star.\n", "stars.\n")) +
-                Text(guideRating?.description ?? "Not rated.")
+                let s1 = (guideRating?.rawValue ?? 0).appending("star.", "stars.")
+                let s2 = guideRating?.description ?? "Not rated."
+                Text("\(s1)\n\(s2)")
             }
     }
 }
@@ -129,10 +131,12 @@ extension HarbourAtAGlance {
                         Text(type.symbol)
                     }
                     if let depth {
-                        Text(depth, format: .number.precision(.fractionLength(0...1))) + Text("ft")
+                        let s = depth.formatted(.number.precision(.fractionLength(0...1)))
+                        Text("\(s)ft")
                     }
                     if let entrance {
-                        Text("(") + Text(entrance, format: .number.precision(.fractionLength(0...1))) + Text("ft ent)")
+                        let s = entrance.formatted(.number.precision(.fractionLength(0...1)))
+                        Text("(\(s)ft ent)")
                     }
                 }
                 .foregroundStyle(.secondary)

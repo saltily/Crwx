@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FoundationUI
+import SwiftData
 
 struct DeleteCruiseModifier: ViewModifier {
     let model: Cruise

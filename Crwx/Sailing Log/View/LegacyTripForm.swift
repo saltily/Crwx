@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import FoundationSalt
+import SwiftData
+import FoundationUI
 
 struct LegacyTripForm: View {
     @Binding var date: Date

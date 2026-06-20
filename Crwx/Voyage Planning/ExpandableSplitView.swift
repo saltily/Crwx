@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FoundationUI
 
 struct ExpandableSplitView<Top, Bottom>: View where Top: View, Bottom: View {
     let topCollapsedHeight: CGFloat

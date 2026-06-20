@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 import FoundationSalt
 import UniformTypeIdentifiers
+import os
 extension UTType {
     static var nob: UTType {
         UTType(importedAs: "com.rosepoint.nob", conformingTo: xml)
@@ -41,9 +42,9 @@ final actor NobActor {
             }
             
             // 4. Parse and save all new routes
-            for (i, _) in parser.routeTrees.enumerated() {
+            for (i, _) in await parser.routeTrees.enumerated() {
                 try Task.checkCancellation()
-                try load(route: try parser.route(at: i))
+                try await load(route: try parser.route(at: i))
                 await tracker.advance()
             }
             
@@ -52,7 +53,8 @@ final actor NobActor {
                 try Task.checkCancellation()
                 try FileManager.default.removeItem(at: url)
             }
-            logger.info("\(parser.debugDescription)")
+            let debug = await parser.debugDescription
+            await logger.info("\(debug)")
         }
         
         // 6. Save the context
@@ -60,7 +62,7 @@ final actor NobActor {
         try modelContext.save()
         let wp_ct = try modelContext.fetchCount(Waypoint.self)
         let rt_ct = try modelContext.fetchCount(Route.self)
-        logger.info("There are now \(wp_ct) waypoints and \(rt_ct) routes in the database")
+        await logger.info("There are now \(wp_ct) waypoints and \(rt_ct) routes in the database")
     }
     
     private func loadExistingWaypoints() throws {

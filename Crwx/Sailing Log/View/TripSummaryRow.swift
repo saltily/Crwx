@@ -7,6 +7,8 @@
 
 import SwiftUI
 import FoundationUI
+import SwiftData
+import FoundationSalt
 
 struct TripSummaryRow: View {
     @Bindable var trip: Trip
@@ -60,10 +62,12 @@ struct TripSummaryRow: View {
                 }
                 Spacer()
                 if let mmg = trip.milesMadeGood {
-                    Text(mmg, format: .number.precision(.fractionLength(0...1))) + Text(" mi,")
+                    let s = mmg.formatted(.number.precision(.fractionLength(0...1)))
+                    Text("\(s) mi,")
                 }
                 if let duration = trip.duration {
-                    Text(duration / .Hour, format: .number.precision(.fractionLength(0...1))) + Text(" hrs")
+                    let s = (duration / .Hour).formatted(.number.precision(.fractionLength(0...1)))
+                    Text("\(s) hrs")
                 }
             }
             .font(.caption)
@@ -77,14 +81,13 @@ struct TripSummaryRow: View {
             .font(.caption)
             HStack(spacing: 3) {
                 if !trip.passengers.isEmpty {
-                    (Text("+ ") +
-                    Text(trip.passengers))
+                    Text("+ \(trip.passengers)")
                         .font(.caption)
                 }
                 Spacer()
                 if let fuel = trip.fuelEnd?.gallons {
-                    Text("Fuel: ") +
-                    Text(fuel, format: .number.precision(.fractionLength(0...1))) + Text(" gals")
+                    let s = fuel.formatted(.number.precision(.fractionLength(0...1)))
+                    Text("Fuel: \(s) gals")
                 }
             }
             .font(.caption)

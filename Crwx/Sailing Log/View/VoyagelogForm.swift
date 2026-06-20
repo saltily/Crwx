@@ -9,6 +9,7 @@ import SwiftUI
 import FoundationUI
 import FoundationSalt
 import CoreLocation
+import WxSalt
 
 struct VoyagelogForm: View {
     @State var model: VoyageLogViewModel

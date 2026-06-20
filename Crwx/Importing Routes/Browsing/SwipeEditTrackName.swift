@@ -8,6 +8,8 @@
 import SwiftUI
 import FoundationUI
 import SwiftData
+import WxSalt
+import os
 
 struct SwipeEditTrackName: ViewModifier {
     init(track: Track) {

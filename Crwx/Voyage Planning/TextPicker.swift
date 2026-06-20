@@ -7,6 +7,8 @@
 
 import SwiftUI
 import FoundationUI
+import WxSalt
+import FoundationSalt
 
 struct TextPicker: View {
     init(_ label: String, text: Binding<String>) {

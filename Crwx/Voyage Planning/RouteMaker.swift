@@ -10,6 +10,7 @@ import SwiftData
 import CoreLocation
 import MapKit
 import FoundationSalt
+import os
 
 @Observable
 @MainActor

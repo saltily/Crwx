@@ -7,6 +7,9 @@
 
 import SwiftUI
 import SwiftData
+import FoundationSalt
+import WxSalt
+import FoundationUI
 
 struct WaypointList: View {
     @Query<Waypoint>(sort: .defaultOrder) private var waypoints: [Waypoint]

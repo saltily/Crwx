@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FoundationSalt
 
 struct CruiseStats: View {
     @Bindable var cruise: CruiseViewModel

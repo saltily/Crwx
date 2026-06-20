@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FoundationSalt
+import WxSalt
 
 struct TripNewDestinationButton: View {
     @Bindable var model: SailingSnapshotViewModel

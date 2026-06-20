@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FoundationSalt
+import WxSalt
 
 struct TripView: View {
     @Bindable var trip: Trip

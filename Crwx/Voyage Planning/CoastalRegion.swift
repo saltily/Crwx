@@ -7,6 +7,7 @@
 
 import Foundation
 import FoundationSalt
+internal import _LocationEssentials
 
 /// Divided at the offshore hubs.
 ///

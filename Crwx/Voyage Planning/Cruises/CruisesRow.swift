@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct CruisesRow: View {
     var body: some View {

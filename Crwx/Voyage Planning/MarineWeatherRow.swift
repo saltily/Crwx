@@ -8,6 +8,7 @@
 import SwiftUI
 import FoundationUI
 import CoreLocation
+import WxSalt
 
 struct MarineWeatherRow: View {
     @State private var currentLocation: CLLocation?

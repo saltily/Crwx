@@ -9,6 +9,9 @@ import SwiftUI
 import SwiftData
 import FoundationUI
 import MapKit
+import FoundationSalt
+import WxSalt
+import os
 
 struct AddHarbourPointPicker: View {
     init(region: MKCoordinateRegion, isPresented: Binding<Bool>) {

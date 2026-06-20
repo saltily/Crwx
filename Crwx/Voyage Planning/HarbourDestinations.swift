@@ -7,6 +7,8 @@
 
 import Foundation
 import SwiftData
+import FoundationSalt
+import os
 
 @Observable
 final class HarbourDestinations {

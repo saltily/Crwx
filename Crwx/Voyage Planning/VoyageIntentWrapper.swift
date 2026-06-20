@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import FoundationSalt
 
 @propertyWrapper
 struct AnchorageIntent: DynamicProperty {
@@ -63,4 +64,11 @@ struct AnchorageIntent: DynamicProperty {
         cached = (start, direction, speed)
         model = assembled
     }
+}
+
+
+extension String {
+    static let voyageIntentStartKey = "com.saltily.Mewx.voyageIntentStartKey" // UUID
+    static let voyageIntentDirectionKey = "com.saltily.Mewx.voyageIntentDirectionKey" // CompassQuadrant
+    static let voyageIntentSpeedKey = "com.saltily.Mewx.voyageIntentSpeedKey" // Double
 }

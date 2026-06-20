@@ -7,6 +7,8 @@
 
 import SwiftUI
 import FoundationSalt
+import os
+import FoundationUI
 
 struct RemoveStopButton: View {
     let i: Int
