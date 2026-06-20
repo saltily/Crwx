@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import FoundationSalt
 
 struct LocationLine: View {
     let location: LocationSnippet?

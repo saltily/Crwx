@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WxSalt
+import FoundationUI
 
 struct LocalForecastSection: View {
     let forecast: ForecastSnippet?
@@ -15,7 +16,8 @@ struct LocalForecastSection: View {
             Section {
                 HStack {
                     if let highTemperature = forecast.highTemperature {
-                        Text(highTemperature, format: .number.precision(.fractionLength(0))) + Text("º")
+                        let s = highTemperature.formatted(.number.precision(.fractionLength(0)))
+                        Text("\(s)º")
                     }
                     ForecastConditionsSymbol(forecast: forecast)
                 }

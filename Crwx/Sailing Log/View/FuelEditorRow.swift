@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FoundationSalt
 
 struct FuelEditorRow: View {
     @Binding var model: FuelSounding?
@@ -15,13 +16,14 @@ struct FuelEditorRow: View {
         VStack(alignment: .leading, spacing: 1) {
             HStack {
                 Stepper("Fuel", value: $inches, step: 0.125)
-                (Text(inches.eighths) + Text(" in"))
+                Text("\(inches.eighths) in")
                     .frame(width: 75, alignment: .trailing)
             }
             HStack {
                 Slider(value: $inches, in: 0...22, step: 0.125)
                     .tint(.yellow)
-                (Text(gals, format: .number.precision(.fractionLength(0...1))) + Text(" gal"))
+                let s = gals.formatted(.number.precision(.fractionLength(0...1)))
+                Text("\(s) gal")
                     .frame(width: 75, alignment: .trailing)
                     .foregroundStyle(gals > 45 ? .red : .primary)
             }

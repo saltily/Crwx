@@ -10,6 +10,7 @@ import FoundationUI
 import FoundationSalt
 import CoreLocation
 import WxSalt
+import SwiftData
 
 struct PredepartureFetchRow: View {
     @Binding var model: PreDepartureViewModel

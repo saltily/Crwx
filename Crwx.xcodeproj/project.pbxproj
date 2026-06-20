@@ -210,6 +210,11 @@
 		FDB3ABE42FE6A1EB00B4B903 /* PickPhotosButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDC2FE6A1EB00B4B903 /* PickPhotosButton.swift */; };
 		FDB3ABE52FE6A1EB00B4B903 /* WhereWasIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDF2FE6A1EB00B4B903 /* WhereWasIButton.swift */; };
 		FDB3ABE62FE6A1EB00B4B903 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDB2FE6A1EB00B4B903 /* PhotoViewModel.swift */; };
+		FDB3ABED2FE6BE5B00B4B903 /* TrackDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABEB2FE6BE5B00B4B903 /* TrackDot.swift */; };
+		FDB3ABEE2FE6BE5B00B4B903 /* MapLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABE82FE6BE5B00B4B903 /* MapLink.swift */; };
+		FDB3ABEF2FE6BE5B00B4B903 /* RedDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABEA2FE6BE5B00B4B903 /* RedDot.swift */; };
+		FDB3ABF02FE6BE5B00B4B903 /* MapMarker+Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABE92FE6BE5B00B4B903 /* MapMarker+Waypoint.swift */; };
+		FDB3ABF12FE6BE5B00B4B903 /* AllRoutePolylines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABE72FE6BE5B00B4B903 /* AllRoutePolylines.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -540,6 +545,11 @@
 		FDB3ABDD2FE6A1EB00B4B903 /* SwipeToShareModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToShareModifier.swift; sourceTree = "<group>"; };
 		FDB3ABDE2FE6A1EB00B4B903 /* WebShareable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebShareable.swift; sourceTree = "<group>"; };
 		FDB3ABDF2FE6A1EB00B4B903 /* WhereWasIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereWasIButton.swift; sourceTree = "<group>"; };
+		FDB3ABE72FE6BE5B00B4B903 /* AllRoutePolylines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoutePolylines.swift; sourceTree = "<group>"; };
+		FDB3ABE82FE6BE5B00B4B903 /* MapLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLink.swift; sourceTree = "<group>"; };
+		FDB3ABE92FE6BE5B00B4B903 /* MapMarker+Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker+Waypoint.swift"; sourceTree = "<group>"; };
+		FDB3ABEA2FE6BE5B00B4B903 /* RedDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedDot.swift; sourceTree = "<group>"; };
+		FDB3ABEB2FE6BE5B00B4B903 /* TrackDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDot.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -704,6 +714,7 @@
 				FDE216352FE5B0CF00F60799 /* Sailing Log */,
 				FDB3AB0E2FE6A03900B4B903 /* Voyage Planning */,
 				FDB3AA842FE5BBA200B4B903 /* SwiftData */,
+				FDB3ABEC2FE6BE5B00B4B903 /* Map Content */,
 				FDB3ABCE2FE6A19800B4B903 /* Soundings */,
 				FDB3AB9B2FE6A16300B4B903 /* Importing Routes */,
 				FDB3ABE02FE6A1EB00B4B903 /* Web Sharing */,
@@ -999,6 +1010,18 @@
 				FDB3ABDF2FE6A1EB00B4B903 /* WhereWasIButton.swift */,
 			);
 			path = "Web Sharing";
+			sourceTree = "<group>";
+		};
+		FDB3ABEC2FE6BE5B00B4B903 /* Map Content */ = {
+			isa = PBXGroup;
+			children = (
+				FDB3ABE72FE6BE5B00B4B903 /* AllRoutePolylines.swift */,
+				FDB3ABE82FE6BE5B00B4B903 /* MapLink.swift */,
+				FDB3ABE92FE6BE5B00B4B903 /* MapMarker+Waypoint.swift */,
+				FDB3ABEA2FE6BE5B00B4B903 /* RedDot.swift */,
+				FDB3ABEB2FE6BE5B00B4B903 /* TrackDot.swift */,
+			);
+			path = "Map Content";
 			sourceTree = "<group>";
 		};
 		FDE215CB2FE5B0CF00F60799 /* Locations */ = {
@@ -1542,6 +1565,11 @@
 				FDB3AB642FE6A03900B4B903 /* LegAnnotation.swift in Sources */,
 				FDB3AB652FE6A03900B4B903 /* ExposureEditor.swift in Sources */,
 				FDB3AB662FE6A03900B4B903 /* AnchorageBanner.swift in Sources */,
+				FDB3ABED2FE6BE5B00B4B903 /* TrackDot.swift in Sources */,
+				FDB3ABEE2FE6BE5B00B4B903 /* MapLink.swift in Sources */,
+				FDB3ABEF2FE6BE5B00B4B903 /* RedDot.swift in Sources */,
+				FDB3ABF02FE6BE5B00B4B903 /* MapMarker+Waypoint.swift in Sources */,
+				FDB3ABF12FE6BE5B00B4B903 /* AllRoutePolylines.swift in Sources */,
 				FDB3AB672FE6A03900B4B903 /* VoyageIntent.swift in Sources */,
 				FDB3AB682FE6A03900B4B903 /* AddCruiseButton.swift in Sources */,
 				FDB3AB692FE6A03900B4B903 /* AnchorageBrowser.swift in Sources */,

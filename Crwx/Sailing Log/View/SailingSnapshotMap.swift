@@ -8,6 +8,8 @@
 import SwiftUI
 import MapKit
 import FoundationUI
+import FoundationSalt
+import SwiftData
 
 struct SailingSnapshotMap: View {
     @Bindable var model: SailingSnapshotViewModel

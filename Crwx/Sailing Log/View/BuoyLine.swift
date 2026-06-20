@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WxSalt
+import FoundationSalt
 
 struct BuoyLine: View {
     let observation: ObservationSnippet?
@@ -17,10 +18,11 @@ struct BuoyLine: View {
                     .foregroundStyle(.primary)
                 Spacer()
                 if let waveHeight = observation.waveHeight {
-                    Text(waveHeight, format: .number.precision(.fractionLength(0...1))) + Text(" ft")
+                    let s = waveHeight.formatted(.number.precision(.fractionLength(0...1)))
+                    Text("\(s) ft")
                 }
                 if let period = observation.period {
-                    Text(period.rounded, format: .number) + Text(" sec")
+                    Text("\(period.rounded) sec")
                 }
                 WindDirectionSymbol(directions: .init(observation.windAngle))
                     .padding(.leading, 10)
@@ -32,7 +34,7 @@ struct BuoyLine: View {
                     if let gust = observation.gust,
                        gust.rounded != windSpeed.rounded
                     {
-                        Text("G") + Text(gust.rounded, format: .number)
+                        Text("G\(gust.rounded)")
                     }
                 }
             }
