@@ -17,6 +17,143 @@
 		FD091F8F2FE590F6001706D6 /* CrwxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F8D2FE590F6001706D6 /* CrwxTests.swift */; };
 		FD091F932FE590FA001706D6 /* CrwxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F902FE590FA001706D6 /* CrwxUITests.swift */; };
 		FD091F942FE590FA001706D6 /* CrwxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */; };
+		FDB3AA5D2FE5BB2400B4B903 /* FocusOnAppear in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = FDB3AA5C2FE5BB2400B4B903 /* FocusOnAppear */; };
+		FDB3AA852FE5BBA200B4B903 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA7F2FE5BBA200B4B903 /* Trip.swift */; };
+		FDB3AA862FE5BBA200B4B903 /* Cruise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA782FE5BBA200B4B903 /* Cruise.swift */; };
+		FDB3AA872FE5BBA200B4B903 /* TripSchemaV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA612FE5BBA200B4B903 /* TripSchemaV3.swift */; };
+		FDB3AA882FE5BBA200B4B903 /* Harbour.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA792FE5BBA200B4B903 /* Harbour.swift */; };
+		FDB3AA892FE5BBA200B4B903 /* BackupActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA752FE5BBA200B4B903 /* BackupActor.swift */; };
+		FDB3AA8A2FE5BBA200B4B903 /* Trip+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA802FE5BBA200B4B903 /* Trip+Extended.swift */; };
+		FDB3AA8B2FE5BBA200B4B903 /* TripSchemaV16.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA6E2FE5BBA200B4B903 /* TripSchemaV16.swift */; };
+		FDB3AA8C2FE5BBA200B4B903 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA7E2FE5BBA200B4B903 /* Track.swift */; };
+		FDB3AA8D2FE5BBA200B4B903 /* TripSchemaV19.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA712FE5BBA200B4B903 /* TripSchemaV19.swift */; };
+		FDB3AA8E2FE5BBA200B4B903 /* TripSchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA5F2FE5BBA200B4B903 /* TripSchemaV1.swift */; };
+		FDB3AA8F2FE5BBA200B4B903 /* TripSchemaV17.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA6F2FE5BBA200B4B903 /* TripSchemaV17.swift */; };
+		FDB3AA902FE5BBA200B4B903 /* TripSchemaV20.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA722FE5BBA200B4B903 /* TripSchemaV20.swift */; };
+		FDB3AA912FE5BBA200B4B903 /* Trip+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA812FE5BBA200B4B903 /* Trip+Previews.swift */; };
+		FDB3AA922FE5BBA200B4B903 /* TripSchemaV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA602FE5BBA200B4B903 /* TripSchemaV2.swift */; };
+		FDB3AA932FE5BBA200B4B903 /* TripSchemaV10.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA682FE5BBA200B4B903 /* TripSchemaV10.swift */; };
+		FDB3AA942FE5BBA200B4B903 /* TripSchemaV9.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA672FE5BBA200B4B903 /* TripSchemaV9.swift */; };
+		FDB3AA952FE5BBA200B4B903 /* TripSchemaV13.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA6B2FE5BBA200B4B903 /* TripSchemaV13.swift */; };
+		FDB3AA962FE5BBA200B4B903 /* TripSchemaV5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA632FE5BBA200B4B903 /* TripSchemaV5.swift */; };
+		FDB3AA972FE5BBA200B4B903 /* TripSchemaV6.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA642FE5BBA200B4B903 /* TripSchemaV6.swift */; };
+		FDB3AA982FE5BBA200B4B903 /* BackupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA762FE5BBA200B4B903 /* BackupButton.swift */; };
+		FDB3AA992FE5BBA200B4B903 /* BackModelActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA742FE5BBA200B4B903 /* BackModelActor.swift */; };
+		FDB3AA9A2FE5BBA200B4B903 /* TripSchemaV4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA622FE5BBA200B4B903 /* TripSchemaV4.swift */; };
+		FDB3AA9B2FE5BBA200B4B903 /* LocationProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA7A2FE5BBA200B4B903 /* LocationProfile.swift */; };
+		FDB3AA9C2FE5BBA200B4B903 /* TripSchemaV14.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA6C2FE5BBA200B4B903 /* TripSchemaV14.swift */; };
+		FDB3AA9D2FE5BBA200B4B903 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA832FE5BBA200B4B903 /* Waypoint.swift */; };
+		FDB3AA9E2FE5BBA200B4B903 /* TripSchemaV12.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA6A2FE5BBA200B4B903 /* TripSchemaV12.swift */; };
+		FDB3AA9F2FE5BBA200B4B903 /* TripSchemaV8.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA662FE5BBA200B4B903 /* TripSchemaV8.swift */; };
+		FDB3AAA02FE5BBA200B4B903 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA7C2FE5BBA200B4B903 /* Route.swift */; };
+		FDB3AAA12FE5BBA200B4B903 /* TripSchemaV15.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA6D2FE5BBA200B4B903 /* TripSchemaV15.swift */; };
+		FDB3AAA22FE5BBA200B4B903 /* TripSchemaV7.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA652FE5BBA200B4B903 /* TripSchemaV7.swift */; };
+		FDB3AAA32FE5BBA200B4B903 /* TripMigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA5E2FE5BBA200B4B903 /* TripMigrationPlan.swift */; };
+		FDB3AAA42FE5BBA200B4B903 /* BackupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA772FE5BBA200B4B903 /* BackupData.swift */; };
+		FDB3AAA52FE5BBA200B4B903 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA7B2FE5BBA200B4B903 /* Photo.swift */; };
+		FDB3AAA62FE5BBA200B4B903 /* TripSchemaV18.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA702FE5BBA200B4B903 /* TripSchemaV18.swift */; };
+		FDB3AAA72FE5BBA200B4B903 /* Trip+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA822FE5BBA200B4B903 /* Trip+Validate.swift */; };
+		FDB3AAA82FE5BBA200B4B903 /* Sounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA7D2FE5BBA200B4B903 /* Sounding.swift */; };
+		FDB3AAA92FE5BBA200B4B903 /* TripSchemaV11.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA692FE5BBA200B4B903 /* TripSchemaV11.swift */; };
+		FDB3AB0F2FE6A03900B4B903 /* AnchorageChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AABF2FE6A03900B4B903 /* AnchorageChooser.swift */; };
+		FDB3AB102FE6A03900B4B903 /* Harbour+LookupName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AADD2FE6A03900B4B903 /* Harbour+LookupName.swift */; };
+		FDB3AB112FE6A03900B4B903 /* CruiseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB22FE6A03900B4B903 /* CruiseViewModel.swift */; };
+		FDB3AB122FE6A03900B4B903 /* ProtectionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAF52FE6A03900B4B903 /* ProtectionPicker.swift */; };
+		FDB3AB132FE6A03900B4B903 /* CruisesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAAF2FE6A03900B4B903 /* CruisesRow.swift */; };
+		FDB3AB142FE6A03900B4B903 /* HubInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAED2FE6A03900B4B903 /* HubInfo.swift */; };
+		FDB3AB152FE6A03900B4B903 /* HarbourAtAGlance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AADF2FE6A03900B4B903 /* HarbourAtAGlance.swift */; };
+		FDB3AB162FE6A03900B4B903 /* PotentialAnchoragesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAF32FE6A03900B4B903 /* PotentialAnchoragesList.swift */; };
+		FDB3AB172FE6A03900B4B903 /* ProtectionSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAF72FE6A03900B4B903 /* ProtectionSymbol.swift */; };
+		FDB3AB182FE6A03900B4B903 /* HarboursMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAEA2FE6A03900B4B903 /* HarboursMap.swift */; };
+		FDB3AB192FE6A03900B4B903 /* EditCruiseModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB52FE6A03900B4B903 /* EditCruiseModifier.swift */; };
+		FDB3AB1A2FE6A03900B4B903 /* HarbourRoutesSublist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE92FE6A03900B4B903 /* HarbourRoutesSublist.swift */; };
+		FDB3AB1B2FE6A03900B4B903 /* CruisesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAAE2FE6A03900B4B903 /* CruisesList.swift */; };
+		FDB3AB1C2FE6A03900B4B903 /* CoastalForecasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AACB2FE6A03900B4B903 /* CoastalForecasts.swift */; };
+		FDB3AB1D2FE6A03900B4B903 /* HarbourTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAEB2FE6A03900B4B903 /* HarbourTab.swift */; };
+		FDB3AB1E2FE6A03900B4B903 /* HarbourMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE72FE6A03900B4B903 /* HarbourMap.swift */; };
+		FDB3AB1F2FE6A03900B4B903 /* CruiseStopDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB12FE6A03900B4B903 /* CruiseStopDetail.swift */; };
+		FDB3AB202FE6A03900B4B903 /* AnchorageFacilitiesFilterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAC22FE6A03900B4B903 /* AnchorageFacilitiesFilterMenu.swift */; };
+		FDB3AB212FE6A03900B4B903 /* SingleStarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB022FE6A03900B4B903 /* SingleStarRating.swift */; };
+		FDB3AB222FE6A03900B4B903 /* TextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB042FE6A03900B4B903 /* TextPicker.swift */; };
+		FDB3AB232FE6A03900B4B903 /* CoastalRegionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AACD2FE6A03900B4B903 /* CoastalRegionPicker.swift */; };
+		FDB3AB242FE6A03900B4B903 /* PotentialAnchoragesMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAF42FE6A03900B4B903 /* PotentialAnchoragesMap.swift */; };
+		FDB3AB252FE6A03900B4B903 /* DeleteCruiseModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB42FE6A03900B4B903 /* DeleteCruiseModifier.swift */; };
+		FDB3AB262FE6A03900B4B903 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AADA2FE6A03900B4B903 /* Facility.swift */; };
+		FDB3AB272FE6A03900B4B903 /* HubsLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAEE2FE6A03900B4B903 /* HubsLink.swift */; };
+		FDB3AB282FE6A03900B4B903 /* PotentialAnchorages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAF22FE6A03900B4B903 /* PotentialAnchorages.swift */; };
+		FDB3AB292FE6A03900B4B903 /* RouteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAFE2FE6A03900B4B903 /* RouteLoader.swift */; };
+		FDB3AB2A2FE6A03900B4B903 /* QuadrantPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAF82FE6A03900B4B903 /* QuadrantPicker.swift */; };
+		FDB3AB2B2FE6A03900B4B903 /* CruiseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAAD2FE6A03900B4B903 /* CruiseRow.swift */; };
+		FDB3AB2C2FE6A03900B4B903 /* WarningBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB0B2FE6A03900B4B903 /* WarningBadge.swift */; };
+		FDB3AB2D2FE6A03900B4B903 /* RouteEditor+OverlayControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAFD2FE6A03900B4B903 /* RouteEditor+OverlayControls.swift */; };
+		FDB3AB2E2FE6A03900B4B903 /* AnchorageDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAC12FE6A03900B4B903 /* AnchorageDot.swift */; };
+		FDB3AB2F2FE6A03900B4B903 /* ExposureSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD82FE6A03900B4B903 /* ExposureSymbol.swift */; };
+		FDB3AB302FE6A03900B4B903 /* AddToCruiseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAAB2FE6A03900B4B903 /* AddToCruiseButton.swift */; };
+		FDB3AB312FE6A03900B4B903 /* ExpandableSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD62FE6A03900B4B903 /* ExpandableSplitView.swift */; };
+		FDB3AB322FE6A03900B4B903 /* CoordinateBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD02FE6A03900B4B903 /* CoordinateBrowser.swift */; };
+		FDB3AB332FE6A03900B4B903 /* CruisingGuideReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD32FE6A03900B4B903 /* CruisingGuideReader.swift */; };
+		FDB3AB342FE6A03900B4B903 /* GridHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AADB2FE6A03900B4B903 /* GridHelper.swift */; };
+		FDB3AB352FE6A03900B4B903 /* MarineWeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAF12FE6A03900B4B903 /* MarineWeatherRow.swift */; };
+		FDB3AB362FE6A03900B4B903 /* HarbourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAEC2FE6A03900B4B903 /* HarbourViewModel.swift */; };
+		FDB3AB372FE6A03900B4B903 /* HarbourChooserMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE22FE6A03900B4B903 /* HarbourChooserMap.swift */; };
+		FDB3AB382FE6A03900B4B903 /* AnchorageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAC02FE6A03900B4B903 /* AnchorageDetail.swift */; };
+		FDB3AB392FE6A03900B4B903 /* CoastalRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AACC2FE6A03900B4B903 /* CoastalRegion.swift */; };
+		FDB3AB3A2FE6A03900B4B903 /* CruisingGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD12FE6A03900B4B903 /* CruisingGuide.swift */; };
+		FDB3AB3B2FE6A03900B4B903 /* AnchorageTidePredictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAC72FE6A03900B4B903 /* AnchorageTidePredictions.swift */; };
+		FDB3AB3C2FE6A03900B4B903 /* SwipeEditHarbour.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB032FE6A03900B4B903 /* SwipeEditHarbour.swift */; };
+		FDB3AB3D2FE6A03900B4B903 /* Harbour+Potential.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AADE2FE6A03900B4B903 /* Harbour+Potential.swift */; };
+		FDB3AB3E2FE6A03900B4B903 /* AnchorageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAC52FE6A03900B4B903 /* AnchorageRow.swift */; };
+		FDB3AB3F2FE6A03900B4B903 /* WaypointSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB0D2FE6A03900B4B903 /* WaypointSnippet.swift */; };
+		FDB3AB402FE6A03900B4B903 /* AnchorageTideChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAC62FE6A03900B4B903 /* AnchorageTideChart.swift */; };
+		FDB3AB412FE6A03900B4B903 /* CompassExposure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AACE2FE6A03900B4B903 /* CompassExposure.swift */; };
+		FDB3AB422FE6A03900B4B903 /* RoutePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB002FE6A03900B4B903 /* RoutePolyline.swift */; };
+		FDB3AB432FE6A03900B4B903 /* VoyageIntent+Underway.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB072FE6A03900B4B903 /* VoyageIntent+Underway.swift */; };
+		FDB3AB442FE6A03900B4B903 /* WaypointDeduplicationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB0C2FE6A03900B4B903 /* WaypointDeduplicationMap.swift */; };
+		FDB3AB452FE6A03900B4B903 /* BottomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAC82FE6A03900B4B903 /* BottomType.swift */; };
+		FDB3AB462FE6A03900B4B903 /* VoyageIntentQuickForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB092FE6A03900B4B903 /* VoyageIntentQuickForm.swift */; };
+		FDB3AB472FE6A03900B4B903 /* ProtectionScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAF62FE6A03900B4B903 /* ProtectionScore.swift */; };
+		FDB3AB482FE6A03900B4B903 /* HarbourChooserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE12FE6A03900B4B903 /* HarbourChooserList.swift */; };
+		FDB3AB492FE6A03900B4B903 /* StopActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AABA2FE6A03900B4B903 /* StopActions.swift */; };
+		FDB3AB4A2FE6A03900B4B903 /* AnchoragePotential.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAC42FE6A03900B4B903 /* AnchoragePotential.swift */; };
+		FDB3AB4B2FE6A03900B4B903 /* RouteMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAFF2FE6A03900B4B903 /* RouteMaker.swift */; };
+		FDB3AB4C2FE6A03900B4B903 /* MarineWeatherBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAF02FE6A03900B4B903 /* MarineWeatherBrowser.swift */; };
+		FDB3AB4D2FE6A03900B4B903 /* HubsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAEF2FE6A03900B4B903 /* HubsMap.swift */; };
+		FDB3AB4E2FE6A03900B4B903 /* CompassQuadrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AACF2FE6A03900B4B903 /* CompassQuadrant.swift */; };
+		FDB3AB4F2FE6A03900B4B903 /* RouteEditor+MapContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAFC2FE6A03900B4B903 /* RouteEditor+MapContent.swift */; };
+		FDB3AB502FE6A03900B4B903 /* HarbourDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE42FE6A03900B4B903 /* HarbourDetail.swift */; };
+		FDB3AB512FE6A03900B4B903 /* ChooseAnchorageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AACA2FE6A03900B4B903 /* ChooseAnchorageRow.swift */; };
+		FDB3AB522FE6A03900B4B903 /* RouteEditor+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAFA2FE6A03900B4B903 /* RouteEditor+Button.swift */; };
+		FDB3AB532FE6A03900B4B903 /* HarbourDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE32FE6A03900B4B903 /* HarbourDestinations.swift */; };
+		FDB3AB542FE6A03900B4B903 /* CruiseForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAAC2FE6A03900B4B903 /* CruiseForm.swift */; };
+		FDB3AB552FE6A03900B4B903 /* FacilitiesPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD92FE6A03900B4B903 /* FacilitiesPicker.swift */; };
+		FDB3AB562FE6A03900B4B903 /* AnchorageLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAC32FE6A03900B4B903 /* AnchorageLink.swift */; };
+		FDB3AB572FE6A03900B4B903 /* CruiseWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB32FE6A03900B4B903 /* CruiseWeather.swift */; };
+		FDB3AB582FE6A03900B4B903 /* VoyageIntentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB0A2FE6A03900B4B903 /* VoyageIntentWrapper.swift */; };
+		FDB3AB592FE6A03900B4B903 /* HarbourChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE02FE6A03900B4B903 /* HarbourChooser.swift */; };
+		FDB3AB5A2FE6A03900B4B903 /* HarbourDetailPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE52FE6A03900B4B903 /* HarbourDetailPane.swift */; };
+		FDB3AB5B2FE6A03900B4B903 /* RouteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAF92FE6A03900B4B903 /* RouteEditor.swift */; };
+		FDB3AB5C2FE6A03900B4B903 /* ChartMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAC92FE6A03900B4B903 /* ChartMap.swift */; };
+		FDB3AB5D2FE6A03900B4B903 /* GuideRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AADC2FE6A03900B4B903 /* GuideRating.swift */; };
+		FDB3AB5E2FE6A03900B4B903 /* DestinationsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD52FE6A03900B4B903 /* DestinationsList.swift */; };
+		FDB3AB5F2FE6A03900B4B903 /* VoyageConditionsLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB052FE6A03900B4B903 /* VoyageConditionsLine.swift */; };
+		FDB3AB602FE6A03900B4B903 /* MakeCruiseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB72FE6A03900B4B903 /* MakeCruiseButton.swift */; };
+		FDB3AB612FE6A03900B4B903 /* DestinationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD42FE6A03900B4B903 /* DestinationRow.swift */; };
+		FDB3AB622FE6A03900B4B903 /* HarbourPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE82FE6A03900B4B903 /* HarbourPicker.swift */; };
+		FDB3AB632FE6A03900B4B903 /* RouteSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB012FE6A03900B4B903 /* RouteSnippet.swift */; };
+		FDB3AB642FE6A03900B4B903 /* LegAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB62FE6A03900B4B903 /* LegAnnotation.swift */; };
+		FDB3AB652FE6A03900B4B903 /* ExposureEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD72FE6A03900B4B903 /* ExposureEditor.swift */; };
+		FDB3AB662FE6A03900B4B903 /* AnchorageBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AABD2FE6A03900B4B903 /* AnchorageBanner.swift */; };
+		FDB3AB672FE6A03900B4B903 /* VoyageIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB062FE6A03900B4B903 /* VoyageIntent.swift */; };
+		FDB3AB682FE6A03900B4B903 /* AddCruiseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAAA2FE6A03900B4B903 /* AddCruiseButton.swift */; };
+		FDB3AB692FE6A03900B4B903 /* AnchorageBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AABE2FE6A03900B4B903 /* AnchorageBrowser.swift */; };
+		FDB3AB6A2FE6A03900B4B903 /* RouteEditor+MapBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAFB2FE6A03900B4B903 /* RouteEditor+MapBasket.swift */; };
+		FDB3AB6B2FE6A03900B4B903 /* VoyageIntentForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB082FE6A03900B4B903 /* VoyageIntentForm.swift */; };
+		FDB3AB6C2FE6A03900B4B903 /* AddHarbourPointPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AABC2FE6A03900B4B903 /* AddHarbourPointPicker.swift */; };
+		FDB3AB6D2FE6A03900B4B903 /* HarbourInfoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE62FE6A03900B4B903 /* HarbourInfoEditor.swift */; };
+		FDB3AB6E2FE6A03900B4B903 /* MultipleTripsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB82FE6A03900B4B903 /* MultipleTripsModifier.swift */; };
+		FDB3AB6F2FE6A03900B4B903 /* CruiseStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB02FE6A03900B4B903 /* CruiseStats.swift */; };
+		FDB3AB702FE6A03900B4B903 /* RemoveStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB92FE6A03900B4B903 /* RemoveStopButton.swift */; };
+		FDB3AB712FE6A03900B4B903 /* CruisingGuideEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD22FE6A03900B4B903 /* CruisingGuideEditor.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -62,7 +199,6 @@
 		FDE216602FE5B0CF00F60799 /* LocalForecastLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215F32FE5B0CF00F60799 /* LocalForecastLine.swift */; };
 		FDE216612FE5B0CF00F60799 /* NewTripButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215FB2FE5B0CF00F60799 /* NewTripButton.swift */; };
 		FDE216622FE5B0CF00F60799 /* LocalWeatherEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215F52FE5B0CF00F60799 /* LocalWeatherEditor.swift */; };
-		FDE216632FE5B0CF00F60799 /* TripDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216142FE5B0CF00F60799 /* TripDetailsView.swift */; };
 		FDE216642FE5B0CF00F60799 /* UnderwayFetchDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216262FE5B0CF00F60799 /* UnderwayFetchDetail.swift */; };
 		FDE216652FE5B0CF00F60799 /* ObservationSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CF2FE5B0CF00F60799 /* ObservationSnippet.swift */; };
 		FDE216662FE5B0CF00F60799 /* SailingFollowMeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216042FE5B0CF00F60799 /* SailingFollowMeModifier.swift */; };
@@ -156,6 +292,142 @@
 		FD091F8D2FE590F6001706D6 /* CrwxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxTests.swift; sourceTree = "<group>"; };
 		FD091F902FE590FA001706D6 /* CrwxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITests.swift; sourceTree = "<group>"; };
 		FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FDB3AA5E2FE5BBA200B4B903 /* TripMigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMigrationPlan.swift; sourceTree = "<group>"; };
+		FDB3AA5F2FE5BBA200B4B903 /* TripSchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV1.swift; sourceTree = "<group>"; };
+		FDB3AA602FE5BBA200B4B903 /* TripSchemaV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV2.swift; sourceTree = "<group>"; };
+		FDB3AA612FE5BBA200B4B903 /* TripSchemaV3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV3.swift; sourceTree = "<group>"; };
+		FDB3AA622FE5BBA200B4B903 /* TripSchemaV4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV4.swift; sourceTree = "<group>"; };
+		FDB3AA632FE5BBA200B4B903 /* TripSchemaV5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV5.swift; sourceTree = "<group>"; };
+		FDB3AA642FE5BBA200B4B903 /* TripSchemaV6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV6.swift; sourceTree = "<group>"; };
+		FDB3AA652FE5BBA200B4B903 /* TripSchemaV7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV7.swift; sourceTree = "<group>"; };
+		FDB3AA662FE5BBA200B4B903 /* TripSchemaV8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV8.swift; sourceTree = "<group>"; };
+		FDB3AA672FE5BBA200B4B903 /* TripSchemaV9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV9.swift; sourceTree = "<group>"; };
+		FDB3AA682FE5BBA200B4B903 /* TripSchemaV10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV10.swift; sourceTree = "<group>"; };
+		FDB3AA692FE5BBA200B4B903 /* TripSchemaV11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV11.swift; sourceTree = "<group>"; };
+		FDB3AA6A2FE5BBA200B4B903 /* TripSchemaV12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV12.swift; sourceTree = "<group>"; };
+		FDB3AA6B2FE5BBA200B4B903 /* TripSchemaV13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV13.swift; sourceTree = "<group>"; };
+		FDB3AA6C2FE5BBA200B4B903 /* TripSchemaV14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV14.swift; sourceTree = "<group>"; };
+		FDB3AA6D2FE5BBA200B4B903 /* TripSchemaV15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV15.swift; sourceTree = "<group>"; };
+		FDB3AA6E2FE5BBA200B4B903 /* TripSchemaV16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV16.swift; sourceTree = "<group>"; };
+		FDB3AA6F2FE5BBA200B4B903 /* TripSchemaV17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV17.swift; sourceTree = "<group>"; };
+		FDB3AA702FE5BBA200B4B903 /* TripSchemaV18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV18.swift; sourceTree = "<group>"; };
+		FDB3AA712FE5BBA200B4B903 /* TripSchemaV19.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV19.swift; sourceTree = "<group>"; };
+		FDB3AA722FE5BBA200B4B903 /* TripSchemaV20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV20.swift; sourceTree = "<group>"; };
+		FDB3AA742FE5BBA200B4B903 /* BackModelActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackModelActor.swift; sourceTree = "<group>"; };
+		FDB3AA752FE5BBA200B4B903 /* BackupActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupActor.swift; sourceTree = "<group>"; };
+		FDB3AA762FE5BBA200B4B903 /* BackupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupButton.swift; sourceTree = "<group>"; };
+		FDB3AA772FE5BBA200B4B903 /* BackupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupData.swift; sourceTree = "<group>"; };
+		FDB3AA782FE5BBA200B4B903 /* Cruise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cruise.swift; sourceTree = "<group>"; };
+		FDB3AA792FE5BBA200B4B903 /* Harbour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Harbour.swift; sourceTree = "<group>"; };
+		FDB3AA7A2FE5BBA200B4B903 /* LocationProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProfile.swift; sourceTree = "<group>"; };
+		FDB3AA7B2FE5BBA200B4B903 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FDB3AA7C2FE5BBA200B4B903 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		FDB3AA7D2FE5BBA200B4B903 /* Sounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounding.swift; sourceTree = "<group>"; };
+		FDB3AA7E2FE5BBA200B4B903 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		FDB3AA7F2FE5BBA200B4B903 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		FDB3AA802FE5BBA200B4B903 /* Trip+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+Extended.swift"; sourceTree = "<group>"; };
+		FDB3AA812FE5BBA200B4B903 /* Trip+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+Previews.swift"; sourceTree = "<group>"; };
+		FDB3AA822FE5BBA200B4B903 /* Trip+Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+Validate.swift"; sourceTree = "<group>"; };
+		FDB3AA832FE5BBA200B4B903 /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
+		FDB3AAAA2FE6A03900B4B903 /* AddCruiseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCruiseButton.swift; sourceTree = "<group>"; };
+		FDB3AAAB2FE6A03900B4B903 /* AddToCruiseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCruiseButton.swift; sourceTree = "<group>"; };
+		FDB3AAAC2FE6A03900B4B903 /* CruiseForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseForm.swift; sourceTree = "<group>"; };
+		FDB3AAAD2FE6A03900B4B903 /* CruiseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseRow.swift; sourceTree = "<group>"; };
+		FDB3AAAE2FE6A03900B4B903 /* CruisesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruisesList.swift; sourceTree = "<group>"; };
+		FDB3AAAF2FE6A03900B4B903 /* CruisesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruisesRow.swift; sourceTree = "<group>"; };
+		FDB3AAB02FE6A03900B4B903 /* CruiseStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseStats.swift; sourceTree = "<group>"; };
+		FDB3AAB12FE6A03900B4B903 /* CruiseStopDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseStopDetail.swift; sourceTree = "<group>"; };
+		FDB3AAB22FE6A03900B4B903 /* CruiseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseViewModel.swift; sourceTree = "<group>"; };
+		FDB3AAB32FE6A03900B4B903 /* CruiseWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseWeather.swift; sourceTree = "<group>"; };
+		FDB3AAB42FE6A03900B4B903 /* DeleteCruiseModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCruiseModifier.swift; sourceTree = "<group>"; };
+		FDB3AAB52FE6A03900B4B903 /* EditCruiseModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCruiseModifier.swift; sourceTree = "<group>"; };
+		FDB3AAB62FE6A03900B4B903 /* LegAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegAnnotation.swift; sourceTree = "<group>"; };
+		FDB3AAB72FE6A03900B4B903 /* MakeCruiseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCruiseButton.swift; sourceTree = "<group>"; };
+		FDB3AAB82FE6A03900B4B903 /* MultipleTripsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleTripsModifier.swift; sourceTree = "<group>"; };
+		FDB3AAB92FE6A03900B4B903 /* RemoveStopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveStopButton.swift; sourceTree = "<group>"; };
+		FDB3AABA2FE6A03900B4B903 /* StopActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopActions.swift; sourceTree = "<group>"; };
+		FDB3AABC2FE6A03900B4B903 /* AddHarbourPointPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHarbourPointPicker.swift; sourceTree = "<group>"; };
+		FDB3AABD2FE6A03900B4B903 /* AnchorageBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageBanner.swift; sourceTree = "<group>"; };
+		FDB3AABE2FE6A03900B4B903 /* AnchorageBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageBrowser.swift; sourceTree = "<group>"; };
+		FDB3AABF2FE6A03900B4B903 /* AnchorageChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageChooser.swift; sourceTree = "<group>"; };
+		FDB3AAC02FE6A03900B4B903 /* AnchorageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageDetail.swift; sourceTree = "<group>"; };
+		FDB3AAC12FE6A03900B4B903 /* AnchorageDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageDot.swift; sourceTree = "<group>"; };
+		FDB3AAC22FE6A03900B4B903 /* AnchorageFacilitiesFilterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageFacilitiesFilterMenu.swift; sourceTree = "<group>"; };
+		FDB3AAC32FE6A03900B4B903 /* AnchorageLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageLink.swift; sourceTree = "<group>"; };
+		FDB3AAC42FE6A03900B4B903 /* AnchoragePotential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchoragePotential.swift; sourceTree = "<group>"; };
+		FDB3AAC52FE6A03900B4B903 /* AnchorageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageRow.swift; sourceTree = "<group>"; };
+		FDB3AAC62FE6A03900B4B903 /* AnchorageTideChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageTideChart.swift; sourceTree = "<group>"; };
+		FDB3AAC72FE6A03900B4B903 /* AnchorageTidePredictions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageTidePredictions.swift; sourceTree = "<group>"; };
+		FDB3AAC82FE6A03900B4B903 /* BottomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomType.swift; sourceTree = "<group>"; };
+		FDB3AAC92FE6A03900B4B903 /* ChartMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartMap.swift; sourceTree = "<group>"; };
+		FDB3AACA2FE6A03900B4B903 /* ChooseAnchorageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAnchorageRow.swift; sourceTree = "<group>"; };
+		FDB3AACB2FE6A03900B4B903 /* CoastalForecasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoastalForecasts.swift; sourceTree = "<group>"; };
+		FDB3AACC2FE6A03900B4B903 /* CoastalRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoastalRegion.swift; sourceTree = "<group>"; };
+		FDB3AACD2FE6A03900B4B903 /* CoastalRegionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoastalRegionPicker.swift; sourceTree = "<group>"; };
+		FDB3AACE2FE6A03900B4B903 /* CompassExposure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassExposure.swift; sourceTree = "<group>"; };
+		FDB3AACF2FE6A03900B4B903 /* CompassQuadrant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassQuadrant.swift; sourceTree = "<group>"; };
+		FDB3AAD02FE6A03900B4B903 /* CoordinateBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateBrowser.swift; sourceTree = "<group>"; };
+		FDB3AAD12FE6A03900B4B903 /* CruisingGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruisingGuide.swift; sourceTree = "<group>"; };
+		FDB3AAD22FE6A03900B4B903 /* CruisingGuideEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruisingGuideEditor.swift; sourceTree = "<group>"; };
+		FDB3AAD32FE6A03900B4B903 /* CruisingGuideReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruisingGuideReader.swift; sourceTree = "<group>"; };
+		FDB3AAD42FE6A03900B4B903 /* DestinationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationRow.swift; sourceTree = "<group>"; };
+		FDB3AAD52FE6A03900B4B903 /* DestinationsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationsList.swift; sourceTree = "<group>"; };
+		FDB3AAD62FE6A03900B4B903 /* ExpandableSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableSplitView.swift; sourceTree = "<group>"; };
+		FDB3AAD72FE6A03900B4B903 /* ExposureEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureEditor.swift; sourceTree = "<group>"; };
+		FDB3AAD82FE6A03900B4B903 /* ExposureSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureSymbol.swift; sourceTree = "<group>"; };
+		FDB3AAD92FE6A03900B4B903 /* FacilitiesPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesPicker.swift; sourceTree = "<group>"; };
+		FDB3AADA2FE6A03900B4B903 /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		FDB3AADB2FE6A03900B4B903 /* GridHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridHelper.swift; sourceTree = "<group>"; };
+		FDB3AADC2FE6A03900B4B903 /* GuideRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideRating.swift; sourceTree = "<group>"; };
+		FDB3AADD2FE6A03900B4B903 /* Harbour+LookupName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Harbour+LookupName.swift"; sourceTree = "<group>"; };
+		FDB3AADE2FE6A03900B4B903 /* Harbour+Potential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Harbour+Potential.swift"; sourceTree = "<group>"; };
+		FDB3AADF2FE6A03900B4B903 /* HarbourAtAGlance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourAtAGlance.swift; sourceTree = "<group>"; };
+		FDB3AAE02FE6A03900B4B903 /* HarbourChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourChooser.swift; sourceTree = "<group>"; };
+		FDB3AAE12FE6A03900B4B903 /* HarbourChooserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourChooserList.swift; sourceTree = "<group>"; };
+		FDB3AAE22FE6A03900B4B903 /* HarbourChooserMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourChooserMap.swift; sourceTree = "<group>"; };
+		FDB3AAE32FE6A03900B4B903 /* HarbourDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourDestinations.swift; sourceTree = "<group>"; };
+		FDB3AAE42FE6A03900B4B903 /* HarbourDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourDetail.swift; sourceTree = "<group>"; };
+		FDB3AAE52FE6A03900B4B903 /* HarbourDetailPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourDetailPane.swift; sourceTree = "<group>"; };
+		FDB3AAE62FE6A03900B4B903 /* HarbourInfoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourInfoEditor.swift; sourceTree = "<group>"; };
+		FDB3AAE72FE6A03900B4B903 /* HarbourMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourMap.swift; sourceTree = "<group>"; };
+		FDB3AAE82FE6A03900B4B903 /* HarbourPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourPicker.swift; sourceTree = "<group>"; };
+		FDB3AAE92FE6A03900B4B903 /* HarbourRoutesSublist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourRoutesSublist.swift; sourceTree = "<group>"; };
+		FDB3AAEA2FE6A03900B4B903 /* HarboursMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarboursMap.swift; sourceTree = "<group>"; };
+		FDB3AAEB2FE6A03900B4B903 /* HarbourTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourTab.swift; sourceTree = "<group>"; };
+		FDB3AAEC2FE6A03900B4B903 /* HarbourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarbourViewModel.swift; sourceTree = "<group>"; };
+		FDB3AAED2FE6A03900B4B903 /* HubInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubInfo.swift; sourceTree = "<group>"; };
+		FDB3AAEE2FE6A03900B4B903 /* HubsLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubsLink.swift; sourceTree = "<group>"; };
+		FDB3AAEF2FE6A03900B4B903 /* HubsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubsMap.swift; sourceTree = "<group>"; };
+		FDB3AAF02FE6A03900B4B903 /* MarineWeatherBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineWeatherBrowser.swift; sourceTree = "<group>"; };
+		FDB3AAF12FE6A03900B4B903 /* MarineWeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineWeatherRow.swift; sourceTree = "<group>"; };
+		FDB3AAF22FE6A03900B4B903 /* PotentialAnchorages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentialAnchorages.swift; sourceTree = "<group>"; };
+		FDB3AAF32FE6A03900B4B903 /* PotentialAnchoragesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentialAnchoragesList.swift; sourceTree = "<group>"; };
+		FDB3AAF42FE6A03900B4B903 /* PotentialAnchoragesMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentialAnchoragesMap.swift; sourceTree = "<group>"; };
+		FDB3AAF52FE6A03900B4B903 /* ProtectionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionPicker.swift; sourceTree = "<group>"; };
+		FDB3AAF62FE6A03900B4B903 /* ProtectionScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionScore.swift; sourceTree = "<group>"; };
+		FDB3AAF72FE6A03900B4B903 /* ProtectionSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionSymbol.swift; sourceTree = "<group>"; };
+		FDB3AAF82FE6A03900B4B903 /* QuadrantPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrantPicker.swift; sourceTree = "<group>"; };
+		FDB3AAF92FE6A03900B4B903 /* RouteEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteEditor.swift; sourceTree = "<group>"; };
+		FDB3AAFA2FE6A03900B4B903 /* RouteEditor+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteEditor+Button.swift"; sourceTree = "<group>"; };
+		FDB3AAFB2FE6A03900B4B903 /* RouteEditor+MapBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteEditor+MapBasket.swift"; sourceTree = "<group>"; };
+		FDB3AAFC2FE6A03900B4B903 /* RouteEditor+MapContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteEditor+MapContent.swift"; sourceTree = "<group>"; };
+		FDB3AAFD2FE6A03900B4B903 /* RouteEditor+OverlayControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteEditor+OverlayControls.swift"; sourceTree = "<group>"; };
+		FDB3AAFE2FE6A03900B4B903 /* RouteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteLoader.swift; sourceTree = "<group>"; };
+		FDB3AAFF2FE6A03900B4B903 /* RouteMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMaker.swift; sourceTree = "<group>"; };
+		FDB3AB002FE6A03900B4B903 /* RoutePolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePolyline.swift; sourceTree = "<group>"; };
+		FDB3AB012FE6A03900B4B903 /* RouteSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSnippet.swift; sourceTree = "<group>"; };
+		FDB3AB022FE6A03900B4B903 /* SingleStarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleStarRating.swift; sourceTree = "<group>"; };
+		FDB3AB032FE6A03900B4B903 /* SwipeEditHarbour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeEditHarbour.swift; sourceTree = "<group>"; };
+		FDB3AB042FE6A03900B4B903 /* TextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPicker.swift; sourceTree = "<group>"; };
+		FDB3AB052FE6A03900B4B903 /* VoyageConditionsLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageConditionsLine.swift; sourceTree = "<group>"; };
+		FDB3AB062FE6A03900B4B903 /* VoyageIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageIntent.swift; sourceTree = "<group>"; };
+		FDB3AB072FE6A03900B4B903 /* VoyageIntent+Underway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VoyageIntent+Underway.swift"; sourceTree = "<group>"; };
+		FDB3AB082FE6A03900B4B903 /* VoyageIntentForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageIntentForm.swift; sourceTree = "<group>"; };
+		FDB3AB092FE6A03900B4B903 /* VoyageIntentQuickForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageIntentQuickForm.swift; sourceTree = "<group>"; };
+		FDB3AB0A2FE6A03900B4B903 /* VoyageIntentWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageIntentWrapper.swift; sourceTree = "<group>"; };
+		FDB3AB0B2FE6A03900B4B903 /* WarningBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningBadge.swift; sourceTree = "<group>"; };
+		FDB3AB0C2FE6A03900B4B903 /* WaypointDeduplicationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointDeduplicationMap.swift; sourceTree = "<group>"; };
+		FDB3AB0D2FE6A03900B4B903 /* WaypointSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointSnippet.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -230,7 +502,6 @@
 		FDE216112FE5B0CF00F60799 /* TideTableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TideTableSection.swift; sourceTree = "<group>"; };
 		FDE216122FE5B0CF00F60799 /* TowingSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowingSymbol.swift; sourceTree = "<group>"; };
 		FDE216132FE5B0CF00F60799 /* TripDestinationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDestinationPicker.swift; sourceTree = "<group>"; };
-		FDE216142FE5B0CF00F60799 /* TripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsView.swift; sourceTree = "<group>"; };
 		FDE216152FE5B0CF00F60799 /* TripEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditor.swift; sourceTree = "<group>"; };
 		FDE216162FE5B0CF00F60799 /* TripEditSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditSheetModifier.swift; sourceTree = "<group>"; };
 		FDE216172FE5B0CF00F60799 /* TripHarboursSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHarboursSection.swift; sourceTree = "<group>"; };
@@ -273,6 +544,7 @@
 				F9B7AEC0155C0AB63F9EB6D6 /* FoundationSalt in Frameworks */,
 				43840A0E08EDFE764B0D90EC /* FoundationUI in Frameworks */,
 				2735F72D479B7616A592F08F /* WxSalt in Frameworks */,
+				FDB3AA5D2FE5BB2400B4B903 /* FocusOnAppear in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +571,7 @@
 				FD091F872FE590F3001706D6 /* Crwx */,
 				FD091F8E2FE590F6001706D6 /* CrwxTests */,
 				FD091F922FE590FA001706D6 /* CrwxUITests */,
+				FDB3AA5B2FE5BB2400B4B903 /* Frameworks */,
 				FD091F312FE57B6F001706D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -317,6 +590,8 @@
 			isa = PBXGroup;
 			children = (
 				FDE216352FE5B0CF00F60799 /* Sailing Log */,
+				FDB3AB0E2FE6A03900B4B903 /* Voyage Planning */,
+				FDB3AA842FE5BBA200B4B903 /* SwiftData */,
 				FD091F812FE590F3001706D6 /* Assets.xcassets */,
 				FD091F822FE590F3001706D6 /* ContentView.swift */,
 				FD091F832FE590F3001706D6 /* Crwx.entitlements */,
@@ -343,6 +618,179 @@
 				FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */,
 			);
 			path = CrwxUITests;
+			sourceTree = "<group>";
+		};
+		FDB3AA5B2FE5BB2400B4B903 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDB3AA732FE5BBA200B4B903 /* Versions */ = {
+			isa = PBXGroup;
+			children = (
+				FDB3AA5E2FE5BBA200B4B903 /* TripMigrationPlan.swift */,
+				FDB3AA5F2FE5BBA200B4B903 /* TripSchemaV1.swift */,
+				FDB3AA602FE5BBA200B4B903 /* TripSchemaV2.swift */,
+				FDB3AA612FE5BBA200B4B903 /* TripSchemaV3.swift */,
+				FDB3AA622FE5BBA200B4B903 /* TripSchemaV4.swift */,
+				FDB3AA632FE5BBA200B4B903 /* TripSchemaV5.swift */,
+				FDB3AA642FE5BBA200B4B903 /* TripSchemaV6.swift */,
+				FDB3AA652FE5BBA200B4B903 /* TripSchemaV7.swift */,
+				FDB3AA662FE5BBA200B4B903 /* TripSchemaV8.swift */,
+				FDB3AA672FE5BBA200B4B903 /* TripSchemaV9.swift */,
+				FDB3AA682FE5BBA200B4B903 /* TripSchemaV10.swift */,
+				FDB3AA692FE5BBA200B4B903 /* TripSchemaV11.swift */,
+				FDB3AA6A2FE5BBA200B4B903 /* TripSchemaV12.swift */,
+				FDB3AA6B2FE5BBA200B4B903 /* TripSchemaV13.swift */,
+				FDB3AA6C2FE5BBA200B4B903 /* TripSchemaV14.swift */,
+				FDB3AA6D2FE5BBA200B4B903 /* TripSchemaV15.swift */,
+				FDB3AA6E2FE5BBA200B4B903 /* TripSchemaV16.swift */,
+				FDB3AA6F2FE5BBA200B4B903 /* TripSchemaV17.swift */,
+				FDB3AA702FE5BBA200B4B903 /* TripSchemaV18.swift */,
+				FDB3AA712FE5BBA200B4B903 /* TripSchemaV19.swift */,
+				FDB3AA722FE5BBA200B4B903 /* TripSchemaV20.swift */,
+			);
+			path = Versions;
+			sourceTree = "<group>";
+		};
+		FDB3AA842FE5BBA200B4B903 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				FDB3AA732FE5BBA200B4B903 /* Versions */,
+				FDB3AA742FE5BBA200B4B903 /* BackModelActor.swift */,
+				FDB3AA752FE5BBA200B4B903 /* BackupActor.swift */,
+				FDB3AA762FE5BBA200B4B903 /* BackupButton.swift */,
+				FDB3AA772FE5BBA200B4B903 /* BackupData.swift */,
+				FDB3AA782FE5BBA200B4B903 /* Cruise.swift */,
+				FDB3AA792FE5BBA200B4B903 /* Harbour.swift */,
+				FDB3AA7A2FE5BBA200B4B903 /* LocationProfile.swift */,
+				FDB3AA7B2FE5BBA200B4B903 /* Photo.swift */,
+				FDB3AA7C2FE5BBA200B4B903 /* Route.swift */,
+				FDB3AA7D2FE5BBA200B4B903 /* Sounding.swift */,
+				FDB3AA7E2FE5BBA200B4B903 /* Track.swift */,
+				FDB3AA7F2FE5BBA200B4B903 /* Trip.swift */,
+				FDB3AA802FE5BBA200B4B903 /* Trip+Extended.swift */,
+				FDB3AA812FE5BBA200B4B903 /* Trip+Previews.swift */,
+				FDB3AA822FE5BBA200B4B903 /* Trip+Validate.swift */,
+				FDB3AA832FE5BBA200B4B903 /* Waypoint.swift */,
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		FDB3AABB2FE6A03900B4B903 /* Cruises */ = {
+			isa = PBXGroup;
+			children = (
+				FDB3AAAA2FE6A03900B4B903 /* AddCruiseButton.swift */,
+				FDB3AAAB2FE6A03900B4B903 /* AddToCruiseButton.swift */,
+				FDB3AAAC2FE6A03900B4B903 /* CruiseForm.swift */,
+				FDB3AAAD2FE6A03900B4B903 /* CruiseRow.swift */,
+				FDB3AAAE2FE6A03900B4B903 /* CruisesList.swift */,
+				FDB3AAAF2FE6A03900B4B903 /* CruisesRow.swift */,
+				FDB3AAB02FE6A03900B4B903 /* CruiseStats.swift */,
+				FDB3AAB12FE6A03900B4B903 /* CruiseStopDetail.swift */,
+				FDB3AAB22FE6A03900B4B903 /* CruiseViewModel.swift */,
+				FDB3AAB32FE6A03900B4B903 /* CruiseWeather.swift */,
+				FDB3AAB42FE6A03900B4B903 /* DeleteCruiseModifier.swift */,
+				FDB3AAB52FE6A03900B4B903 /* EditCruiseModifier.swift */,
+				FDB3AAB62FE6A03900B4B903 /* LegAnnotation.swift */,
+				FDB3AAB72FE6A03900B4B903 /* MakeCruiseButton.swift */,
+				FDB3AAB82FE6A03900B4B903 /* MultipleTripsModifier.swift */,
+				FDB3AAB92FE6A03900B4B903 /* RemoveStopButton.swift */,
+				FDB3AABA2FE6A03900B4B903 /* StopActions.swift */,
+			);
+			path = Cruises;
+			sourceTree = "<group>";
+		};
+		FDB3AB0E2FE6A03900B4B903 /* Voyage Planning */ = {
+			isa = PBXGroup;
+			children = (
+				FDB3AABB2FE6A03900B4B903 /* Cruises */,
+				FDB3AABC2FE6A03900B4B903 /* AddHarbourPointPicker.swift */,
+				FDB3AABD2FE6A03900B4B903 /* AnchorageBanner.swift */,
+				FDB3AABE2FE6A03900B4B903 /* AnchorageBrowser.swift */,
+				FDB3AABF2FE6A03900B4B903 /* AnchorageChooser.swift */,
+				FDB3AAC02FE6A03900B4B903 /* AnchorageDetail.swift */,
+				FDB3AAC12FE6A03900B4B903 /* AnchorageDot.swift */,
+				FDB3AAC22FE6A03900B4B903 /* AnchorageFacilitiesFilterMenu.swift */,
+				FDB3AAC32FE6A03900B4B903 /* AnchorageLink.swift */,
+				FDB3AAC42FE6A03900B4B903 /* AnchoragePotential.swift */,
+				FDB3AAC52FE6A03900B4B903 /* AnchorageRow.swift */,
+				FDB3AAC62FE6A03900B4B903 /* AnchorageTideChart.swift */,
+				FDB3AAC72FE6A03900B4B903 /* AnchorageTidePredictions.swift */,
+				FDB3AAC82FE6A03900B4B903 /* BottomType.swift */,
+				FDB3AAC92FE6A03900B4B903 /* ChartMap.swift */,
+				FDB3AACA2FE6A03900B4B903 /* ChooseAnchorageRow.swift */,
+				FDB3AACB2FE6A03900B4B903 /* CoastalForecasts.swift */,
+				FDB3AACC2FE6A03900B4B903 /* CoastalRegion.swift */,
+				FDB3AACD2FE6A03900B4B903 /* CoastalRegionPicker.swift */,
+				FDB3AACE2FE6A03900B4B903 /* CompassExposure.swift */,
+				FDB3AACF2FE6A03900B4B903 /* CompassQuadrant.swift */,
+				FDB3AAD02FE6A03900B4B903 /* CoordinateBrowser.swift */,
+				FDB3AAD12FE6A03900B4B903 /* CruisingGuide.swift */,
+				FDB3AAD22FE6A03900B4B903 /* CruisingGuideEditor.swift */,
+				FDB3AAD32FE6A03900B4B903 /* CruisingGuideReader.swift */,
+				FDB3AAD42FE6A03900B4B903 /* DestinationRow.swift */,
+				FDB3AAD52FE6A03900B4B903 /* DestinationsList.swift */,
+				FDB3AAD62FE6A03900B4B903 /* ExpandableSplitView.swift */,
+				FDB3AAD72FE6A03900B4B903 /* ExposureEditor.swift */,
+				FDB3AAD82FE6A03900B4B903 /* ExposureSymbol.swift */,
+				FDB3AAD92FE6A03900B4B903 /* FacilitiesPicker.swift */,
+				FDB3AADA2FE6A03900B4B903 /* Facility.swift */,
+				FDB3AADB2FE6A03900B4B903 /* GridHelper.swift */,
+				FDB3AADC2FE6A03900B4B903 /* GuideRating.swift */,
+				FDB3AADD2FE6A03900B4B903 /* Harbour+LookupName.swift */,
+				FDB3AADE2FE6A03900B4B903 /* Harbour+Potential.swift */,
+				FDB3AADF2FE6A03900B4B903 /* HarbourAtAGlance.swift */,
+				FDB3AAE02FE6A03900B4B903 /* HarbourChooser.swift */,
+				FDB3AAE12FE6A03900B4B903 /* HarbourChooserList.swift */,
+				FDB3AAE22FE6A03900B4B903 /* HarbourChooserMap.swift */,
+				FDB3AAE32FE6A03900B4B903 /* HarbourDestinations.swift */,
+				FDB3AAE42FE6A03900B4B903 /* HarbourDetail.swift */,
+				FDB3AAE52FE6A03900B4B903 /* HarbourDetailPane.swift */,
+				FDB3AAE62FE6A03900B4B903 /* HarbourInfoEditor.swift */,
+				FDB3AAE72FE6A03900B4B903 /* HarbourMap.swift */,
+				FDB3AAE82FE6A03900B4B903 /* HarbourPicker.swift */,
+				FDB3AAE92FE6A03900B4B903 /* HarbourRoutesSublist.swift */,
+				FDB3AAEA2FE6A03900B4B903 /* HarboursMap.swift */,
+				FDB3AAEB2FE6A03900B4B903 /* HarbourTab.swift */,
+				FDB3AAEC2FE6A03900B4B903 /* HarbourViewModel.swift */,
+				FDB3AAED2FE6A03900B4B903 /* HubInfo.swift */,
+				FDB3AAEE2FE6A03900B4B903 /* HubsLink.swift */,
+				FDB3AAEF2FE6A03900B4B903 /* HubsMap.swift */,
+				FDB3AAF02FE6A03900B4B903 /* MarineWeatherBrowser.swift */,
+				FDB3AAF12FE6A03900B4B903 /* MarineWeatherRow.swift */,
+				FDB3AAF22FE6A03900B4B903 /* PotentialAnchorages.swift */,
+				FDB3AAF32FE6A03900B4B903 /* PotentialAnchoragesList.swift */,
+				FDB3AAF42FE6A03900B4B903 /* PotentialAnchoragesMap.swift */,
+				FDB3AAF52FE6A03900B4B903 /* ProtectionPicker.swift */,
+				FDB3AAF62FE6A03900B4B903 /* ProtectionScore.swift */,
+				FDB3AAF72FE6A03900B4B903 /* ProtectionSymbol.swift */,
+				FDB3AAF82FE6A03900B4B903 /* QuadrantPicker.swift */,
+				FDB3AAF92FE6A03900B4B903 /* RouteEditor.swift */,
+				FDB3AAFA2FE6A03900B4B903 /* RouteEditor+Button.swift */,
+				FDB3AAFB2FE6A03900B4B903 /* RouteEditor+MapBasket.swift */,
+				FDB3AAFC2FE6A03900B4B903 /* RouteEditor+MapContent.swift */,
+				FDB3AAFD2FE6A03900B4B903 /* RouteEditor+OverlayControls.swift */,
+				FDB3AAFE2FE6A03900B4B903 /* RouteLoader.swift */,
+				FDB3AAFF2FE6A03900B4B903 /* RouteMaker.swift */,
+				FDB3AB002FE6A03900B4B903 /* RoutePolyline.swift */,
+				FDB3AB012FE6A03900B4B903 /* RouteSnippet.swift */,
+				FDB3AB022FE6A03900B4B903 /* SingleStarRating.swift */,
+				FDB3AB032FE6A03900B4B903 /* SwipeEditHarbour.swift */,
+				FDB3AB042FE6A03900B4B903 /* TextPicker.swift */,
+				FDB3AB052FE6A03900B4B903 /* VoyageConditionsLine.swift */,
+				FDB3AB062FE6A03900B4B903 /* VoyageIntent.swift */,
+				FDB3AB072FE6A03900B4B903 /* VoyageIntent+Underway.swift */,
+				FDB3AB082FE6A03900B4B903 /* VoyageIntentForm.swift */,
+				FDB3AB092FE6A03900B4B903 /* VoyageIntentQuickForm.swift */,
+				FDB3AB0A2FE6A03900B4B903 /* VoyageIntentWrapper.swift */,
+				FDB3AB0B2FE6A03900B4B903 /* WarningBadge.swift */,
+				FDB3AB0C2FE6A03900B4B903 /* WaypointDeduplicationMap.swift */,
+				FDB3AB0D2FE6A03900B4B903 /* WaypointSnippet.swift */,
+			);
+			path = "Voyage Planning";
 			sourceTree = "<group>";
 		};
 		FDE215CB2FE5B0CF00F60799 /* Locations */ = {
@@ -453,7 +901,6 @@
 				FDE216112FE5B0CF00F60799 /* TideTableSection.swift */,
 				FDE216122FE5B0CF00F60799 /* TowingSymbol.swift */,
 				FDE216132FE5B0CF00F60799 /* TripDestinationPicker.swift */,
-				FDE216142FE5B0CF00F60799 /* TripDetailsView.swift */,
 				FDE216152FE5B0CF00F60799 /* TripEditor.swift */,
 				FDE216162FE5B0CF00F60799 /* TripEditSheetModifier.swift */,
 				FDE216172FE5B0CF00F60799 /* TripHarboursSection.swift */,
@@ -518,6 +965,7 @@
 				A055ACDAA9D3D87785FCD25E /* FoundationSalt */,
 				8E992BCD553F9A6B429F6E69 /* FoundationUI */,
 				3A5EF7F29FD689CA3D285C15 /* WxSalt */,
+				FDB3AA5C2FE5BB2400B4B903 /* FocusOnAppear */,
 			);
 			productName = Crwx;
 			productReference = FD091F302FE57B6F001706D6 /* Crwx.app */;
@@ -595,6 +1043,7 @@
 				0DCB7B5F836A4254F4781F67 /* XCRemoteSwiftPackageReference "FoundationSalt" */,
 				BD5B6FFB262C70F737536DE6 /* XCRemoteSwiftPackageReference "FoundationUI" */,
 				E8A12B45D18F4B3736A233CA /* XCRemoteSwiftPackageReference "WxSalt" */,
+				FDB3AA5A2FE5BA6D00B4B903 /* XCRemoteSwiftPackageReference "FocusOnAppear" */,
 			);
 			productRefGroup = FD091F312FE57B6F001706D6 /* Products */;
 			projectDirPath = "";
@@ -684,7 +1133,6 @@
 				FDE216602FE5B0CF00F60799 /* LocalForecastLine.swift in Sources */,
 				FDE216612FE5B0CF00F60799 /* NewTripButton.swift in Sources */,
 				FDE216622FE5B0CF00F60799 /* LocalWeatherEditor.swift in Sources */,
-				FDE216632FE5B0CF00F60799 /* TripDetailsView.swift in Sources */,
 				FDE216642FE5B0CF00F60799 /* UnderwayFetchDetail.swift in Sources */,
 				FDE216652FE5B0CF00F60799 /* ObservationSnippet.swift in Sources */,
 				FDE216662FE5B0CF00F60799 /* SailingFollowMeModifier.swift in Sources */,
@@ -703,8 +1151,144 @@
 				FDE216732FE5B0CF00F60799 /* VoyageEvent.swift in Sources */,
 				FDE216742FE5B0CF00F60799 /* EventRelativeSentence.swift in Sources */,
 				FDE216752FE5B0CF00F60799 /* EventLine.swift in Sources */,
+				FDB3AA852FE5BBA200B4B903 /* Trip.swift in Sources */,
+				FDB3AA862FE5BBA200B4B903 /* Cruise.swift in Sources */,
+				FDB3AA872FE5BBA200B4B903 /* TripSchemaV3.swift in Sources */,
+				FDB3AA882FE5BBA200B4B903 /* Harbour.swift in Sources */,
+				FDB3AA892FE5BBA200B4B903 /* BackupActor.swift in Sources */,
+				FDB3AA8A2FE5BBA200B4B903 /* Trip+Extended.swift in Sources */,
+				FDB3AA8B2FE5BBA200B4B903 /* TripSchemaV16.swift in Sources */,
+				FDB3AA8C2FE5BBA200B4B903 /* Track.swift in Sources */,
+				FDB3AA8D2FE5BBA200B4B903 /* TripSchemaV19.swift in Sources */,
+				FDB3AA8E2FE5BBA200B4B903 /* TripSchemaV1.swift in Sources */,
+				FDB3AA8F2FE5BBA200B4B903 /* TripSchemaV17.swift in Sources */,
+				FDB3AA902FE5BBA200B4B903 /* TripSchemaV20.swift in Sources */,
+				FDB3AA912FE5BBA200B4B903 /* Trip+Previews.swift in Sources */,
+				FDB3AA922FE5BBA200B4B903 /* TripSchemaV2.swift in Sources */,
+				FDB3AA932FE5BBA200B4B903 /* TripSchemaV10.swift in Sources */,
+				FDB3AA942FE5BBA200B4B903 /* TripSchemaV9.swift in Sources */,
+				FDB3AA952FE5BBA200B4B903 /* TripSchemaV13.swift in Sources */,
+				FDB3AA962FE5BBA200B4B903 /* TripSchemaV5.swift in Sources */,
+				FDB3AA972FE5BBA200B4B903 /* TripSchemaV6.swift in Sources */,
+				FDB3AA982FE5BBA200B4B903 /* BackupButton.swift in Sources */,
+				FDB3AA992FE5BBA200B4B903 /* BackModelActor.swift in Sources */,
+				FDB3AA9A2FE5BBA200B4B903 /* TripSchemaV4.swift in Sources */,
+				FDB3AA9B2FE5BBA200B4B903 /* LocationProfile.swift in Sources */,
+				FDB3AA9C2FE5BBA200B4B903 /* TripSchemaV14.swift in Sources */,
+				FDB3AA9D2FE5BBA200B4B903 /* Waypoint.swift in Sources */,
+				FDB3AA9E2FE5BBA200B4B903 /* TripSchemaV12.swift in Sources */,
+				FDB3AA9F2FE5BBA200B4B903 /* TripSchemaV8.swift in Sources */,
+				FDB3AAA02FE5BBA200B4B903 /* Route.swift in Sources */,
+				FDB3AAA12FE5BBA200B4B903 /* TripSchemaV15.swift in Sources */,
+				FDB3AAA22FE5BBA200B4B903 /* TripSchemaV7.swift in Sources */,
+				FDB3AAA32FE5BBA200B4B903 /* TripMigrationPlan.swift in Sources */,
+				FDB3AAA42FE5BBA200B4B903 /* BackupData.swift in Sources */,
+				FDB3AAA52FE5BBA200B4B903 /* Photo.swift in Sources */,
+				FDB3AAA62FE5BBA200B4B903 /* TripSchemaV18.swift in Sources */,
+				FDB3AAA72FE5BBA200B4B903 /* Trip+Validate.swift in Sources */,
+				FDB3AAA82FE5BBA200B4B903 /* Sounding.swift in Sources */,
+				FDB3AAA92FE5BBA200B4B903 /* TripSchemaV11.swift in Sources */,
 				FDE216762FE5B0CF00F60799 /* CurrentSpeedSymbol.swift in Sources */,
 				FDE216772FE5B0CF00F60799 /* TripViewModel.swift in Sources */,
+				FDB3AB0F2FE6A03900B4B903 /* AnchorageChooser.swift in Sources */,
+				FDB3AB102FE6A03900B4B903 /* Harbour+LookupName.swift in Sources */,
+				FDB3AB112FE6A03900B4B903 /* CruiseViewModel.swift in Sources */,
+				FDB3AB122FE6A03900B4B903 /* ProtectionPicker.swift in Sources */,
+				FDB3AB132FE6A03900B4B903 /* CruisesRow.swift in Sources */,
+				FDB3AB142FE6A03900B4B903 /* HubInfo.swift in Sources */,
+				FDB3AB152FE6A03900B4B903 /* HarbourAtAGlance.swift in Sources */,
+				FDB3AB162FE6A03900B4B903 /* PotentialAnchoragesList.swift in Sources */,
+				FDB3AB172FE6A03900B4B903 /* ProtectionSymbol.swift in Sources */,
+				FDB3AB182FE6A03900B4B903 /* HarboursMap.swift in Sources */,
+				FDB3AB192FE6A03900B4B903 /* EditCruiseModifier.swift in Sources */,
+				FDB3AB1A2FE6A03900B4B903 /* HarbourRoutesSublist.swift in Sources */,
+				FDB3AB1B2FE6A03900B4B903 /* CruisesList.swift in Sources */,
+				FDB3AB1C2FE6A03900B4B903 /* CoastalForecasts.swift in Sources */,
+				FDB3AB1D2FE6A03900B4B903 /* HarbourTab.swift in Sources */,
+				FDB3AB1E2FE6A03900B4B903 /* HarbourMap.swift in Sources */,
+				FDB3AB1F2FE6A03900B4B903 /* CruiseStopDetail.swift in Sources */,
+				FDB3AB202FE6A03900B4B903 /* AnchorageFacilitiesFilterMenu.swift in Sources */,
+				FDB3AB212FE6A03900B4B903 /* SingleStarRating.swift in Sources */,
+				FDB3AB222FE6A03900B4B903 /* TextPicker.swift in Sources */,
+				FDB3AB232FE6A03900B4B903 /* CoastalRegionPicker.swift in Sources */,
+				FDB3AB242FE6A03900B4B903 /* PotentialAnchoragesMap.swift in Sources */,
+				FDB3AB252FE6A03900B4B903 /* DeleteCruiseModifier.swift in Sources */,
+				FDB3AB262FE6A03900B4B903 /* Facility.swift in Sources */,
+				FDB3AB272FE6A03900B4B903 /* HubsLink.swift in Sources */,
+				FDB3AB282FE6A03900B4B903 /* PotentialAnchorages.swift in Sources */,
+				FDB3AB292FE6A03900B4B903 /* RouteLoader.swift in Sources */,
+				FDB3AB2A2FE6A03900B4B903 /* QuadrantPicker.swift in Sources */,
+				FDB3AB2B2FE6A03900B4B903 /* CruiseRow.swift in Sources */,
+				FDB3AB2C2FE6A03900B4B903 /* WarningBadge.swift in Sources */,
+				FDB3AB2D2FE6A03900B4B903 /* RouteEditor+OverlayControls.swift in Sources */,
+				FDB3AB2E2FE6A03900B4B903 /* AnchorageDot.swift in Sources */,
+				FDB3AB2F2FE6A03900B4B903 /* ExposureSymbol.swift in Sources */,
+				FDB3AB302FE6A03900B4B903 /* AddToCruiseButton.swift in Sources */,
+				FDB3AB312FE6A03900B4B903 /* ExpandableSplitView.swift in Sources */,
+				FDB3AB322FE6A03900B4B903 /* CoordinateBrowser.swift in Sources */,
+				FDB3AB332FE6A03900B4B903 /* CruisingGuideReader.swift in Sources */,
+				FDB3AB342FE6A03900B4B903 /* GridHelper.swift in Sources */,
+				FDB3AB352FE6A03900B4B903 /* MarineWeatherRow.swift in Sources */,
+				FDB3AB362FE6A03900B4B903 /* HarbourViewModel.swift in Sources */,
+				FDB3AB372FE6A03900B4B903 /* HarbourChooserMap.swift in Sources */,
+				FDB3AB382FE6A03900B4B903 /* AnchorageDetail.swift in Sources */,
+				FDB3AB392FE6A03900B4B903 /* CoastalRegion.swift in Sources */,
+				FDB3AB3A2FE6A03900B4B903 /* CruisingGuide.swift in Sources */,
+				FDB3AB3B2FE6A03900B4B903 /* AnchorageTidePredictions.swift in Sources */,
+				FDB3AB3C2FE6A03900B4B903 /* SwipeEditHarbour.swift in Sources */,
+				FDB3AB3D2FE6A03900B4B903 /* Harbour+Potential.swift in Sources */,
+				FDB3AB3E2FE6A03900B4B903 /* AnchorageRow.swift in Sources */,
+				FDB3AB3F2FE6A03900B4B903 /* WaypointSnippet.swift in Sources */,
+				FDB3AB402FE6A03900B4B903 /* AnchorageTideChart.swift in Sources */,
+				FDB3AB412FE6A03900B4B903 /* CompassExposure.swift in Sources */,
+				FDB3AB422FE6A03900B4B903 /* RoutePolyline.swift in Sources */,
+				FDB3AB432FE6A03900B4B903 /* VoyageIntent+Underway.swift in Sources */,
+				FDB3AB442FE6A03900B4B903 /* WaypointDeduplicationMap.swift in Sources */,
+				FDB3AB452FE6A03900B4B903 /* BottomType.swift in Sources */,
+				FDB3AB462FE6A03900B4B903 /* VoyageIntentQuickForm.swift in Sources */,
+				FDB3AB472FE6A03900B4B903 /* ProtectionScore.swift in Sources */,
+				FDB3AB482FE6A03900B4B903 /* HarbourChooserList.swift in Sources */,
+				FDB3AB492FE6A03900B4B903 /* StopActions.swift in Sources */,
+				FDB3AB4A2FE6A03900B4B903 /* AnchoragePotential.swift in Sources */,
+				FDB3AB4B2FE6A03900B4B903 /* RouteMaker.swift in Sources */,
+				FDB3AB4C2FE6A03900B4B903 /* MarineWeatherBrowser.swift in Sources */,
+				FDB3AB4D2FE6A03900B4B903 /* HubsMap.swift in Sources */,
+				FDB3AB4E2FE6A03900B4B903 /* CompassQuadrant.swift in Sources */,
+				FDB3AB4F2FE6A03900B4B903 /* RouteEditor+MapContent.swift in Sources */,
+				FDB3AB502FE6A03900B4B903 /* HarbourDetail.swift in Sources */,
+				FDB3AB512FE6A03900B4B903 /* ChooseAnchorageRow.swift in Sources */,
+				FDB3AB522FE6A03900B4B903 /* RouteEditor+Button.swift in Sources */,
+				FDB3AB532FE6A03900B4B903 /* HarbourDestinations.swift in Sources */,
+				FDB3AB542FE6A03900B4B903 /* CruiseForm.swift in Sources */,
+				FDB3AB552FE6A03900B4B903 /* FacilitiesPicker.swift in Sources */,
+				FDB3AB562FE6A03900B4B903 /* AnchorageLink.swift in Sources */,
+				FDB3AB572FE6A03900B4B903 /* CruiseWeather.swift in Sources */,
+				FDB3AB582FE6A03900B4B903 /* VoyageIntentWrapper.swift in Sources */,
+				FDB3AB592FE6A03900B4B903 /* HarbourChooser.swift in Sources */,
+				FDB3AB5A2FE6A03900B4B903 /* HarbourDetailPane.swift in Sources */,
+				FDB3AB5B2FE6A03900B4B903 /* RouteEditor.swift in Sources */,
+				FDB3AB5C2FE6A03900B4B903 /* ChartMap.swift in Sources */,
+				FDB3AB5D2FE6A03900B4B903 /* GuideRating.swift in Sources */,
+				FDB3AB5E2FE6A03900B4B903 /* DestinationsList.swift in Sources */,
+				FDB3AB5F2FE6A03900B4B903 /* VoyageConditionsLine.swift in Sources */,
+				FDB3AB602FE6A03900B4B903 /* MakeCruiseButton.swift in Sources */,
+				FDB3AB612FE6A03900B4B903 /* DestinationRow.swift in Sources */,
+				FDB3AB622FE6A03900B4B903 /* HarbourPicker.swift in Sources */,
+				FDB3AB632FE6A03900B4B903 /* RouteSnippet.swift in Sources */,
+				FDB3AB642FE6A03900B4B903 /* LegAnnotation.swift in Sources */,
+				FDB3AB652FE6A03900B4B903 /* ExposureEditor.swift in Sources */,
+				FDB3AB662FE6A03900B4B903 /* AnchorageBanner.swift in Sources */,
+				FDB3AB672FE6A03900B4B903 /* VoyageIntent.swift in Sources */,
+				FDB3AB682FE6A03900B4B903 /* AddCruiseButton.swift in Sources */,
+				FDB3AB692FE6A03900B4B903 /* AnchorageBrowser.swift in Sources */,
+				FDB3AB6A2FE6A03900B4B903 /* RouteEditor+MapBasket.swift in Sources */,
+				FDB3AB6B2FE6A03900B4B903 /* VoyageIntentForm.swift in Sources */,
+				FDB3AB6C2FE6A03900B4B903 /* AddHarbourPointPicker.swift in Sources */,
+				FDB3AB6D2FE6A03900B4B903 /* HarbourInfoEditor.swift in Sources */,
+				FDB3AB6E2FE6A03900B4B903 /* MultipleTripsModifier.swift in Sources */,
+				FDB3AB6F2FE6A03900B4B903 /* CruiseStats.swift in Sources */,
+				FDB3AB702FE6A03900B4B903 /* RemoveStopButton.swift in Sources */,
+				FDB3AB712FE6A03900B4B903 /* CruisingGuideEditor.swift in Sources */,
 				FDE216782FE5B0CF00F60799 /* AllTripsView.swift in Sources */,
 				FDE216792FE5B0CF00F60799 /* TidePredictionsEditor.swift in Sources */,
 				FDE2167A2FE5B0CF00F60799 /* EventDetails.swift in Sources */,
@@ -1153,8 +1737,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/saltily/WxSalt.git";
 			requirement = {
-				branch = master;
+				branch = main;
 				kind = branch;
+			};
+		};
+		FDB3AA5A2FE5BA6D00B4B903 /* XCRemoteSwiftPackageReference "FocusOnAppear" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/naan/FocusOnAppear";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1174,6 +1766,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0DCB7B5F836A4254F4781F67 /* XCRemoteSwiftPackageReference "FoundationSalt" */;
 			productName = FoundationSalt;
+		};
+		FDB3AA5C2FE5BB2400B4B903 /* FocusOnAppear */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDB3AA5A2FE5BA6D00B4B903 /* XCRemoteSwiftPackageReference "FocusOnAppear" */;
+			productName = FocusOnAppear;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

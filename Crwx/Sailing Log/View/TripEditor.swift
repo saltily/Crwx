@@ -7,7 +7,9 @@
 
 import SwiftUI
 import FoundationUI
+import SwiftData
 import WxSalt
+import FoundationSalt
 
 struct TripEditor: View {
     @Bindable var trip: Trip

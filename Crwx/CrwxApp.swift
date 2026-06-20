@@ -25,7 +25,7 @@ struct CrwxApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MobileHomeView()
         }
 //        .modelContainer(sharedModelContainer)
     }

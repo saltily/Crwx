@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "focusonappear",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/naan/FocusOnAppear",
+      "state" : {
+        "revision" : "f7a3e8a9de5f254af89c0fa9f4ee510cd81a9021",
+        "version" : "1.2.0"
+      }
+    },
+    {
       "identity" : "mathexpression",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/peredaniel/MathExpression.git",

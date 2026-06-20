@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FoundationSalt
 
 struct RouteLeg: Codable {
     let start: LocationSnippet
