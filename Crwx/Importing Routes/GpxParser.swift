@@ -8,6 +8,8 @@
 import Foundation
 import SWXMLHash
 import WxSalt
+import FoundationSalt
+import os
 
 // MARK: Init
 struct GpxParser {

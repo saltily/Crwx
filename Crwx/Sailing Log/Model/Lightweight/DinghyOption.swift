@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FoundationSalt
 
 enum DinghyOption: String, Codable, CaseIterable {
     case none, white, green

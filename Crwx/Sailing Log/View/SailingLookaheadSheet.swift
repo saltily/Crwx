@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import FoundationSalt
+import WxSalt
+import os
 
 struct SailingLookaheadSheet: View {
     @Bindable var model: SailingLookaheadViewModel
@@ -34,7 +37,8 @@ struct SailingLookaheadSheet: View {
                         .foregroundStyle(.secondary)
                     Text("DTG")
                     Spacer()
-                    (Text(model.distance, format: .number.precision(.fractionLength(1))) + Text(" nm"))
+                    let s = model.distance.formatted(.number.precision(.fractionLength(1)))
+                    Text("\(s) nm")
                         .foregroundStyle(.secondary)
                 }
                 
@@ -55,7 +59,9 @@ struct SailingLookaheadSheet: View {
                         HStack {
                             Image(systemName: tide.movement.symbolName)
                                 .font(.subheadline)
-                            Text(tide.height.converted(to: .feet).value, format: .number.precision(.fractionLength(0...1))) + Text(" ft")
+                            let n = tide.height.converted(to: .feet).value
+                            let s = n.formatted(.number.precision(.fractionLength(0...1)))
+                            Text("\(s) ft")
                         }
                         .foregroundStyle(.secondary)
                     } else {

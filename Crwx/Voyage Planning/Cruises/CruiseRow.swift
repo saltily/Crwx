@@ -7,6 +7,8 @@
 
 import SwiftUI
 import FoundationUI
+import FoundationSalt
+import SwiftData
 
 struct CruiseRow: View {
     @Bindable var cruise: Cruise

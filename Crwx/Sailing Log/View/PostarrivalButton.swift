@@ -7,6 +7,9 @@
 
 import SwiftUI
 import FoundationUI
+import FoundationSalt
+import WxSalt
+import FocusOnAppear
 
 struct PostarrivalButton: View {
     let model: PostArrivalViewModel
@@ -29,14 +32,16 @@ struct PostarrivalButton: View {
                     else {
                         HStack {
                             if let odometer = model.odometer {
-                                Text(odometer, format: .number.grouping(.never)) + Text(" nm")
+                                let s = odometer.formatted(.number.grouping(.never))
+                                Text("\(s) nm")
                             }
                             Spacer()
                             if let fuel = model.fuel,
                                let inches = fuel.inches
                             {
-                                Text(inches.eighths) + Text(" in")
-                                Text(fuel.gallons ?? 0, format: .number.precision(.fractionLength(1))) + Text(" gals")
+                                Text("\(inches.eighths) in")
+                                let s = (fuel.gallons ?? 0).formatted(.number.precision(.fractionLength(1)))
+                                Text("\(s) gals")
                             }
                         }
                         .foregroundColor(.secondary)
@@ -46,7 +51,8 @@ struct PostarrivalButton: View {
                                 .foregroundStyle(.primary)
                             Spacer()
                             if let milesMadeGood = model.milesMadeGood {
-                                Text(milesMadeGood, format: .number.precision(.fractionLength(0...1))) + Text(" nm")
+                                let s = milesMadeGood.formatted(.number.precision(.fractionLength(0...1)))
+                                Text("\(s) nm")
                             }
                             Text("Duration")
                                 .padding(.leading, 10)
@@ -62,14 +68,16 @@ struct PostarrivalButton: View {
                                 .foregroundStyle(.primary)
                             Spacer()
                             if let averageSpeed = model.averageSpeed {
-                                Text(averageSpeed, format: .number.precision(.fractionLength(0...1))) + Text(" kts")
+                                let s = averageSpeed.formatted(.number.precision(.fractionLength(0...1)))
+                                Text("\(s) kts")
                             }
                             Text("SOG max")
                                 .padding(.leading, 10)
                                 .foregroundStyle(.primary)
                             Spacer()
                             if let maximumSpeed = model.maximumSpeed {
-                                Text(maximumSpeed, format: .number.precision(.fractionLength(0...1))) + Text(" kts")
+                                let s = maximumSpeed.formatted(.number.precision(.fractionLength(0...1)))
+                                Text("\(s) kts")
                             }
                         }
                         .foregroundStyle(.secondary)
@@ -79,7 +87,7 @@ struct PostarrivalButton: View {
                                 Text("Rode")
                                     .foregroundStyle(.primary)
                                 Spacer()
-                                Text(fathoms, format: .number) + Text(" ftm")
+                                Text("\(fathoms) ftm")
                                 Text("Depth")
                                     .padding(.leading, 10)
                                     .foregroundStyle(.primary)
@@ -101,7 +109,7 @@ struct PostarrivalButton: View {
                                     .foregroundStyle(.primary)
                                 Spacer()
                                 if let maximumSwing = model.maximumSwing {
-                                    Text(maximumSwing.rounded, format: .number) + Text(" ft")
+                                    Text("\(maximumSwing.rounded) ft")
                                 }
                             }
                             .foregroundStyle(.secondary)

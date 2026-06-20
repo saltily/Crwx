@@ -7,6 +7,7 @@
 
 import Foundation
 import WxSalt
+internal import _LocationEssentials
 
 struct TideStationSnippet: Codable, Equatable {
     let id: Int
