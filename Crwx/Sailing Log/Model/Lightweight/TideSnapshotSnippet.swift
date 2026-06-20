@@ -7,6 +7,7 @@
 
 import Foundation
 import WxSalt
+import FoundationSalt
 
 struct TideSnapshotSnippet: Codable, Equatable {
     var date: Date

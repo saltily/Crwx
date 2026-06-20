@@ -8,6 +8,8 @@
 import SwiftUI
 import MapKit
 import FoundationUI
+import FoundationSalt
+import WxSalt
 
 struct SailingSnapshotChart: View {
     init(model: SailingSnapshotViewModel, initialRegion: MKCoordinateRegion) {

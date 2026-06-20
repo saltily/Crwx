@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SwiftData
+import UniformTypeIdentifiers
 
 struct BackupButton: View {
     @Environment(\.modelContext) private var context

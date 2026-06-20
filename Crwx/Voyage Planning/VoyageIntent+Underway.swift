@@ -7,6 +7,7 @@
 
 import Foundation
 import FoundationSalt
+import SwiftData
 
 extension PotentialAnchorages.Engine {
     func loadConditions(underway: ClosedRange<Date>, start: UUID) async throws -> ([WindSnippet], [Range<Date>]) {

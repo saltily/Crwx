@@ -10,6 +10,8 @@ import MapKit
 import SwiftData
 import FoundationUI
 import FoundationSalt
+import os
+import WxSalt
 
 struct WaypointDeduplicationButton: View {
     var body: some View {
@@ -192,4 +194,8 @@ struct WaypointDeduplicationMap: View {
 
 #Preview {
     WaypointDeduplicationMap()
+}
+
+extension String {
+    static let deduplicationThresholdKey = "com.saltily.Mewx.deduplicationThresholdKey" // Double
 }

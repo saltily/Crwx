@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import FoundationSalt
 import CoreLocation
+import FoundationUI
 
 typealias Waypoint = CurrentSchema.Waypoint
 

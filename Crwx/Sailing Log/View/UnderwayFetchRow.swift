@@ -10,6 +10,7 @@ import FoundationUI
 import FoundationSalt
 import CoreLocation
 import WxSalt
+import SwiftData
 
 struct UnderwayFetchRow: View {
     @Binding var model: UnderwayViewModel

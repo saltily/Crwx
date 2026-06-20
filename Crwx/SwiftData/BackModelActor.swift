@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 import FoundationSalt
 import WxSalt
+import os
 
 // MARK: - Save Location Profile
 @ModelActor

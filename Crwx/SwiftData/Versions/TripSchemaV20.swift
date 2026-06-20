@@ -190,7 +190,7 @@ public enum TripSchemaV20: VersionedSchema {
     }
     
     // MARK: Track
-    @Model final class Track {
+    @Model final class Track: nonisolated Identifiable {
         var id: UUID = UUID()
         var name: String = ""
         var date: Date?

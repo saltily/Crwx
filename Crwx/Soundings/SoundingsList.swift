@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import FoundationSalt
+import WxSalt
 
 struct SoundingsList: View {
     init(type: Sounding.T) {

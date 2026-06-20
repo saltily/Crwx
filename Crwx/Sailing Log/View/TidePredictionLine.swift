@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FoundationSalt
 
 struct TidePredictionLine: View {
     let predictions: [TidePredictionSnippet]
@@ -17,7 +18,8 @@ struct TidePredictionLine: View {
                 Spacer()
                 Text("H")
                 Text(daytimeHi.date, format: .dateTime.hour().minute())
-                Text(daytimeHi.height, format: .number.precision(.fractionLength(1))) + Text(" ft")
+                let s = daytimeHi.height.formatted(.number.precision(.fractionLength(1)))
+                Text("\(s) ft")
             }
         }
     }

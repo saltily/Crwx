@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import WxSalt
 
 struct TripMapSection<Content>: View where Content: View {
     let corner: Alignment

@@ -8,6 +8,7 @@
 import SwiftUI
 import FoundationUI
 import WxSalt
+import FoundationSalt
 
 struct UnderwayButton: View {
     let model: UnderwayViewModel
@@ -64,7 +65,8 @@ struct UnderwayButton: View {
                                 Group {
                                     WindDirectionSymbol(directions: .init(model.windAngle))
                                     Text(model.compassDirection.abbreviation)
-                                    (Text(windSpeed, format: .number.precision(.fractionLength(0...1))) + Text(" kts"))
+                                    let s = windSpeed.formatted(.number.precision(.fractionLength(0...1)))
+                                    Text("\(s) kts")
                                 }
                                 //                        .foregroundStyle(.secondary)
                             }
@@ -81,13 +83,15 @@ struct UnderwayButton: View {
                             Text("Depth")
                             Spacer()
                             if let depth = model.depth {
-                                (Text(depth, format: .number.precision(.fractionLength(1))) + Text(" ft"))
+                                let s = depth.formatted(.number.precision(.fractionLength(1)))
+                                Text("\(s) ft")
                                     .foregroundStyle(.secondary)
                             }
                             Text("UKC")
                             Spacer()
                             if let ukc = model.ukc {
-                                (Text(ukc, format: .number.precision(.fractionLength(1))) + Text(" ft"))
+                                let s = ukc.formatted(.number.precision(.fractionLength(1)))
+                                Text("\(s) ft")
                                     .foregroundStyle(.secondary)
                             }
                         }
@@ -97,7 +101,8 @@ struct UnderwayButton: View {
                             Text("Tide")
                             Spacer()
                             if let tide = model.tide?.height {
-                                (Text(tide, format: .number.precision(.fractionLength(1))) + Text(" ft"))
+                                let s = tide.formatted(.number.precision(.fractionLength(1)))
+                                Text("\(s) ft")
                                     .foregroundStyle(.secondary)
                             }
                             if !model.tidalCurrent.isEmpty {

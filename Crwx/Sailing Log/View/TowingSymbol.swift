@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct TowingSymbol: View {
     let dinghy: DinghyOption

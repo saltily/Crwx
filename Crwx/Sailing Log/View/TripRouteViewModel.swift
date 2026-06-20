@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import FoundationSalt
 
 struct TripRouteViewModel: Equatable {
     var start: UUID?

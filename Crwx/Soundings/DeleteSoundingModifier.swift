@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FoundationUI
+import SwiftData
 
 struct DeleteSoundingModifier: ViewModifier {
     let model: Sounding

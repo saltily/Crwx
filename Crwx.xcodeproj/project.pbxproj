@@ -17,6 +17,9 @@
 		FD091F8F2FE590F6001706D6 /* CrwxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F8D2FE590F6001706D6 /* CrwxTests.swift */; };
 		FD091F932FE590FA001706D6 /* CrwxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F902FE590FA001706D6 /* CrwxUITests.swift */; };
 		FD091F942FE590FA001706D6 /* CrwxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */; };
+		FD399ACE2FE721CF00E37AEA /* LocationChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */; };
+		FD399AD02FE757AC00E37AEA /* PointText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399ACF2FE757AC00E37AEA /* PointText.swift */; };
+		FD399AD22FE7584900E37AEA /* LocationPointPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */; };
 		FDB3AA5D2FE5BB2400B4B903 /* FocusOnAppear in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = FDB3AA5C2FE5BB2400B4B903 /* FocusOnAppear */; };
 		FDB3AA852FE5BBA200B4B903 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA7F2FE5BBA200B4B903 /* Trip.swift */; };
 		FDB3AA862FE5BBA200B4B903 /* Cruise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA782FE5BBA200B4B903 /* Cruise.swift */; };
@@ -353,6 +356,9 @@
 		FD091F8D2FE590F6001706D6 /* CrwxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxTests.swift; sourceTree = "<group>"; };
 		FD091F902FE590FA001706D6 /* CrwxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITests.swift; sourceTree = "<group>"; };
 		FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChoice.swift; sourceTree = "<group>"; };
+		FD399ACF2FE757AC00E37AEA /* PointText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointText.swift; sourceTree = "<group>"; };
+		FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPointPicker.swift; sourceTree = "<group>"; };
 		FDB3AA5E2FE5BBA200B4B903 /* TripMigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMigrationPlan.swift; sourceTree = "<group>"; };
 		FDB3AA5F2FE5BBA200B4B903 /* TripSchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV1.swift; sourceTree = "<group>"; };
 		FDB3AA602FE5BBA200B4B903 /* TripSchemaV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV2.swift; sourceTree = "<group>"; };
@@ -792,6 +798,7 @@
 				FDB3AA782FE5BBA200B4B903 /* Cruise.swift */,
 				FDB3AA792FE5BBA200B4B903 /* Harbour.swift */,
 				FDB3AA7A2FE5BBA200B4B903 /* LocationProfile.swift */,
+				FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */,
 				FDB3AA7B2FE5BBA200B4B903 /* Photo.swift */,
 				FDB3AA7C2FE5BBA200B4B903 /* Route.swift */,
 				FDB3AA7D2FE5BBA200B4B903 /* Sounding.swift */,
@@ -867,6 +874,8 @@
 				FDB3AADB2FE6A03900B4B903 /* GridHelper.swift */,
 				FDB3AADC2FE6A03900B4B903 /* GuideRating.swift */,
 				FDB3AADD2FE6A03900B4B903 /* Harbour+LookupName.swift */,
+				FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */,
+				FD399ACF2FE757AC00E37AEA /* PointText.swift */,
 				FDB3AADE2FE6A03900B4B903 /* Harbour+Potential.swift */,
 				FDB3AADF2FE6A03900B4B903 /* HarbourAtAGlance.swift */,
 				FDB3AAE02FE6A03900B4B903 /* HarbourChooser.swift */,
@@ -1386,6 +1395,7 @@
 				FDB3AA862FE5BBA200B4B903 /* Cruise.swift in Sources */,
 				FDB3AA872FE5BBA200B4B903 /* TripSchemaV3.swift in Sources */,
 				FDB3AA882FE5BBA200B4B903 /* Harbour.swift in Sources */,
+				FD399AD02FE757AC00E37AEA /* PointText.swift in Sources */,
 				FDB3AA892FE5BBA200B4B903 /* BackupActor.swift in Sources */,
 				FDB3AA8A2FE5BBA200B4B903 /* Trip+Extended.swift in Sources */,
 				FDB3AA8B2FE5BBA200B4B903 /* TripSchemaV16.swift in Sources */,
@@ -1443,6 +1453,7 @@
 				FDB3ABE12FE6A1EB00B4B903 /* PhotosManager.swift in Sources */,
 				FDB3ABE22FE6A1EB00B4B903 /* WebShareable.swift in Sources */,
 				FDB3ABE32FE6A1EB00B4B903 /* SwipeToShareModifier.swift in Sources */,
+				FD399ACE2FE721CF00E37AEA /* LocationChoice.swift in Sources */,
 				FDB3ABE42FE6A1EB00B4B903 /* PickPhotosButton.swift in Sources */,
 				FDB3ABE52FE6A1EB00B4B903 /* WhereWasIButton.swift in Sources */,
 				FDB3ABE62FE6A1EB00B4B903 /* PhotoViewModel.swift in Sources */,
@@ -1461,6 +1472,7 @@
 				FDB3ABC12FE6A16300B4B903 /* TrackMatcherButton.swift in Sources */,
 				FDB3ABC22FE6A16300B4B903 /* SwipeEditTrackName.swift in Sources */,
 				FDB3AAA62FE5BBA200B4B903 /* TripSchemaV18.swift in Sources */,
+				FD399AD22FE7584900E37AEA /* LocationPointPicker.swift in Sources */,
 				FDB3AAA72FE5BBA200B4B903 /* Trip+Validate.swift in Sources */,
 				FDB3AAA82FE5BBA200B4B903 /* Sounding.swift in Sources */,
 				FDB3AAA92FE5BBA200B4B903 /* TripSchemaV11.swift in Sources */,

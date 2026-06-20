@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WxSalt
+import FoundationSalt
 
 struct LocalForecastLine: View {
     let forecast: ForecastSnippet?
@@ -25,7 +26,7 @@ struct LocalForecastLine: View {
                         .frame(height: 10)
                 }
                 if let highTemperature = forecast.highTemperature {
-                    Text(highTemperature.rounded, format: .number) + Text("º")
+                    Text("\(highTemperature.rounded)º")
                     WindDirectionSymbol(directions: .init(directions: forecast.winds.angles))
                         .padding(.leading, 10)
                     Text(forecast.winds.summaryWithGusts)

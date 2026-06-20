@@ -9,6 +9,7 @@ import SwiftUI
 import FoundationSalt
 import FoundationUI
 import CoreLocation
+import WxSalt
 
 struct PredepartureFetchDetail: View {
     init(model: Binding<PreDepartureViewModel>) {

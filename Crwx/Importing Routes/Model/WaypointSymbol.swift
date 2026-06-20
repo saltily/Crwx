@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum WaypointSymbol: Equatable, Hashable, Codable {
+enum WaypointSymbol: nonisolated Equatable, Hashable, Codable {
     case anchor, waypoint, greenAnchor, greenCross, square
     case hub
     case unknown(String)
