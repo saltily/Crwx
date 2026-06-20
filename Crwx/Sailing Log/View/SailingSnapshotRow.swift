@@ -8,6 +8,8 @@
 import SwiftUI
 import FoundationUI
 import CoreLocation
+import WxSalt
+import FoundationSalt
 
 struct SailingSnapshotRow: View {
     let start: Date?

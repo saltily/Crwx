@@ -11,6 +11,7 @@ import FoundationSalt
 import CoreLocation
 import SwiftUI
 import WxSalt
+import os
 
 typealias Harbour = CurrentSchema.Harbour
 
@@ -225,6 +226,7 @@ extension Harbour: Encodable {
     }
 }
 extension Harbour: WebShareable {
+    @MainActor
     func share(_ context: ModelContext) async throws -> URL {
         if let id = self.webId {
             let url = URL(string: "https://www.saltily.com/blouse/update-harbour")!

@@ -9,6 +9,7 @@ import Foundation
 import FoundationUI
 import FoundationSalt
 import SwiftData
+import os
 
 typealias Cruise = CurrentSchema.Cruise
 
@@ -82,6 +83,7 @@ extension Cruise: Encodable {
     }
 }
 extension Cruise: WebShareable {
+    @MainActor
     func share(_ context: ModelContext) async throws -> URL {
         if let id = self.webId {
             logger.trace("Previously uploaded")

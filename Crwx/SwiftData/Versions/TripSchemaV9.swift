@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 import FoundationSalt
 import WxSalt
+import os
 
 /// In the next version make route and waypoint import dates optional and set any `.distantFuture` to `nil`
 ///

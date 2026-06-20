@@ -252,7 +252,7 @@ public enum TripSchemaV20: VersionedSchema {
     }
     
     // MARK: Trip
-    @Model final class Trip {
+    @Model final class Trip: Identifiable {
         var id: UUID = UUID()
         var webId: Int?
         

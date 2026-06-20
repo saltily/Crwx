@@ -8,6 +8,8 @@
 import SwiftUI
 import FoundationSalt
 import FoundationUI
+import os
+import SwiftData
 
 struct AnchorageRow: View {
     @Binding var anchorage: AnchoragePotential
@@ -66,7 +68,7 @@ fileprivate struct RowGuts: View {
                 }
                 Spacer()
                 Group {
-                    (Text(anchorage.distance.rounded, format: .number) + Text(" nm"))
+                    Text("\(anchorage.distance.rounded) nm")
                         .font(.footnote)
                     Text(anchorage.duration, format: .duration.separator(.narrow).grouping(.none).hour().minute(2).fractionLength(0))
                         .font(.subheadline)

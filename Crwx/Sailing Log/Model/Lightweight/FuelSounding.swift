@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-struct FuelSounding: Codable, Equatable {
+struct FuelSounding: nonisolated Codable, Equatable {
     var soundingId: UUID = .init()
     var inches: Double? {
         didSet {

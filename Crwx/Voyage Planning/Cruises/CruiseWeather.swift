@@ -18,7 +18,7 @@ import WxSalt
 /// _weather = weather.encoded
 /// let weather = .init(decoding: _weather)
 /// ```
-struct CruiseWeather: Codable {
+struct CruiseWeather: nonisolated Codable {
     subscript(zone: MarineZone, day: Day) -> Winds? {
         contents[zone]?.contents[day]
     }

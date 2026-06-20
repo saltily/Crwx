@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 import FoundationSalt
 import WxSalt
+import os
 
 /// Incrementally remove codable types.
 /// On the first pass I'm just going to move the same codable types out of the schema and confirm that the migration is happy with that.  Ok, it thinks they are equal.  So now I'm going to setup to migrate each to a custom data backing, with custom encoding.

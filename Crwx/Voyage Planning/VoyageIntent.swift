@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 import CoreLocation
 import FoundationSalt
+import WxSalt
 
 struct VoyageIntent: Equatable, Mappable {
     // on a form, all fields describe the default and a button to reset to default after customising

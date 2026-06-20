@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import FoundationSalt
 
-struct CruisingGuide: Codable, Equatable {
+struct CruisingGuide: nonisolated Codable, Equatable {
     var year: Int = 2024
     var summary: String = ""
     var approaches: String = ""

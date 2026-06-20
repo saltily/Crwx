@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FoundationUI
+import SwiftData
 
 struct VoyagelogSection: View {
     @State var model: VoyageLogViewModel

@@ -7,6 +7,10 @@
 
 import SwiftUI
 import FoundationUI
+import SwiftData
+import os
+import FoundationSalt
+import WxSalt
 
 struct VoyageIntentForm: View {
     @Binding var intent: VoyageIntent
@@ -75,7 +79,8 @@ struct VoyageIntentForm: View {
                 } footer: {
                     HStack {
                         Spacer()
-                        Text(intent.range, format: .number.precision(.fractionLength(0...1))) + Text(" nm range")
+                        let s = intent.range.formatted(.number.precision(.fractionLength(0...1)))
+                        Text("\(s) nm range")
                     }
                 }
             }

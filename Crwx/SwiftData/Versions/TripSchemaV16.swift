@@ -10,6 +10,7 @@ import SwiftData
 import FoundationSalt
 import CoreLocation
 import WxSalt
+import os
 
 /// Adding ``Trip.id`` as UUID for linking to cruise legs
 /// Adding ``Cruise._legs``

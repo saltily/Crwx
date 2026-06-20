@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 import FoundationSalt
 import FoundationUI
+import WxSalt
 
 struct TrackDot: MapContent {
     init(_ point: any Mappable, tint: Color = .night) {

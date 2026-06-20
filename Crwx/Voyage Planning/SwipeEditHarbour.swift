@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SwiftData
+import FoundationUI
 
 struct SwipeEditHarbour: ViewModifier {
     @Bindable var harbour: Harbour

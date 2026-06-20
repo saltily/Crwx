@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 import FoundationSalt
 import WxSalt
+import os
 
 /// Make imported date optional (custom routes and waypoints) and add a couple more harbour properties for capturing cruising guide info.
 enum TripSchemaV10: VersionedSchema {

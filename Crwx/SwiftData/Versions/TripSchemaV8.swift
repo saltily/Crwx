@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 import FoundationSalt
 import WxSalt
+import os
 
 /// Setting up relationships for track and route types, and cache analysis of tracks
 enum TripSchemaV8: VersionedSchema {

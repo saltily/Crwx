@@ -10,7 +10,7 @@ import FoundationSalt
 import SwiftData
 import WxSalt
 
-struct BackupData: Codable {
+struct BackupData: nonisolated Codable {
     let summary: String
     let locations: [LocationProfileViewModel]
     let trips: [TripViewModel]

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct TripEditSheetModifier: ViewModifier {
     @Bindable var trip: Trip

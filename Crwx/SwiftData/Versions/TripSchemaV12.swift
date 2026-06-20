@@ -10,6 +10,7 @@ import SwiftData
 import FoundationSalt
 import CoreLocation
 import WxSalt
+import os
 
 /// I want trips to have a relationship to harbours and a route.
 enum TripSchemaV12: VersionedSchema {
@@ -281,13 +282,13 @@ extension ModelContext {
     func migrateToV12() {
         let container = self.container
         Task.detached {
-            logger.info("Begin V12 migration")
+            await logger.info("Begin V12 migration")
             let actor = V12Migration(modelContainer: container)
             do {
                 try await actor.migrate()
-                logger.info("V12 migration complete")
+                await logger.info("V12 migration complete")
             } catch {
-                logger.critical("Couldn't migrate to V12: \(error)")
+                await logger.critical("Couldn't migrate to V12: \(error)")
             }
         }
     }

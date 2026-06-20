@@ -10,7 +10,7 @@ import CoreLocation
 import FoundationSalt
 import SwiftData
 
-struct LocationSnippet: Codable, Equatable, Hashable {
+struct LocationSnippet: nonisolated Codable, Equatable, Hashable {
     var name: String?
     var latitude: Double
     var longitude: Double

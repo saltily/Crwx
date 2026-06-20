@@ -9,7 +9,7 @@ import SwiftUI
 import FoundationSalt
 import FoundationUI
 
-struct CompassExposure: Codable, Equatable {
+struct CompassExposure: nonisolated Codable, Equatable {
     var contents: [CompassDirection: Level] = [:]
     subscript(direction: CompassDirection) -> Level? {
         get { contents[direction] }
@@ -86,11 +86,11 @@ extension CompassExposure {
         var boldColour: Color {
             switch self {
             case .protected:
-                    .green.dynamic.darkened(amount: 0.1).color.mix(with: .blue, by: 0.1)
+                    .green.mix(with: .black, by: 0.1).mix(with: .blue, by: 0.1)
             case .some:
-                    .orange.dynamic.darkened(amount: 0.1).color
+                    .orange.mix(with: .black, by: 0.1)
             case .exposed:
-                    .red.dynamic.darkened().color
+                    .red.mix(with: .black, by: 0.4)
             }
         }
         var name: String {

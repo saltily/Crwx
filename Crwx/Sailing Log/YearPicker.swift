@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import FoundationSalt
 
 struct YearPicker: View {
     @Query private var trips: [Trip]

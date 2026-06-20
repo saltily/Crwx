@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FoundationSalt
 
 @Observable
 final class SoundingViewModel: Identifiable {

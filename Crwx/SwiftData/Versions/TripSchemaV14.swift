@@ -10,6 +10,7 @@ import SwiftData
 import FoundationSalt
 import CoreLocation
 import WxSalt
+import os
 
 /// Same as V13 except found that couldn't use `Range<Double>` for ``Trip.overnightDepths`` because it doesn't encode with a keyed value container
 enum TripSchemaV14: VersionedSchema {

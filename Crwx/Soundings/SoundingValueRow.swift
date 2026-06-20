@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FoundationUI
+import FoundationSalt
 
 struct SoundingValueRow: View {
     @Bindable var value: Sounding

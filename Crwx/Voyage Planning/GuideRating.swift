@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FoundationSalt
 
 struct GuideRating: RawRepresentable, Codable, Identifiable, Equatable {
     var id: Int { rawValue }

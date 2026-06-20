@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct TideTableSection: View {
     let predictions: [TidePredictionSnippet]

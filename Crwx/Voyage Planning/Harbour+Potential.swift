@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 import FoundationSalt
+import WxSalt
 
 extension PotentialAnchorages.Engine {
     func potential(destination: HarbourViewModel, intent: VoyageIntent) async throws -> AnchoragePotential? {
@@ -146,7 +147,7 @@ extension PotentialAnchorages.Engine {
 
             // winds
             let winds = forecast.flatMap { $0.winds }
-            var directions = winds.directions
+            var directions = await winds.directions
             anchorage.windExposure = harbour.windExposure.filtering(directions)
             for direction in directions {
                 if let max = winds.max(direction) {
@@ -167,7 +168,7 @@ extension PotentialAnchorages.Engine {
             
             // waves
             let waves = forecast.flatMap { $0.waves }
-            directions = waves.directions
+            directions = await waves.directions
             anchorage.swellExposure = harbour.swellExposure.filtering(directions)
             for direction in directions {
                 if let max = waves.max(direction) {

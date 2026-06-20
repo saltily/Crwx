@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import SwiftData
+import FoundationUI
+import os
 
 struct DestinationRow: View {
     let harbour: HarbourViewModel
@@ -20,8 +23,8 @@ struct DestinationRow: View {
             HStack(spacing: 0) {
                 Text(harbour.isGenerated ? "*" : "")
                     .opacity(0.5)
-                Text(harbour.distanceFromStart, format: .number.precision(.fractionLength(0...1))) +
-                Text(" nm")
+                let s = harbour.distanceFromStart.formatted(.number.precision(.fractionLength(0...1)))
+                Text("\(s) nm")
             }
             .foregroundStyle(.secondary)
         }

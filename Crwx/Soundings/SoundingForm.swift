@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct SoundingForm: View {
     @Bindable var model: SoundingViewModel

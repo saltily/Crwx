@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import FoundationUI
+import WxSalt
 
 struct DestinationsList: View {
     let isExpanded: Bool

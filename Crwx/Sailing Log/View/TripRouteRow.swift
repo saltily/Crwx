@@ -8,6 +8,9 @@
 import SwiftUI
 import FoundationSalt
 import FoundationUI
+import WxSalt
+import SwiftData
+import os
 
 /// Should be 4 phases.
 /// 1. No route set.  Navigate to select start and end.
@@ -39,7 +42,8 @@ struct TripRouteRow: View {
                             Text(route.name)
                             Spacer()
                             Group {
-                                Text(route.distance, format: .number.precision(.fractionLength(0...1))) + Text(" nm")
+                                let s = route.distance.formatted(.number.precision(.fractionLength(0...1)))
+                                Text("\(s) nm")
                                 if let bearing = route.bearing {
                                     Image(systemName: "location.north.fill")
                                         .rotationEffect(.degrees(bearing.converted(to: .degrees).value))

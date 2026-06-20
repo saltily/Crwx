@@ -7,19 +7,20 @@
 
 import Foundation
 import SwiftData
+import os
 
 @ModelActor
 final actor BackupActor {
     func backup() async throws -> Data {
-        logger.trace("Received instruction to backup")
+        await logger.trace("Received instruction to backup")
         try Task.checkCancellation()
-        let backupData = try BackupData(context: modelContext)
+        let backupData = try await BackupData(context: modelContext)
         try Task.checkCancellation()
         let encoder = JSONEncoder()
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         let data = try encoder.encode(backupData)
-        logger.info("Backup complete.")
-        logger.trace("\(backupData.summary)")
+        await logger.info("Backup complete.")
+        await logger.trace("\(backupData.summary)")
         return data
     }
 }

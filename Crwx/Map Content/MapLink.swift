@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 import FoundationUI
 import WxSalt
+import FoundationSalt
 
 struct MapLink<Location: WxLocation, Destination: View>: MapContent {
     

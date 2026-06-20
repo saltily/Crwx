@@ -9,6 +9,8 @@ import Foundation
 import SwiftData
 import FoundationSalt
 import FoundationUI
+import os
+import WxSalt
 
 typealias Trip = CurrentSchema.Trip
 

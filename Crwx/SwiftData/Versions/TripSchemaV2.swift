@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 import WxSalt
+import FoundationSalt
 
 /// Add saved location profiles.
 enum TripSchemaV2: VersionedSchema {

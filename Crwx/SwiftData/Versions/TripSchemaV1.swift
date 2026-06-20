@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 import WxSalt
+import FoundationSalt
 
 enum TripSchemaV1: VersionedSchema {
     static var versionIdentifier = Schema.Version(1, 0, 0)

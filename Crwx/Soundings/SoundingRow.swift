@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WxSalt
 
 struct SoundingRow: View {
     let type: Sounding.T
