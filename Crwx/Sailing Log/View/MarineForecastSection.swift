@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WxSalt
+import FoundationUI
 
 struct MarineForecastSection: View {
     let forecast: ForecastSnippet?

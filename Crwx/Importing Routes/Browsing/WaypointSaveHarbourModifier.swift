@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SwiftData
+import FoundationUI
 
 struct WaypointSaveHarbourModifier: ViewModifier {
     @Bindable var waypoint: Waypoint

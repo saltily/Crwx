@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FoundationUI
 
 struct EditingModeOverlay: View {
     @Binding var mode: TrackMap.EditingMode

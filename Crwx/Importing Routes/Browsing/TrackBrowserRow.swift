@@ -7,6 +7,8 @@
 
 import SwiftUI
 import SwiftData
+import WxSalt
+import FoundationUI
 
 struct TrackBrowserRow<T>: View where T: PersistentModel {
     init(_: T.Type, _ type: TrackBrowserType) {

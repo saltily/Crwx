@@ -32,13 +32,13 @@ struct VoyageLogTab: View {
     }
 }
 
-#Preview {
-    WxNavigator { wx in
-        VoyageLogTab()
-            .seaBackground()
-            .onAppear {
-                wx.config.showVoyageLog = true
-            }
-    }
-    .locationManager()
-}
+//#Preview {
+//    WxNavigator { wx in
+//        VoyageLogTab()
+//            .seaBackground()
+//            .onAppear {
+//                wx.config.showVoyageLog = true
+//            }
+//    }
+//    .locationManager()
+//}

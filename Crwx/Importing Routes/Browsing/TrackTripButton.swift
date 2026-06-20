@@ -8,6 +8,11 @@
 import SwiftUI
 import FoundationUI
 import FoundationSalt
+import SwiftData
+import WxSalt
+import os
+
+let logger = Logger(subsystem: "com.saltily.Crwx", category: "Sailing")
 
 struct TrackTripButton: View {
     @Bindable var track: Track

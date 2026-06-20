@@ -7,14 +7,14 @@
 
 import SwiftUI
 import FoundationUI
+import FoundationSalt
 
 struct RouteSummary: View {
     @Bindable var route: Route
     var body: some View {
         VStack(alignment: .leading) {
             PlaceholderText(route.name, placeholder: "Unnamed")
-            (Text(route.endpointNames) + Text(", ") +
-             Text(route.waypointIds.count.appending("waypoint", "waypoints")))
+            Text("\(route.endpointNames), \(route.waypointIds.count.appending("waypoint", "waypoints"))")
             .font(.caption)
         }
         .badge("\(route.length.formatted(.number.precision(.fractionLength(1)))) nm")

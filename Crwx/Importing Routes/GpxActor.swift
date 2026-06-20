@@ -9,6 +9,7 @@ import Foundation
 import FoundationSalt
 import SwiftData
 import UniformTypeIdentifiers
+import os
 extension UTType {
     static var gpx: UTType {
         UTType(importedAs: "com.topografix.gpx", conformingTo: xml)
@@ -33,16 +34,16 @@ final actor GpxActor {
             await tracker.set(label: "\(i+1) of \(parsers.count) - \(parser.url?.deletingPathExtension().lastPathComponent ?? "unnamed")")
             
             // 3. Parse and save all new waypoints
-            for (i, _) in parser.waypointTrees.enumerated() {
+            for (i, _) in await parser.waypointTrees.enumerated() {
                 try Task.checkCancellation()
-                load(waypoint: try parser.waypoint(at: i))
+                await load(waypoint: try parser.waypoint(at: i))
                 await tracker.advance()
             }
             
             // 4. Parse and save all new tracks
-            for (i, _) in parser.trackTrees.enumerated() {
+            for (i, _) in await parser.trackTrees.enumerated() {
                 try Task.checkCancellation()
-                load(track: try parser.track(at: i))
+                await load(track: try parser.track(at: i))
                 await tracker.advance()
             }
             
@@ -51,7 +52,8 @@ final actor GpxActor {
                 try Task.checkCancellation()
                 try FileManager.default.removeItem(at: url)
             }
-            logger.info("\(parser.debugDescription)")
+            let debug = await parser.debugDescription
+            await logger.info("\(debug)")
         }
         
         // 6. Save the context
@@ -59,7 +61,7 @@ final actor GpxActor {
         try modelContext.save()
         let wp_ct = try modelContext.fetchCount(Waypoint.self)
         let tk_ct = try modelContext.fetchCount(Track.self)
-        logger.info("There are now \(wp_ct) waypoints and \(tk_ct) tracks in the database")
+        await logger.info("There are now \(wp_ct) waypoints and \(tk_ct) tracks in the database")
     }
     
     private func loadExistingWaypoints() throws {

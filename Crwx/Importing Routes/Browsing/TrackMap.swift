@@ -9,6 +9,7 @@ import SwiftUI
 import FoundationUI
 import FoundationSalt
 import MapKit
+import SwiftData
 
 struct TrackMap: View {
     @Bindable var track: Track

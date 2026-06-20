@@ -7,6 +7,8 @@
 
 import SwiftUI
 import MapKit
+import FoundationSalt
+import WxSalt
 
 struct EventDetails: View {
     @Binding var event: VoyageEvent

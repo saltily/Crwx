@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FoundationUI
+import FoundationSalt
 
 struct WaypointSummary: View {
     @Bindable var waypoint: Waypoint

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FoundationSalt
 
 struct LogCommandsMenu: View {
     @State private var trackMatcherIsPresented = false
@@ -21,11 +22,6 @@ struct LogCommandsMenu: View {
             TrackMatcherButton(tracksOnLeft: false, isPresented: $trackMatcherIsPresented)
             SelectMultipleButton()
             Divider()
-            NavigationLink {
-                HubView()
-            } label: {
-                Label("Legacy Content", systemImage: "list.clipboard")
-            }
             BackupButton()
         }
         .trackMatcher(isPresented: $trackMatcherIsPresented, tracksOnLeft: false)
@@ -53,4 +49,7 @@ struct Year: DynamicProperty {
         }
 
     }
+}
+extension String {
+    static let tripsYearKey = "com.saltily.Mewx.tripsYearKey" // Int
 }

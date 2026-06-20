@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import FoundationSalt
 import FoundationUI
+import WxSalt
 
 struct TrackList: View {
     @Query<Track>(sort: .defaultOrder) private var tracks: [Track]

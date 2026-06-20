@@ -8,6 +8,7 @@
 import Foundation
 import FoundationSalt
 import CoreLocation
+import CoreGraphics
 
 struct TrackPoint: Codable, Hashable {
     let latitude: Double

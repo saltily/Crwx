@@ -7,6 +7,8 @@
 
 import Foundation
 import CoreGraphics
+import FoundationUI
+import FoundationSalt
 
 typealias Photo = CurrentSchema.Photo
 
@@ -14,6 +16,7 @@ extension Photo {
     var stamp: PhotoViewModel.Stamp {
         .init(date: date, latitude: latitude, longitude: longitude, isVideo: isVideo, pixelWidth: originalWidth, pixelHeight: originalHeight)
     }
+    @MainActor
     var image: CGImage? {
         guard let data else { return nil }
         if isVideo {
@@ -22,6 +25,7 @@ extension Photo {
         }
         return .with(data: data)
     }
+    @MainActor
     var videoWrapper: VideoWrapper? {
         .init(decoding: data)
     }
