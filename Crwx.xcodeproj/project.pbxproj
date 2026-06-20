@@ -154,6 +154,62 @@
 		FDB3AB6F2FE6A03900B4B903 /* CruiseStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB02FE6A03900B4B903 /* CruiseStats.swift */; };
 		FDB3AB702FE6A03900B4B903 /* RemoveStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAB92FE6A03900B4B903 /* RemoveStopButton.swift */; };
 		FDB3AB712FE6A03900B4B903 /* CruisingGuideEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAD22FE6A03900B4B903 /* CruisingGuideEditor.swift */; };
+		FDB3AB9C2FE6A16300B4B903 /* TrackBrowserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB7D2FE6A16300B4B903 /* TrackBrowserRow.swift */; };
+		FDB3AB9D2FE6A16300B4B903 /* TrackEditorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB7E2FE6A16300B4B903 /* TrackEditorButton.swift */; };
+		FDB3AB9E2FE6A16300B4B903 /* HarboursRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB732FE6A16300B4B903 /* HarboursRow.swift */; };
+		FDB3AB9F2FE6A16300B4B903 /* TrackMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB812FE6A16300B4B903 /* TrackMap.swift */; };
+		FDB3ABA02FE6A16300B4B903 /* TrackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB802FE6A16300B4B903 /* TrackList.swift */; };
+		FDB3ABA12FE6A16300B4B903 /* SwipeExtractSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB7A2FE6A16300B4B903 /* SwipeExtractSegment.swift */; };
+		FDB3ABA22FE6A16300B4B903 /* WaypointSaveHarbourModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB8B2FE6A16300B4B903 /* WaypointSaveHarbourModifier.swift */; };
+		FDB3ABA32FE6A16300B4B903 /* WaypointSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB8D2FE6A16300B4B903 /* WaypointSummary.swift */; };
+		FDB3ABA42FE6A16300B4B903 /* ImportSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB902FE6A16300B4B903 /* ImportSource.swift */; };
+		FDB3ABA52FE6A16300B4B903 /* TrackTripButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB872FE6A16300B4B903 /* TrackTripButton.swift */; };
+		FDB3ABA62FE6A16300B4B903 /* TrackMatcherModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB832FE6A16300B4B903 /* TrackMatcherModifier.swift */; };
+		FDB3ABA72FE6A16300B4B903 /* GpxActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB942FE6A16300B4B903 /* GpxActor.swift */; };
+		FDB3ABA82FE6A16300B4B903 /* NobActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB982FE6A16300B4B903 /* NobActor.swift */; };
+		FDB3ABA92FE6A16300B4B903 /* EditingModeOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB722FE6A16300B4B903 /* EditingModeOverlay.swift */; };
+		FDB3ABAA2FE6A16300B4B903 /* GpxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB952FE6A16300B4B903 /* GpxParser.swift */; };
+		FDB3ABAB2FE6A16300B4B903 /* TrackSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB862FE6A16300B4B903 /* TrackSummary.swift */; };
+		FDB3ABAC2FE6A16300B4B903 /* ReceiveGpxModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB9A2FE6A16300B4B903 /* ReceiveGpxModifier.swift */; };
+		FDB3ABAD2FE6A16300B4B903 /* TripPuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB882FE6A16300B4B903 /* TripPuck.swift */; };
+		FDB3ABAE2FE6A16300B4B903 /* RouteSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB772FE6A16300B4B903 /* RouteSummary.swift */; };
+		FDB3ABAF2FE6A16300B4B903 /* TrackPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB912FE6A16300B4B903 /* TrackPoint.swift */; };
+		FDB3ABB02FE6A16300B4B903 /* TrackHintsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB7F2FE6A16300B4B903 /* TrackHintsOverlay.swift */; };
+		FDB3ABB12FE6A16300B4B903 /* TrackNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB842FE6A16300B4B903 /* TrackNameViewModel.swift */; };
+		FDB3ABB22FE6A16300B4B903 /* WaypointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB892FE6A16300B4B903 /* WaypointList.swift */; };
+		FDB3ABB32FE6A16300B4B903 /* ImportProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB972FE6A16300B4B903 /* ImportProgressView.swift */; };
+		FDB3ABB42FE6A16300B4B903 /* RouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB752FE6A16300B4B903 /* RouteList.swift */; };
+		FDB3ABB52FE6A16300B4B903 /* ZoomControlsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB8E2FE6A16300B4B903 /* ZoomControlsOverlay.swift */; };
+		FDB3ABB62FE6A16300B4B903 /* WaypointSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB922FE6A16300B4B903 /* WaypointSymbol.swift */; };
+		FDB3ABB72FE6A16300B4B903 /* TrackBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB7B2FE6A16300B4B903 /* TrackBrowser.swift */; };
+		FDB3ABB82FE6A16300B4B903 /* RouteMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB762FE6A16300B4B903 /* RouteMap.swift */; };
+		FDB3ABB92FE6A16300B4B903 /* WaypointsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB8C2FE6A16300B4B903 /* WaypointsMap.swift */; };
+		FDB3ABBA2FE6A16300B4B903 /* NobParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB992FE6A16300B4B903 /* NobParser.swift */; };
+		FDB3ABBB2FE6A16300B4B903 /* TrackBrowserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB7C2FE6A16300B4B903 /* TrackBrowserList.swift */; };
+		FDB3ABBC2FE6A16300B4B903 /* ImportEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB962FE6A16300B4B903 /* ImportEngine.swift */; };
+		FDB3ABBD2FE6A16300B4B903 /* RouteCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB742FE6A16300B4B903 /* RouteCommands.swift */; };
+		FDB3ABBE2FE6A16300B4B903 /* TrackPuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB852FE6A16300B4B903 /* TrackPuck.swift */; };
+		FDB3ABBF2FE6A16300B4B903 /* SegmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB782FE6A16300B4B903 /* SegmentRow.swift */; };
+		FDB3ABC02FE6A16300B4B903 /* WaypointMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB8A2FE6A16300B4B903 /* WaypointMap.swift */; };
+		FDB3ABC12FE6A16300B4B903 /* TrackMatcherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB822FE6A16300B4B903 /* TrackMatcherButton.swift */; };
+		FDB3ABC22FE6A16300B4B903 /* SwipeEditTrackName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB792FE6A16300B4B903 /* SwipeEditTrackName.swift */; };
+		FDB3ABCF2FE6A19800B4B903 /* SoundingValueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABCB2FE6A19800B4B903 /* SoundingValueRow.swift */; };
+		FDB3ABD02FE6A19800B4B903 /* SoundingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABC72FE6A19800B4B903 /* SoundingRow.swift */; };
+		FDB3ABD12FE6A19800B4B903 /* SoundingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABCC2FE6A19800B4B903 /* SoundingViewModel.swift */; };
+		FDB3ABD22FE6A19800B4B903 /* SoundingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABC62FE6A19800B4B903 /* SoundingForm.swift */; };
+		FDB3ABD32FE6A19800B4B903 /* WaterValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABCD2FE6A19800B4B903 /* WaterValue.swift */; };
+		FDB3ABD42FE6A19800B4B903 /* AddSoundingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABC32FE6A19800B4B903 /* AddSoundingButton.swift */; };
+		FDB3ABD52FE6A19800B4B903 /* SoundingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABCA2FE6A19800B4B903 /* SoundingsRow.swift */; };
+		FDB3ABD62FE6A19800B4B903 /* DeleteSoundingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABC42FE6A19800B4B903 /* DeleteSoundingModifier.swift */; };
+		FDB3ABD72FE6A19800B4B903 /* SoundingsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABC82FE6A19800B4B903 /* SoundingsHome.swift */; };
+		FDB3ABD82FE6A19800B4B903 /* SoundingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABC92FE6A19800B4B903 /* SoundingsList.swift */; };
+		FDB3ABD92FE6A19800B4B903 /* EditSoundingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABC52FE6A19800B4B903 /* EditSoundingModifier.swift */; };
+		FDB3ABE12FE6A1EB00B4B903 /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDA2FE6A1EB00B4B903 /* PhotosManager.swift */; };
+		FDB3ABE22FE6A1EB00B4B903 /* WebShareable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDE2FE6A1EB00B4B903 /* WebShareable.swift */; };
+		FDB3ABE32FE6A1EB00B4B903 /* SwipeToShareModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDD2FE6A1EB00B4B903 /* SwipeToShareModifier.swift */; };
+		FDB3ABE42FE6A1EB00B4B903 /* PickPhotosButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDC2FE6A1EB00B4B903 /* PickPhotosButton.swift */; };
+		FDB3ABE52FE6A1EB00B4B903 /* WhereWasIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDF2FE6A1EB00B4B903 /* WhereWasIButton.swift */; };
+		FDB3ABE62FE6A1EB00B4B903 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDB2FE6A1EB00B4B903 /* PhotoViewModel.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -428,6 +484,62 @@
 		FDB3AB0B2FE6A03900B4B903 /* WarningBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningBadge.swift; sourceTree = "<group>"; };
 		FDB3AB0C2FE6A03900B4B903 /* WaypointDeduplicationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointDeduplicationMap.swift; sourceTree = "<group>"; };
 		FDB3AB0D2FE6A03900B4B903 /* WaypointSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointSnippet.swift; sourceTree = "<group>"; };
+		FDB3AB722FE6A16300B4B903 /* EditingModeOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingModeOverlay.swift; sourceTree = "<group>"; };
+		FDB3AB732FE6A16300B4B903 /* HarboursRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarboursRow.swift; sourceTree = "<group>"; };
+		FDB3AB742FE6A16300B4B903 /* RouteCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCommands.swift; sourceTree = "<group>"; };
+		FDB3AB752FE6A16300B4B903 /* RouteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteList.swift; sourceTree = "<group>"; };
+		FDB3AB762FE6A16300B4B903 /* RouteMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMap.swift; sourceTree = "<group>"; };
+		FDB3AB772FE6A16300B4B903 /* RouteSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSummary.swift; sourceTree = "<group>"; };
+		FDB3AB782FE6A16300B4B903 /* SegmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentRow.swift; sourceTree = "<group>"; };
+		FDB3AB792FE6A16300B4B903 /* SwipeEditTrackName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeEditTrackName.swift; sourceTree = "<group>"; };
+		FDB3AB7A2FE6A16300B4B903 /* SwipeExtractSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeExtractSegment.swift; sourceTree = "<group>"; };
+		FDB3AB7B2FE6A16300B4B903 /* TrackBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBrowser.swift; sourceTree = "<group>"; };
+		FDB3AB7C2FE6A16300B4B903 /* TrackBrowserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBrowserList.swift; sourceTree = "<group>"; };
+		FDB3AB7D2FE6A16300B4B903 /* TrackBrowserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBrowserRow.swift; sourceTree = "<group>"; };
+		FDB3AB7E2FE6A16300B4B903 /* TrackEditorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackEditorButton.swift; sourceTree = "<group>"; };
+		FDB3AB7F2FE6A16300B4B903 /* TrackHintsOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHintsOverlay.swift; sourceTree = "<group>"; };
+		FDB3AB802FE6A16300B4B903 /* TrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackList.swift; sourceTree = "<group>"; };
+		FDB3AB812FE6A16300B4B903 /* TrackMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMap.swift; sourceTree = "<group>"; };
+		FDB3AB822FE6A16300B4B903 /* TrackMatcherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMatcherButton.swift; sourceTree = "<group>"; };
+		FDB3AB832FE6A16300B4B903 /* TrackMatcherModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMatcherModifier.swift; sourceTree = "<group>"; };
+		FDB3AB842FE6A16300B4B903 /* TrackNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackNameViewModel.swift; sourceTree = "<group>"; };
+		FDB3AB852FE6A16300B4B903 /* TrackPuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPuck.swift; sourceTree = "<group>"; };
+		FDB3AB862FE6A16300B4B903 /* TrackSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSummary.swift; sourceTree = "<group>"; };
+		FDB3AB872FE6A16300B4B903 /* TrackTripButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTripButton.swift; sourceTree = "<group>"; };
+		FDB3AB882FE6A16300B4B903 /* TripPuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPuck.swift; sourceTree = "<group>"; };
+		FDB3AB892FE6A16300B4B903 /* WaypointList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointList.swift; sourceTree = "<group>"; };
+		FDB3AB8A2FE6A16300B4B903 /* WaypointMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointMap.swift; sourceTree = "<group>"; };
+		FDB3AB8B2FE6A16300B4B903 /* WaypointSaveHarbourModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointSaveHarbourModifier.swift; sourceTree = "<group>"; };
+		FDB3AB8C2FE6A16300B4B903 /* WaypointsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointsMap.swift; sourceTree = "<group>"; };
+		FDB3AB8D2FE6A16300B4B903 /* WaypointSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointSummary.swift; sourceTree = "<group>"; };
+		FDB3AB8E2FE6A16300B4B903 /* ZoomControlsOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomControlsOverlay.swift; sourceTree = "<group>"; };
+		FDB3AB902FE6A16300B4B903 /* ImportSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportSource.swift; sourceTree = "<group>"; };
+		FDB3AB912FE6A16300B4B903 /* TrackPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPoint.swift; sourceTree = "<group>"; };
+		FDB3AB922FE6A16300B4B903 /* WaypointSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointSymbol.swift; sourceTree = "<group>"; };
+		FDB3AB942FE6A16300B4B903 /* GpxActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpxActor.swift; sourceTree = "<group>"; };
+		FDB3AB952FE6A16300B4B903 /* GpxParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpxParser.swift; sourceTree = "<group>"; };
+		FDB3AB962FE6A16300B4B903 /* ImportEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportEngine.swift; sourceTree = "<group>"; };
+		FDB3AB972FE6A16300B4B903 /* ImportProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportProgressView.swift; sourceTree = "<group>"; };
+		FDB3AB982FE6A16300B4B903 /* NobActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobActor.swift; sourceTree = "<group>"; };
+		FDB3AB992FE6A16300B4B903 /* NobParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobParser.swift; sourceTree = "<group>"; };
+		FDB3AB9A2FE6A16300B4B903 /* ReceiveGpxModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveGpxModifier.swift; sourceTree = "<group>"; };
+		FDB3ABC32FE6A19800B4B903 /* AddSoundingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSoundingButton.swift; sourceTree = "<group>"; };
+		FDB3ABC42FE6A19800B4B903 /* DeleteSoundingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSoundingModifier.swift; sourceTree = "<group>"; };
+		FDB3ABC52FE6A19800B4B903 /* EditSoundingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSoundingModifier.swift; sourceTree = "<group>"; };
+		FDB3ABC62FE6A19800B4B903 /* SoundingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundingForm.swift; sourceTree = "<group>"; };
+		FDB3ABC72FE6A19800B4B903 /* SoundingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundingRow.swift; sourceTree = "<group>"; };
+		FDB3ABC82FE6A19800B4B903 /* SoundingsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundingsHome.swift; sourceTree = "<group>"; };
+		FDB3ABC92FE6A19800B4B903 /* SoundingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundingsList.swift; sourceTree = "<group>"; };
+		FDB3ABCA2FE6A19800B4B903 /* SoundingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundingsRow.swift; sourceTree = "<group>"; };
+		FDB3ABCB2FE6A19800B4B903 /* SoundingValueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundingValueRow.swift; sourceTree = "<group>"; };
+		FDB3ABCC2FE6A19800B4B903 /* SoundingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundingViewModel.swift; sourceTree = "<group>"; };
+		FDB3ABCD2FE6A19800B4B903 /* WaterValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterValue.swift; sourceTree = "<group>"; };
+		FDB3ABDA2FE6A1EB00B4B903 /* PhotosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
+		FDB3ABDB2FE6A1EB00B4B903 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		FDB3ABDC2FE6A1EB00B4B903 /* PickPhotosButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPhotosButton.swift; sourceTree = "<group>"; };
+		FDB3ABDD2FE6A1EB00B4B903 /* SwipeToShareModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToShareModifier.swift; sourceTree = "<group>"; };
+		FDB3ABDE2FE6A1EB00B4B903 /* WebShareable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebShareable.swift; sourceTree = "<group>"; };
+		FDB3ABDF2FE6A1EB00B4B903 /* WhereWasIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereWasIButton.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -592,6 +704,9 @@
 				FDE216352FE5B0CF00F60799 /* Sailing Log */,
 				FDB3AB0E2FE6A03900B4B903 /* Voyage Planning */,
 				FDB3AA842FE5BBA200B4B903 /* SwiftData */,
+				FDB3ABCE2FE6A19800B4B903 /* Soundings */,
+				FDB3AB9B2FE6A16300B4B903 /* Importing Routes */,
+				FDB3ABE02FE6A1EB00B4B903 /* Web Sharing */,
 				FD091F812FE590F3001706D6 /* Assets.xcassets */,
 				FD091F822FE590F3001706D6 /* ContentView.swift */,
 				FD091F832FE590F3001706D6 /* Crwx.entitlements */,
@@ -791,6 +906,99 @@
 				FDB3AB0D2FE6A03900B4B903 /* WaypointSnippet.swift */,
 			);
 			path = "Voyage Planning";
+			sourceTree = "<group>";
+		};
+		FDB3AB8F2FE6A16300B4B903 /* Browsing */ = {
+			isa = PBXGroup;
+			children = (
+				FDB3AB722FE6A16300B4B903 /* EditingModeOverlay.swift */,
+				FDB3AB732FE6A16300B4B903 /* HarboursRow.swift */,
+				FDB3AB742FE6A16300B4B903 /* RouteCommands.swift */,
+				FDB3AB752FE6A16300B4B903 /* RouteList.swift */,
+				FDB3AB762FE6A16300B4B903 /* RouteMap.swift */,
+				FDB3AB772FE6A16300B4B903 /* RouteSummary.swift */,
+				FDB3AB782FE6A16300B4B903 /* SegmentRow.swift */,
+				FDB3AB792FE6A16300B4B903 /* SwipeEditTrackName.swift */,
+				FDB3AB7A2FE6A16300B4B903 /* SwipeExtractSegment.swift */,
+				FDB3AB7B2FE6A16300B4B903 /* TrackBrowser.swift */,
+				FDB3AB7C2FE6A16300B4B903 /* TrackBrowserList.swift */,
+				FDB3AB7D2FE6A16300B4B903 /* TrackBrowserRow.swift */,
+				FDB3AB7E2FE6A16300B4B903 /* TrackEditorButton.swift */,
+				FDB3AB7F2FE6A16300B4B903 /* TrackHintsOverlay.swift */,
+				FDB3AB802FE6A16300B4B903 /* TrackList.swift */,
+				FDB3AB812FE6A16300B4B903 /* TrackMap.swift */,
+				FDB3AB822FE6A16300B4B903 /* TrackMatcherButton.swift */,
+				FDB3AB832FE6A16300B4B903 /* TrackMatcherModifier.swift */,
+				FDB3AB842FE6A16300B4B903 /* TrackNameViewModel.swift */,
+				FDB3AB852FE6A16300B4B903 /* TrackPuck.swift */,
+				FDB3AB862FE6A16300B4B903 /* TrackSummary.swift */,
+				FDB3AB872FE6A16300B4B903 /* TrackTripButton.swift */,
+				FDB3AB882FE6A16300B4B903 /* TripPuck.swift */,
+				FDB3AB892FE6A16300B4B903 /* WaypointList.swift */,
+				FDB3AB8A2FE6A16300B4B903 /* WaypointMap.swift */,
+				FDB3AB8B2FE6A16300B4B903 /* WaypointSaveHarbourModifier.swift */,
+				FDB3AB8C2FE6A16300B4B903 /* WaypointsMap.swift */,
+				FDB3AB8D2FE6A16300B4B903 /* WaypointSummary.swift */,
+				FDB3AB8E2FE6A16300B4B903 /* ZoomControlsOverlay.swift */,
+			);
+			path = Browsing;
+			sourceTree = "<group>";
+		};
+		FDB3AB932FE6A16300B4B903 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDB3AB902FE6A16300B4B903 /* ImportSource.swift */,
+				FDB3AB912FE6A16300B4B903 /* TrackPoint.swift */,
+				FDB3AB922FE6A16300B4B903 /* WaypointSymbol.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDB3AB9B2FE6A16300B4B903 /* Importing Routes */ = {
+			isa = PBXGroup;
+			children = (
+				FDB3AB8F2FE6A16300B4B903 /* Browsing */,
+				FDB3AB932FE6A16300B4B903 /* Model */,
+				FDB3AB942FE6A16300B4B903 /* GpxActor.swift */,
+				FDB3AB952FE6A16300B4B903 /* GpxParser.swift */,
+				FDB3AB962FE6A16300B4B903 /* ImportEngine.swift */,
+				FDB3AB972FE6A16300B4B903 /* ImportProgressView.swift */,
+				FDB3AB982FE6A16300B4B903 /* NobActor.swift */,
+				FDB3AB992FE6A16300B4B903 /* NobParser.swift */,
+				FDB3AB9A2FE6A16300B4B903 /* ReceiveGpxModifier.swift */,
+			);
+			path = "Importing Routes";
+			sourceTree = "<group>";
+		};
+		FDB3ABCE2FE6A19800B4B903 /* Soundings */ = {
+			isa = PBXGroup;
+			children = (
+				FDB3ABC32FE6A19800B4B903 /* AddSoundingButton.swift */,
+				FDB3ABC42FE6A19800B4B903 /* DeleteSoundingModifier.swift */,
+				FDB3ABC52FE6A19800B4B903 /* EditSoundingModifier.swift */,
+				FDB3ABC62FE6A19800B4B903 /* SoundingForm.swift */,
+				FDB3ABC72FE6A19800B4B903 /* SoundingRow.swift */,
+				FDB3ABC82FE6A19800B4B903 /* SoundingsHome.swift */,
+				FDB3ABC92FE6A19800B4B903 /* SoundingsList.swift */,
+				FDB3ABCA2FE6A19800B4B903 /* SoundingsRow.swift */,
+				FDB3ABCB2FE6A19800B4B903 /* SoundingValueRow.swift */,
+				FDB3ABCC2FE6A19800B4B903 /* SoundingViewModel.swift */,
+				FDB3ABCD2FE6A19800B4B903 /* WaterValue.swift */,
+			);
+			path = Soundings;
+			sourceTree = "<group>";
+		};
+		FDB3ABE02FE6A1EB00B4B903 /* Web Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				FDB3ABDA2FE6A1EB00B4B903 /* PhotosManager.swift */,
+				FDB3ABDB2FE6A1EB00B4B903 /* PhotoViewModel.swift */,
+				FDB3ABDC2FE6A1EB00B4B903 /* PickPhotosButton.swift */,
+				FDB3ABDD2FE6A1EB00B4B903 /* SwipeToShareModifier.swift */,
+				FDB3ABDE2FE6A1EB00B4B903 /* WebShareable.swift */,
+				FDB3ABDF2FE6A1EB00B4B903 /* WhereWasIButton.swift */,
+			);
+			path = "Web Sharing";
 			sourceTree = "<group>";
 		};
 		FDE215CB2FE5B0CF00F60799 /* Locations */ = {
@@ -1184,6 +1392,51 @@
 				FDB3AAA32FE5BBA200B4B903 /* TripMigrationPlan.swift in Sources */,
 				FDB3AAA42FE5BBA200B4B903 /* BackupData.swift in Sources */,
 				FDB3AAA52FE5BBA200B4B903 /* Photo.swift in Sources */,
+				FDB3AB9C2FE6A16300B4B903 /* TrackBrowserRow.swift in Sources */,
+				FDB3AB9D2FE6A16300B4B903 /* TrackEditorButton.swift in Sources */,
+				FDB3AB9E2FE6A16300B4B903 /* HarboursRow.swift in Sources */,
+				FDB3AB9F2FE6A16300B4B903 /* TrackMap.swift in Sources */,
+				FDB3ABA02FE6A16300B4B903 /* TrackList.swift in Sources */,
+				FDB3ABA12FE6A16300B4B903 /* SwipeExtractSegment.swift in Sources */,
+				FDB3ABA22FE6A16300B4B903 /* WaypointSaveHarbourModifier.swift in Sources */,
+				FDB3ABA32FE6A16300B4B903 /* WaypointSummary.swift in Sources */,
+				FDB3ABA42FE6A16300B4B903 /* ImportSource.swift in Sources */,
+				FDB3ABA52FE6A16300B4B903 /* TrackTripButton.swift in Sources */,
+				FDB3ABA62FE6A16300B4B903 /* TrackMatcherModifier.swift in Sources */,
+				FDB3ABA72FE6A16300B4B903 /* GpxActor.swift in Sources */,
+				FDB3ABA82FE6A16300B4B903 /* NobActor.swift in Sources */,
+				FDB3ABA92FE6A16300B4B903 /* EditingModeOverlay.swift in Sources */,
+				FDB3ABAA2FE6A16300B4B903 /* GpxParser.swift in Sources */,
+				FDB3ABAB2FE6A16300B4B903 /* TrackSummary.swift in Sources */,
+				FDB3ABAC2FE6A16300B4B903 /* ReceiveGpxModifier.swift in Sources */,
+				FDB3ABAD2FE6A16300B4B903 /* TripPuck.swift in Sources */,
+				FDB3ABAE2FE6A16300B4B903 /* RouteSummary.swift in Sources */,
+				FDB3ABAF2FE6A16300B4B903 /* TrackPoint.swift in Sources */,
+				FDB3ABB02FE6A16300B4B903 /* TrackHintsOverlay.swift in Sources */,
+				FDB3ABB12FE6A16300B4B903 /* TrackNameViewModel.swift in Sources */,
+				FDB3ABB22FE6A16300B4B903 /* WaypointList.swift in Sources */,
+				FDB3ABB32FE6A16300B4B903 /* ImportProgressView.swift in Sources */,
+				FDB3ABB42FE6A16300B4B903 /* RouteList.swift in Sources */,
+				FDB3ABE12FE6A1EB00B4B903 /* PhotosManager.swift in Sources */,
+				FDB3ABE22FE6A1EB00B4B903 /* WebShareable.swift in Sources */,
+				FDB3ABE32FE6A1EB00B4B903 /* SwipeToShareModifier.swift in Sources */,
+				FDB3ABE42FE6A1EB00B4B903 /* PickPhotosButton.swift in Sources */,
+				FDB3ABE52FE6A1EB00B4B903 /* WhereWasIButton.swift in Sources */,
+				FDB3ABE62FE6A1EB00B4B903 /* PhotoViewModel.swift in Sources */,
+				FDB3ABB52FE6A16300B4B903 /* ZoomControlsOverlay.swift in Sources */,
+				FDB3ABB62FE6A16300B4B903 /* WaypointSymbol.swift in Sources */,
+				FDB3ABB72FE6A16300B4B903 /* TrackBrowser.swift in Sources */,
+				FDB3ABB82FE6A16300B4B903 /* RouteMap.swift in Sources */,
+				FDB3ABB92FE6A16300B4B903 /* WaypointsMap.swift in Sources */,
+				FDB3ABBA2FE6A16300B4B903 /* NobParser.swift in Sources */,
+				FDB3ABBB2FE6A16300B4B903 /* TrackBrowserList.swift in Sources */,
+				FDB3ABBC2FE6A16300B4B903 /* ImportEngine.swift in Sources */,
+				FDB3ABBD2FE6A16300B4B903 /* RouteCommands.swift in Sources */,
+				FDB3ABBE2FE6A16300B4B903 /* TrackPuck.swift in Sources */,
+				FDB3ABBF2FE6A16300B4B903 /* SegmentRow.swift in Sources */,
+				FDB3ABC02FE6A16300B4B903 /* WaypointMap.swift in Sources */,
+				FDB3ABC12FE6A16300B4B903 /* TrackMatcherButton.swift in Sources */,
+				FDB3ABC22FE6A16300B4B903 /* SwipeEditTrackName.swift in Sources */,
 				FDB3AAA62FE5BBA200B4B903 /* TripSchemaV18.swift in Sources */,
 				FDB3AAA72FE5BBA200B4B903 /* Trip+Validate.swift in Sources */,
 				FDB3AAA82FE5BBA200B4B903 /* Sounding.swift in Sources */,
@@ -1240,6 +1493,17 @@
 				FDB3AB3E2FE6A03900B4B903 /* AnchorageRow.swift in Sources */,
 				FDB3AB3F2FE6A03900B4B903 /* WaypointSnippet.swift in Sources */,
 				FDB3AB402FE6A03900B4B903 /* AnchorageTideChart.swift in Sources */,
+				FDB3ABCF2FE6A19800B4B903 /* SoundingValueRow.swift in Sources */,
+				FDB3ABD02FE6A19800B4B903 /* SoundingRow.swift in Sources */,
+				FDB3ABD12FE6A19800B4B903 /* SoundingViewModel.swift in Sources */,
+				FDB3ABD22FE6A19800B4B903 /* SoundingForm.swift in Sources */,
+				FDB3ABD32FE6A19800B4B903 /* WaterValue.swift in Sources */,
+				FDB3ABD42FE6A19800B4B903 /* AddSoundingButton.swift in Sources */,
+				FDB3ABD52FE6A19800B4B903 /* SoundingsRow.swift in Sources */,
+				FDB3ABD62FE6A19800B4B903 /* DeleteSoundingModifier.swift in Sources */,
+				FDB3ABD72FE6A19800B4B903 /* SoundingsHome.swift in Sources */,
+				FDB3ABD82FE6A19800B4B903 /* SoundingsList.swift in Sources */,
+				FDB3ABD92FE6A19800B4B903 /* EditSoundingModifier.swift in Sources */,
 				FDB3AB412FE6A03900B4B903 /* CompassExposure.swift in Sources */,
 				FDB3AB422FE6A03900B4B903 /* RoutePolyline.swift in Sources */,
 				FDB3AB432FE6A03900B4B903 /* VoyageIntent+Underway.swift in Sources */,

@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import FoundationUI
 import WxSalt
+import FoundationSalt
 
 struct AllTripsView: View {
     @Year private var year

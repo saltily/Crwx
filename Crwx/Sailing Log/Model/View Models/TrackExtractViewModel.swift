@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import FoundationSalt
 
 struct TrackExtractViewModel: Identifiable {
     init(segment: [TrackPoint], original: Track) {
