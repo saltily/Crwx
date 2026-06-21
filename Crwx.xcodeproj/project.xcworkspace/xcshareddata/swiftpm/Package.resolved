@@ -1,0 +1,105 @@
+{
+  "originHash" : "cbaff210412764815df0e3e0095784dc03a518da233aaaf858d6232ecbec4886",
+  "pins" : [
+    {
+      "identity" : "codablesalt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/saltily/CodableSalt.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "ab5c1d5156b4661cba665536e2d8cd1a66de6ae0"
+      }
+    },
+    {
+      "identity" : "focusonappear",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/naan/FocusOnAppear",
+      "state" : {
+        "revision" : "f7a3e8a9de5f254af89c0fa9f4ee510cd81a9021",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "foundationsalt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/saltily/FoundationSalt.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "cba513401fc084c2673e681753bfbff458cc2c4d"
+      }
+    },
+    {
+      "identity" : "foundationui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/saltily/FoundationUI.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "ee245c203ac29aa419c6a17f01cb1c15d7113216"
+      }
+    },
+    {
+      "identity" : "mathexpression",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/peredaniel/MathExpression.git",
+      "state" : {
+        "revision" : "cd4bff668db45e2283c263da7cd67fe76d7d3106",
+        "version" : "1.3.0"
+      }
+    },
+    {
+      "identity" : "solar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ceeK/Solar",
+      "state" : {
+        "revision" : "c2b96f2d5fb7f835b91cefac5e83101f54643901",
+        "version" : "3.0.1"
+      }
+    },
+    {
+      "identity" : "swiftsoup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scinfu/SwiftSoup.git",
+      "state" : {
+        "revision" : "49dcadd93161f4a44b4994d3a3e8de9f085aface",
+        "version" : "2.13.5"
+      }
+    },
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/swiftui-introspect",
+      "state" : {
+        "revision" : "807f73ce09a9b9723f12385e592b4e0aaebd3336",
+        "version" : "1.3.0"
+      }
+    },
+    {
+      "identity" : "swxmlhash",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/drmohundro/SWXMLHash.git",
+      "state" : {
+        "revision" : "a853604c9e9a83ad9954c7e3d2a565273982471f",
+        "version" : "7.0.2"
+      }
+    },
+    {
+      "identity" : "wxsalt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/saltily/WxSalt.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0cb2b8a2a66670475c97c32a620a3e6ea22a123d"
+      }
+    },
+    {
+      "identity" : "yams",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jpsim/Yams.git",
+      "state" : {
+        "revision" : "9ff1cc9327586db4e0c8f46f064b6a82ec1566fa",
+        "version" : "4.0.6"
+      }
+    }
+  ],
+  "version" : 3
+}

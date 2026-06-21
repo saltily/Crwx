@@ -7,9 +7,14 @@
 
 import SwiftUI
 import SwiftData
+import FoundationUI
 
 @main
 struct CrwxApp: App {
+    let container: ModelContainer
+    init() {
+        self.container = appContainer // previewContainer
+    }
 //    var sharedModelContainer: ModelContainer = {
 //        let schema = Schema([
 //            Item.self,
@@ -26,6 +31,11 @@ struct CrwxApp: App {
     var body: some Scene {
         WindowGroup {
             MobileHomeView()
+                .modelContainer(container)
+                .locationManager()
+                .safari()
+                .preferredColorScheme(.dark)
+                .receiveGpx(container)
         }
 //        .modelContainer(sharedModelContainer)
     }

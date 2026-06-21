@@ -214,7 +214,6 @@
 		FDB3ABE52FE6A1EB00B4B903 /* WhereWasIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDF2FE6A1EB00B4B903 /* WhereWasIButton.swift */; };
 		FDB3ABE62FE6A1EB00B4B903 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABDB2FE6A1EB00B4B903 /* PhotoViewModel.swift */; };
 		FDB3ABED2FE6BE5B00B4B903 /* TrackDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABEB2FE6BE5B00B4B903 /* TrackDot.swift */; };
-		FDB3ABEE2FE6BE5B00B4B903 /* MapLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABE82FE6BE5B00B4B903 /* MapLink.swift */; };
 		FDB3ABEF2FE6BE5B00B4B903 /* RedDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABEA2FE6BE5B00B4B903 /* RedDot.swift */; };
 		FDB3ABF02FE6BE5B00B4B903 /* MapMarker+Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABE92FE6BE5B00B4B903 /* MapMarker+Waypoint.swift */; };
 		FDB3ABF12FE6BE5B00B4B903 /* AllRoutePolylines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABE72FE6BE5B00B4B903 /* AllRoutePolylines.swift */; };
@@ -552,7 +551,6 @@
 		FDB3ABDE2FE6A1EB00B4B903 /* WebShareable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebShareable.swift; sourceTree = "<group>"; };
 		FDB3ABDF2FE6A1EB00B4B903 /* WhereWasIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereWasIButton.swift; sourceTree = "<group>"; };
 		FDB3ABE72FE6BE5B00B4B903 /* AllRoutePolylines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoutePolylines.swift; sourceTree = "<group>"; };
-		FDB3ABE82FE6BE5B00B4B903 /* MapLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLink.swift; sourceTree = "<group>"; };
 		FDB3ABE92FE6BE5B00B4B903 /* MapMarker+Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker+Waypoint.swift"; sourceTree = "<group>"; };
 		FDB3ABEA2FE6BE5B00B4B903 /* RedDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedDot.swift; sourceTree = "<group>"; };
 		FDB3ABEB2FE6BE5B00B4B903 /* TrackDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDot.swift; sourceTree = "<group>"; };
@@ -1025,7 +1023,6 @@
 			isa = PBXGroup;
 			children = (
 				FDB3ABE72FE6BE5B00B4B903 /* AllRoutePolylines.swift */,
-				FDB3ABE82FE6BE5B00B4B903 /* MapLink.swift */,
 				FDB3ABE92FE6BE5B00B4B903 /* MapMarker+Waypoint.swift */,
 				FDB3ABEA2FE6BE5B00B4B903 /* RedDot.swift */,
 				FDB3ABEB2FE6BE5B00B4B903 /* TrackDot.swift */,
@@ -1578,7 +1575,6 @@
 				FDB3AB652FE6A03900B4B903 /* ExposureEditor.swift in Sources */,
 				FDB3AB662FE6A03900B4B903 /* AnchorageBanner.swift in Sources */,
 				FDB3ABED2FE6BE5B00B4B903 /* TrackDot.swift in Sources */,
-				FDB3ABEE2FE6BE5B00B4B903 /* MapLink.swift in Sources */,
 				FDB3ABEF2FE6BE5B00B4B903 /* RedDot.swift in Sources */,
 				FDB3ABF02FE6BE5B00B4B903 /* MapMarker+Waypoint.swift in Sources */,
 				FDB3ABF12FE6BE5B00B4B903 /* AllRoutePolylines.swift in Sources */,
@@ -1676,15 +1672,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Crwx/Crwx.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y2Y7BQ544M;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Crwx/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Crwx uses your current location to track your progress while sailing, capture weather, and help you navigate on charts.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Crwx lets you track and share photos from your sailing trips.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -1721,15 +1730,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Crwx/Crwx.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y2Y7BQ544M;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Crwx/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Crwx uses your current location to track your progress while sailing, capture weather, and help you navigate on charts.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Crwx lets you track and share photos from your sailing trips.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
