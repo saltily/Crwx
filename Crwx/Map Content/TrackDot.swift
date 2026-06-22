@@ -12,7 +12,7 @@ import FoundationUI
 import WxSalt
 
 struct TrackDot: MapContent {
-    init(_ point: any Mappable, tint: Color = .night) {
+    init(_ point: any Mappable, tint: Color = .night(.green)) {
         self.point = point
         self.tint = tint
     }
@@ -23,7 +23,7 @@ struct TrackDot: MapContent {
     }
 }
 extension MapBasket {
-    func trackDot(_ point: any Mappable, tint: Color = .night) {
+    func trackDot(_ point: any Mappable, tint: Color = .night(.green)) {
         self.dot(point, tint: tint, width: 5, border: 1)
     }
     func dot(snippet: WaypointSnippet) {
@@ -43,7 +43,7 @@ extension MapDot {
         } else if snippet.isHub {
             self.init(snippet, tint: .green)
         } else {
-            self.init(snippet, tint: .night, width: 5, border: 1)
+            self.init(snippet, tint: .night(.green), width: 5, border: 1)
         }
     }
 }

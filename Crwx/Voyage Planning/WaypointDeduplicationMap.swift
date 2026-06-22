@@ -52,7 +52,7 @@ struct WaypointDeduplicationMap: View {
                         if let image = wp.symbol?.systemImage {
                             map.marker(point: wp, systemImage: image, tint: wp.symbol?.colour ?? .red)
                         } else {
-                            map.dot(wp, tint: .night, width: 5, border: 1)
+                            map.dot(wp, tint: .night(.green), width: 5, border: 1)
                         }
                     }
                 }

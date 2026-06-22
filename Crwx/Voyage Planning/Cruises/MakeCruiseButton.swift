@@ -52,7 +52,7 @@ struct MakeCruiseButton: View {
                 .fullScreenCover(item: $model) { model in
                     NavigationStack {
                         CruiseForm(model: model)
-                            .seaBackground(.darkSeaBlue)
+                            .seaBackground(.darkSeaGreen)
                             .cancelButton()
                             .navigationTitle("New Cruise")
                             .navigationBarTitleDisplayMode(.inline)

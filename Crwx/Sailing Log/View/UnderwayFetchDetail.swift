@@ -219,7 +219,7 @@ struct UnderwayFetchDetail: View {
             .seaSection()
         }
         .listStyle(.grouped)
-        .seaBackground(.darkSeaBlue)
+        .seaBackground(.darkSeaGreen)
         .scrollDismissesKeyboard(.interactively)
         .navigationTitle("Manual Override")
         .navigationBarTitleDisplayMode(.inline)

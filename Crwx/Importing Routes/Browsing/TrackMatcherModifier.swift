@@ -61,13 +61,13 @@ fileprivate struct NestOne: View {
     @Query private var tracks: [Track]
     var body: some View {
         if tracksOnLeft {
-            LinkingLists(tracks, trips, background: .darkSeaBlue, puckBackground: .groupBoxTint) { track in
+            LinkingLists(tracks, trips, background: .darkSeaGreen, puckBackground: .groupBoxTint) { track in
                 TrackPuck(track: track)
             } rhs: { trip in
                 TripPuck(trip: trip)
             }
         } else {
-            LinkingLists(trips, tracks, background: .darkSeaBlue, puckBackground: .groupBoxTint) { trip in
+            LinkingLists(trips, tracks, background: .darkSeaGreen, puckBackground: .groupBoxTint) { trip in
                 TripPuck(trip: trip)
             } rhs: { track in
                 TrackPuck(track: track)

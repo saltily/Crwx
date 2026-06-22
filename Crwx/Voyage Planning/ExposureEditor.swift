@@ -141,7 +141,7 @@ struct ExposurePickerRow<Label>: View where Label: View {
     var legend: (any ExposureLegend)?
     @ViewBuilder var label: () -> Label
     var body: some View {
-        NavigationLink(destination: ExposureEditor(value: $exposure, legend: legend).seaBackground(.darkSeaBlue).navigationTitle(title)) {
+        NavigationLink(destination: ExposureEditor(value: $exposure, legend: legend).seaBackground(.darkSeaGreen).navigationTitle(title)) {
             HStack {
                 label()
                 Spacer()

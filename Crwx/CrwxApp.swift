@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import FoundationUI
+import WxSalt
 
 @main
 struct CrwxApp: App {
@@ -24,6 +25,7 @@ struct CrwxApp: App {
                 .safari()
                 .preferredColorScheme(.dark)
                 .receiveGpx(container)
+                .environment(\.wxColourScheme, .green)
         }
     }
 }

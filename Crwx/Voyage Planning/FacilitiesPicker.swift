@@ -30,7 +30,7 @@ struct FacilitiesPicker: View {
                 .seaSection()
                 .tint(.primary)
             }
-            .seaBackground(.darkSeaBlue)
+            .seaBackground(.darkSeaGreen)
             .navigationTitle("Facilities")
         } label: {
             HStack {

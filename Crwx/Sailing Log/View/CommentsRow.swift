@@ -43,7 +43,7 @@ struct CommentsRow: View {
                     }
                     .seaSection()
                 }
-                .seaBackground(.darkSeaBlue)
+                .seaBackground(.darkSeaGreen)
                 .navigationTitle("Comments")
                 .navigationBarTitleDisplayMode(.inline)
                 .cancelButton()

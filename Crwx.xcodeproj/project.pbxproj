@@ -217,6 +217,7 @@
 		FDB3ABEF2FE6BE5B00B4B903 /* RedDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABEA2FE6BE5B00B4B903 /* RedDot.swift */; };
 		FDB3ABF02FE6BE5B00B4B903 /* MapMarker+Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABE92FE6BE5B00B4B903 /* MapMarker+Waypoint.swift */; };
 		FDB3ABF12FE6BE5B00B4B903 /* AllRoutePolylines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABE72FE6BE5B00B4B903 /* AllRoutePolylines.swift */; };
+		FDBAD45D2FE9D06100C63620 /* Crwx.icon in Resources */ = {isa = PBXBuildFile; fileRef = FDBAD45C2FE9D06100C63620 /* Crwx.icon */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -574,6 +575,7 @@
 		FDB3ABE92FE6BE5B00B4B903 /* MapMarker+Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapMarker+Waypoint.swift"; sourceTree = "<group>"; };
 		FDB3ABEA2FE6BE5B00B4B903 /* RedDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedDot.swift; sourceTree = "<group>"; };
 		FDB3ABEB2FE6BE5B00B4B903 /* TrackDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDot.swift; sourceTree = "<group>"; };
+		FDBAD45C2FE9D06100C63620 /* Crwx.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Crwx.icon; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -769,6 +771,7 @@
 				FD091F812FE590F3001706D6 /* Assets.xcassets */,
 				FD091F832FE590F3001706D6 /* Crwx.entitlements */,
 				FD091F842FE590F3001706D6 /* CrwxApp.swift */,
+				FDBAD45C2FE9D06100C63620 /* Crwx.icon */,
 				FDE216A02FE5B10E00F60799 /* MobileHomeView.swift */,
 				FD091F852FE590F3001706D6 /* Info.plist */,
 			);
@@ -1369,6 +1372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDBAD45D2FE9D06100C63620 /* Crwx.icon in Resources */,
 				FD091F8B2FE590F3001706D6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1758,7 +1762,7 @@
 		FD091F552FE57B70001706D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Crwx;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Crwx/Crwx.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1816,7 +1820,7 @@
 		FD091F562FE57B70001706D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Crwx;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Crwx/Crwx.entitlements;
 				CODE_SIGN_STYLE = Automatic;

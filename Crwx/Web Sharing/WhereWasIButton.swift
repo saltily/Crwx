@@ -70,7 +70,7 @@ struct WhereWasIButton: View {
                 .saveButton("Done")
                 .navigationTitle("Where Was I At…?")
                 .navigationBarTitleDisplayMode(.inline)
-                .seaBackground(.darkSeaBlue)
+                .seaBackground(.darkSeaGreen)
             }
         }
     }

@@ -49,7 +49,7 @@ struct TrackTripButton: View {
         .fullScreenCover(item: $tripToEdit) { trip in
             NavigationStack {
                 TripEditor(trip: trip)
-                    .seaBackground(.darkSeaBlue)
+                    .seaBackground(.darkSeaGreen)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             DismissButton("Cancel") {

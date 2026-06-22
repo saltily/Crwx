@@ -27,7 +27,7 @@ struct ProtectionPicker: View {
                 .seaSection()
 
             }
-            .seaBackground(.darkSeaBlue)
+            .seaBackground(.darkSeaGreen)
             .navigationTitle("Protection Score")
         } label: {
             HStack {

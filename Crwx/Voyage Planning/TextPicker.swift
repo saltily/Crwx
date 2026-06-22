@@ -25,7 +25,7 @@ struct TextPicker: View {
                     .font(.subheadline)
                     .seaSection()
             }
-            .seaBackground(.darkSeaBlue)
+            .seaBackground(.darkSeaGreen)
             .navigationTitle(label)
             .toolbar {
                 Button(systemImage: "document.on.document") {
