@@ -9,20 +9,61 @@ import SwiftUI
 import WxSalt
 
 struct MobileHomeView: View {
+    @AppStorage(.crwxTabKey) private var tab = TabValue.log
     var body: some View {
-        NavigationStack {
-            AllTripsView()
-                .seaBackground()
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem {
-                        LogCommandsMenu()
-                    }
+        TabView(selection: $tab) {
+            
+            // MARK: 1. Voyage Log
+            Tab("Log", systemImage: "book.closed", value: TabValue.log) {
+                NavigationStack {
+                    AllTripsView()
+                        .seaBackground()
+                        .navigationBarTitleDisplayMode(.inline)
+                        .toolbar {
+                            ToolbarItem {
+                                LogCommandsMenu()
+                            }
+                        }
                 }
+            }
+            
+            // MARK: 2. Chart Navigator
+            Tab("Navigator", systemImage: "safari", value: TabValue.chart) {
+                NavigationStack {
+                    List {
+                        Text("Chart Navigator Map")
+                            .seaSection()
+                    }
+                    .seaBackground()
+                    .navigationTitle("Navigator")
+                    .navigationBarTitleDisplayMode(.inline)
+                }
+            }
+            
+            // MARK: 3. Planning
+            Tab("Plan", systemImage: "list.bullet.clipboard", value: TabValue.plan) {
+                NavigationStack {
+                    List {
+                        Text("List of Soundings and Harbours")
+                            .seaSection()
+                    }
+                    .seaBackground()
+                    .navigationTitle("Planning")
+                    .navigationBarTitleDisplayMode(.inline)
+                }
+            }
+            
         }
+    }
+    enum TabValue: Int {
+        case log, chart, plan
     }
 }
 
 #Preview {
     MobileHomeView()
+}
+
+extension String {
+    static let crwxTabKey = "com.saltily.Crwx.tabKey" // MobileHomeView.TabValue: Int
 }
