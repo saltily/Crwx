@@ -34,8 +34,9 @@ struct WaypointList: View {
             }
             .seaSection()
         }
-        .listFooter(countSentence)
+//        .listFooter(countSentence)
         .navigationTitle("Waypoints")
+        .navigationSubtitle(countSentence)
     }
     private var countSentence: String {
         var strings = [String]()

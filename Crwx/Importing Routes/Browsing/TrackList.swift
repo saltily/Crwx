@@ -59,8 +59,8 @@ struct TrackList: View {
                 .disabled(!canMergeSelection())
             }
         }
-        .listFooter(countSentence)
         .navigationTitle("Tracks")
+        .navigationSubtitle(countSentence)
         .toolbar {
             ToolbarItem {
                 Menu("Actions", systemImage: "ellipsis.circle") {

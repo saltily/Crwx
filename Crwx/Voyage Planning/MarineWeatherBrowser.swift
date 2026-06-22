@@ -30,8 +30,8 @@ struct MarineWeatherBrowser: View {
                 LocationMarineZonePicker(zone: $zone)
             } footer: {
                 if let captured = forecast?.captured {
-                    Text("Last updated: ") +
-                    Text(captured, format: .dateTime)
+                    let s = captured.formatted(.dateTime)
+                    Text("Last updated: \(s)")
                 }
             }
             .seaSection()
@@ -81,6 +81,8 @@ struct MarineWeatherBrowser: View {
 //            await forecasts.set(offline: false)
             forecast = await forecasts.marineWeather(for: zone)
         }
+        .navigationTitle(zone.name)
+        .navigationSubtitle(forecast?.captured.formatted(.relative(presentation: .named)) ?? "")
     }
     private var wx: [MarineZoneWeather] {
         guard let forecast else { return [] }

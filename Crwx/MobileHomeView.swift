@@ -43,13 +43,8 @@ struct MobileHomeView: View {
             // MARK: 3. Planning
             Tab("Plan", systemImage: "list.bullet.clipboard", value: TabValue.plan) {
                 NavigationStack {
-                    List {
-                        Text("List of Soundings and Harbours")
-                            .seaSection()
-                    }
-                    .seaBackground()
-                    .navigationTitle("Planning")
-                    .navigationBarTitleDisplayMode(.inline)
+                    PlanningHome()
+                        .navigationBarTitleDisplayMode(.inline)
                 }
             }
             

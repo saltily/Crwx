@@ -30,8 +30,9 @@ struct RouteList: View {
             .seaSection()
         }
         .routeCommands(showProgress: $showProgress)
-        .listFooter(countSentence, showProgress: showProgress)
+//        .listFooter(countSentence, showProgress: showProgress)
         .navigationTitle("Routes")
+        .navigationSubtitle(countSentence)
     }
     private var countSentence: String {
         routes.count.appending("route", "routes")

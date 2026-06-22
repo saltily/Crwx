@@ -218,6 +218,11 @@
 		FDB3ABF02FE6BE5B00B4B903 /* MapMarker+Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABE92FE6BE5B00B4B903 /* MapMarker+Waypoint.swift */; };
 		FDB3ABF12FE6BE5B00B4B903 /* AllRoutePolylines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3ABE72FE6BE5B00B4B903 /* AllRoutePolylines.swift */; };
 		FDBAD45D2FE9D06100C63620 /* Crwx.icon in Resources */ = {isa = PBXBuildFile; fileRef = FDBAD45C2FE9D06100C63620 /* Crwx.icon */; };
+		FDBAD4602FE9F3BE00C63620 /* WeatherPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD45F2FE9F3BE00C63620 /* WeatherPlanning.swift */; };
+		FDBAD4622FE9F3ED00C63620 /* PlanningHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4612FE9F3ED00C63620 /* PlanningHome.swift */; };
+		FDBAD4642FE9F5FA00C63620 /* ChecklistsPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4632FE9F5FA00C63620 /* ChecklistsPlanning.swift */; };
+		FDBAD4662FE9F71900C63620 /* HistoryPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4652FE9F71900C63620 /* HistoryPlanning.swift */; };
+		FDBAD4682FE9F8D800C63620 /* DatabasePlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4672FE9F8D800C63620 /* DatabasePlanning.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -576,6 +581,11 @@
 		FDB3ABEA2FE6BE5B00B4B903 /* RedDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedDot.swift; sourceTree = "<group>"; };
 		FDB3ABEB2FE6BE5B00B4B903 /* TrackDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDot.swift; sourceTree = "<group>"; };
 		FDBAD45C2FE9D06100C63620 /* Crwx.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Crwx.icon; sourceTree = "<group>"; };
+		FDBAD45F2FE9F3BE00C63620 /* WeatherPlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPlanning.swift; sourceTree = "<group>"; };
+		FDBAD4612FE9F3ED00C63620 /* PlanningHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningHome.swift; sourceTree = "<group>"; };
+		FDBAD4632FE9F5FA00C63620 /* ChecklistsPlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistsPlanning.swift; sourceTree = "<group>"; };
+		FDBAD4652FE9F71900C63620 /* HistoryPlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPlanning.swift; sourceTree = "<group>"; };
+		FDBAD4672FE9F8D800C63620 /* DatabasePlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabasePlanning.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -761,6 +771,7 @@
 		FD091F872FE590F3001706D6 /* Crwx */ = {
 			isa = PBXGroup;
 			children = (
+				FDBAD45E2FE9F3B000C63620 /* Planning Tab */,
 				FDE216352FE5B0CF00F60799 /* Sailing Log */,
 				FDB3AB0E2FE6A03900B4B903 /* Voyage Planning */,
 				FDB3AA842FE5BBA200B4B903 /* SwiftData */,
@@ -1073,6 +1084,18 @@
 				FDB3ABEB2FE6BE5B00B4B903 /* TrackDot.swift */,
 			);
 			path = "Map Content";
+			sourceTree = "<group>";
+		};
+		FDBAD45E2FE9F3B000C63620 /* Planning Tab */ = {
+			isa = PBXGroup;
+			children = (
+				FDBAD45F2FE9F3BE00C63620 /* WeatherPlanning.swift */,
+				FDBAD4632FE9F5FA00C63620 /* ChecklistsPlanning.swift */,
+				FDBAD4672FE9F8D800C63620 /* DatabasePlanning.swift */,
+				FDBAD4652FE9F71900C63620 /* HistoryPlanning.swift */,
+				FDBAD4612FE9F3ED00C63620 /* PlanningHome.swift */,
+			);
+			path = "Planning Tab";
 			sourceTree = "<group>";
 		};
 		FDE215CB2FE5B0CF00F60799 /* Locations */ = {
@@ -1484,10 +1507,12 @@
 				FDB3AA902FE5BBA200B4B903 /* TripSchemaV20.swift in Sources */,
 				FDB3AA912FE5BBA200B4B903 /* Trip+Previews.swift in Sources */,
 				FDB3AA922FE5BBA200B4B903 /* TripSchemaV2.swift in Sources */,
+				FDBAD4682FE9F8D800C63620 /* DatabasePlanning.swift in Sources */,
 				FDB3AA932FE5BBA200B4B903 /* TripSchemaV10.swift in Sources */,
 				FDB3AA942FE5BBA200B4B903 /* TripSchemaV9.swift in Sources */,
 				FDB3AA952FE5BBA200B4B903 /* TripSchemaV13.swift in Sources */,
 				FDB3AA962FE5BBA200B4B903 /* TripSchemaV5.swift in Sources */,
+				FDBAD4662FE9F71900C63620 /* HistoryPlanning.swift in Sources */,
 				FDB3AA972FE5BBA200B4B903 /* TripSchemaV6.swift in Sources */,
 				FDB3AA982FE5BBA200B4B903 /* BackupButton.swift in Sources */,
 				FDB3AA992FE5BBA200B4B903 /* BackModelActor.swift in Sources */,
@@ -1578,6 +1603,7 @@
 				FDB3AB222FE6A03900B4B903 /* TextPicker.swift in Sources */,
 				FDB3AB232FE6A03900B4B903 /* CoastalRegionPicker.swift in Sources */,
 				FDB3AB242FE6A03900B4B903 /* PotentialAnchoragesMap.swift in Sources */,
+				FDBAD4622FE9F3ED00C63620 /* PlanningHome.swift in Sources */,
 				FDB3AB252FE6A03900B4B903 /* DeleteCruiseModifier.swift in Sources */,
 				FDB3AB262FE6A03900B4B903 /* Facility.swift in Sources */,
 				FDB3AB272FE6A03900B4B903 /* HubsLink.swift in Sources */,
@@ -1626,6 +1652,7 @@
 				FDB3AB472FE6A03900B4B903 /* ProtectionScore.swift in Sources */,
 				FDB3AB482FE6A03900B4B903 /* HarbourChooserList.swift in Sources */,
 				FDB3AB492FE6A03900B4B903 /* StopActions.swift in Sources */,
+				FDBAD4602FE9F3BE00C63620 /* WeatherPlanning.swift in Sources */,
 				FDB3AB4A2FE6A03900B4B903 /* AnchoragePotential.swift in Sources */,
 				FDB3AB4B2FE6A03900B4B903 /* RouteMaker.swift in Sources */,
 				FDB3AB4C2FE6A03900B4B903 /* MarineWeatherBrowser.swift in Sources */,
@@ -1637,6 +1664,7 @@
 				FDB3AB522FE6A03900B4B903 /* RouteEditor+Button.swift in Sources */,
 				FDB3AB532FE6A03900B4B903 /* HarbourDestinations.swift in Sources */,
 				FDB3AB542FE6A03900B4B903 /* CruiseForm.swift in Sources */,
+				FDBAD4642FE9F5FA00C63620 /* ChecklistsPlanning.swift in Sources */,
 				FDB3AB552FE6A03900B4B903 /* FacilitiesPicker.swift in Sources */,
 				FDB3AB562FE6A03900B4B903 /* AnchorageLink.swift in Sources */,
 				FDB3AB572FE6A03900B4B903 /* CruiseWeather.swift in Sources */,

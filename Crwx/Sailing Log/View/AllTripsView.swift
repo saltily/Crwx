@@ -51,11 +51,7 @@ fileprivate struct TripsLoop: View {
             List(selection: $selectedTrips) {
                 Group {
                     Section {
-                        HarboursRow()
-                        CruisesRow()
                         ChooseAnchorageRow()
-                        MarineWeatherRow()
-                        SoundingsRow()
                         NavigationLink(destination: GridHelper()) {
                             Text("Grid Helper")
                         }
