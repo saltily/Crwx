@@ -24,7 +24,7 @@ struct GridHelper: View {
                     map.marker(point: p.labelled(p.summary))
                 }
             }
-            .mapTypeControl($mapType, region: region, allowedTypes: .tiles, overlay: .grid, .radar)
+            .mapTypeControl($mapType, region: region, allowedTypes: .tiles) //, overlay: .grid, .radar)
             Button(systemImage: "scope") {
                 points.append(region.center)
             }

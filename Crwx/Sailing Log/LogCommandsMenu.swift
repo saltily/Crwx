@@ -14,11 +14,6 @@ struct LogCommandsMenu: View {
         Menu("Commands", systemImage: "ellipsis.circle") {
             YearPicker()
             Divider()
-            NavigationLink {
-                TrackBrowser()
-            } label: {
-                Label("Tracks & Routes", systemImage: "map")
-            }
             TrackMatcherButton(tracksOnLeft: false, isPresented: $trackMatcherIsPresented)
             SelectMultipleButton()
             Divider()

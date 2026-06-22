@@ -50,12 +50,6 @@ fileprivate struct TripsLoop: View {
         ScrollViewReader { proxy in
             List(selection: $selectedTrips) {
                 Group {
-                    Section {
-                        ChooseAnchorageRow()
-                        NavigationLink(destination: GridHelper()) {
-                            Text("Grid Helper")
-                        }
-                    }
                     if addSection {
                         Section {
                             NewTripButton()

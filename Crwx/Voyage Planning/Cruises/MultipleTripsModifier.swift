@@ -15,7 +15,8 @@ struct MultipleTripsModifier: ViewModifier {
     let selection: Set<UUID>
     func body(content: Content) -> some View {
         content
-            .listFooter {
+            .navigationSubtitle(countSentence)
+            .safeAreaInset(edge: .bottom) {
                 FooterView(countSentence: countSentence, selection: selection)
             }
     }
@@ -33,12 +34,13 @@ fileprivate struct FooterView: View {
     @Environment(\.editMode) private var editMode
     var body: some View {
         if selection.isEmpty || editMode?.wrappedValue != .active {
-            Text(countSentence)
+            EmptyView()
+//            Text(countSentence)
         } else {
             let trips = selection.compactMap {
                 Trip.find($0, in: context)
             }.sorted(by: \.date)
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .center, spacing: 5) {
                 // start with hours underway, number of days and anchorages
                 Text(trips.hoursDaysAndAnchorages)
                 // then actual miles sailed and sog avg
@@ -49,10 +51,10 @@ fileprivate struct FooterView: View {
                 Text(trips.maxSpeedAndFuelConsumptionSentence)
                 MakeCruiseButton(selection: selection)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal)
-            .padding(.top, 8)
+            .frame(maxWidth: .infinity, alignment: .center)
             .font(.caption)
+            .padding()
+            .background(.thinMaterial)
         }
     }
 }

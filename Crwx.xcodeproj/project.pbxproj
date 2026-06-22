@@ -184,7 +184,6 @@
 		FDB3ABB42FE6A16300B4B903 /* RouteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB752FE6A16300B4B903 /* RouteList.swift */; };
 		FDB3ABB52FE6A16300B4B903 /* ZoomControlsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB8E2FE6A16300B4B903 /* ZoomControlsOverlay.swift */; };
 		FDB3ABB62FE6A16300B4B903 /* WaypointSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB922FE6A16300B4B903 /* WaypointSymbol.swift */; };
-		FDB3ABB72FE6A16300B4B903 /* TrackBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB7B2FE6A16300B4B903 /* TrackBrowser.swift */; };
 		FDB3ABB82FE6A16300B4B903 /* RouteMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB762FE6A16300B4B903 /* RouteMap.swift */; };
 		FDB3ABB92FE6A16300B4B903 /* WaypointsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB8C2FE6A16300B4B903 /* WaypointsMap.swift */; };
 		FDB3ABBA2FE6A16300B4B903 /* NobParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AB992FE6A16300B4B903 /* NobParser.swift */; };
@@ -529,7 +528,6 @@
 		FDB3AB782FE6A16300B4B903 /* SegmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentRow.swift; sourceTree = "<group>"; };
 		FDB3AB792FE6A16300B4B903 /* SwipeEditTrackName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeEditTrackName.swift; sourceTree = "<group>"; };
 		FDB3AB7A2FE6A16300B4B903 /* SwipeExtractSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeExtractSegment.swift; sourceTree = "<group>"; };
-		FDB3AB7B2FE6A16300B4B903 /* TrackBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBrowser.swift; sourceTree = "<group>"; };
 		FDB3AB7C2FE6A16300B4B903 /* TrackBrowserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBrowserList.swift; sourceTree = "<group>"; };
 		FDB3AB7D2FE6A16300B4B903 /* TrackBrowserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBrowserRow.swift; sourceTree = "<group>"; };
 		FDB3AB7E2FE6A16300B4B903 /* TrackEditorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackEditorButton.swift; sourceTree = "<group>"; };
@@ -994,7 +992,6 @@
 				FDB3AB782FE6A16300B4B903 /* SegmentRow.swift */,
 				FDB3AB792FE6A16300B4B903 /* SwipeEditTrackName.swift */,
 				FDB3AB7A2FE6A16300B4B903 /* SwipeExtractSegment.swift */,
-				FDB3AB7B2FE6A16300B4B903 /* TrackBrowser.swift */,
 				FDB3AB7C2FE6A16300B4B903 /* TrackBrowserList.swift */,
 				FDB3AB7D2FE6A16300B4B903 /* TrackBrowserRow.swift */,
 				FDB3AB7E2FE6A16300B4B903 /* TrackEditorButton.swift */,
@@ -1562,7 +1559,6 @@
 				FDB3ABE62FE6A1EB00B4B903 /* PhotoViewModel.swift in Sources */,
 				FDB3ABB52FE6A16300B4B903 /* ZoomControlsOverlay.swift in Sources */,
 				FDB3ABB62FE6A16300B4B903 /* WaypointSymbol.swift in Sources */,
-				FDB3ABB72FE6A16300B4B903 /* TrackBrowser.swift in Sources */,
 				FDB3ABB82FE6A16300B4B903 /* RouteMap.swift in Sources */,
 				FDB3ABB92FE6A16300B4B903 /* WaypointsMap.swift in Sources */,
 				FDB3ABBA2FE6A16300B4B903 /* NobParser.swift in Sources */,
