@@ -30,12 +30,13 @@ struct CrwxApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MobileHomeView()
-                .modelContainer(container)
+            EaseInView()
+//            MobileHomeView()
+//                .modelContainer(container)
                 .locationManager()
-                .safari()
-                .preferredColorScheme(.dark)
-                .receiveGpx(container)
+//                .safari()
+//                .preferredColorScheme(.dark)
+//                .receiveGpx(container)
         }
 //        .modelContainer(sharedModelContainer)
     }
