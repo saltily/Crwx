@@ -10,9 +10,7 @@
 		2735F72D479B7616A592F08F /* WxSalt in Frameworks */ = {isa = PBXBuildFile; productRef = 3A5EF7F29FD689CA3D285C15 /* WxSalt */; };
 		43840A0E08EDFE764B0D90EC /* FoundationUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8E992BCD553F9A6B429F6E69 /* FoundationUI */; };
 		F9B7AEC0155C0AB63F9EB6D6 /* FoundationSalt in Frameworks */ = {isa = PBXBuildFile; productRef = A055ACDAA9D3D87785FCD25E /* FoundationSalt */; };
-		FD091F882FE590F3001706D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F822FE590F3001706D6 /* ContentView.swift */; };
 		FD091F892FE590F3001706D6 /* CrwxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F842FE590F3001706D6 /* CrwxApp.swift */; };
-		FD091F8A2FE590F3001706D6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F862FE590F3001706D6 /* Item.swift */; };
 		FD091F8B2FE590F3001706D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD091F812FE590F3001706D6 /* Assets.xcassets */; };
 		FD091F8F2FE590F6001706D6 /* CrwxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F8D2FE590F6001706D6 /* CrwxTests.swift */; };
 		FD091F932FE590FA001706D6 /* CrwxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F902FE590FA001706D6 /* CrwxUITests.swift */; };
@@ -347,11 +345,9 @@
 		FD091F412FE57B70001706D6 /* CrwxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrwxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD091F4B2FE57B70001706D6 /* CrwxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrwxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD091F812FE590F3001706D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FD091F822FE590F3001706D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FD091F832FE590F3001706D6 /* Crwx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crwx.entitlements; sourceTree = "<group>"; };
 		FD091F842FE590F3001706D6 /* CrwxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxApp.swift; sourceTree = "<group>"; };
 		FD091F852FE590F3001706D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD091F862FE590F3001706D6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FD091F8D2FE590F6001706D6 /* CrwxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxTests.swift; sourceTree = "<group>"; };
 		FD091F902FE590FA001706D6 /* CrwxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITests.swift; sourceTree = "<group>"; };
 		FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -723,12 +719,10 @@
 				FDB3AB9B2FE6A16300B4B903 /* Importing Routes */,
 				FDB3ABE02FE6A1EB00B4B903 /* Web Sharing */,
 				FD091F812FE590F3001706D6 /* Assets.xcassets */,
-				FD091F822FE590F3001706D6 /* ContentView.swift */,
 				FD091F832FE590F3001706D6 /* Crwx.entitlements */,
 				FD091F842FE590F3001706D6 /* CrwxApp.swift */,
 				FDE216A02FE5B10E00F60799 /* MobileHomeView.swift */,
 				FD091F852FE590F3001706D6 /* Info.plist */,
-				FD091F862FE590F3001706D6 /* Item.swift */,
 			);
 			path = Crwx;
 			sourceTree = "<group>";
@@ -1323,7 +1317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD091F882FE590F3001706D6 /* ContentView.swift in Sources */,
 				FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */,
 				FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */,
 				FDE216A12FE5B10E00F60799 /* MobileHomeView.swift in Sources */,
@@ -1630,7 +1623,6 @@
 				FDE2169E2FE5B0CF00F60799 /* BuoyLine.swift in Sources */,
 				FDE2169F2FE5B0CF00F60799 /* WindSnippet.swift in Sources */,
 				FD091F892FE590F3001706D6 /* CrwxApp.swift in Sources */,
-				FD091F8A2FE590F3001706D6 /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

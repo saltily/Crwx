@@ -14,24 +14,15 @@ struct MobileHomeView: View {
             AllTripsView()
                 .seaBackground()
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem {
+                        LogCommandsMenu()
+                    }
+                }
         }
     }
 }
 
 #Preview {
     MobileHomeView()
-}
-
-struct EaseInView: View {
-    @State private var station: TideStation = .default
-    var body: some View {
-        NavigationStack {
-            List {
-                LocationTideStationPicker(station: $station)
-                    .seaSection()
-            }
-            .navigationTitle("Crwx")
-            .seaBackground()
-        }
-    }
 }

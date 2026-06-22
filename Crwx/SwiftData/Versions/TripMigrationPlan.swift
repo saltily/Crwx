@@ -8,6 +8,8 @@
 import Foundation
 import SwiftData
 import WxSalt
+import FoundationSalt
+import os
 
 public typealias CurrentSchema = TripSchemaV20
 
@@ -78,7 +80,13 @@ extension Schema {
 @MainActor
 var appContainer: ModelContainer {
     do {
-        let container = try ModelContainer(for: .init(versionedSchema: CurrentSchema.self), migrationPlan: TripMigrationPlan.self, configurations: [])
+        let container = try ModelContainer(
+            for: .init(versionedSchema: CurrentSchema.self),
+            migrationPlan: TripMigrationPlan.self,
+            configurations: .init(url: .swiftData("Mewx", groupIdentifier: .appGroupKey), cloudKitDatabase: .private(.cloudKitKey))
+        )
+        let url = try URL.swiftData("Mewx", groupIdentifier: .appGroupKey)
+        logger.trace("The database is at \(url.absoluteString)")
 //        if try container.mainContext.fetchCount(LocationProfile.self) == 0 {
 //            for location in LocationProfileViewModel.samples {
 //                let new = LocationProfile(viewModel: location)
