@@ -52,7 +52,7 @@ struct EventDetails: View {
             .seaSection()
         }
         .listStyle(.grouped)
-        .seaBackground(.darkSeaGreen)
+        .seaBackground(.flat)
         .navigationTitle(Text(event.time, format: .dateTime.hour().minute()))
         .toolbar {
             Button("Edit") {

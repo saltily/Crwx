@@ -22,7 +22,7 @@ struct AddSoundingButton: View {
         .sheet(item: $model) { model in
             NavigationStack {
                 SoundingForm(model: model, type: type, isNew: true)
-                    .seaBackground(.darkSeaGreen)
+                    .seaBackground(.flat)
                     .cancelButton()
                     .saveButton {
                         try await save(model: model)

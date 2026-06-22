@@ -20,7 +20,7 @@ struct TripDestinationPicker: View {
     @State private var destinationSetter: Destination = .init()
     var body: some View {
         // navigate to chooser
-        NavigationLink(destination: AnchorageChooser(intent: $mutableIntent).seaBackground(.darkSeaGreen).environment(\.anchorageSetter, destinationSetter)) {
+        NavigationLink(destination: AnchorageChooser(intent: $mutableIntent).seaBackground(.flat).environment(\.anchorageSetter, destinationSetter)) {
             
             Text("Destination")
                 .badge(endHarbour?.name ?? "")

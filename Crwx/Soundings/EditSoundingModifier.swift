@@ -24,7 +24,7 @@ struct EditSoundingModifier: ViewModifier {
         .sheet(item: $model) { model in
             NavigationStack {
                 SoundingForm(model: model, type: sounding.type, isNew: true)
-                    .seaBackground(.darkSeaGreen)
+                    .seaBackground(.flat)
                     .cancelButton()
                     .saveButton {
                         try await save(model: model)

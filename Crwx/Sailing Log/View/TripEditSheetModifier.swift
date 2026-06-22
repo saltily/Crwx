@@ -31,7 +31,7 @@ struct TripEditSheetModifier: ViewModifier {
                                 .fontWeight(.bold)
                             }
                         }
-                        .seaBackground(.darkSeaGreen)
+                        .seaBackground(.flat)
                 }
             }
     }

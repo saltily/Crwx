@@ -33,7 +33,7 @@ struct EventForm: View {
             }
             .seaSection()
         }
-        .seaBackground(.darkSeaGreen)
+        .seaBackground(.flat)
         .onChange(of: event, initial: true) { oldValue, newValue in
             if mutable.id != newValue.id {
                 mutable = newValue

@@ -36,7 +36,7 @@ struct EventLocationPicker: View {
                 }
             }
             .navigationTitle(label)
-            .seaBackground(.darkSeaGreen)
+            .seaBackground(.flat)
             .safeAreaInset(edge: .bottom) {
                 if let coordinate {
                     Text(coordinate.coordinate, format: .location)

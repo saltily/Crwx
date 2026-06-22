@@ -41,7 +41,7 @@ struct SailingLookaheadOverlay: ViewModifier {
         }, content: { lookahead in
             SailingLookaheadSheet(model: lookahead)
                 .presentationDetents([.height(150)])
-                .seaBackground(.darkSeaGreen)
+                .seaBackground(.flat)
         })
     }
 }

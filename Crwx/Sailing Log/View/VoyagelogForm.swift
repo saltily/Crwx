@@ -47,7 +47,7 @@ struct VoyagelogForm: View {
                 .seaSection()
             }
             .listStyle(.grouped)
-            .seaBackground(.darkSeaGreen)
+            .seaBackground(.flat)
             .navigationTitle("Voyage Log")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

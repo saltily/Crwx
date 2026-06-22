@@ -24,7 +24,7 @@ struct EditCruiseModifier: ViewModifier {
         .fullScreenCover(item: $model) { model in
             NavigationStack {
                 CruiseForm(model: model)
-                    .seaBackground(.darkSeaGreen)
+                    .seaBackground(.flat)
                     .cancelButton()
                     .navigationTitle("Edit Cruise")
                     .navigationBarTitleDisplayMode(.inline)

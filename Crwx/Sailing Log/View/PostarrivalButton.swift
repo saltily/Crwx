@@ -217,7 +217,7 @@ fileprivate struct CommentsButton: View {
                     }
                     .seaSection()
                 }
-                .seaBackground(.darkSeaGreen)
+                .seaBackground(.flat)
                 .navigationTitle("Comments")
                 .navigationBarTitleDisplayMode(.inline)
                 .cancelButton()

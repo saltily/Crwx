@@ -12,13 +12,14 @@ import WxSalt
 struct TripMapSection<Content>: View where Content: View {
     let corner: Alignment
     @ViewBuilder var content: () -> Content
+    @Environment(\.wxColourScheme) private var scheme
     var body: some View {
         content()
             .font(.footnote)
             .padding(10)
             .background {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(.darkSeaBlue.opacity(0.8))
+                    .fill(scheme.darkSea.opacity(0.8))
             }
             .padding(5)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: corner)

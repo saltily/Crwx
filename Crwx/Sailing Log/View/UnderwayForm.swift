@@ -89,7 +89,7 @@ struct UnderwayForm: View {
                 .seaSection()
             }
             .listStyle(.grouped)
-            .seaBackground(.darkSeaGreen)
+            .seaBackground(.flat)
             .navigationTitle(landing.rawValue.capitalized)
             .toolbarTitleDisplayMode(.inline)
             .cancelButton()

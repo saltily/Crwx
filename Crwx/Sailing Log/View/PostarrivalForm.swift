@@ -125,7 +125,7 @@ struct PostarrivalForm: View {
                 .seaSection()
             }
             .listStyle(.grouped)
-            .seaBackground(.darkSeaGreen)
+            .seaBackground(.flat)
             .scrollDismissesKeyboard(.interactively)
             .navigationTitle("Post Arrival")
             .navigationBarTitleDisplayMode(.inline)

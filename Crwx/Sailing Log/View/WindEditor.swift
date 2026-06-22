@@ -81,7 +81,7 @@ struct WindEditor: View {
             .seaSection()
         }
         .listStyle(.grouped)
-        .seaBackground(.darkSeaGreen)
+        .seaBackground(.flat)
         .navigationTitle("Edit Wind")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {

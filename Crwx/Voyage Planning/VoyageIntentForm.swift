@@ -102,7 +102,7 @@ struct EditVoyageIntentButton: View {
             NavigationStack {
                 VoyageIntentForm(intent: $intent)
                     .saveButton("Done")
-                    .seaBackground(.darkSeaGreen)
+                    .seaBackground(.flat)
             }
         }
     }

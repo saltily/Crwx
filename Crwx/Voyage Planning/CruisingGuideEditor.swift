@@ -39,6 +39,6 @@ struct CruisingGuideEditor: View {
             }
             .seaSection()
         }
-        .seaBackground(.darkSeaGreen)
+        .seaBackground(.flat)
     }
 }

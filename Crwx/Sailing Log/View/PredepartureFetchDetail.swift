@@ -118,7 +118,7 @@ struct PredepartureFetchDetail: View {
             
         }
         .listStyle(.grouped)
-        .seaBackground(.darkSeaGreen)
+        .seaBackground(.flat)
         .scrollDismissesKeyboard(.interactively)
         .navigationTitle("Manual Override")
         .navigationBarTitleDisplayMode(.inline)

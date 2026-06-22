@@ -15,7 +15,7 @@ struct TripNewDestinationButton: View {
     @State private var mutableIntent: VoyageIntent = .init()
     @Environment(\.anchorageSetter) private var setter
     var body: some View {
-        NavigationLink(destination: AnchorageChooser(intent: $mutableIntent).seaBackground(.darkSeaGreen).environment(\.anchorageSetter, setter)) {
+        NavigationLink(destination: AnchorageChooser(intent: $mutableIntent).seaBackground(.flat).environment(\.anchorageSetter, setter)) {
             
             Image(systemName: "arrow.right.to.line.circle")
             

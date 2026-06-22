@@ -82,7 +82,7 @@ struct PredepartureForm: View {
                 .seaSection()
             }
             .listStyle(.grouped)
-            .seaBackground(.darkSeaGreen)
+            .seaBackground(.flat)
             .navigationTitle(isNew ? "New Trip" : "Pre Departure")
             .toolbarTitleDisplayMode(.inline)
             .cancelButton()

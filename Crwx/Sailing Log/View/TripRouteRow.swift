@@ -65,7 +65,7 @@ struct TripRouteRow: View {
             .sheet(isPresented: $isPresented) {
                 NavigationStack {
                     TripRouteForm(model: $model)
-                        .seaBackground(.darkSeaGreen)
+                        .seaBackground(.flat)
                         .cancelButton()
                         .saveButton {
                             try model.save(to: trip, in: context)

@@ -38,7 +38,7 @@ struct SwipeEditTrackName: ViewModifier {
                         }
                         .seaSection()
                     }
-                    .seaBackground(.darkSeaGreen)
+                    .seaBackground(.flat)
                     .cancelButton()
                     .saveButton {
                         let container = context.container

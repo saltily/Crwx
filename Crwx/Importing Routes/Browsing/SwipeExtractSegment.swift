@@ -33,7 +33,7 @@ struct SwipeExtractSegmentModifier: ViewModifier {
                 }
                 .navigationTitle("Extract Segment")
                 .toolbarTitleDisplayMode(.inline)
-                .seaBackground(.darkSeaGreen)
+                .seaBackground(.flat)
             }
         }
     }
