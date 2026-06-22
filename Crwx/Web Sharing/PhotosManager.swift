@@ -37,8 +37,9 @@ final class PhotosManager: Identifiable, RandomAccessCollection {
     fileprivate let actor: PhotoActor
     var startIndex: Int { 0 }
     var endIndex: Int { assets.count }
-    subscript(position: Int) -> UniquePHAsset {
-        assets[position]
+    subscript(position: Int) -> UniquePHAsset? {
+        guard position < endIndex else { return nil }
+        return assets[position]
     }
     func set(dates: Range<Date>) {
         guard uploadCount == 0,

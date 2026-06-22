@@ -109,71 +109,72 @@ fileprivate struct PhotoAssetThumbnail: View {
     @State private var image: UIImage?
     @Environment(Trip.self) private var trip
     var body: some View {
-        let uniqueAsset = photos[index]
-        let exists = photos.existing.contains(uniqueAsset.stamp)
-        let asset = uniqueAsset.asset
-        ZStack {
-            if let image {
-                Image(uiImage: image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .opacity(exists ? 0.5 : 1)
-                if asset.mediaType == .video {
-                    Image(systemName: "play.circle")
-                        .font(.largeTitle)
-                        .opacity(0.8)
-                }
-                Group {
-                    if exists {
-                        HStack {
-                            Image(systemName: "square.and.arrow.down")
-                            Button(systemImage: "trash") {
-                                Task {
-                                    do {
-                                        try await photos.unload(index, on: trip)
-                                    } catch {
-                                        logger.critical("Couldn't unsave photo: \(error)")
+        if let uniqueAsset = photos[index] {
+            let exists = photos.existing.contains(uniqueAsset.stamp)
+            let asset = uniqueAsset.asset
+            ZStack {
+                if let image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .opacity(exists ? 0.5 : 1)
+                    if asset.mediaType == .video {
+                        Image(systemName: "play.circle")
+                            .font(.largeTitle)
+                            .opacity(0.8)
+                    }
+                    Group {
+                        if exists {
+                            HStack {
+                                Image(systemName: "square.and.arrow.down")
+                                Button(systemImage: "trash") {
+                                    Task {
+                                        do {
+                                            try await photos.unload(index, on: trip)
+                                        } catch {
+                                            logger.critical("Couldn't unsave photo: \(error)")
+                                        }
                                     }
                                 }
+                                .tint(.pink)
                             }
-                            .tint(.pink)
+                        }
+                        else if photos.isSelected(index) {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundStyle(.yellow)
+                        } else {
+                            Image(systemName: "circle")
                         }
                     }
-                    else if photos.isSelected(index) {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundStyle(.yellow)
-                    } else {
-                        Image(systemName: "circle")
+                    .padding(5)
+                    .mapAlignment(.topLeading)
+                    if asset.location != nil {
+                        Image(systemName: "mappin.and.ellipse")
+                            .padding(5)
+                            .mapAlignment(.topTrailing)
                     }
+                } else {
+                    ProgressView()
                 }
-                .padding(5)
-                .mapAlignment(.topLeading)
-                if asset.location != nil {
-                    Image(systemName: "mappin.and.ellipse")
-                        .padding(5)
-                        .mapAlignment(.topTrailing)
+            }
+            //        .aspectRatio(1.0, contentMode: .fit)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                if !exists {
+                    photos.toggleSelection(index)
                 }
-            } else {
-                ProgressView()
             }
-        }
-//        .aspectRatio(1.0, contentMode: .fit)
-        .contentShape(Rectangle())
-        .onTapGesture {
-            if !exists {
-                photos.toggleSelection(index)
-            }
-        }
-        .task {
-            let task = Task.detached {
-                try await photos.thumbnail(asset)
-            }
-            do {
-                self.image = try await task.value
-            } catch is CancellationError {
-                logger.warning("Cancelled loading thumbnail")
-            } catch {
-                logger.critical("Error loading thumbnail: \(error)")
+            .task {
+                let task = Task.detached {
+                    try await photos.thumbnail(asset)
+                }
+                do {
+                    self.image = try await task.value
+                } catch is CancellationError {
+                    logger.warning("Cancelled loading thumbnail")
+                } catch {
+                    logger.critical("Error loading thumbnail: \(error)")
+                }
             }
         }
     }
