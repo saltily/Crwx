@@ -11,7 +11,7 @@ import WxSalt
 struct SoundingsRow: View {
     var body: some View {
         NavigationLink(destination: SoundingsHome().seaBackground()) {
-            Label("Soundings", systemImage: "inset.filled.bottomhalf.rectangle")
+            Label("Inventory", systemImage: "inset.filled.bottomhalf.rectangle")
         }
     }
 }

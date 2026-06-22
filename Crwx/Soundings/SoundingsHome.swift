@@ -12,14 +12,14 @@ import WxSalt
 struct SoundingsHome: View {
     var body: some View {
         List {
-            Section {
+            Section("Soundings") {
                 ForEach(Sounding.T.allCases, id: \.rawValue) { type in
                     SoundingRow(type: type)
                 }
             }
             .seaSection()
         }
-        .navigationTitle("Soundings")
+        .navigationTitle("Inventory")
     }
 }
 

@@ -12,9 +12,9 @@ struct WeatherPlanning: View {
     var body: some View {
         Section("Weather") {
             MarineWeatherRow()
-            Text("Tides")
-            Text("Tidal Currents")
-            Text("Sea Buoy")
+            Label("Tides", systemImage: WeatherAngle.tide.symbolName)
+            Label("Tidal Currents", systemImage: WeatherSource.tidalCurrents.symbolName)
+            Label("Sea Buoy", systemImage: WeatherSource.marineBuoy.symbolName)
         }
         .seaSection()
     }

@@ -12,11 +12,10 @@ struct ChecklistsPlanning: View {
     var body: some View {
         Section("Lists") {
             SoundingsRow()
-            Text("Menu")
-            Text("Packing List")
-            Text("Inventory")
-            Text("Safety Equipment")
-            Text("Seasonal Checklists")
+            Label("Menu", systemImage: "fork.knife")
+            Label("Packing List", systemImage: "checklist")
+            Label("Safety Equipment", systemImage: "fire.extinguisher")
+            Label("Seasonal Checklists", systemImage: "wind.snow")
         }
         .seaSection()
     }
