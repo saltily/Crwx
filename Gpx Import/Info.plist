@@ -2,23 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleURLTypes</key>
-	<array>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionAttributes</key>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>com.saltily.crwx</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>crwx</string>
-			</array>
+			<key>NSExtensionActivationRule</key>
+			<string>TRUEPREDICATE</string>
 		</dict>
-	</array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.share-services</string>
+		<key>NSExtensionPrincipalClass</key>
+		<string>$(PRODUCT_MODULE_NAME).ShareViewController</string>
+	</dict>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>
@@ -27,16 +22,14 @@
 				<string>public.xml</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Rose Point Routes</string>
-			<key>UTTypeIcons</key>
-			<dict/>
+			<string>GPS Exchange</string>
 			<key>UTTypeIdentifier</key>
-			<string>com.rosepoint.nob</string>
+			<string>com.topografix.gpx</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
 				<array>
-					<string>nob</string>
+					<string>gpx</string>
 				</array>
 			</dict>
 		</dict>
@@ -46,16 +39,14 @@
 				<string>public.xml</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>GPS Exchange</string>
-			<key>UTTypeIcons</key>
-			<dict/>
+			<string>RosePoint Routes</string>
 			<key>UTTypeIdentifier</key>
-			<string>com.topografix.gpx</string>
+			<string>com.rosepoint.nob</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
 				<array>
-					<string>gpx</string>
+					<string>nob</string>
 				</array>
 			</dict>
 		</dict>

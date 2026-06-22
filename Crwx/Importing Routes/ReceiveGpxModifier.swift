@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import FoundationUI
+import WxSalt
 
 struct ReceiveGpxModifier: ViewModifier {
     init(container: ModelContainer) {
@@ -17,7 +18,7 @@ struct ReceiveGpxModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .onOpenURL { url in
-                guard url.scheme == "mewx",
+                guard url.scheme == "crwx",
                       url == .receiveGpx
                 else { return }
                 engine.start()
@@ -35,6 +36,3 @@ extension View {
     }
 }
 
-extension URL {
-    static let receiveGpx = URL(string: "mewx://receive-gpx")!
-}

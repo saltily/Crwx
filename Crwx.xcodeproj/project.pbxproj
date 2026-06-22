@@ -15,6 +15,8 @@
 		FD091F8F2FE590F6001706D6 /* CrwxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F8D2FE590F6001706D6 /* CrwxTests.swift */; };
 		FD091F932FE590FA001706D6 /* CrwxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F902FE590FA001706D6 /* CrwxUITests.swift */; };
 		FD091F942FE590FA001706D6 /* CrwxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */; };
+		FD35AEFD2FE99B9E00A607FE /* Gpx Import.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD35AEF32FE99B9E00A607FE /* Gpx Import.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD35AF052FE99BB600A607FE /* FoundationSalt in Frameworks */ = {isa = PBXBuildFile; productRef = FD35AF042FE99BB600A607FE /* FoundationSalt */; };
 		FD399ACE2FE721CF00E37AEA /* LocationChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */; };
 		FD399AD02FE757AC00E37AEA /* PointText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399ACF2FE757AC00E37AEA /* PointText.swift */; };
 		FD399AD22FE7584900E37AEA /* LocationPointPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */; };
@@ -338,7 +340,28 @@
 			remoteGlobalIDString = FD091F2F2FE57B6F001706D6;
 			remoteInfo = Crwx;
 		};
+		FD35AEFB2FE99B9E00A607FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD091F282FE57B6F001706D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD35AEF22FE99B9E00A607FE;
+			remoteInfo = "Gpx Import";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD35AEFE2FE99B9E00A607FE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FD35AEFD2FE99B9E00A607FE /* Gpx Import.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD091F302FE57B6F001706D6 /* Crwx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crwx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -351,6 +374,7 @@
 		FD091F8D2FE590F6001706D6 /* CrwxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxTests.swift; sourceTree = "<group>"; };
 		FD091F902FE590FA001706D6 /* CrwxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITests.swift; sourceTree = "<group>"; };
 		FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FD35AEF32FE99B9E00A607FE /* Gpx Import.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gpx Import.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChoice.swift; sourceTree = "<group>"; };
 		FD399ACF2FE757AC00E37AEA /* PointText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointText.swift; sourceTree = "<group>"; };
 		FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPointPicker.swift; sourceTree = "<group>"; };
@@ -658,6 +682,20 @@
 		FDE216A02FE5B10E00F60799 /* MobileHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FD35AF012FE99B9E00A607FE /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FD35AEF22FE99B9E00A607FE /* Gpx Import */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FD35AEF42FE99B9E00A607FE /* Gpx Import */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FD35AF012FE99B9E00A607FE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Gpx Import"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		FD091F2D2FE57B6F001706D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -684,6 +722,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD35AEF02FE99B9E00A607FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD35AF052FE99BB600A607FE /* FoundationSalt in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -693,6 +739,7 @@
 				FD091F872FE590F3001706D6 /* Crwx */,
 				FD091F8E2FE590F6001706D6 /* CrwxTests */,
 				FD091F922FE590FA001706D6 /* CrwxUITests */,
+				FD35AEF42FE99B9E00A607FE /* Gpx Import */,
 				FDB3AA5B2FE5BB2400B4B903 /* Frameworks */,
 				FD091F312FE57B6F001706D6 /* Products */,
 			);
@@ -704,6 +751,7 @@
 				FD091F302FE57B6F001706D6 /* Crwx.app */,
 				FD091F412FE57B70001706D6 /* CrwxTests.xctest */,
 				FD091F4B2FE57B70001706D6 /* CrwxUITests.xctest */,
+				FD35AEF32FE99B9E00A607FE /* Gpx Import.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1186,10 +1234,12 @@
 				FD091F2C2FE57B6F001706D6 /* Sources */,
 				FD091F2D2FE57B6F001706D6 /* Frameworks */,
 				FD091F2E2FE57B6F001706D6 /* Resources */,
+				FD35AEFE2FE99B9E00A607FE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FD35AEFC2FE99B9E00A607FE /* PBXTargetDependency */,
 			);
 			name = Crwx;
 			packageProductDependencies = (
@@ -1238,6 +1288,29 @@
 			productReference = FD091F4B2FE57B70001706D6 /* CrwxUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FD35AEF22FE99B9E00A607FE /* Gpx Import */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD35AF022FE99B9E00A607FE /* Build configuration list for PBXNativeTarget "Gpx Import" */;
+			buildPhases = (
+				FD35AEEF2FE99B9E00A607FE /* Sources */,
+				FD35AEF02FE99B9E00A607FE /* Frameworks */,
+				FD35AEF12FE99B9E00A607FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FD35AEF42FE99B9E00A607FE /* Gpx Import */,
+			);
+			name = "Gpx Import";
+			packageProductDependencies = (
+				FD35AF042FE99BB600A607FE /* FoundationSalt */,
+			);
+			productName = "Gpx Import";
+			productReference = FD35AEF32FE99B9E00A607FE /* Gpx Import.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1258,6 +1331,9 @@
 					FD091F4A2FE57B70001706D6 = {
 						CreatedOnToolsVersion = 26.5;
 						TestTargetID = FD091F2F2FE57B6F001706D6;
+					};
+					FD35AEF22FE99B9E00A607FE = {
+						CreatedOnToolsVersion = 26.5;
 					};
 				};
 			};
@@ -1283,6 +1359,7 @@
 				FD091F2F2FE57B6F001706D6 /* Crwx */,
 				FD091F402FE57B70001706D6 /* CrwxTests */,
 				FD091F4A2FE57B70001706D6 /* CrwxUITests */,
+				FD35AEF22FE99B9E00A607FE /* Gpx Import */,
 			);
 		};
 /* End PBXProject section */
@@ -1304,6 +1381,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FD091F492FE57B70001706D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD35AEF12FE99B9E00A607FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1643,6 +1727,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD35AEEF2FE99B9E00A607FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1655,6 +1746,11 @@
 			isa = PBXTargetDependency;
 			target = FD091F2F2FE57B6F001706D6 /* Crwx */;
 			targetProxy = FD091F4C2FE57B70001706D6 /* PBXContainerItemProxy */;
+		};
+		FD35AEFC2FE99B9E00A607FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD35AEF22FE99B9E00A607FE /* Gpx Import */;
+			targetProxy = FD35AEFB2FE99B9E00A607FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1993,6 +2089,69 @@
 			};
 			name = Release;
 		};
+		FD35AEFF2FE99B9E00A607FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Gpx Import/Gpx Import.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y2Y7BQ544M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Gpx Import/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gpx Import";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saltily.Crwx.Gpx-Import";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD35AF002FE99B9E00A607FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Gpx Import/Gpx Import.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y2Y7BQ544M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Gpx Import/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gpx Import";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saltily.Crwx.Gpx-Import";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2028,6 +2187,15 @@
 			buildConfigurations = (
 				FD091F5D2FE57B70001706D6 /* Debug */,
 				FD091F5E2FE57B70001706D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD35AF022FE99B9E00A607FE /* Build configuration list for PBXNativeTarget "Gpx Import" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD35AEFF2FE99B9E00A607FE /* Debug */,
+				FD35AF002FE99B9E00A607FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2083,6 +2251,10 @@
 		A055ACDAA9D3D87785FCD25E /* FoundationSalt */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0DCB7B5F836A4254F4781F67 /* XCRemoteSwiftPackageReference "FoundationSalt" */;
+			productName = FoundationSalt;
+		};
+		FD35AF042FE99BB600A607FE /* FoundationSalt */ = {
+			isa = XCSwiftPackageProductDependency;
 			productName = FoundationSalt;
 		};
 		FDB3AA5C2FE5BB2400B4B903 /* FocusOnAppear */ = {
