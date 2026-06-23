@@ -246,7 +246,6 @@
 		FDE216492FE5B0CF00F60799 /* RouteInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216032FE5B0CF00F60799 /* RouteInspector.swift */; };
 		FDE2164A2FE5B0CF00F60799 /* MarineZoneSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */; };
 		FDE2164B2FE5B0CF00F60799 /* DinghyOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CC2FE5B0CF00F60799 /* DinghyOption.swift */; };
-		FDE2164C2FE5B0CF00F60799 /* TripEditSheetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216162FE5B0CF00F60799 /* TripEditSheetModifier.swift */; };
 		FDE2164D2FE5B0CF00F60799 /* LogCommandsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216312FE5B0CF00F60799 /* LogCommandsMenu.swift */; };
 		FDE2164E2FE5B0CF00F60799 /* UnderwayFetchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216272FE5B0CF00F60799 /* UnderwayFetchRow.swift */; };
 		FDE2164F2FE5B0CF00F60799 /* UnderwayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216252FE5B0CF00F60799 /* UnderwayButton.swift */; };
@@ -274,7 +273,6 @@
 		FDE216662FE5B0CF00F60799 /* SailingFollowMeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216042FE5B0CF00F60799 /* SailingFollowMeModifier.swift */; };
 		FDE216672FE5B0CF00F60799 /* BuoyObservationEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215E42FE5B0CF00F60799 /* BuoyObservationEditor.swift */; };
 		FDE216682FE5B0CF00F60799 /* EventLocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215ED2FE5B0CF00F60799 /* EventLocationPicker.swift */; };
-		FDE2166A2FE5B0CF00F60799 /* LegacyTripForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215F22FE5B0CF00F60799 /* LegacyTripForm.swift */; };
 		FDE2166B2FE5B0CF00F60799 /* VoyagelogSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162B2FE5B0CF00F60799 /* VoyagelogSection.swift */; };
 		FDE2166C2FE5B0CF00F60799 /* MeasuredWaypointSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215FA2FE5B0CF00F60799 /* MeasuredWaypointSnippet.swift */; };
 		FDE2166D2FE5B0CF00F60799 /* VoyageeventEditorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216292FE5B0CF00F60799 /* VoyageeventEditorRow.swift */; };
@@ -626,7 +624,6 @@
 		FDE215EF2FE5B0CF00F60799 /* ForecastConditionsSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastConditionsSymbol.swift; sourceTree = "<group>"; };
 		FDE215F02FE5B0CF00F60799 /* ForecastWindLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWindLines.swift; sourceTree = "<group>"; };
 		FDE215F12FE5B0CF00F60799 /* FuelEditorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelEditorRow.swift; sourceTree = "<group>"; };
-		FDE215F22FE5B0CF00F60799 /* LegacyTripForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTripForm.swift; sourceTree = "<group>"; };
 		FDE215F32FE5B0CF00F60799 /* LocalForecastLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalForecastLine.swift; sourceTree = "<group>"; };
 		FDE215F42FE5B0CF00F60799 /* LocalForecastSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalForecastSection.swift; sourceTree = "<group>"; };
 		FDE215F52FE5B0CF00F60799 /* LocalWeatherEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWeatherEditor.swift; sourceTree = "<group>"; };
@@ -661,7 +658,6 @@
 		FDE216122FE5B0CF00F60799 /* TowingSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowingSymbol.swift; sourceTree = "<group>"; };
 		FDE216132FE5B0CF00F60799 /* TripDestinationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDestinationPicker.swift; sourceTree = "<group>"; };
 		FDE216152FE5B0CF00F60799 /* TripEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditor.swift; sourceTree = "<group>"; };
-		FDE216162FE5B0CF00F60799 /* TripEditSheetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditSheetModifier.swift; sourceTree = "<group>"; };
 		FDE216172FE5B0CF00F60799 /* TripHarboursSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHarboursSection.swift; sourceTree = "<group>"; };
 		FDE216182FE5B0CF00F60799 /* TripMapOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapOverlays.swift; sourceTree = "<group>"; };
 		FDE216192FE5B0CF00F60799 /* TripMapSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapSection.swift; sourceTree = "<group>"; };
@@ -1171,7 +1167,6 @@
 				FDE215EF2FE5B0CF00F60799 /* ForecastConditionsSymbol.swift */,
 				FDE215F02FE5B0CF00F60799 /* ForecastWindLines.swift */,
 				FDE215F12FE5B0CF00F60799 /* FuelEditorRow.swift */,
-				FDE215F22FE5B0CF00F60799 /* LegacyTripForm.swift */,
 				FDE215F32FE5B0CF00F60799 /* LocalForecastLine.swift */,
 				FDE215F42FE5B0CF00F60799 /* LocalForecastSection.swift */,
 				FDE215F52FE5B0CF00F60799 /* LocalWeatherEditor.swift */,
@@ -1206,7 +1201,6 @@
 				FDE216122FE5B0CF00F60799 /* TowingSymbol.swift */,
 				FDE216132FE5B0CF00F60799 /* TripDestinationPicker.swift */,
 				FDE216152FE5B0CF00F60799 /* TripEditor.swift */,
-				FDE216162FE5B0CF00F60799 /* TripEditSheetModifier.swift */,
 				FDE216172FE5B0CF00F60799 /* TripHarboursSection.swift */,
 				FDE216182FE5B0CF00F60799 /* TripMapOverlays.swift */,
 				FDE216192FE5B0CF00F60799 /* TripMapSection.swift */,
@@ -1448,7 +1442,6 @@
 				FDE216492FE5B0CF00F60799 /* RouteInspector.swift in Sources */,
 				FDE2164A2FE5B0CF00F60799 /* MarineZoneSnippet.swift in Sources */,
 				FDE2164B2FE5B0CF00F60799 /* DinghyOption.swift in Sources */,
-				FDE2164C2FE5B0CF00F60799 /* TripEditSheetModifier.swift in Sources */,
 				FDE2164D2FE5B0CF00F60799 /* LogCommandsMenu.swift in Sources */,
 				FDE2164E2FE5B0CF00F60799 /* UnderwayFetchRow.swift in Sources */,
 				FDE2164F2FE5B0CF00F60799 /* UnderwayButton.swift in Sources */,
@@ -1476,7 +1469,6 @@
 				FDE216662FE5B0CF00F60799 /* SailingFollowMeModifier.swift in Sources */,
 				FDE216672FE5B0CF00F60799 /* BuoyObservationEditor.swift in Sources */,
 				FDE216682FE5B0CF00F60799 /* EventLocationPicker.swift in Sources */,
-				FDE2166A2FE5B0CF00F60799 /* LegacyTripForm.swift in Sources */,
 				FDE2166B2FE5B0CF00F60799 /* VoyagelogSection.swift in Sources */,
 				FDE2166C2FE5B0CF00F60799 /* MeasuredWaypointSnippet.swift in Sources */,
 				FDE2166D2FE5B0CF00F60799 /* VoyageeventEditorRow.swift in Sources */,

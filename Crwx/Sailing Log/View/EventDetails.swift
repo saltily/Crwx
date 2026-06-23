@@ -55,7 +55,7 @@ struct EventDetails: View {
         .seaBackground(.flat)
         .navigationTitle(Text(event.time, format: .dateTime.hour().minute()))
         .toolbar {
-            Button("Edit") {
+            Button("Edit", systemImage: "pencil") {
                 editEvent = event
             }
         }

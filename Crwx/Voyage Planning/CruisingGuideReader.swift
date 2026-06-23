@@ -71,7 +71,7 @@ struct CruisingGuideReader: View {
         .seaBackground()
         .toolbar {
             if mutable != nil {
-                Button("Edit") {
+                Button("Edit", systemImage: "pencil") {
                     showEditor = true
                 }
             }

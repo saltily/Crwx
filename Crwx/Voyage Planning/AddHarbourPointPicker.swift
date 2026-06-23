@@ -77,10 +77,11 @@ fileprivate struct AddHarbourDetail: View {
         .seaBackground()
         .navigationTitle(new?.name ?? "New Harbour")
         .toolbar {
-            Button("Done") {
-                isPresented = false
+            ToolbarItem {
+                Button("Done", systemImage: "checkmark", role: .confirm) {
+                    isPresented = false
+                }
             }
-            .fontWeight(.bold)
         }
         .task {
             let vm = await HarbourViewModel(coordinate: coordinate)

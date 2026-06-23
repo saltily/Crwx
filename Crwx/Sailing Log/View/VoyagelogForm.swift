@@ -52,7 +52,7 @@ struct VoyagelogForm: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") {
+                    Button("Cancel", systemImage: "xmark", role: .cancel) {
                         dismiss()
                     }
                 }
@@ -64,7 +64,7 @@ struct VoyagelogForm: View {
                         }
                         generateEvent()
                     }
-                    Button("Save") {
+                    Button("Save", systemImage: "checkmark", role: .confirm) {
                         dismiss()
                         if let newEvent,
                            !newEvent.text.isEmpty

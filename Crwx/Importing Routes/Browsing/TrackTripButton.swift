@@ -52,14 +52,14 @@ struct TrackTripButton: View {
                     .seaBackground(.flat)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
-                            DismissButton("Cancel") {
+                            DismissButton("Cancel", systemImage: "xmark", role: .cancel) {
                                 context.delete(trip)
                                 try? context.save()
                                 return true
                             }
                         }
                         ToolbarItem {
-                            DismissButton("Save")
+                            DismissButton("Save", systemImage: "checkmark", role: .confirm)
                                 .fontWeight(.bold)
                         }
                     }

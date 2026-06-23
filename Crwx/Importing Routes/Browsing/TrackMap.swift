@@ -107,7 +107,7 @@ fileprivate struct NestOne: View {
               segments != copy
             {
                 ToolbarItem {
-                    Button("Save") {
+                    Button("Save", systemImage: "checkmark", role: .confirm) {
                         segments = copy
                         track.remeasure()
                         try? context.save()

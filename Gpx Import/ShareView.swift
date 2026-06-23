@@ -36,7 +36,7 @@ struct ShareView: View {
             .navigationTitle("Share Extension")
             .toolbar {
                 ToolbarItemGroup(placement: .cancellationAction) {
-                    Button("Cancel", role: .cancel) {
+                    Button("Cancel", systemImage: "xmark", role: .cancel) {
                         close()
                     }
                 }

@@ -75,7 +75,6 @@ struct TripOverview: View {
             MarineForecastSection(forecast: trip.marineForecast, observation: trip.buoyObservation)
             LocalForecastSection(forecast: trip.localForecast)
         }
-//        .editSheet(trip)
         .navigationTitle(trip.date.formatted(.dateTime.month().day().year().weekday()))
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(isPresented: $goToStartHarbour) {
@@ -91,7 +90,7 @@ struct TripOverview: View {
         .toolbar {
             ToolbarItem {
                 NavigationLink(destination: TripEditor(trip: trip).seaBackground()) {
-                    Text("Edit")
+                    Label("Edit", systemImage: "pencil")
                 }
             }
         }
