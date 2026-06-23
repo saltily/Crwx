@@ -17,7 +17,6 @@ struct PlanningHome: View {
             HistoryPlanning()
             
             Section("Deprecated") {
-                ChooseAnchorageRow()
                 NavigationLink(destination: CoordinateBrowser()) {
                     Label("Coordinate Browser", systemImage: "scope")
                 }

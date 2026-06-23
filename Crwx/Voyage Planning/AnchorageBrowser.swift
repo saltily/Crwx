@@ -51,7 +51,7 @@ struct AnchorageBrowser: View {
                     .padding(.trailing, 10)
             }
             .padding(.vertical)
-            .background(.thinMaterial)
+            .background(.ultraThinMaterial)
         }
         .toolbar {
             ToolbarItem {

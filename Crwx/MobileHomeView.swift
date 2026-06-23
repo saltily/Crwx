@@ -22,11 +22,7 @@ struct MobileHomeView: View {
             // MARK: 2. Chart Navigator
             Tab("Navigator", systemImage: "safari", value: TabValue.chart) {
                 NavigationStack {
-                    GridHelper()
-                        .scrollClipDisabled()
-//                        .ignoresSafeArea()
-                        .seaBackground()
-                        .navigationTitle("Navigator")
+                    NavigationHome()
                         .navigationBarTitleDisplayMode(.inline)
                 }
             }

@@ -124,7 +124,7 @@
 		FDB3AB4E2FE6A03900B4B903 /* CompassQuadrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AACF2FE6A03900B4B903 /* CompassQuadrant.swift */; };
 		FDB3AB4F2FE6A03900B4B903 /* RouteEditor+MapContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAFC2FE6A03900B4B903 /* RouteEditor+MapContent.swift */; };
 		FDB3AB502FE6A03900B4B903 /* HarbourDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE42FE6A03900B4B903 /* HarbourDetail.swift */; };
-		FDB3AB512FE6A03900B4B903 /* ChooseAnchorageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AACA2FE6A03900B4B903 /* ChooseAnchorageRow.swift */; };
+		FDB3AB512FE6A03900B4B903 /* ChooseAnchorageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AACA2FE6A03900B4B903 /* ChooseAnchorageButton.swift */; };
 		FDB3AB522FE6A03900B4B903 /* RouteEditor+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAFA2FE6A03900B4B903 /* RouteEditor+Button.swift */; };
 		FDB3AB532FE6A03900B4B903 /* HarbourDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAE32FE6A03900B4B903 /* HarbourDestinations.swift */; };
 		FDB3AB542FE6A03900B4B903 /* CruiseForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AAAC2FE6A03900B4B903 /* CruiseForm.swift */; };
@@ -225,6 +225,8 @@
 		FDBAD46A2FEA8DA400C63620 /* AllTripYears.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4692FEA8DA400C63620 /* AllTripYears.swift */; };
 		FDBAD46C2FEA927200C63620 /* VoyageLogHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD46B2FEA927200C63620 /* VoyageLogHome.swift */; };
 		FDBAD46E2FEAA04300C63620 /* LegacyTripForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD46D2FEAA04300C63620 /* LegacyTripForm.swift */; };
+		FDBAD4712FEAA3B700C63620 /* NavigationCommandsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4702FEAA3B700C63620 /* NavigationCommandsMenu.swift */; };
+		FDBAD4732FEAA4E100C63620 /* NavigationHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4722FEAA4E100C63620 /* NavigationHome.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -450,7 +452,7 @@
 		FDB3AAC72FE6A03900B4B903 /* AnchorageTidePredictions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorageTidePredictions.swift; sourceTree = "<group>"; };
 		FDB3AAC82FE6A03900B4B903 /* BottomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomType.swift; sourceTree = "<group>"; };
 		FDB3AAC92FE6A03900B4B903 /* ChartMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartMap.swift; sourceTree = "<group>"; };
-		FDB3AACA2FE6A03900B4B903 /* ChooseAnchorageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAnchorageRow.swift; sourceTree = "<group>"; };
+		FDB3AACA2FE6A03900B4B903 /* ChooseAnchorageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAnchorageButton.swift; sourceTree = "<group>"; };
 		FDB3AACB2FE6A03900B4B903 /* CoastalForecasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoastalForecasts.swift; sourceTree = "<group>"; };
 		FDB3AACC2FE6A03900B4B903 /* CoastalRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoastalRegion.swift; sourceTree = "<group>"; };
 		FDB3AACD2FE6A03900B4B903 /* CoastalRegionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoastalRegionPicker.swift; sourceTree = "<group>"; };
@@ -586,6 +588,8 @@
 		FDBAD4692FEA8DA400C63620 /* AllTripYears.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTripYears.swift; sourceTree = "<group>"; };
 		FDBAD46B2FEA927200C63620 /* VoyageLogHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageLogHome.swift; sourceTree = "<group>"; };
 		FDBAD46D2FEAA04300C63620 /* LegacyTripForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTripForm.swift; sourceTree = "<group>"; };
+		FDBAD4702FEAA3B700C63620 /* NavigationCommandsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCommandsMenu.swift; sourceTree = "<group>"; };
+		FDBAD4722FEAA4E100C63620 /* NavigationHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHome.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -767,6 +771,7 @@
 		FD091F872FE590F3001706D6 /* Crwx */ = {
 			isa = PBXGroup;
 			children = (
+				FDBAD46F2FEAA3AA00C63620 /* NavigationTab */,
 				FDBAD45E2FE9F3B000C63620 /* Planning Tab */,
 				FDE216352FE5B0CF00F60799 /* Sailing Log */,
 				FDB3AB0E2FE6A03900B4B903 /* Voyage Planning */,
@@ -904,7 +909,7 @@
 				FDB3AAC72FE6A03900B4B903 /* AnchorageTidePredictions.swift */,
 				FDB3AAC82FE6A03900B4B903 /* BottomType.swift */,
 				FDB3AAC92FE6A03900B4B903 /* ChartMap.swift */,
-				FDB3AACA2FE6A03900B4B903 /* ChooseAnchorageRow.swift */,
+				FDB3AACA2FE6A03900B4B903 /* ChooseAnchorageButton.swift */,
 				FDB3AACB2FE6A03900B4B903 /* CoastalForecasts.swift */,
 				FDB3AACC2FE6A03900B4B903 /* CoastalRegion.swift */,
 				FDB3AACD2FE6A03900B4B903 /* CoastalRegionPicker.swift */,
@@ -1091,6 +1096,15 @@
 				FDBAD4612FE9F3ED00C63620 /* PlanningHome.swift */,
 			);
 			path = "Planning Tab";
+			sourceTree = "<group>";
+		};
+		FDBAD46F2FEAA3AA00C63620 /* NavigationTab */ = {
+			isa = PBXGroup;
+			children = (
+				FDBAD4702FEAA3B700C63620 /* NavigationCommandsMenu.swift */,
+				FDBAD4722FEAA4E100C63620 /* NavigationHome.swift */,
+			);
+			path = NavigationTab;
 			sourceTree = "<group>";
 		};
 		FDE215CB2FE5B0CF00F60799 /* Locations */ = {
@@ -1483,6 +1497,7 @@
 				FDE216732FE5B0CF00F60799 /* VoyageEvent.swift in Sources */,
 				FDE216742FE5B0CF00F60799 /* EventRelativeSentence.swift in Sources */,
 				FDE216752FE5B0CF00F60799 /* EventLine.swift in Sources */,
+				FDBAD4732FEAA4E100C63620 /* NavigationHome.swift in Sources */,
 				FDB3AA852FE5BBA200B4B903 /* Trip.swift in Sources */,
 				FDB3AA862FE5BBA200B4B903 /* Cruise.swift in Sources */,
 				FDB3AA872FE5BBA200B4B903 /* TripSchemaV3.swift in Sources */,
@@ -1494,6 +1509,7 @@
 				FDB3AA8C2FE5BBA200B4B903 /* Track.swift in Sources */,
 				FDB3AA8D2FE5BBA200B4B903 /* TripSchemaV19.swift in Sources */,
 				FDB3AA8E2FE5BBA200B4B903 /* TripSchemaV1.swift in Sources */,
+				FDBAD4712FEAA3B700C63620 /* NavigationCommandsMenu.swift in Sources */,
 				FDB3AA8F2FE5BBA200B4B903 /* TripSchemaV17.swift in Sources */,
 				FDB3AA902FE5BBA200B4B903 /* TripSchemaV20.swift in Sources */,
 				FDB3AA912FE5BBA200B4B903 /* Trip+Previews.swift in Sources */,
@@ -1652,7 +1668,7 @@
 				FDB3AB4E2FE6A03900B4B903 /* CompassQuadrant.swift in Sources */,
 				FDB3AB4F2FE6A03900B4B903 /* RouteEditor+MapContent.swift in Sources */,
 				FDB3AB502FE6A03900B4B903 /* HarbourDetail.swift in Sources */,
-				FDB3AB512FE6A03900B4B903 /* ChooseAnchorageRow.swift in Sources */,
+				FDB3AB512FE6A03900B4B903 /* ChooseAnchorageButton.swift in Sources */,
 				FDB3AB522FE6A03900B4B903 /* RouteEditor+Button.swift in Sources */,
 				FDB3AB532FE6A03900B4B903 /* HarbourDestinations.swift in Sources */,
 				FDB3AB542FE6A03900B4B903 /* CruiseForm.swift in Sources */,

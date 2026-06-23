@@ -42,10 +42,11 @@ fileprivate struct NestOne: View {
                 .symbolVariant(.fill)
                 .labelsHidden()
                 .pickerStyle(.segmented)
+                .glassEffect()
             }
             .padding(.horizontal)
-            .padding(.top, 10)
-            .background(.thinMaterial)
+            .padding(.top)
+            .background(.ultraThinMaterial)
             .onChange(of: intent.start, initial: true) { oldValue, newValue in
                 destinations.loadViewModels(start: newValue, context: context)
             }
