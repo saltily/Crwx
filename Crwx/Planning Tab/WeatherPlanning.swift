@@ -15,6 +15,7 @@ struct WeatherPlanning: View {
             Label("Tides", systemImage: WeatherAngle.tide.symbolName)
             Label("Tidal Currents", systemImage: WeatherSource.tidalCurrents.symbolName)
             Label("Sea Buoy", systemImage: WeatherSource.marineBuoy.symbolName)
+            Label("Radar", systemImage: "antenna.radiowaves.left.and.right")
         }
         .seaSection()
     }

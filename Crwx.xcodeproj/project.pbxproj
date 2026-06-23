@@ -224,6 +224,7 @@
 		FDBAD4682FE9F8D800C63620 /* DatabasePlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4672FE9F8D800C63620 /* DatabasePlanning.swift */; };
 		FDBAD46A2FEA8DA400C63620 /* AllTripYears.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4692FEA8DA400C63620 /* AllTripYears.swift */; };
 		FDBAD46C2FEA927200C63620 /* VoyageLogHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD46B2FEA927200C63620 /* VoyageLogHome.swift */; };
+		FDBAD46E2FEAA04300C63620 /* LegacyTripForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD46D2FEAA04300C63620 /* LegacyTripForm.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -584,6 +585,7 @@
 		FDBAD4672FE9F8D800C63620 /* DatabasePlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabasePlanning.swift; sourceTree = "<group>"; };
 		FDBAD4692FEA8DA400C63620 /* AllTripYears.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTripYears.swift; sourceTree = "<group>"; };
 		FDBAD46B2FEA927200C63620 /* VoyageLogHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageLogHome.swift; sourceTree = "<group>"; };
+		FDBAD46D2FEAA04300C63620 /* LegacyTripForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTripForm.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -1150,6 +1152,7 @@
 			children = (
 				FDE215E12FE5B0CF00F60799 /* AddEventButton.swift */,
 				FDE215E22FE5B0CF00F60799 /* AllTripsView.swift */,
+				FDBAD46D2FEAA04300C63620 /* LegacyTripForm.swift */,
 				FDBAD4692FEA8DA400C63620 /* AllTripYears.swift */,
 				FDBAD46B2FEA927200C63620 /* VoyageLogHome.swift */,
 				FDE215E32FE5B0CF00F60799 /* BuoyLine.swift */,
@@ -1542,6 +1545,7 @@
 				FDB3ABB22FE6A16300B4B903 /* WaypointList.swift in Sources */,
 				FDB3ABB32FE6A16300B4B903 /* ImportProgressView.swift in Sources */,
 				FDB3ABB42FE6A16300B4B903 /* RouteList.swift in Sources */,
+				FDBAD46E2FEAA04300C63620 /* LegacyTripForm.swift in Sources */,
 				FDB3ABE12FE6A1EB00B4B903 /* PhotosManager.swift in Sources */,
 				FDB3ABE22FE6A1EB00B4B903 /* WebShareable.swift in Sources */,
 				FDB3ABE32FE6A1EB00B4B903 /* SwipeToShareModifier.swift in Sources */,

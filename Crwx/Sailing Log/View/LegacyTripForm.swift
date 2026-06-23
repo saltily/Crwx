@@ -9,7 +9,9 @@ import SwiftUI
 import FoundationSalt
 import SwiftData
 import FoundationUI
+import WxSalt
 
+/// I'm still using this to swipe and add a trip at a custom date after a past trip.
 struct LegacyTripForm: View {
     @Binding var date: Date
     let didSave: (Trip) -> ()
@@ -20,12 +22,13 @@ struct LegacyTripForm: View {
             Form {
                 DatePicker("Date", selection: $date, displayedComponents: .date)
                     .datePickerStyle(.graphical)
+                    .seaSection()
             }
             .navigationTitle("Add Trip")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigation) {
-                    Button("Cancel", role: .cancel) {
+                    Button("Cancel", systemImage: "xmark", role: .cancel) {
                         dismiss()
                     }
                 }
@@ -78,6 +81,8 @@ struct LegacyTripSheetModifier: ViewModifier {
                 LegacyTripForm(date: $date) { trip in
                     proxy.scrollTo(trip.persistentModelID)
                 }
+                .seaBackground(.flat)
+                .presentationDetents([.height(500)])
             }
     }
 }
