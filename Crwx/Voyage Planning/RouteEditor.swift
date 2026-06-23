@@ -9,6 +9,8 @@ import SwiftUI
 import MapKit
 import FoundationUI
 import FoundationSalt
+import SwiftData
+import WxSalt
 
 struct RouteEditor: View {
     var initialCentre: CLLocationCoordinate2D?
@@ -47,12 +49,7 @@ fileprivate struct NestOne: View {
             RouteEditor.ActionButton(route: route, region: region, canAct: route.canAct(in: region))
             RouteEditor.OverlayControls(route: route)
         }
-        .safeAreaInset(edge: .bottom) {
-            Text(route.description)
-                .frame(maxWidth: .infinity)
-                .padding(10)
-                .background(.thinMaterial)
-        }
+        .navigationSubtitle(route.description)
         .navigationTitle(route.name)
         .toolbarTitleDisplayMode(.inline)
         .saveButton(disabled: !route.canSave) {
@@ -100,9 +97,28 @@ extension Marker where Label == Text? {
     }
 }
 struct AddRouteButton: View {
+    @Binding var isPresented: Bool
     var body: some View {
-        NavigationLink(destination: RouteEditor()) {
-            Label("Add Route", systemImage: "pencil.and.scribble")
+        Button("Add Route", systemImage: "pencil.and.scribble") {
+            isPresented = true
         }
+    }
+}
+struct RouteEditorSheetPresenter: ViewModifier {
+    @Binding var isPresented: Bool
+    func body(content: Content) -> some View {
+        content
+            .fullScreenCover(isPresented: $isPresented) {
+                NavigationStack {
+                    RouteEditor()
+                        .seaBackground()
+                        .cancelButton()
+                }
+            }
+    }
+}
+extension View {
+    func routeEditor(isPresented: Binding<Bool>) -> some View {
+        modifier(RouteEditorSheetPresenter(isPresented: isPresented))
     }
 }

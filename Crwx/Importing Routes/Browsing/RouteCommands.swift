@@ -14,13 +14,17 @@ struct RouteCommands: ViewModifier {
     @Binding var showProgress: Bool
     @State private var task: Task<Void,Error>?
     @Environment(\.modelContext) private var context
+    @State private var routeEditorIsPresented = false
     func body(content: Content) -> some View {
         content.actions {
+            AddRouteButton(isPresented: $routeEditorIsPresented)
+            Divider()
             WaypointDeduplicationButton()
             Button("Refresh Route Names", systemImage: "arrow.trianglehead.2.clockwise") {
                 refreshRouteNames()
             }
         }
+        .routeEditor(isPresented: $routeEditorIsPresented)
     }
     private func refreshRouteNames() {
         task?.cancel()
