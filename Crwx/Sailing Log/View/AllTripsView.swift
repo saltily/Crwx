@@ -13,7 +13,6 @@ import FoundationSalt
 
 struct AllTripsView: View {
     let year: Int
-//    @Year private var year
     var body: some View {
         TripsFetcher(year: year)
     }

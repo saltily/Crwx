@@ -10,8 +10,8 @@ import FoundationSalt
 import WxSalt
 
 struct VoyageLogHome: View {
-    @State private var path = NavigationPath()
-    @AppStorage(.tripsYearKey) private var year: Int = Date.now.year
+    @State private var path = NavigationPath([TripYearValue(rawValue: Date.now.year)])
+//    @AppStorage(.tripsYearKey) private var year: Int = Date.now.year
     var body: some View {
         NavigationStack(path: $path) {
             AllTripYears()
@@ -35,14 +35,14 @@ struct VoyageLogHome: View {
                                 }
                             }
                         }
-                        .onAppear {
-                            self.year = year
-                        }
+//                        .onAppear {
+//                            self.year = year
+//                        }
                 }
         }
-        .onAppear {
-            path = .init([TripYearValue(rawValue: year)])
-        }
+//        .onAppear {
+//            path = .init([TripYearValue(rawValue: year)])
+//        }
     }
 }
 
@@ -50,6 +50,6 @@ struct VoyageLogHome: View {
     VoyageLogHome()
 }
 
-extension String {
-    static let tripsYearKey = "com.saltily.Mewx.tripsYearKey" // Int
-}
+//extension String {
+//    static let tripsYearKey = "com.saltily.Mewx.tripsYearKey" // Int
+//}
