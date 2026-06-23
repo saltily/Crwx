@@ -22,6 +22,7 @@ struct HarboursMap: View {
     @State private var showAllRoutes = false
     @Environment(\.modelContext) private var context
     var body: some View {
+        let message = message
         ZStack {
             SaltMap(region: $region, selection: $selected) {
                 ForEach(harbours) { harbour in
@@ -66,6 +67,7 @@ struct HarboursMap: View {
                 region = showAll
             }
         }
+        .navigationSubtitle(message)
         .safeAreaInset(edge: .bottom) {
             VStack {
                 HStack {
@@ -93,8 +95,8 @@ struct HarboursMap: View {
                 .padding(.bottom, 5)
                 if let selected {
                     HarbourRoutesSublist(selectedRoute: $selectedRoute, routes: selected.routes?.sorted(not: selected.id, in: context) ?? [], pattern: colours, harbourId: selected.id)
-                        .seaBackground(.thinMaterial)
-                        .frame(height: min(100, 50 * CGFloat(selected.routes?.count ?? 0)))
+                        .seaBackground(.ultraThinMaterial)
+                        .frame(height: min(200, 50 * CGFloat(selected.routes?.count ?? 0)))
                 }
             }
         }
@@ -102,7 +104,7 @@ struct HarboursMap: View {
     }
     
     private var title: String {
-        selected?.name ?? "Harbours"
+        selected?.name ?? "Routes by Harbour"
     }
     private var message: String {
         if !searchTerm.isEmpty {

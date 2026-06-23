@@ -17,6 +17,9 @@ struct RouteList: View {
     var body: some View {
         List {
             Group {
+                NavigationLink(destination: HarboursMap()) {
+                    Label("Mapped by Harbour", systemImage: "map")
+                }
                 ForEach(routes.grouped(by: \.start)) { group in
                     Section(group.id?.name ?? "") {
                         ForEach(group) { route in

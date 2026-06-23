@@ -20,9 +20,6 @@ struct PlanningHome: View {
                 NavigationLink(destination: CoordinateBrowser()) {
                     Label("Coordinate Browser", systemImage: "scope")
                 }
-                NavigationLink(destination: HarboursMap()) {
-                    Label("Harbours Map", systemImage: "map")
-                }
             }
             .seaSection()
         }

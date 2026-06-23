@@ -16,7 +16,7 @@ struct HarbourRoutesSublist: View {
     let harbourId: UUID
     var body: some View {
         List {
-            Group {
+            ZeroHeaderSection {
                 ForEach(0..<routes.count, id: \.self) { i in
                     let route = routes[i]
                     Button {
@@ -31,6 +31,7 @@ struct HarbourRoutesSublist: View {
             }
             .seaSection()
         }
+        .zeroListHeader()
         .listSectionSpacing(.compact)
     }
 }
