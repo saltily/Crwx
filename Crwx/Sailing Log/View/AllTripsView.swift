@@ -12,7 +12,8 @@ import WxSalt
 import FoundationSalt
 
 struct AllTripsView: View {
-    @Year private var year
+    let year: Int
+//    @Year private var year
     var body: some View {
         TripsFetcher(year: year)
     }
@@ -20,7 +21,7 @@ struct AllTripsView: View {
 
 #Preview {
     NavigationStack {
-        AllTripsView()
+        AllTripsView(year: Date.now.year)
             .seaBackground()
     }
     .modelContainer(previewContainer)

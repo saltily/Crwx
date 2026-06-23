@@ -72,7 +72,7 @@ struct TrackList: View {
                 .labelsHidden()
             }
         }
-        .trackMatcher(isPresented: $trackMatcherIsPresented, tracksOnLeft: true)
+        .trackMatcher(isPresented: $trackMatcherIsPresented, tracksOnLeft: true, year: Date.now.year)
         .onDisappear {
             editMode = .inactive
         }

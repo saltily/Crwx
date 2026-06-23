@@ -12,14 +12,21 @@ import FoundationSalt
 import WxSalt
 
 struct TrackMatcherModifier: ViewModifier {
+    init(isPresented: Binding<Bool>, tracksOnLeft: Bool, year: Int) {
+        self._isPresented = isPresented
+        self.tracksOnLeft = tracksOnLeft
+        self.year = year
+        self._mutableYear = .init(initialValue: year)
+    }
     @Binding var isPresented: Bool
     let tracksOnLeft: Bool
-    @Year private var year
+    let year: Int
+    @State private var mutableYear: Int
     func body(content: Content) -> some View {
         content
             .fullScreenCover(isPresented: $isPresented) {
                 NavigationStack {
-                    NestOne(year: year, tracksOnLeft: tracksOnLeft)
+                    NestOne(year: mutableYear, tracksOnLeft: tracksOnLeft)
                         .navigationTitle(tracksOnLeft ? "Tracks <-> Trips" : "Trips <-> Tracks")
                         .toolbarTitleDisplayMode(.inline)
                         .toolbar {
@@ -30,22 +37,25 @@ struct TrackMatcherModifier: ViewModifier {
                         }
                         .safeAreaInset(edge: .bottom) {
                             HStack {
-                                Text(year, format: .number.grouping(.never))
+                                Text(mutableYear, format: .number.grouping(.never))
                                 Spacer()
-                                Stepper("Year", value: $year, in: 2015...Date.now.year)
+                                Stepper("Year", value: $mutableYear, in: 2015...Date.now.year)
                                     .labelsHidden()
                             }
                             .padding(.horizontal)
                             .padding(.top)
                             .background(.thinMaterial)
                         }
+                        .onChange(of: year, initial: true) { oldValue, newValue in
+                            mutableYear = newValue
+                        }
                 }
             }
     }
 }
 extension View {
-    func trackMatcher(isPresented: Binding<Bool>, tracksOnLeft: Bool) -> some View {
-        modifier(TrackMatcherModifier(isPresented: isPresented, tracksOnLeft: tracksOnLeft))
+    func trackMatcher(isPresented: Binding<Bool>, tracksOnLeft: Bool, year: Int) -> some View {
+        modifier(TrackMatcherModifier(isPresented: isPresented, tracksOnLeft: tracksOnLeft, year: year))
     }
 }
 fileprivate struct NestOne: View {

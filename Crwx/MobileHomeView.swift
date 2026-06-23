@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WxSalt
+import FoundationSalt
 
 struct MobileHomeView: View {
     @AppStorage(.crwxTabKey) private var tab = TabValue.log
@@ -15,16 +16,7 @@ struct MobileHomeView: View {
             
             // MARK: 1. Voyage Log
             Tab("Log", systemImage: "book.closed", value: TabValue.log) {
-                NavigationStack {
-                    AllTripsView()
-                        .seaBackground()
-                        .navigationBarTitleDisplayMode(.inline)
-                        .toolbar {
-                            ToolbarItem {
-                                LogCommandsMenu()
-                            }
-                        }
-                }
+                VoyageLogHome()
             }
             
             // MARK: 2. Chart Navigator

@@ -222,6 +222,8 @@
 		FDBAD4642FE9F5FA00C63620 /* ChecklistsPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4632FE9F5FA00C63620 /* ChecklistsPlanning.swift */; };
 		FDBAD4662FE9F71900C63620 /* HistoryPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4652FE9F71900C63620 /* HistoryPlanning.swift */; };
 		FDBAD4682FE9F8D800C63620 /* DatabasePlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4672FE9F8D800C63620 /* DatabasePlanning.swift */; };
+		FDBAD46A2FEA8DA400C63620 /* AllTripYears.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4692FEA8DA400C63620 /* AllTripYears.swift */; };
+		FDBAD46C2FEA927200C63620 /* VoyageLogHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD46B2FEA927200C63620 /* VoyageLogHome.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -272,7 +274,6 @@
 		FDE216662FE5B0CF00F60799 /* SailingFollowMeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216042FE5B0CF00F60799 /* SailingFollowMeModifier.swift */; };
 		FDE216672FE5B0CF00F60799 /* BuoyObservationEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215E42FE5B0CF00F60799 /* BuoyObservationEditor.swift */; };
 		FDE216682FE5B0CF00F60799 /* EventLocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215ED2FE5B0CF00F60799 /* EventLocationPicker.swift */; };
-		FDE216692FE5B0CF00F60799 /* YearPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216342FE5B0CF00F60799 /* YearPicker.swift */; };
 		FDE2166A2FE5B0CF00F60799 /* LegacyTripForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215F22FE5B0CF00F60799 /* LegacyTripForm.swift */; };
 		FDE2166B2FE5B0CF00F60799 /* VoyagelogSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162B2FE5B0CF00F60799 /* VoyagelogSection.swift */; };
 		FDE2166C2FE5B0CF00F60799 /* MeasuredWaypointSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215FA2FE5B0CF00F60799 /* MeasuredWaypointSnippet.swift */; };
@@ -301,7 +302,6 @@
 		FDE216832FE5B0CF00F60799 /* SailingLookaheadSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216062FE5B0CF00F60799 /* SailingLookaheadSheet.swift */; };
 		FDE216842FE5B0CF00F60799 /* MarineWeatherEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215F92FE5B0CF00F60799 /* MarineWeatherEditor.swift */; };
 		FDE216852FE5B0CF00F60799 /* LocationSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */; };
-		FDE216862FE5B0CF00F60799 /* VoyageLogTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE216332FE5B0CF00F60799 /* VoyageLogTab.swift */; };
 		FDE216872FE5B0CF00F60799 /* DoubleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215E82FE5B0CF00F60799 /* DoubleText.swift */; };
 		FDE216882FE5B0CF00F60799 /* CommentsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215E52FE5B0CF00F60799 /* CommentsRow.swift */; };
 		FDE216892FE5B0CF00F60799 /* TripNewDestinationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161A2FE5B0CF00F60799 /* TripNewDestinationButton.swift */; };
@@ -584,6 +584,8 @@
 		FDBAD4632FE9F5FA00C63620 /* ChecklistsPlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistsPlanning.swift; sourceTree = "<group>"; };
 		FDBAD4652FE9F71900C63620 /* HistoryPlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPlanning.swift; sourceTree = "<group>"; };
 		FDBAD4672FE9F8D800C63620 /* DatabasePlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabasePlanning.swift; sourceTree = "<group>"; };
+		FDBAD4692FEA8DA400C63620 /* AllTripYears.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTripYears.swift; sourceTree = "<group>"; };
+		FDBAD46B2FEA927200C63620 /* VoyageLogHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageLogHome.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -687,8 +689,6 @@
 		FDE2162F2FE5B0CF00F60799 /* WindsText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindsText.swift; sourceTree = "<group>"; };
 		FDE216312FE5B0CF00F60799 /* LogCommandsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCommandsMenu.swift; sourceTree = "<group>"; };
 		FDE216322FE5B0CF00F60799 /* SelectMultipleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMultipleButton.swift; sourceTree = "<group>"; };
-		FDE216332FE5B0CF00F60799 /* VoyageLogTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageLogTab.swift; sourceTree = "<group>"; };
-		FDE216342FE5B0CF00F60799 /* YearPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearPicker.swift; sourceTree = "<group>"; };
 		FDE216A02FE5B10E00F60799 /* MobileHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1154,6 +1154,8 @@
 			children = (
 				FDE215E12FE5B0CF00F60799 /* AddEventButton.swift */,
 				FDE215E22FE5B0CF00F60799 /* AllTripsView.swift */,
+				FDBAD4692FEA8DA400C63620 /* AllTripYears.swift */,
+				FDBAD46B2FEA927200C63620 /* VoyageLogHome.swift */,
 				FDE215E32FE5B0CF00F60799 /* BuoyLine.swift */,
 				FDE215E42FE5B0CF00F60799 /* BuoyObservationEditor.swift */,
 				FDE215E52FE5B0CF00F60799 /* CommentsRow.swift */,
@@ -1241,8 +1243,6 @@
 				FDE216302FE5B0CF00F60799 /* View */,
 				FDE216312FE5B0CF00F60799 /* LogCommandsMenu.swift */,
 				FDE216322FE5B0CF00F60799 /* SelectMultipleButton.swift */,
-				FDE216332FE5B0CF00F60799 /* VoyageLogTab.swift */,
-				FDE216342FE5B0CF00F60799 /* YearPicker.swift */,
 			);
 			path = "Sailing Log";
 			sourceTree = "<group>";
@@ -1476,7 +1476,6 @@
 				FDE216662FE5B0CF00F60799 /* SailingFollowMeModifier.swift in Sources */,
 				FDE216672FE5B0CF00F60799 /* BuoyObservationEditor.swift in Sources */,
 				FDE216682FE5B0CF00F60799 /* EventLocationPicker.swift in Sources */,
-				FDE216692FE5B0CF00F60799 /* YearPicker.swift in Sources */,
 				FDE2166A2FE5B0CF00F60799 /* LegacyTripForm.swift in Sources */,
 				FDE2166B2FE5B0CF00F60799 /* VoyagelogSection.swift in Sources */,
 				FDE2166C2FE5B0CF00F60799 /* MeasuredWaypointSnippet.swift in Sources */,
@@ -1522,6 +1521,7 @@
 				FDB3AAA02FE5BBA200B4B903 /* Route.swift in Sources */,
 				FDB3AAA12FE5BBA200B4B903 /* TripSchemaV15.swift in Sources */,
 				FDB3AAA22FE5BBA200B4B903 /* TripSchemaV7.swift in Sources */,
+				FDBAD46A2FEA8DA400C63620 /* AllTripYears.swift in Sources */,
 				FDB3AAA32FE5BBA200B4B903 /* TripMigrationPlan.swift in Sources */,
 				FDB3AAA42FE5BBA200B4B903 /* BackupData.swift in Sources */,
 				FDB3AAA52FE5BBA200B4B903 /* Photo.swift in Sources */,
@@ -1691,6 +1691,7 @@
 				FDB3AB6C2FE6A03900B4B903 /* AddHarbourPointPicker.swift in Sources */,
 				FDB3AB6D2FE6A03900B4B903 /* HarbourInfoEditor.swift in Sources */,
 				FDB3AB6E2FE6A03900B4B903 /* MultipleTripsModifier.swift in Sources */,
+				FDBAD46C2FEA927200C63620 /* VoyageLogHome.swift in Sources */,
 				FDB3AB6F2FE6A03900B4B903 /* CruiseStats.swift in Sources */,
 				FDB3AB702FE6A03900B4B903 /* RemoveStopButton.swift in Sources */,
 				FDB3AB712FE6A03900B4B903 /* CruisingGuideEditor.swift in Sources */,
@@ -1708,7 +1709,6 @@
 				FDE216832FE5B0CF00F60799 /* SailingLookaheadSheet.swift in Sources */,
 				FDE216842FE5B0CF00F60799 /* MarineWeatherEditor.swift in Sources */,
 				FDE216852FE5B0CF00F60799 /* LocationSnippet.swift in Sources */,
-				FDE216862FE5B0CF00F60799 /* VoyageLogTab.swift in Sources */,
 				FDE216872FE5B0CF00F60799 /* DoubleText.swift in Sources */,
 				FDE216882FE5B0CF00F60799 /* CommentsRow.swift in Sources */,
 				FDE216892FE5B0CF00F60799 /* TripNewDestinationButton.swift in Sources */,
