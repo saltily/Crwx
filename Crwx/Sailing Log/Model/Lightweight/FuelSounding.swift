@@ -10,17 +10,20 @@ import SwiftData
 
 struct FuelSounding: nonisolated Codable, Equatable {
     var soundingId: UUID = .init()
-    var inches: Double? {
-        didSet {
-            if let inches {
-                self.gallons = inches / 22 * 50
-            }
-            else {
-                self.gallons = 0
+    var inches: Double?
+    var gallons: Double? {
+        get {
+            guard let inches else { return nil }
+            return inches / 22 * 50
+        }
+        set {
+            if let newValue {
+                inches = newValue / 50 * 22
+            } else {
+                inches = nil
             }
         }
     }
-    var gallons: Double?
 }
 
 
@@ -30,49 +33,28 @@ extension FuelSounding {
         if let inches {
             return inches / 22
         }
-        else if let gallons {
-            return gallons / 50
-        }
         return 0
     }
     func subtracting(gallons: Double) -> FuelSounding {
         if let old_gallons = self.gallons {
-            var new_sounding = FuelSounding(gallons: [old_gallons - gallons, 0].max())
-            new_sounding.updateInches()
-            return new_sounding
+            return FuelSounding(gallons: [old_gallons - gallons, 0].max())
         }
         return FuelSounding()
     }
     /// Duplicates this but makes sure it gets its own id
     func copy() -> FuelSounding {
-        .init(soundingId: .init(), inches: inches, gallons: gallons)
+        .init(soundingId: .init(), inches: inches)
     }
 }
 
 
 // MARK: Sounding table
 extension FuelSounding {
-    mutating func updateGallons() {
-        if let inches {
-            let percent = inches / 22
-            self.gallons = percent * 50
-        }
-        else {
-            self.gallons = nil
-        }
-    }
-    mutating func updateInches() {
-        if let gallons {
-            let percent = gallons / 50
-            self.inches = percent * 22
-        }
-        else {
-            self.inches = nil
-        }
-    }
     init(gallons: Double?) {
         self.gallons = gallons
-        self.updateInches()
+    }
+    init(inches: Double?) {
+        self.inches = inches
     }
 }
 
@@ -80,28 +62,24 @@ extension FuelSounding {
 // MARK: Random preview
 extension FuelSounding {
     static var random: FuelSounding {
-        var sounding = FuelSounding(gallons: .random(in: 1...15))
-        sounding.updateInches()
-        return sounding
+        .init(gallons: .random(in: 1...15))
     }
 }
 
 // MARK: Codable
 extension FuelSounding {
     enum CodingKeys: CodingKey {
-        case inches, gallons, soundingId
+        case inches, soundingId
     }
     public init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         soundingId = try container.decodeIfPresent(UUID.self, forKey: .soundingId) ?? .init()
         inches = try container.decodeIfPresent(Double.self, forKey: .inches)
-        gallons = try container.decodeIfPresent(Double.self, forKey: .gallons)
     }
     public func encode(to encoder: any Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(soundingId, forKey: .soundingId)
         try container.encodeIfPresent(inches, forKey: .inches)
-        try container.encodeIfPresent(gallons, forKey: .gallons)
     }
 }
 

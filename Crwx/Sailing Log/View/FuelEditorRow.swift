@@ -10,17 +10,25 @@ import FoundationSalt
 
 struct FuelEditorRow: View {
     @Binding var model: FuelSounding?
-    @State private var inches: Double = 0
-    @State private var gals: Double = 0
+    private var inches: Binding<Double> {
+        .init {
+            model?.inches ?? 0
+        } set: { newValue in
+            model?.inches = newValue.nilIfZero
+        }
+    }
+    private var gals: Double {
+        model?.gallons ?? 0
+    }
     var body: some View {
         VStack(alignment: .leading, spacing: 1) {
             HStack {
-                Stepper("Fuel", value: $inches, step: 0.125)
-                Text("\(inches.eighths) in")
+                Stepper("Fuel", value: inches, step: 0.125)
+                Text("\(inches.wrappedValue.eighths) in")
                     .frame(width: 75, alignment: .trailing)
             }
             HStack {
-                Slider(value: $inches, in: 0...22, step: 0.125)
+                Slider(value: inches, in: 0...22, step: 0.125)
                     .tint(.yellow)
                 let s = gals.formatted(.number.precision(.fractionLength(0...1)))
                 Text("\(s) gal")
@@ -28,31 +36,6 @@ struct FuelEditorRow: View {
                     .foregroundStyle(gals > 45 ? .red : .primary)
             }
         }
-        .onAppear {
-            importData()
-        }
-        .onChange(of: model) { oldValue, newValue in
-            importData()
-        }
-        .onChange(of: inches) { oldValue, newValue in
-            if model == nil {
-                model = .init(inches: inches, gallons: gals)
-            } else {
-                model?.inches = newValue
-            }
-//            gals = 50 * newValue / 22
-//            if newValue > 0 {
-//                model = .init(inches: inches, gallons: gals)
-//            }
-//            else {
-//                model = nil
-//            }
-        }
-    }
-    private func importData() {
-        inches = model?.inches ?? 0
-        inches = inches.rounded(0.125)
-        gals = model?.gallons ?? 0
     }
 }
 extension Double {

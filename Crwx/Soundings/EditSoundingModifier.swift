@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import WxSalt
 import FoundationUI
+import os
 
 struct EditSoundingModifier: ViewModifier {
     let sounding: Sounding
@@ -37,6 +38,7 @@ struct EditSoundingModifier: ViewModifier {
         sounding.date = model.date
         sounding.value = model.value
         sounding.note = model.note
+        logger.trace("Should be saving the sounding and the new value is \(model.value ?? -1) and the value being saved is \(sounding.value ?? -1)")
         try context.save()
     }
 }
