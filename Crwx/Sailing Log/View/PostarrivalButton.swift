@@ -10,6 +10,7 @@ import FoundationUI
 import FoundationSalt
 import WxSalt
 import FocusOnAppear
+import SwiftData
 
 struct PostarrivalButton: View {
     let model: PostArrivalViewModel
@@ -18,10 +19,7 @@ struct PostarrivalButton: View {
     @State private var confirmRevert = false
     var body: some View {
         Section {
-            Button {
-                sheetIsPresented = true
-            } label: {
-                
+            Button(isPresented: $sheetIsPresented) {
                 
                 // MARK: Content
                 VStack(alignment: .leading, spacing: 8) {
@@ -196,6 +194,7 @@ fileprivate struct CommentsButton: View {
     let passengers: String
     @State private var isPresented = false
     @State private var text: String = ""
+    @Environment(\.modelContext) private var context
     var body: some View {
         Button {
             text = trip.comments
@@ -223,6 +222,7 @@ fileprivate struct CommentsButton: View {
                 .cancelButton()
                 .saveButton {
                     trip.comments = text
+                    try context.save()
                 }
             }
         }
