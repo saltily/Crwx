@@ -77,7 +77,7 @@ struct HarbourPickerMap: View {
             dismiss()
         }
         .searchable(text: $searchText)
-        .debounceChange(of: $searchText) { newValue in
+        .debounceChange(of: $searchText) { oldValue, newValue in
             if !newValue.isEmpty {
                 region = .fitting(points: filteredHarbours)
             } else {

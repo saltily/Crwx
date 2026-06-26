@@ -37,7 +37,7 @@ struct HarbourChooserMap: View {
                 wasScaled = true
             }
         }
-        .debounceChange(of: $searchText, seconds: 0.5) { newValue in
+        .debounceChange(of: $searchText, seconds: 0.5) { oldValue, newValue in
             focusOnSearch()
         }
         .onSubmit(of: .search) {

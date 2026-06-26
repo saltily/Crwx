@@ -170,7 +170,7 @@ struct HarbourInfoEditor: View {
                 }
             }
             .scrollDismissesKeyboard(.interactively)
-            .debounceChange(of: $model) { newValue in
+            .debounceChange(of: $model) { oldValue, newValue in
                 guard newValue != cache else { return }
                 save()
             }
