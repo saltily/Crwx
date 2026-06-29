@@ -20,6 +20,10 @@
 		FD399ACE2FE721CF00E37AEA /* LocationChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */; };
 		FD399AD02FE757AC00E37AEA /* PointText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399ACF2FE757AC00E37AEA /* PointText.swift */; };
 		FD399AD22FE7584900E37AEA /* LocationPointPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */; };
+		FD9DF1052FF1530D008322E1 /* TaskItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF1042FF1530D008322E1 /* TaskItemViewModel.swift */; };
+		FD9DF1072FF1534A008322E1 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF1062FF1534A008322E1 /* Checklist.swift */; };
+		FD9DF1092FF15360008322E1 /* TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF1082FF15360008322E1 /* TaskType.swift */; };
+		FD9DF10B2FF282FD008322E1 /* PackingItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF10A2FF282FD008322E1 /* PackingItemViewModel.swift */; };
 		FDB3AA5D2FE5BB2400B4B903 /* FocusOnAppear in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = FDB3AA5C2FE5BB2400B4B903 /* FocusOnAppear */; };
 		FDB3AA852FE5BBA200B4B903 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA7F2FE5BBA200B4B903 /* Trip.swift */; };
 		FDB3AA862FE5BBA200B4B903 /* Cruise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA782FE5BBA200B4B903 /* Cruise.swift */; };
@@ -384,6 +388,10 @@
 		FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChoice.swift; sourceTree = "<group>"; };
 		FD399ACF2FE757AC00E37AEA /* PointText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointText.swift; sourceTree = "<group>"; };
 		FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPointPicker.swift; sourceTree = "<group>"; };
+		FD9DF1042FF1530D008322E1 /* TaskItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemViewModel.swift; sourceTree = "<group>"; };
+		FD9DF1062FF1534A008322E1 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		FD9DF1082FF15360008322E1 /* TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskType.swift; sourceTree = "<group>"; };
+		FD9DF10A2FF282FD008322E1 /* PackingItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItemViewModel.swift; sourceTree = "<group>"; };
 		FDB3AA5E2FE5BBA200B4B903 /* TripMigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMigrationPlan.swift; sourceTree = "<group>"; };
 		FDB3AA5F2FE5BBA200B4B903 /* TripSchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV1.swift; sourceTree = "<group>"; };
 		FDB3AA602FE5BBA200B4B903 /* TripSchemaV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV2.swift; sourceTree = "<group>"; };
@@ -771,6 +779,7 @@
 		FD091F872FE590F3001706D6 /* Crwx */ = {
 			isa = PBXGroup;
 			children = (
+				FD9DF1022FF152F9008322E1 /* Lists */,
 				FDBAD46F2FEAA3AA00C63620 /* NavigationTab */,
 				FDBAD45E2FE9F3B000C63620 /* Planning Tab */,
 				FDE216352FE5B0CF00F60799 /* Sailing Log */,
@@ -805,6 +814,25 @@
 				FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */,
 			);
 			path = CrwxUITests;
+			sourceTree = "<group>";
+		};
+		FD9DF1022FF152F9008322E1 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				FD9DF1032FF15302008322E1 /* Model */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
+		FD9DF1032FF15302008322E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD9DF1042FF1530D008322E1 /* TaskItemViewModel.swift */,
+				FD9DF10A2FF282FD008322E1 /* PackingItemViewModel.swift */,
+				FD9DF1062FF1534A008322E1 /* Checklist.swift */,
+				FD9DF1082FF15360008322E1 /* TaskType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FDB3AA5B2FE5BB2400B4B903 /* Frameworks */ = {
@@ -1524,7 +1552,9 @@
 				FDB3AA982FE5BBA200B4B903 /* BackupButton.swift in Sources */,
 				FDB3AA992FE5BBA200B4B903 /* BackModelActor.swift in Sources */,
 				FDB3AA9A2FE5BBA200B4B903 /* TripSchemaV4.swift in Sources */,
+				FD9DF1052FF1530D008322E1 /* TaskItemViewModel.swift in Sources */,
 				FDB3AA9B2FE5BBA200B4B903 /* LocationProfile.swift in Sources */,
+				FD9DF10B2FF282FD008322E1 /* PackingItemViewModel.swift in Sources */,
 				FDB3AA9C2FE5BBA200B4B903 /* TripSchemaV14.swift in Sources */,
 				FDB3AA9D2FE5BBA200B4B903 /* Waypoint.swift in Sources */,
 				FDB3AA9E2FE5BBA200B4B903 /* TripSchemaV12.swift in Sources */,
@@ -1588,6 +1618,7 @@
 				FDB3AAA82FE5BBA200B4B903 /* Sounding.swift in Sources */,
 				FDB3AAA92FE5BBA200B4B903 /* TripSchemaV11.swift in Sources */,
 				FDE216762FE5B0CF00F60799 /* CurrentSpeedSymbol.swift in Sources */,
+				FD9DF1072FF1534A008322E1 /* Checklist.swift in Sources */,
 				FDE216772FE5B0CF00F60799 /* TripViewModel.swift in Sources */,
 				FDB3AB0F2FE6A03900B4B903 /* AnchorageChooser.swift in Sources */,
 				FDB3AB102FE6A03900B4B903 /* Harbour+LookupName.swift in Sources */,
@@ -1622,6 +1653,7 @@
 				FDB3AB2C2FE6A03900B4B903 /* WarningBadge.swift in Sources */,
 				FDB3AB2D2FE6A03900B4B903 /* RouteEditor+OverlayControls.swift in Sources */,
 				FDB3AB2E2FE6A03900B4B903 /* AnchorageDot.swift in Sources */,
+				FD9DF1092FF15360008322E1 /* TaskType.swift in Sources */,
 				FDB3AB2F2FE6A03900B4B903 /* ExposureSymbol.swift in Sources */,
 				FDB3AB302FE6A03900B4B903 /* AddToCruiseButton.swift in Sources */,
 				FDB3AB312FE6A03900B4B903 /* ExpandableSplitView.swift in Sources */,
