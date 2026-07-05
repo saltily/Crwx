@@ -11,6 +11,7 @@ import FoundationSalt
 
 struct MobileHomeView: View {
     @AppStorage(.crwxTabKey) private var tab = TabValue.log
+    @State private var wx = WxEngine()
     var body: some View {
         TabView(selection: $tab) {
             
@@ -36,6 +37,7 @@ struct MobileHomeView: View {
             }
             
         }
+        .environment(wx)
     }
     enum TabValue: Int {
         case log, chart, plan
