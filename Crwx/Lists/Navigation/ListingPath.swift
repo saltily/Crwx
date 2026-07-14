@@ -31,6 +31,7 @@ enum ListingPath {
     // MARK: Cruise Checklists
     case cruiseChecklists
     case menu
+    case voyagePlanning
     case cruisePreDeparture
     case anchoragePreArrival
     case anchoragePostArrival
@@ -84,6 +85,8 @@ extension ListingPath {
             "Cruise Checklists"
         case .menu:
             "Menu"
+        case .voyagePlanning:
+            "Voyage Plan"
         case .cruisePreDeparture:
             "Pre-Departure"
         case .anchoragePreArrival:
@@ -149,10 +152,20 @@ extension ListingPath {
             "dollarsign"
         case .prepAshore:
             "app.gift"
-        case .cruisePostArrival, .daysailPostArrival, .anchoragePostArrival:
-            "lock"
-        case .cruisePreDeparture, .daysailPreDeparture, .anchoragePreDeparture:
-            "pencil.and.ruler"
+        case .cruisePostArrival, .daysailPostArrival:
+            "book.closed"
+        case .anchoragePostArrival:
+            "moon.zzz"
+        case .anchoragePreDeparture:
+            "sun.horizon.fill"
+        case .cruisePreDeparture, .daysailPreDeparture:
+            "book.pages"
+        case .anchoragePreArrival:
+            "square.grid.2x2"
+        case .anchoragePostDeparture:
+            "squareshape.split.2x2"
+        case .voyagePlanning:
+            "p.circle"
         default: "questionmark"
         }
     }

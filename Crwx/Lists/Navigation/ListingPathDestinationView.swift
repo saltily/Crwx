@@ -17,6 +17,8 @@ struct ListingPathDestinationView: View {
             ProjectsAndRemindersHome()
         case .daysailChecklists:
             DaysailChecklistsHome()
+        case .cruiseChecklists:
+            CruiseChecklistsHome()
         default:
             Text("Under Development")
         }

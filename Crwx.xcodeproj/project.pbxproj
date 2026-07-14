@@ -22,6 +22,7 @@
 		FD399AD22FE7584900E37AEA /* LocationPointPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */; };
 		FD4430FF3006E78300976424 /* ProjectsAndRemindersHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4430FE3006E78300976424 /* ProjectsAndRemindersHome.swift */; };
 		FD4431013006E98A00976424 /* DaysailChecklistsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431003006E98A00976424 /* DaysailChecklistsHome.swift */; };
+		FD4431033006EB0B00976424 /* CruiseChecklistsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431023006EB0B00976424 /* CruiseChecklistsHome.swift */; };
 		FD463E703006D8CF00B20127 /* ListingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E6F3006D8CF00B20127 /* ListingPath.swift */; };
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
@@ -397,6 +398,7 @@
 		FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPointPicker.swift; sourceTree = "<group>"; };
 		FD4430FE3006E78300976424 /* ProjectsAndRemindersHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsAndRemindersHome.swift; sourceTree = "<group>"; };
 		FD4431003006E98A00976424 /* DaysailChecklistsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysailChecklistsHome.swift; sourceTree = "<group>"; };
+		FD4431023006EB0B00976424 /* CruiseChecklistsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseChecklistsHome.swift; sourceTree = "<group>"; };
 		FD463E6F3006D8CF00B20127 /* ListingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPath.swift; sourceTree = "<group>"; };
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
@@ -840,6 +842,7 @@
 				FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */,
 				FD4430FE3006E78300976424 /* ProjectsAndRemindersHome.swift */,
 				FD4431003006E98A00976424 /* DaysailChecklistsHome.swift */,
+				FD4431023006EB0B00976424 /* CruiseChecklistsHome.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -1766,6 +1769,7 @@
 				FDB3AB692FE6A03900B4B903 /* AnchorageBrowser.swift in Sources */,
 				FDB3AB6A2FE6A03900B4B903 /* RouteEditor+MapBasket.swift in Sources */,
 				FDB3AB6B2FE6A03900B4B903 /* VoyageIntentForm.swift in Sources */,
+				FD4431033006EB0B00976424 /* CruiseChecklistsHome.swift in Sources */,
 				FDB3AB6C2FE6A03900B4B903 /* AddHarbourPointPicker.swift in Sources */,
 				FDB3AB6D2FE6A03900B4B903 /* HarbourInfoEditor.swift in Sources */,
 				FDB3AB6E2FE6A03900B4B903 /* MultipleTripsModifier.swift in Sources */,
