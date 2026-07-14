@@ -23,6 +23,18 @@ struct ListingPathDestinationView: View {
             MenuHome()
         case .voyagePlanning:
             VoyagePlanHome()
+        case .daysailPostArrival, .daysailPreDeparture,
+                .cruisePostArrival, .cruisePreDeparture,
+                .anchoragePreArrival, .anchoragePostArrival, .anchoragePreDeparture, .anchoragePostDeparture,
+                .springUprig, .springLaunch, .springLoading, .springFitOut, .takeOut,
+                .fallLayup, .fallDownrig, .fallHaulout, .fallOffloading:
+            if let checklist = path.checklist {
+                AnyChecklistView(checklist: checklist)
+            } else {
+                Label("Missing Checklist", systemImage: "exclamationmark.triangle.fill")
+                    .foregroundStyle(.orange)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
         default:
             Text("Under Development")
         }

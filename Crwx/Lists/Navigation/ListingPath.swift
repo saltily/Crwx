@@ -170,3 +170,37 @@ extension ListingPath {
         }
     }
 }
+
+
+// MARK: Checklist
+extension ListingPath {
+    /// For the paths that will just present some sort of reusable, non-cached checklist.
+    var checklist: Checklist? {
+        switch self {
+            
+        // MARK: Daysail
+        case .daysailPostArrival: .daysailPostarrival
+        case .daysailPreDeparture: .daysailPredeparture
+            
+        // MARK: Cruise
+        case .cruisePreDeparture: .cruisePredeparture
+        case .cruisePostArrival: .cruisePostarrival
+        case .anchoragePreArrival: .anchoragePrearrival
+        case .anchoragePostArrival: .anchoragePostarrival
+        case .anchoragePreDeparture: .anchoragePredeparture
+        case .anchoragePostDeparture: .anchoragePostdeparture
+            
+        // MARK: Seasonal
+        case .springUprig: .springUprig
+        case .springLaunch: .springLaunch
+        case .springLoading: .springLoading
+        case .springFitOut: .springFitOut
+        case .fallLayup: .fallLayup
+        case .fallDownrig: .fallDownrig
+        case .fallHaulout: .fallHaulout
+        case .fallOffloading: .fallOffloading
+
+        default: nil
+        }
+    }
+}
