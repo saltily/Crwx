@@ -233,7 +233,7 @@ fileprivate final actor PhotoActor {
     public subscript<T>(id: PersistentIdentifier, as as: T.Type) -> T? where T : PersistentModel {
         modelContext.model(for: id) as? T
     }
-    let maxMegabytes = 25
+    let maxMegabytes = 25 // you can temporarily increase this in .htaccess
     func upload(photoId: PersistentIdentifier) async throws -> URL {
         guard let photo = self[photoId, as: Photo.self]
         else { throw E.BadId }
