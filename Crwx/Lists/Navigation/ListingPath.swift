@@ -166,7 +166,22 @@ extension ListingPath {
             "squareshape.split.2x2"
         case .voyagePlanning:
             "p.circle"
-        default: "questionmark"
+        case .fallOffloading:
+            "square.and.arrow.up"
+        case .springLoading:
+            "square.and.arrow.down"
+        case .springLaunch:
+            "arrow.down.and.line.horizontal.and.arrow.up"
+        case .fallHaulout:
+            "arrow.up.and.line.horizontal.and.arrow.down"
+        case .springFitOut:
+            "envelope.open.fill"
+        case .fallLayup:
+            "envelope.front"
+        case .springUprig:
+            "guidepoint.vertical"
+        case .fallDownrig:
+            "guidepoint.horizontal"
         }
     }
 }

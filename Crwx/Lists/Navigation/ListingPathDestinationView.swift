@@ -19,6 +19,8 @@ struct ListingPathDestinationView: View {
             DaysailChecklistsHome()
         case .cruiseChecklists:
             CruiseChecklistsHome()
+        case .seasonalChecklists:
+            SeasonalChecklistsHome()
         case .menu:
             MenuHome()
         case .voyagePlanning:
@@ -26,7 +28,7 @@ struct ListingPathDestinationView: View {
         case .daysailPostArrival, .daysailPreDeparture,
                 .cruisePostArrival, .cruisePreDeparture,
                 .anchoragePreArrival, .anchoragePostArrival, .anchoragePreDeparture, .anchoragePostDeparture,
-                .springUprig, .springLaunch, .springLoading, .springFitOut, .takeOut,
+                .springUprig, .springLaunch, .springLoading, .springFitOut,
                 .fallLayup, .fallDownrig, .fallHaulout, .fallOffloading:
             if let checklist = path.checklist {
                 AnyChecklistView(checklist: checklist)
