@@ -37,6 +37,8 @@ struct ListingPathDestinationView: View {
                     .foregroundStyle(.orange)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
+        case .safetyEquipment, .generalInventory:
+            AnyInventoryView()
         default:
             Text("Under Development")
         }
