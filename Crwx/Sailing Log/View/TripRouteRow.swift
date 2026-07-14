@@ -91,7 +91,22 @@ struct TripRouteRow: View {
             // MARK: 4. Arrived
         case .arrived:
             Text("Completed route.")
-            
+            // in the event that a trip was completed with a bogus route, this will let us refresh to a decent route.
+                .swipeActions(edge: .leading, allowsFullSwipe: false) {
+                    Button(systemImage: "arrow.clockwise") {
+                        Task {
+                            do {
+                                model = .init(trip: trip, context: context)
+                                model.route = try await model.refreshRoute(container: context.container)
+                                try model.save(to: trip, in: context)
+                                try context.save()
+                            } catch {
+                                logger.critical("Couldn't refresh the route: \(error)")
+                            }
+                        }
+                    }
+                    .tint(.accentColor)
+                }
         }
         
     }
@@ -102,6 +117,7 @@ struct TripRouteRow: View {
                 model.route = try await model.refreshRoute(container: container)
             } catch {
                 // it's fine if we don't - throws if doesn't need updating
+                logger.trace("Not updating the route: \(error)")
             }
         }
     }
