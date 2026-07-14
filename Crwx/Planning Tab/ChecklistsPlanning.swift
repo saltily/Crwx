@@ -7,20 +7,33 @@
 
 import SwiftUI
 import WxSalt
+import FoundationUI
 
 struct ChecklistsPlanning: View {
     var body: some View {
         Section("Lists") {
-            SoundingsRow()
-            Label("Menu", systemImage: "fork.knife")
-            Label("Packing List", systemImage: "checklist")
-            Label("Safety Equipment", systemImage: "fire.extinguisher")
-            Label("Seasonal Checklists", systemImage: "wind.snow")
+            ListingPathLink(.loadingAndInventory)
+            ListingPathLink(.projectsAndReminders)
+            ListingPathLink(.daysailChecklists)
+            ListingPathLink(.cruiseChecklists)
+            ListingPathLink(.seasonalChecklists)
         }
         .seaSection()
     }
 }
 
 #Preview {
-    ChecklistsPlanning()
+    NavigationStack {
+        List {
+            ChecklistsPlanning()
+        }
+        .navigationTitle("Checklists")
+            .seaBackground()
+            .navigationDestination(for: ListingPath.self) { path in
+                ListingPathDestinationView(path: path)
+                    .seaBackground()
+                    .navigationTitle(path.label)
+            }
+    }
+    .environment(\.wxColourScheme, .green)
 }

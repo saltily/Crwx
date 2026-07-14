@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WxSalt
+import FoundationUI
 
 struct PlanningHome: View {
     var body: some View {
@@ -25,9 +26,18 @@ struct PlanningHome: View {
         }
         .navigationTitle("Planning")
         .seaBackground()
+        .navigationDestination(for: ListingPath.self) { path in
+            ListingPathDestinationView(path: path)
+                .seaBackground()
+                .navigationTitle(path.label)
+        }
     }
 }
 
 #Preview {
-    PlanningHome()
+    NavigationStack {
+        PlanningHome()
+    }
+    .locationManager()
+    .environment(\.wxColourScheme, .green)
 }
