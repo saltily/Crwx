@@ -17,6 +17,7 @@ struct ProjectsAndRemindersHome: View {
                 Text("I should be able to easily add stuff on the fly, drill in, mark as complete, see completed items filter to the bottom, delete (preferrably with shake to undo).")
                 Text("Would be nice to be able to inject a sample store into the environment for use with previews.")
                 Text("Probably also an edit button to drag to reorder in addition to just the plus to quickly add.")
+                Text("I'll want to be able to filter in some ways.  Like which projects to do next.  Which to do underway on a cruise.  Which to do dockside.  Which to pack out on the next trip to the boat.  And then when marked complete, be sure to pack items back in.  So see it closely relate to the packing lists.")
             }
             .seaSection()
         }

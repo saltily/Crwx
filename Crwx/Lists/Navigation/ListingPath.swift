@@ -149,6 +149,10 @@ extension ListingPath {
             "dollarsign"
         case .prepAshore:
             "app.gift"
+        case .cruisePostArrival, .daysailPostArrival, .anchoragePostArrival:
+            "lock"
+        case .cruisePreDeparture, .daysailPreDeparture, .anchoragePreDeparture:
+            "pencil.and.ruler"
         default: "questionmark"
         }
     }
