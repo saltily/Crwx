@@ -14,6 +14,7 @@ enum ListingPath {
     case loadingAndInventory
     case dockside
     case purchase
+    case prepAshore
     case takeOut
     case bringIn
     case safetyEquipment
@@ -61,6 +62,8 @@ extension ListingPath {
             "Dockside"
         case .purchase:
             "Purchase"
+        case .prepAshore:
+            "Prep Ashore"
         case .takeOut:
             "Take Out"
         case .bringIn:
@@ -134,6 +137,18 @@ extension ListingPath {
             "fork.knife"
         case .safetyEquipment:
             "fire.extinguisher"
+        case .generalInventory:
+            "inset.filled.bottomhalf.rectangle"
+        case .takeOut:
+            "arrow.right"
+        case .bringIn:
+            "arrow.left"
+        case .dockside:
+            "shippingbox"
+        case .purchase:
+            "dollarsign"
+        case .prepAshore:
+            "app.gift"
         default: "questionmark"
         }
     }
