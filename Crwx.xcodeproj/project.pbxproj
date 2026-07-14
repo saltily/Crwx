@@ -20,6 +20,7 @@
 		FD399ACE2FE721CF00E37AEA /* LocationChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */; };
 		FD399AD02FE757AC00E37AEA /* PointText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399ACF2FE757AC00E37AEA /* PointText.swift */; };
 		FD399AD22FE7584900E37AEA /* LocationPointPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */; };
+		FD4430FF3006E78300976424 /* ProjectsAndRemindersHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4430FE3006E78300976424 /* ProjectsAndRemindersHome.swift */; };
 		FD463E703006D8CF00B20127 /* ListingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E6F3006D8CF00B20127 /* ListingPath.swift */; };
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
@@ -393,6 +394,7 @@
 		FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChoice.swift; sourceTree = "<group>"; };
 		FD399ACF2FE757AC00E37AEA /* PointText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointText.swift; sourceTree = "<group>"; };
 		FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPointPicker.swift; sourceTree = "<group>"; };
+		FD4430FE3006E78300976424 /* ProjectsAndRemindersHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsAndRemindersHome.swift; sourceTree = "<group>"; };
 		FD463E6F3006D8CF00B20127 /* ListingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPath.swift; sourceTree = "<group>"; };
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
@@ -834,6 +836,7 @@
 				FDC73A843006E59200877061 /* ListingPathCountingLink.swift */,
 				FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */,
 				FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */,
+				FD4430FE3006E78300976424 /* ProjectsAndRemindersHome.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -1689,6 +1692,7 @@
 				FDB3AB352FE6A03900B4B903 /* MarineWeatherRow.swift in Sources */,
 				FDB3AB362FE6A03900B4B903 /* HarbourViewModel.swift in Sources */,
 				FDB3AB372FE6A03900B4B903 /* HarbourChooserMap.swift in Sources */,
+				FD4430FF3006E78300976424 /* ProjectsAndRemindersHome.swift in Sources */,
 				FDB3AB382FE6A03900B4B903 /* AnchorageDetail.swift in Sources */,
 				FDB3AB392FE6A03900B4B903 /* CoastalRegion.swift in Sources */,
 				FDB3AB3A2FE6A03900B4B903 /* CruisingGuide.swift in Sources */,

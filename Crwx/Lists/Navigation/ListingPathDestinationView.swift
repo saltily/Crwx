@@ -13,6 +13,8 @@ struct ListingPathDestinationView: View {
         switch path {
         case .loadingAndInventory:
             LoadingAndInventoryHome()
+        case .projectsAndReminders:
+            ProjectsAndRemindersHome()
         default:
             Text("Under Development")
         }
