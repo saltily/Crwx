@@ -29,6 +29,7 @@ struct AnyChecklistView: View {
                 }
             }
         }
+        .navigationSubtitle("Last used: 3 days ago")
     }
 }
 

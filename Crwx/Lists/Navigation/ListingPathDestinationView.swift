@@ -39,8 +39,8 @@ struct ListingPathDestinationView: View {
             }
         case .safetyEquipment, .generalInventory:
             AnyInventoryView()
-        default:
-            Text("Under Development")
+        case .takeOut, .bringIn, .dockside, .purchase, .prepAshore:
+            AnyPackingView()
         }
     }
 }
