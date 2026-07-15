@@ -14,7 +14,7 @@ struct ChecklistTaskRow: View {
     @Binding var taskToEdit: CheckableTask?
     @Environment(\.editMode) private var editMode
     var body: some View {
-        HStack(spacing: 15) {
+        HStack(spacing: 10) {
             if editMode?.wrappedValue != .active {
                 TaskIsCheckedButton(isOn: $task.isChecked)
             }

@@ -49,6 +49,7 @@ enum ListingPath {
     case fallDownrig
     case fallHaulout
     case fallLayup
+    case winterMaintenance
     
 }
 
@@ -117,6 +118,8 @@ extension ListingPath {
             "Haulout"
         case .fallLayup:
             "Layup"
+        case .winterMaintenance:
+            "Winter Maintenance"
         }
     }
 }
@@ -182,6 +185,8 @@ extension ListingPath {
             "guidepoint.vertical"
         case .fallDownrig:
             "guidepoint.horizontal"
+        case .winterMaintenance:
+            "snowflake"
         }
     }
 }
@@ -214,6 +219,7 @@ extension ListingPath {
         case .fallDownrig: .fallDownrig
         case .fallHaulout: .fallHaulout
         case .fallOffloading: .fallOffloading
+        case .winterMaintenance: .winterMaintenance
 
         default: nil
         }

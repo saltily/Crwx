@@ -29,7 +29,7 @@ struct ListingPathDestinationView: View {
                 .cruisePostArrival, .cruisePreDeparture,
                 .anchoragePreArrival, .anchoragePostArrival, .anchoragePreDeparture, .anchoragePostDeparture,
                 .springUprig, .springLaunch, .springLoading, .springFitOut,
-                .fallLayup, .fallDownrig, .fallHaulout, .fallOffloading:
+                .fallLayup, .fallDownrig, .fallHaulout, .fallOffloading, .winterMaintenance:
             if let checklist = path.checklist {
                 AnyChecklistView(checklist: checklist)
             } else {

@@ -36,3 +36,84 @@ extension CheckableTask: ExpressibleByStringLiteral {
         }
     }
 }
+
+
+// MARK: - General Packing, Purchase, Inventory
+extension CheckableTask {
+    
+    
+    // MARK: Daysail
+    static var daysailPreConfirm: CheckableTask {
+        .init("Confirm: snacks, drinks, gerber multi-tool, pfd count, hats and jackets.", action: .daysailConfirm)
+    }
+    static var daysailPostConfirm: CheckableTask {
+        .init("Update inventory: snacks, drinks.", action: .daysailPostConfirm)
+    }
+    static var daysailPack: CheckableTask {
+        .init("Pack: sunglasses, muck boots.", action: .daysailPack)
+    }
+    
+    // MARK: Cruise
+    static var cruisePreConfirm: CheckableTask {
+        .init("Confirm inventory: snacks, drinks, outerwear, trash bags, cleaning supplies, linens, gerber multi-tool, safety equipment, propane, fuel, toilet paper, paper towels.", action: .cruiseConfirm)
+    }
+    static var cruisePostConfirm: CheckableTask {
+        .init("Update inventory: snacks, drinks, cleaning supplies, toilet paper, paper towel.", action: .cruisePostConfirm)
+    }
+    static var cruisePackFood: CheckableTask {
+        .init("Pack food.", action: .cruiseFood)
+    }
+    static var cruisePackPersonal: CheckableTask {
+        .init("Pack: clothing, toiletries, devices and chargers (watch battery pack), muck boots, sunglasses, reading materials, instruments.", action: .cruisePersonal)
+    }
+    static var cruisePackChainsaw: CheckableTask {
+        .init("Pack chainsaw.", action: .cruiseChainsaw)
+    }
+    static var cruiseCleanup: CheckableTask {
+        .init("Go back for ice, trash, linens, dehumidifiers, empty water jugs, white dinghy, chainsaw.", action: .cruiseCleanup)
+    }
+    
+    // MARK: Spring
+    static var fitoutPurchase: CheckableTask {
+        "Purchase: flags, flares, mooring shackle, house batteries, starter batteries, alkaline batteries, dock boards."
+    }
+    static var fitoutBringHome: CheckableTask {
+        "Bring home: shrink wrap ropes and framing."
+    }
+    static var fitoutTakeOver: CheckableTask {
+        "Take over: pressure washer, garden hoses, extension cords, bilge diapers, fibreglass repair, welding machine, water heater, grinder and sander."
+    }
+    static var enginePurchase: CheckableTask {
+        "Purchase: engine filters, engine oil, coolant, diesel."
+    }
+    static var hullPurchase: CheckableTask {
+        "Purchase: bottom paint, large rollers, Frank's red hot, 2-inch chip brushes, nitrile gloves, 2-inch painter's tape, green paint, small rollers, clear coat, garden sprayer, foam rollers, stern lettering, fibreglass primer."
+    }
+    
+    // MARK: Fall
+    static var layupPurchase: CheckableTask {
+        "Purchase: 2 gals RV antifreeze."
+    }
+    static var shrinkWrapPurchase: CheckableTask {
+        "Purchase: shrink wrap, shrink wrap tape, propane."
+    }
+    static var winterPurchase: CheckableTask {
+        "Purchase: red ensign flag materials, mooring rope, furler tracks if necessary."
+    }
+}
+
+
+// MARK: Shortcut Builders
+extension CheckableTask {
+    /// Basic idea being that I can establish verbs and then a list of packable items to build these.
+    /// Maybe even like:
+    /// ```swift
+    /// .confirm {
+    ///     "maple syrup"
+    ///     "flour"
+    /// }
+    /// ```
+    static func confirm(_ items: [String]) -> CheckableTask {
+        .init(stringLiteral: "Confirm inventory: \(items.formatted(.list(type: .and)))")
+    }
+}
