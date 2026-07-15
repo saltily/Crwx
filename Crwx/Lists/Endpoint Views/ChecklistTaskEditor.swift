@@ -16,6 +16,7 @@ extension View {
 }
 struct ChecklistTaskEditorSheetModifier: ViewModifier {
     @Binding var taskToEdit: CheckableTask?
+    @Environment(PlanningRouter.self) private var router
     func body(content: Content) -> some View {
         content
             .sheet(item: $taskToEdit) { task in
@@ -26,6 +27,12 @@ struct ChecklistTaskEditorSheetModifier: ViewModifier {
                         .saveButton()
                 }
                 .presentationDetents([.medium, .large])
+                .onChange(of: task.style) { oldValue, newValue in
+                    if newValue != .plain {
+                        taskToEdit = nil
+                        router.path.append(task)
+                    }
+                }
             }
     }
 }
