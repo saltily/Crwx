@@ -38,9 +38,7 @@
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
 		FD463E773006E28600B20127 /* ListingPathLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E763006E28600B20127 /* ListingPathLink.swift */; };
-		FD9DF1052FF1530D008322E1 /* TaskItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF1042FF1530D008322E1 /* TaskItemViewModel.swift */; };
 		FD9DF1072FF1534A008322E1 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF1062FF1534A008322E1 /* Checklist.swift */; };
-		FD9DF1092FF15360008322E1 /* TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF1082FF15360008322E1 /* TaskType.swift */; };
 		FD9DF10B2FF282FD008322E1 /* PackingItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF10A2FF282FD008322E1 /* PackingItemViewModel.swift */; };
 		FDB3AA5D2FE5BB2400B4B903 /* FocusOnAppear in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = FDB3AA5C2FE5BB2400B4B903 /* FocusOnAppear */; };
 		FDB3AA852FE5BBA200B4B903 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB3AA7F2FE5BBA200B4B903 /* Trip.swift */; };
@@ -425,9 +423,7 @@
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
 		FD463E763006E28600B20127 /* ListingPathLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathLink.swift; sourceTree = "<group>"; };
-		FD9DF1042FF1530D008322E1 /* TaskItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemViewModel.swift; sourceTree = "<group>"; };
 		FD9DF1062FF1534A008322E1 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
-		FD9DF1082FF15360008322E1 /* TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskType.swift; sourceTree = "<group>"; };
 		FD9DF10A2FF282FD008322E1 /* PackingItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItemViewModel.swift; sourceTree = "<group>"; };
 		FDB3AA5E2FE5BBA200B4B903 /* TripMigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMigrationPlan.swift; sourceTree = "<group>"; };
 		FDB3AA5F2FE5BBA200B4B903 /* TripSchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSchemaV1.swift; sourceTree = "<group>"; };
@@ -898,10 +894,8 @@
 		FD9DF1032FF15302008322E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FD9DF1042FF1530D008322E1 /* TaskItemViewModel.swift */,
 				FD9DF10A2FF282FD008322E1 /* PackingItemViewModel.swift */,
 				FD9DF1062FF1534A008322E1 /* Checklist.swift */,
-				FD9DF1082FF15360008322E1 /* TaskType.swift */,
 				FD44311030071B3000976424 /* CheckableTask.swift */,
 				FD44311230071BBC00976424 /* ChecklistViewModel.swift */,
 			);
@@ -1632,7 +1626,6 @@
 				FDB3AA982FE5BBA200B4B903 /* BackupButton.swift in Sources */,
 				FDB3AA992FE5BBA200B4B903 /* BackModelActor.swift in Sources */,
 				FDB3AA9A2FE5BBA200B4B903 /* TripSchemaV4.swift in Sources */,
-				FD9DF1052FF1530D008322E1 /* TaskItemViewModel.swift in Sources */,
 				FDB3AA9B2FE5BBA200B4B903 /* LocationProfile.swift in Sources */,
 				FD9DF10B2FF282FD008322E1 /* PackingItemViewModel.swift in Sources */,
 				FDB3AA9C2FE5BBA200B4B903 /* TripSchemaV14.swift in Sources */,
@@ -1737,7 +1730,6 @@
 				FDB3AB2C2FE6A03900B4B903 /* WarningBadge.swift in Sources */,
 				FDB3AB2D2FE6A03900B4B903 /* RouteEditor+OverlayControls.swift in Sources */,
 				FDB3AB2E2FE6A03900B4B903 /* AnchorageDot.swift in Sources */,
-				FD9DF1092FF15360008322E1 /* TaskType.swift in Sources */,
 				FDB3AB2F2FE6A03900B4B903 /* ExposureSymbol.swift in Sources */,
 				FDB3AB302FE6A03900B4B903 /* AddToCruiseButton.swift in Sources */,
 				FDB3AB312FE6A03900B4B903 /* ExpandableSplitView.swift in Sources */,

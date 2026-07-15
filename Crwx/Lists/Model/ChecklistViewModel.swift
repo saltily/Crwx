@@ -34,7 +34,7 @@ extension ChecklistViewModel: ExpressibleByArrayLiteral {
     }
     var subtitleString: String {
         guard let lastUsed else { return "" }
-        let s = lastUsed.formatted(.dateTime.hour().minute().second())
+        let s = lastUsed.formatted(.relative(presentation: .named))
         return "Last used: \(s)"
     }
 }
