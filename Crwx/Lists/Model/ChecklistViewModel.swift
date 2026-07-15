@@ -18,17 +18,6 @@ extension ChecklistViewModel: ExpressibleByArrayLiteral {
     init(arrayLiteral elements: CheckableTask...) {
         self.steps = elements
     }
-    /// Moves checked items to the bottom, with most recently checked above others.
-    var orderedSteps: [CheckableTask] {
-        let unchecked = steps.filter({ !$0.isChecked })
-        let checked = steps.filter({ $0.isChecked }).sorted(by: \.checkedOff, order: .reverse)
-        return unchecked + checked
-    }
-    mutating func reset() {
-        for i in 0..<steps.count {
-            steps[i].isChecked = false
-        }
-    }
     var lastUsed: Date? {
         steps.compactMap(\.checkedOff).max()
     }
@@ -36,5 +25,17 @@ extension ChecklistViewModel: ExpressibleByArrayLiteral {
         guard let lastUsed else { return "" }
         let s = lastUsed.formatted(.relative(presentation: .named))
         return "Last used: \(s)"
+    }
+}
+extension [CheckableTask] {
+    var checkedToBottom: [CheckableTask] {
+        let unchecked = self.filter({ !$0.isChecked })
+        let checked = self.filter({ $0.isChecked }).sorted(by: \.checkedOff, order: .reverse)
+        return unchecked + checked
+    }
+    func reset() {
+        for i in 0..<self.count {
+            self[i].isChecked = false
+        }
     }
 }

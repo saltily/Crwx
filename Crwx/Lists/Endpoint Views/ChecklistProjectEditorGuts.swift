@@ -11,6 +11,7 @@ import FoundationUI
 
 struct ChecklistProjectEditorGuts: View {
     @Binding var items: [PackableItem]
+    @Binding var steps: [CheckableTask]
     var body: some View {
         Section("Equipment") {
             NavigationLink(destination: ChecklistPackingEditor(items: $items)) {
@@ -19,6 +20,7 @@ struct ChecklistProjectEditorGuts: View {
         }
         .seaSection()
         Section("Steps") {
+            
             Text("These can be a full on checkable list just like with a checklist.")
             Text("You can manually order, see sorted to the bottom as checked.")
             Text("You can add and remove.")
@@ -38,10 +40,22 @@ struct ChecklistProjectEditorGuts: View {
         "step ladder",
         "nitrile gloves"
     ]
+    @Previewable @State var steps: [CheckableTask] = [
+        "Fill garden sprayer with clear coat.",
+        "Setup ladder, gloves, and foam roller.",
+        "Spray a section, then roll out with roller.",
+        "Repeat until finished.",
+        "Reclaim unused clear coat.",
+        "Discard used sprayer, gloves, and roller cover."
+    ]
+    @Previewable @State var taskToEdit: CheckableTask?
+    @Previewable @State var isEditing = false
     NavigationStack {
         List {
-            ChecklistProjectEditorGuts(items: $items)
+            ChecklistProjectEditorGuts(items: $items, steps: $steps)
         }
+        .checklistTaskToolbar(steps: $steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: false)
+        .checklistTaskEditor($taskToEdit)
         .seaBackground()
     }
     .environment(\.wxColourScheme, .green)

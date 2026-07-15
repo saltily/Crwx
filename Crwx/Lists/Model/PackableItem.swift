@@ -16,6 +16,16 @@ final class PackableItem: Codable, Sendable, Identifiable {
         self.label = label
     }
 }
+extension PackableItem: Hashable {
+    static func == (lhs: PackableItem, rhs: PackableItem) -> Bool {
+        lhs.id == rhs.id &&
+        lhs.label == rhs.label
+    }
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(label)
+    }
+}
 
 
 extension PackableItem: ExpressibleByStringLiteral {

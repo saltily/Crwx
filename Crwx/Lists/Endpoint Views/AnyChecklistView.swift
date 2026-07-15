@@ -23,15 +23,7 @@ struct AnyChecklistView: View {
     var body: some View {
         List {
             Section {
-                ForEach(steps) { step in
-                    ChecklistTaskRow(task: step, taskToEdit: $taskToEdit)
-                }
-                .onMove { indices, i in
-                    model.steps.move(fromOffsets: indices, toOffset: i)
-                }
-                .onDelete { indices in
-                    model.steps.remove(atOffsets: indices)
-                }
+                ChecklistTaskLoop(steps: $model.steps, taskToEdit: $taskToEdit, isEditing: $isEditing)
             }
             .seaSection()
             Section {
@@ -41,30 +33,12 @@ struct AnyChecklistView: View {
             }
             .seaSection()
         }
-        .checklistEditButton(isEditing: $isEditing) {
-            ToolbarItem {
-                Button(systemImage: "arrow.counterclockwise") {
-                    withAnimation {
-                        model.reset()
-                    }
-                }
-            }
-            ToolbarItem {
-                Button(systemImage: "plus") {
-                    let new: CheckableTask = ""
-                    taskToEdit = new
-                    model.steps.insert(new, at: 0)
-                }
-            }
-        }
+        .checklistTaskToolbar(steps: $model.steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: true)
         .navigationSubtitle(model.subtitleString)
         .onChange(of: checklist) { oldValue, newValue in
             model = newValue.viewModel
         }
         .checklistTaskEditor($taskToEdit)
-    }
-    private var steps: [CheckableTask] {
-        isEditing ? model.steps : model.orderedSteps
     }
 }
 

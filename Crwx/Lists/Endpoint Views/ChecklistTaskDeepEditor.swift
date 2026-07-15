@@ -12,12 +12,13 @@ struct ChecklistTaskDeepEditor: View {
     let style: CheckableTask.S
     @Binding var items: [PackableItem]
     @Binding var itemToEdit: PackableItem?
+    @Binding var steps: [CheckableTask]
     var body: some View {
         switch style {
         case .packing:
             ChecklistPackingEditorGuts(items: $items, itemToEdit: $itemToEdit)
         case .project:
-            ChecklistProjectEditorGuts(items: $items)
+            ChecklistProjectEditorGuts(items: $items, steps: $steps)
         case .plain:
             EmptyView()
         }
@@ -32,9 +33,17 @@ struct ChecklistTaskDeepEditor: View {
         "step ladder",
         "nitrile gloves"
     ]
+    @Previewable @State var steps: [CheckableTask] = [
+        "Fill garden sprayer with clear coat.",
+        "Setup ladder, gloves, and foam roller.",
+        "Spray a section, then roll out with roller.",
+        "Repeat until finished.",
+        "Reclaim unused clear coat.",
+        "Discard used sprayer, gloves, and roller cover."
+    ]
     NavigationStack {
         List {
-            ChecklistTaskDeepEditor(style: .project, items: $items, itemToEdit: .constant(nil))
+            ChecklistTaskDeepEditor(style: .project, items: $items, itemToEdit: .constant(nil), steps: $steps)
         }
         .seaBackground()
     }

@@ -19,13 +19,15 @@ final class CheckableTask: Identifiable, Codable, Sendable {
     /// So I know what type of form to display for it, whether it has nested steps and/or packing items.
     var style: S = .plain
     var packingList: [PackableItem] = []
-    init(_ label: String, action: TaskAction? = nil, checkedOff: Date? = nil, style: S = .plain, id: UUID = .init(), packingList: [PackableItem] = []) {
+    var steps: [CheckableTask] = []
+    init(_ label: String, action: TaskAction? = nil, checkedOff: Date? = nil, style: S = .plain, id: UUID = .init(), packingList: [PackableItem] = [], steps: [CheckableTask] = []) {
         self.id = id
         self.label = label
         self.action = action
         self.checkedOff = checkedOff
         self.style = style
         self.packingList = packingList
+        self.steps = steps
     }
 }
 
@@ -50,7 +52,9 @@ extension CheckableTask: Hashable {
         lhs.label == rhs.label &&
         lhs.action == rhs.action &&
         lhs.checkedOff == rhs.checkedOff &&
-        lhs.style == rhs.style
+        lhs.style == rhs.style &&
+        lhs.packingList == rhs.packingList &&
+        lhs.steps == rhs.steps
     }
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
@@ -58,6 +62,8 @@ extension CheckableTask: Hashable {
         hasher.combine(action)
         hasher.combine(checkedOff)
         hasher.combine(style)
+        hasher.combine(packingList)
+        hasher.combine(steps)
     }
 }
 
@@ -175,6 +181,22 @@ extension CheckableTask {
             "foam roller",
             "nitrile gloves",
             "step ladder"
+        ])
+    }
+    static var project: CheckableTask {
+        .init("Clear coat hull.", style: .packing, packingList: [
+            "clear coat",
+            "garden sprayer",
+            "foam roller",
+            "nitrile gloves",
+            "step ladder"
+        ], steps: [
+            "Fill garden sprayer with clear coat.",
+            "Setup ladder, gloves, and foam roller.",
+            "Spray a section, then roll out with roller.",
+            "Repeat until finished.",
+            "Reclaim unused clear coat.",
+            "Discard used sprayer, gloves, and roller cover."
         ])
     }
 }
