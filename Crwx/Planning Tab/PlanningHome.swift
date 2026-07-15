@@ -18,9 +18,7 @@ struct PlanningHome: View {
             HistoryPlanning()
             
             Section("Deprecated") {
-                NavigationLink(destination: CoordinateBrowser()) {
-                    Label("Coordinate Browser", systemImage: "scope")
-                }
+                PlanningPathLink(.coordinateBrowser)
             }
             .seaSection()
         }
@@ -37,6 +35,10 @@ struct PlanningHome: View {
         }
         .navigationDestination(for: Sounding.T.self) { type in
             SoundingsList(type: type)
+                .seaBackground()
+        }
+        .navigationDestination(for: PlanningPath.self) { path in
+            PlanningPathDestinationView(path: path)
                 .seaBackground()
         }
     }

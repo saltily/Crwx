@@ -39,6 +39,10 @@
 		FD44312030080EA900976424 /* WeatherPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311F30080EA900976424 /* WeatherPath.swift */; };
 		FD44312230080EE500976424 /* WeatherPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44312130080EE500976424 /* WeatherPathDestinationView.swift */; };
 		FD4431243008115200976424 /* WeatherPathLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431233008115200976424 /* WeatherPathLink.swift */; };
+		FD4431263008137800976424 /* PlanningPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431253008137800976424 /* PlanningPath.swift */; };
+		FD4431283008148F00976424 /* PlanningPathCountingLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431273008148F00976424 /* PlanningPathCountingLink.swift */; };
+		FD44312A300815F100976424 /* PlanningPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD443129300815F100976424 /* PlanningPathDestinationView.swift */; };
+		FD44312C300816BD00976424 /* PlanningPathLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44312B300816BD00976424 /* PlanningPathLink.swift */; };
 		FD463E703006D8CF00B20127 /* ListingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E6F3006D8CF00B20127 /* ListingPath.swift */; };
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
@@ -429,6 +433,10 @@
 		FD44311F30080EA900976424 /* WeatherPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPath.swift; sourceTree = "<group>"; };
 		FD44312130080EE500976424 /* WeatherPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPathDestinationView.swift; sourceTree = "<group>"; };
 		FD4431233008115200976424 /* WeatherPathLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPathLink.swift; sourceTree = "<group>"; };
+		FD4431253008137800976424 /* PlanningPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPath.swift; sourceTree = "<group>"; };
+		FD4431273008148F00976424 /* PlanningPathCountingLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPathCountingLink.swift; sourceTree = "<group>"; };
+		FD443129300815F100976424 /* PlanningPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPathDestinationView.swift; sourceTree = "<group>"; };
+		FD44312B300816BD00976424 /* PlanningPathLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPathLink.swift; sourceTree = "<group>"; };
 		FD463E6F3006D8CF00B20127 /* ListingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPath.swift; sourceTree = "<group>"; };
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
@@ -1204,6 +1212,10 @@
 				FD44311F30080EA900976424 /* WeatherPath.swift */,
 				FD4431233008115200976424 /* WeatherPathLink.swift */,
 				FD44312130080EE500976424 /* WeatherPathDestinationView.swift */,
+				FD4431253008137800976424 /* PlanningPath.swift */,
+				FD44312B300816BD00976424 /* PlanningPathLink.swift */,
+				FD4431273008148F00976424 /* PlanningPathCountingLink.swift */,
+				FD443129300815F100976424 /* PlanningPathDestinationView.swift */,
 			);
 			path = "Planning Tab";
 			sourceTree = "<group>";
@@ -1675,6 +1687,7 @@
 				FDB3ABAB2FE6A16300B4B903 /* TrackSummary.swift in Sources */,
 				FDB3ABAC2FE6A16300B4B903 /* ReceiveGpxModifier.swift in Sources */,
 				FDB3ABAD2FE6A16300B4B903 /* TripPuck.swift in Sources */,
+				FD44312C300816BD00976424 /* PlanningPathLink.swift in Sources */,
 				FDB3ABAE2FE6A16300B4B903 /* RouteSummary.swift in Sources */,
 				FDB3ABAF2FE6A16300B4B903 /* TrackPoint.swift in Sources */,
 				FDB3ABB02FE6A16300B4B903 /* TrackHintsOverlay.swift in Sources */,
@@ -1693,6 +1706,7 @@
 				FDB3ABE62FE6A1EB00B4B903 /* PhotoViewModel.swift in Sources */,
 				FDB3ABB52FE6A16300B4B903 /* ZoomControlsOverlay.swift in Sources */,
 				FDB3ABB62FE6A16300B4B903 /* WaypointSymbol.swift in Sources */,
+				FD44312A300815F100976424 /* PlanningPathDestinationView.swift in Sources */,
 				FDB3ABB82FE6A16300B4B903 /* RouteMap.swift in Sources */,
 				FDB3ABB92FE6A16300B4B903 /* WaypointsMap.swift in Sources */,
 				FDB3ABBA2FE6A16300B4B903 /* NobParser.swift in Sources */,
@@ -1775,6 +1789,7 @@
 				FDB3ABD42FE6A19800B4B903 /* AddSoundingButton.swift in Sources */,
 				FDB3ABD52FE6A19800B4B903 /* SoundingsRow.swift in Sources */,
 				FDB3ABD62FE6A19800B4B903 /* DeleteSoundingModifier.swift in Sources */,
+				FD4431263008137800976424 /* PlanningPath.swift in Sources */,
 				FDB3ABD72FE6A19800B4B903 /* SoundingsHome.swift in Sources */,
 				FDB3ABD82FE6A19800B4B903 /* SoundingsList.swift in Sources */,
 				FDB3ABD92FE6A19800B4B903 /* EditSoundingModifier.swift in Sources */,
@@ -1800,6 +1815,7 @@
 				FD44312230080EE500976424 /* WeatherPathDestinationView.swift in Sources */,
 				FDB3AB532FE6A03900B4B903 /* HarbourDestinations.swift in Sources */,
 				FDB3AB542FE6A03900B4B903 /* CruiseForm.swift in Sources */,
+				FD4431283008148F00976424 /* PlanningPathCountingLink.swift in Sources */,
 				FDBAD4642FE9F5FA00C63620 /* ChecklistsPlanning.swift in Sources */,
 				FDB3AB552FE6A03900B4B903 /* FacilitiesPicker.swift in Sources */,
 				FDB3AB562FE6A03900B4B903 /* AnchorageLink.swift in Sources */,

@@ -11,8 +11,8 @@ import WxSalt
 struct HistoryPlanning: View {
     var body: some View {
         Section("History") {
-            CruisesRow()
-            TrackBrowserRow(Track.self, .tracks)
+            PlanningPathLink(.cruises)
+            PlanningPathCountingLink(.tracks, type: Track.self)
         }
         .seaSection()
     }

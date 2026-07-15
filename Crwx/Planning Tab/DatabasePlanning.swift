@@ -11,10 +11,10 @@ import WxSalt
 struct DatabasePlanning: View {
     var body: some View {
         Section("Database") {
-            HarboursRow()
-            TrackBrowserRow(Route.self, .routes)
-            HubsLink()
-            TrackBrowserRow(Waypoint.self, .waypoints)
+            PlanningPathCountingLink(.harbours, type: Harbour.self)
+            PlanningPathCountingLink(.routes, type: Route.self)
+            PlanningPathFilteredCountingLink(.hubs, filter: .hubs)
+            PlanningPathCountingLink(.waypoints, type: Waypoint.self)
         }
         .seaSection()
     }
