@@ -41,6 +41,25 @@ extension CheckableTask: ExpressibleByStringLiteral {
 }
 
 
+// MARK: Hashable
+extension CheckableTask: Hashable {
+    static func == (lhs: CheckableTask, rhs: CheckableTask) -> Bool {
+        lhs.id == rhs.id &&
+        lhs.label == rhs.label &&
+        lhs.action == rhs.action &&
+        lhs.checkedOff == rhs.checkedOff &&
+        lhs.style == rhs.style
+    }
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(label)
+        hasher.combine(action)
+        hasher.combine(checkedOff)
+        hasher.combine(style)
+    }
+}
+
+
 // MARK: Style
 extension CheckableTask {
     enum S: Int, Codable, Sendable, CaseIterable, Identifiable {

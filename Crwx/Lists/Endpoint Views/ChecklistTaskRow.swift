@@ -13,6 +13,7 @@ struct ChecklistTaskRow: View {
     @Bindable var task: CheckableTask
     @Binding var taskToEdit: CheckableTask?
     @Environment(\.editMode) private var editMode
+    @Environment(PlanningRouter.self) private var router
     var body: some View {
         HStack(spacing: 10) {
             if editMode?.wrappedValue != .active {
@@ -22,7 +23,11 @@ struct ChecklistTaskRow: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .contentShape(.rect)
                 .onTapGesture {
-                    taskToEdit = task
+                    if task.style == .plain {
+                        taskToEdit = task
+                    } else {
+                        router.path.append(task)
+                    }
                 }
             if let action = task.action {
                 TaskActionButton(action: action)

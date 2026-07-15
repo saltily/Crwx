@@ -41,6 +41,10 @@ struct PlanningHome: View {
             PlanningPathDestinationView(path: path)
                 .seaBackground()
         }
+        .navigationDestination(for: CheckableTask.self) { task in
+            ChecklistTaskEditor(task: task)
+                .seaBackground()
+        }
     }
 }
 
