@@ -69,10 +69,12 @@ struct AnyChecklistView: View {
 }
 
 #Preview {
+    @Previewable @State var router = PlanningRouter()
     NavigationStack {
         AnyChecklistView(checklist: .daysailPredeparture)
             .navigationTitle(ListingPath.daysailPreDeparture.label)
             .seaBackground()
     }
     .environment(\.wxColourScheme, .green)
+    .environment(router)
 }

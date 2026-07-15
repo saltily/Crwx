@@ -44,6 +44,10 @@
 		FD44312A300815F100976424 /* PlanningPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD443129300815F100976424 /* PlanningPathDestinationView.swift */; };
 		FD44312C300816BD00976424 /* PlanningPathLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44312B300816BD00976424 /* PlanningPathLink.swift */; };
 		FD44312E300818E000976424 /* PlanningRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44312D300818E000976424 /* PlanningRouter.swift */; };
+		FD443130300822C100976424 /* TaskStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44312F300822C100976424 /* TaskStylePicker.swift */; };
+		FD4431323008253600976424 /* ChecklistTaskDeepEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431313008253600976424 /* ChecklistTaskDeepEditor.swift */; };
+		FD4431343008258D00976424 /* ChecklistPackingEditorGuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431333008258D00976424 /* ChecklistPackingEditorGuts.swift */; };
+		FD44313630082ACF00976424 /* ChecklistProjectEditorGuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44313530082ACF00976424 /* ChecklistProjectEditorGuts.swift */; };
 		FD463E703006D8CF00B20127 /* ListingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E6F3006D8CF00B20127 /* ListingPath.swift */; };
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
@@ -439,6 +443,10 @@
 		FD443129300815F100976424 /* PlanningPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPathDestinationView.swift; sourceTree = "<group>"; };
 		FD44312B300816BD00976424 /* PlanningPathLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPathLink.swift; sourceTree = "<group>"; };
 		FD44312D300818E000976424 /* PlanningRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningRouter.swift; sourceTree = "<group>"; };
+		FD44312F300822C100976424 /* TaskStylePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStylePicker.swift; sourceTree = "<group>"; };
+		FD4431313008253600976424 /* ChecklistTaskDeepEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTaskDeepEditor.swift; sourceTree = "<group>"; };
+		FD4431333008258D00976424 /* ChecklistPackingEditorGuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistPackingEditorGuts.swift; sourceTree = "<group>"; };
+		FD44313530082ACF00976424 /* ChecklistProjectEditorGuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistProjectEditorGuts.swift; sourceTree = "<group>"; };
 		FD463E6F3006D8CF00B20127 /* ListingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPath.swift; sourceTree = "<group>"; };
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
@@ -881,6 +889,10 @@
 				FD4431063006F56B00976424 /* VoyagePlanHome.swift */,
 				FD443114300720B800976424 /* ChecklistTaskRow.swift */,
 				FD4431193007A79900976424 /* ChecklistTaskEditor.swift */,
+				FD4431313008253600976424 /* ChecklistTaskDeepEditor.swift */,
+				FD4431333008258D00976424 /* ChecklistPackingEditorGuts.swift */,
+				FD44313530082ACF00976424 /* ChecklistProjectEditorGuts.swift */,
+				FD44312F300822C100976424 /* TaskStylePicker.swift */,
 				FD44311730079DB100976424 /* ChecklistEditButtonModifier.swift */,
 				FD44311D3007CD0700976424 /* TaskActionButton.swift */,
 			);
@@ -1603,6 +1615,7 @@
 				FDE2165A2FE5B0CF00F60799 /* DownloadChartsModifier.swift in Sources */,
 				FDE2165B2FE5B0CF00F60799 /* TripRouteMap.swift in Sources */,
 				FDE2165C2FE5B0CF00F60799 /* TideSnapshotSnippet.swift in Sources */,
+				FD4431323008253600976424 /* ChecklistTaskDeepEditor.swift in Sources */,
 				FD4431093006F7A800976424 /* AnyChecklistView.swift in Sources */,
 				FDE2165D2FE5B0CF00F60799 /* WindEditor.swift in Sources */,
 				FDE2165E2FE5B0CF00F60799 /* TripStatsTable.swift in Sources */,
@@ -1611,6 +1624,7 @@
 				FDE216602FE5B0CF00F60799 /* LocalForecastLine.swift in Sources */,
 				FDE216612FE5B0CF00F60799 /* NewTripButton.swift in Sources */,
 				FD44312030080EA900976424 /* WeatherPath.swift in Sources */,
+				FD4431343008258D00976424 /* ChecklistPackingEditorGuts.swift in Sources */,
 				FDE216622FE5B0CF00F60799 /* LocalWeatherEditor.swift in Sources */,
 				FDE216642FE5B0CF00F60799 /* UnderwayFetchDetail.swift in Sources */,
 				FDE216652FE5B0CF00F60799 /* ObservationSnippet.swift in Sources */,
@@ -1767,6 +1781,7 @@
 				FDB3AB2D2FE6A03900B4B903 /* RouteEditor+OverlayControls.swift in Sources */,
 				FDB3AB2E2FE6A03900B4B903 /* AnchorageDot.swift in Sources */,
 				FDB3AB2F2FE6A03900B4B903 /* ExposureSymbol.swift in Sources */,
+				FD44313630082ACF00976424 /* ChecklistProjectEditorGuts.swift in Sources */,
 				FDB3AB302FE6A03900B4B903 /* AddToCruiseButton.swift in Sources */,
 				FDB3AB312FE6A03900B4B903 /* ExpandableSplitView.swift in Sources */,
 				FDB3AB322FE6A03900B4B903 /* CoordinateBrowser.swift in Sources */,
@@ -1811,6 +1826,7 @@
 				FDB3AB4B2FE6A03900B4B903 /* RouteMaker.swift in Sources */,
 				FDB3AB4C2FE6A03900B4B903 /* MarineWeatherBrowser.swift in Sources */,
 				FDB3AB4D2FE6A03900B4B903 /* HubsMap.swift in Sources */,
+				FD443130300822C100976424 /* TaskStylePicker.swift in Sources */,
 				FDB3AB4E2FE6A03900B4B903 /* CompassQuadrant.swift in Sources */,
 				FDB3AB4F2FE6A03900B4B903 /* RouteEditor+MapContent.swift in Sources */,
 				FDB3AB502FE6A03900B4B903 /* HarbourDetail.swift in Sources */,

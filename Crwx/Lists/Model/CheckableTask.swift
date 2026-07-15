@@ -16,11 +16,14 @@ final class CheckableTask: Identifiable, Codable, Sendable {
     var label: String
     var action: TaskAction?
     var checkedOff: Date?
-    init(_ label: String, action: TaskAction? = nil, checkedOff: Date? = nil, id: UUID = .init()) {
+    /// So I know what type of form to display for it, whether it has nested steps and/or packing items.
+    var style: S = .plain
+    init(_ label: String, action: TaskAction? = nil, checkedOff: Date? = nil, style: S = .plain, id: UUID = .init()) {
         self.id = id
         self.label = label
         self.action = action
         self.checkedOff = checkedOff
+        self.style = style
     }
 }
 
@@ -33,6 +36,25 @@ extension CheckableTask: ExpressibleByStringLiteral {
         set {
             guard newValue != isChecked else { return }
             checkedOff = newValue ? .now : nil
+        }
+    }
+}
+
+
+// MARK: Style
+extension CheckableTask {
+    enum S: Int, Codable, Sendable, CaseIterable, Identifiable {
+        case plain, packing, project
+        var id: Int { rawValue }
+        var systemImage: String {
+            switch self {
+            case .plain:
+                "text.justify.left"
+            case .project:
+                "list.bullet.indent"
+            case .packing:
+                "shippingbox"
+            }
         }
     }
 }
@@ -115,5 +137,14 @@ extension CheckableTask {
     /// ```
     static func confirm(_ items: [String]) -> CheckableTask {
         .init(stringLiteral: "Confirm inventory: \(items.formatted(.list(type: .and)))")
+    }
+}
+
+
+
+// MARK: Previews
+extension CheckableTask {
+    static var plain: CheckableTask {
+        "Do this one thing."
     }
 }
