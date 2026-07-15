@@ -8,6 +8,8 @@
 import SwiftUI
 import WxSalt
 import FoundationUI
+import os
+import FoundationSalt
 
 struct AnyChecklistView: View {
     init(checklist: Checklist) {
@@ -21,8 +23,7 @@ struct AnyChecklistView: View {
         List {
             Section {
                 ForEach(steps) { step in
-                    Text(step.label)
-                        .multilineTextAlignment(.leading)
+                    ChecklistTaskRow(task: step)
                 }
                 .onMove { indices, i in
                     model.steps.move(fromOffsets: indices, toOffset: i)
@@ -48,7 +49,9 @@ struct AnyChecklistView: View {
             ToolbarItem {
                 Button(systemImage: "arrow.counterclockwise") {
                     // be sure to alert confirmation first
-                    model.reset()
+                    withAnimation {
+                        model.reset()
+                    }
                 }
             }
             ToolbarItem {

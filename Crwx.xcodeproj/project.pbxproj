@@ -31,6 +31,7 @@
 		FD44310F3007001800976424 /* AnyPackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44310E3007001800976424 /* AnyPackingView.swift */; };
 		FD44311130071B3000976424 /* CheckableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311030071B3000976424 /* CheckableTask.swift */; };
 		FD44311330071BBC00976424 /* ChecklistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311230071BBC00976424 /* ChecklistViewModel.swift */; };
+		FD443115300720B800976424 /* ChecklistTaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD443114300720B800976424 /* ChecklistTaskRow.swift */; };
 		FD463E703006D8CF00B20127 /* ListingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E6F3006D8CF00B20127 /* ListingPath.swift */; };
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
@@ -415,6 +416,7 @@
 		FD44310E3007001800976424 /* AnyPackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyPackingView.swift; sourceTree = "<group>"; };
 		FD44311030071B3000976424 /* CheckableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckableTask.swift; sourceTree = "<group>"; };
 		FD44311230071BBC00976424 /* ChecklistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewModel.swift; sourceTree = "<group>"; };
+		FD443114300720B800976424 /* ChecklistTaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTaskRow.swift; sourceTree = "<group>"; };
 		FD463E6F3006D8CF00B20127 /* ListingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPath.swift; sourceTree = "<group>"; };
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
@@ -865,6 +867,7 @@
 				FD44310E3007001800976424 /* AnyPackingView.swift */,
 				FD4431043006F35C00976424 /* MenuHome.swift */,
 				FD4431063006F56B00976424 /* VoyagePlanHome.swift */,
+				FD443114300720B800976424 /* ChecklistTaskRow.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -1842,6 +1845,7 @@
 				FDE216962FE5B0CF00F60799 /* RouteLeg.swift in Sources */,
 				FDE216972FE5B0CF00F60799 /* TripHarboursSection.swift in Sources */,
 				FD44310F3007001800976424 /* AnyPackingView.swift in Sources */,
+				FD443115300720B800976424 /* ChecklistTaskRow.swift in Sources */,
 				FDE216982FE5B0CF00F60799 /* TripMapOverlays.swift in Sources */,
 				FDE216992FE5B0CF00F60799 /* TripDestinationPicker.swift in Sources */,
 				FDE2169A2FE5B0CF00F60799 /* TripOverview.swift in Sources */,
