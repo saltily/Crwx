@@ -19,11 +19,12 @@ struct AnyChecklistView: View {
     let checklist: Checklist
     @State private var model: ChecklistViewModel
     @State private var isEditing = false
+    @State private var taskToEdit: CheckableTask?
     var body: some View {
         List {
             Section {
                 ForEach(steps) { step in
-                    ChecklistTaskRow(task: step)
+                    ChecklistTaskRow(task: step, taskToEdit: $taskToEdit)
                 }
                 .onMove { indices, i in
                     model.steps.move(fromOffsets: indices, toOffset: i)
@@ -34,11 +35,9 @@ struct AnyChecklistView: View {
             }
             .seaSection()
             Section {
-                Text("Because most checklists have some common stuff going on.")
-                Text("It's always just the one list of items, though the current state of that list is persisted.  We don't keep previous lists.  So we can wipe the list and start over afresh.  When wiping, it will restore to the default order on the list.")
-                Text("When completing stuff on the list, it moves completed items to the bottom.  But if uncompleting, it restores them to their previous order.")
+                Text("Still need to persist edits somewhere.")
                 Text("Some items have actions they will run when marking complete or uncomplete, such as adding items to packing list or removing them from the packing list.  But otherwise these items are basically pre-defined when defining a checklist.")
-                Text("Might not hurt to show a date of when it was last tapped on.  Also might not hurt for the log book steps to have quick-links to the appropriate items.  And some of these things might also post notifications and reminders to do the list or certain items in the list like turning the anchor light on and off.")
+                Text("Might not hurt for the log book steps to have quick-links to the appropriate items.  And some of these things might also post notifications and reminders to do the list or certain items in the list like turning the anchor light on and off.")
             }
             .seaSection()
         }
@@ -52,7 +51,9 @@ struct AnyChecklistView: View {
             }
             ToolbarItem {
                 Button(systemImage: "plus") {
-                    
+                    let new: CheckableTask = ""
+                    taskToEdit = new
+                    model.steps.insert(new, at: 0)
                 }
             }
         }
@@ -60,6 +61,7 @@ struct AnyChecklistView: View {
         .onChange(of: checklist) { oldValue, newValue in
             model = newValue.viewModel
         }
+        .checklistTaskEditor($taskToEdit)
     }
     private var steps: [CheckableTask] {
         isEditing ? model.steps : model.orderedSteps

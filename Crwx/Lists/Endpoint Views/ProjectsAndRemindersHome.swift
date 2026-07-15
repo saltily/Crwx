@@ -10,6 +10,7 @@ import WxSalt
 import FoundationUI
 
 struct ProjectsAndRemindersHome: View {
+    @State private var isEditing = false
     var body: some View {
         List {
             Section {
@@ -21,13 +22,7 @@ struct ProjectsAndRemindersHome: View {
             }
             .seaSection()
         }
-        .toolbar {
-            ToolbarItem {
-                EditButton()
-//                Button(systemImage: "pencil") {
-//                    
-//                }
-            }
+        .checklistEditButton(isEditing: $isEditing) {
             ToolbarItem {
                 Button(systemImage: "plus") {
                     

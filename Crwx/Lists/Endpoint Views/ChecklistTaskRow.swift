@@ -7,16 +7,23 @@
 
 import SwiftUI
 import WxSalt
+import FoundationUI
 
 struct ChecklistTaskRow: View {
     @Bindable var task: CheckableTask
+    @Binding var taskToEdit: CheckableTask?
     @Environment(\.editMode) private var editMode
     var body: some View {
         HStack(spacing: 15) {
             if editMode?.wrappedValue != .active {
                 TaskIsCheckedButton(isOn: $task.isChecked)
             }
-            Text(task.label)
+            PlaceholderText(task.label, placeholder: "Untitled")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .contentShape(.rect)
+                .onTapGesture {
+                    taskToEdit = task
+                }
         }
     }
 }
@@ -25,7 +32,7 @@ struct ChecklistTaskRow: View {
     @Previewable @State var task: CheckableTask = "Do something.\nMultiple lines."
     NavigationStack {
         List {
-            ChecklistTaskRow(task: task)
+            ChecklistTaskRow(task: task, taskToEdit: .constant(nil))
                 .seaSection()
         }
         .seaBackground()
@@ -50,6 +57,6 @@ fileprivate struct TaskIsCheckedButton: View {
                     isOn.toggle()
                 }
             }
-            .foregroundStyle(isOn ? .accentColor : .primary)
+            .foregroundStyle(isOn ? .accentColor : Color.primary)
     }
 }
