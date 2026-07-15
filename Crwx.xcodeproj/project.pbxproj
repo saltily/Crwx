@@ -36,6 +36,9 @@
 		FD44311A3007A79900976424 /* ChecklistTaskEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431193007A79900976424 /* ChecklistTaskEditor.swift */; };
 		FD44311C3007CC4A00976424 /* TaskAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311B3007CC4A00976424 /* TaskAction.swift */; };
 		FD44311E3007CD0700976424 /* TaskActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311D3007CD0700976424 /* TaskActionButton.swift */; };
+		FD44312030080EA900976424 /* WeatherPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311F30080EA900976424 /* WeatherPath.swift */; };
+		FD44312230080EE500976424 /* WeatherPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44312130080EE500976424 /* WeatherPathDestinationView.swift */; };
+		FD4431243008115200976424 /* WeatherPathLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431233008115200976424 /* WeatherPathLink.swift */; };
 		FD463E703006D8CF00B20127 /* ListingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E6F3006D8CF00B20127 /* ListingPath.swift */; };
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
@@ -423,6 +426,9 @@
 		FD4431193007A79900976424 /* ChecklistTaskEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTaskEditor.swift; sourceTree = "<group>"; };
 		FD44311B3007CC4A00976424 /* TaskAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAction.swift; sourceTree = "<group>"; };
 		FD44311D3007CD0700976424 /* TaskActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskActionButton.swift; sourceTree = "<group>"; };
+		FD44311F30080EA900976424 /* WeatherPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPath.swift; sourceTree = "<group>"; };
+		FD44312130080EE500976424 /* WeatherPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPathDestinationView.swift; sourceTree = "<group>"; };
+		FD4431233008115200976424 /* WeatherPathLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPathLink.swift; sourceTree = "<group>"; };
 		FD463E6F3006D8CF00B20127 /* ListingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPath.swift; sourceTree = "<group>"; };
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
@@ -1195,6 +1201,9 @@
 				FDBAD4672FE9F8D800C63620 /* DatabasePlanning.swift */,
 				FDBAD4652FE9F71900C63620 /* HistoryPlanning.swift */,
 				FDBAD4612FE9F3ED00C63620 /* PlanningHome.swift */,
+				FD44311F30080EA900976424 /* WeatherPath.swift */,
+				FD4431233008115200976424 /* WeatherPathLink.swift */,
+				FD44312130080EE500976424 /* WeatherPathDestinationView.swift */,
 			);
 			path = "Planning Tab";
 			sourceTree = "<group>";
@@ -1586,6 +1595,7 @@
 				FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */,
 				FDE216602FE5B0CF00F60799 /* LocalForecastLine.swift in Sources */,
 				FDE216612FE5B0CF00F60799 /* NewTripButton.swift in Sources */,
+				FD44312030080EA900976424 /* WeatherPath.swift in Sources */,
 				FDE216622FE5B0CF00F60799 /* LocalWeatherEditor.swift in Sources */,
 				FDE216642FE5B0CF00F60799 /* UnderwayFetchDetail.swift in Sources */,
 				FDE216652FE5B0CF00F60799 /* ObservationSnippet.swift in Sources */,
@@ -1656,6 +1666,7 @@
 				FDB3ABA32FE6A16300B4B903 /* WaypointSummary.swift in Sources */,
 				FDB3ABA42FE6A16300B4B903 /* ImportSource.swift in Sources */,
 				FDB3ABA52FE6A16300B4B903 /* TrackTripButton.swift in Sources */,
+				FD4431243008115200976424 /* WeatherPathLink.swift in Sources */,
 				FDB3ABA62FE6A16300B4B903 /* TrackMatcherModifier.swift in Sources */,
 				FDB3ABA72FE6A16300B4B903 /* GpxActor.swift in Sources */,
 				FDB3ABA82FE6A16300B4B903 /* NobActor.swift in Sources */,
@@ -1786,6 +1797,7 @@
 				FDB3AB502FE6A03900B4B903 /* HarbourDetail.swift in Sources */,
 				FDB3AB512FE6A03900B4B903 /* ChooseAnchorageButton.swift in Sources */,
 				FDB3AB522FE6A03900B4B903 /* RouteEditor+Button.swift in Sources */,
+				FD44312230080EE500976424 /* WeatherPathDestinationView.swift in Sources */,
 				FDB3AB532FE6A03900B4B903 /* HarbourDestinations.swift in Sources */,
 				FDB3AB542FE6A03900B4B903 /* CruiseForm.swift in Sources */,
 				FDBAD4642FE9F5FA00C63620 /* ChecklistsPlanning.swift in Sources */,

@@ -31,6 +31,10 @@ struct PlanningHome: View {
                 .seaBackground()
                 .navigationTitle(path.label)
         }
+        .navigationDestination(for: WeatherPath.self) { path in
+            WeatherPathDestinationView(path: path)
+                .seaBackground()
+        }
     }
 }
 

@@ -7,20 +7,33 @@
 
 import SwiftUI
 import WxSalt
+import FoundationUI
 
 struct WeatherPlanning: View {
     var body: some View {
         Section("Weather") {
-            MarineWeatherRow()
-            Label("Tides", systemImage: WeatherAngle.tide.symbolName)
-            Label("Tidal Currents", systemImage: WeatherSource.tidalCurrents.symbolName)
-            Label("Sea Buoy", systemImage: WeatherSource.marineBuoy.symbolName)
-            Label("Radar", systemImage: "antenna.radiowaves.left.and.right")
+            WeatherPathLink(.marineWeather)
+            WeatherPathLink(.tides)
+            WeatherPathLink(.currents)
+            WeatherPathLink(.seaBuoy)
+            WeatherPathLink(.radar)
         }
         .seaSection()
     }
 }
 
 #Preview {
-    WeatherPlanning()
+    NavigationStack {
+        List {
+            WeatherPlanning()
+        }
+        .navigationTitle("Weather")
+            .seaBackground()
+            .navigationDestination(for: WeatherPath.self) { path in
+                WeatherPathDestinationView(path: path)
+                    .seaBackground()
+            }
+    }
+    .environment(\.wxColourScheme, .green)
+    .locationManager()
 }
