@@ -32,6 +32,7 @@
 		FD44311130071B3000976424 /* CheckableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311030071B3000976424 /* CheckableTask.swift */; };
 		FD44311330071BBC00976424 /* ChecklistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311230071BBC00976424 /* ChecklistViewModel.swift */; };
 		FD443115300720B800976424 /* ChecklistTaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD443114300720B800976424 /* ChecklistTaskRow.swift */; };
+		FD44311830079DB100976424 /* ChecklistEditButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311730079DB100976424 /* ChecklistEditButtonModifier.swift */; };
 		FD463E703006D8CF00B20127 /* ListingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E6F3006D8CF00B20127 /* ListingPath.swift */; };
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
@@ -417,6 +418,7 @@
 		FD44311030071B3000976424 /* CheckableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckableTask.swift; sourceTree = "<group>"; };
 		FD44311230071BBC00976424 /* ChecklistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewModel.swift; sourceTree = "<group>"; };
 		FD443114300720B800976424 /* ChecklistTaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTaskRow.swift; sourceTree = "<group>"; };
+		FD44311730079DB100976424 /* ChecklistEditButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistEditButtonModifier.swift; sourceTree = "<group>"; };
 		FD463E6F3006D8CF00B20127 /* ListingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPath.swift; sourceTree = "<group>"; };
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
@@ -850,6 +852,21 @@
 			path = CrwxUITests;
 			sourceTree = "<group>";
 		};
+		FD44311630079D7C00976424 /* Endpoint Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD4430FE3006E78300976424 /* ProjectsAndRemindersHome.swift */,
+				FD4431083006F7A800976424 /* AnyChecklistView.swift */,
+				FD44310C3006FD1D00976424 /* AnyInventoryView.swift */,
+				FD44310E3007001800976424 /* AnyPackingView.swift */,
+				FD4431043006F35C00976424 /* MenuHome.swift */,
+				FD4431063006F56B00976424 /* VoyagePlanHome.swift */,
+				FD443114300720B800976424 /* ChecklistTaskRow.swift */,
+				FD44311730079DB100976424 /* ChecklistEditButtonModifier.swift */,
+			);
+			path = "Endpoint Views";
+			sourceTree = "<group>";
+		};
 		FD463E713006DAD000B20127 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -858,16 +875,9 @@
 				FDC73A843006E59200877061 /* ListingPathCountingLink.swift */,
 				FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */,
 				FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */,
-				FD4430FE3006E78300976424 /* ProjectsAndRemindersHome.swift */,
 				FD4431003006E98A00976424 /* DaysailChecklistsHome.swift */,
 				FD4431023006EB0B00976424 /* CruiseChecklistsHome.swift */,
 				FD44310A3006FA5900976424 /* SeasonalChecklistsHome.swift */,
-				FD4431083006F7A800976424 /* AnyChecklistView.swift */,
-				FD44310C3006FD1D00976424 /* AnyInventoryView.swift */,
-				FD44310E3007001800976424 /* AnyPackingView.swift */,
-				FD4431043006F35C00976424 /* MenuHome.swift */,
-				FD4431063006F56B00976424 /* VoyagePlanHome.swift */,
-				FD443114300720B800976424 /* ChecklistTaskRow.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -875,6 +885,7 @@
 		FD9DF1022FF152F9008322E1 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				FD44311630079D7C00976424 /* Endpoint Views */,
 				FD463E713006DAD000B20127 /* Navigation */,
 				FD9DF1032FF15302008322E1 /* Model */,
 			);
@@ -1586,6 +1597,7 @@
 				FDE216712FE5B0CF00F60799 /* TripSummaryRow.swift in Sources */,
 				FDE216722FE5B0CF00F60799 /* SailingLookaheadViewModel.swift in Sources */,
 				FD44311330071BBC00976424 /* ChecklistViewModel.swift in Sources */,
+				FD44311830079DB100976424 /* ChecklistEditButtonModifier.swift in Sources */,
 				FDE216732FE5B0CF00F60799 /* VoyageEvent.swift in Sources */,
 				FDE216742FE5B0CF00F60799 /* EventRelativeSentence.swift in Sources */,
 				FDE216752FE5B0CF00F60799 /* EventLine.swift in Sources */,

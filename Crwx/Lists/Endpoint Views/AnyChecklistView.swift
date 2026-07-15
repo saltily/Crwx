@@ -18,7 +18,7 @@ struct AnyChecklistView: View {
     }
     let checklist: Checklist
     @State private var model: ChecklistViewModel
-    @Environment(\.editMode) private var editMode
+    @State private var isEditing = false
     var body: some View {
         List {
             Section {
@@ -42,13 +42,9 @@ struct AnyChecklistView: View {
             }
             .seaSection()
         }
-        .toolbar {
-            ToolbarItem {
-                EditButton()
-            }
+        .checklistEditButton(isEditing: $isEditing) {
             ToolbarItem {
                 Button(systemImage: "arrow.counterclockwise") {
-                    // be sure to alert confirmation first
                     withAnimation {
                         model.reset()
                     }
@@ -66,11 +62,7 @@ struct AnyChecklistView: View {
         }
     }
     private var steps: [CheckableTask] {
-        if editMode?.wrappedValue == .active {
-            return model.steps
-        } else {
-            return model.orderedSteps
-        }
+        isEditing ? model.steps : model.orderedSteps
     }
 }
 
