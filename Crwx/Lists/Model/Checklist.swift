@@ -192,8 +192,8 @@ extension Checklist {
             [
                 "Weather and tide confirmed.",
                 "Log pre-departure with marine forecast and passenger list.",
-                "Confirm: snacks, drinks, gerber multi-tool, pfd count, hats and jackets.", // this could involve scanning the inventory and adding stuff to bring out
-                "Pack: sunglasses, muck boots.", // this could involve scanning the inventory and adding stuff to bring out
+                .init("Confirm: snacks, drinks, gerber multi-tool, pfd count, hats and jackets.", action: .daysailConfirm), // this could involve scanning the inventory and adding stuff to bring out
+                .init("Pack: sunglasses, muck boots.", action: .daysailPack), // this could involve scanning the inventory and adding stuff to bring out
                 "Check engine.",
                 "Turn on breakers.",
                 "Pass up pillows, navigation basket, and GPS.",
@@ -222,8 +222,8 @@ extension Checklist {
                 "Sound fuel tank and complete voyage in log.",
                 "Transfer track line to phone.",
                 "Prepare and load dinghy.",
-                "Pack: sunglasses, muck boots.",
-                "Update inventory: snacks, drinks.",
+                .init("Pack: sunglasses, muck boots.", action: .daysailPack),
+                .init("Update inventory: snacks, drinks.", action: .daysailConfirm),
                 "Confirm hatch is secure.",
                 "Confirm mooring is secure.",
                 "Write up notes for the day. Match track to trip.",
@@ -237,13 +237,13 @@ extension Checklist {
                 "Ensure ice blocks and yeti are freezing.",
                 "Charge up watch battery pack.",
                 "Recharge dehumidifiers.",
-                "Confirm inventory: snacks, drinks, outerwear, trash bags, cleaning supplies, linens, gerber multi-tool, safety equipment, propane, fuel, toilet paper, paper towels.",
+                .init("Confirm inventory: snacks, drinks, outerwear, trash bags, cleaning supplies, linens, gerber multi-tool, safety equipment, propane, fuel, toilet paper, paper towels.", action: .cruiseConfirm),
                 "Develop menu for number of meals.",
                 "Purchase groceries (and diesel).",
                 "Prep food.",
                 "Review projects and pack for them.",
-                "Pack food.",
-                "Pack: clothing, toiletries, devices and chargers (watch battery pack), chainsaw, muck boots, sunglasses, reading materials, instruments.",
+                .init("Pack food.", action: .cruiseFood),
+                .init("Pack: clothing, toiletries, devices and chargers (watch battery pack), chainsaw, muck boots, sunglasses, reading materials, instruments.", action: .cruisePersonal),
                 "Fill water. Also top off backup supply and gallon jugs. Update soundings.",
                 "Top off fuel.  Update soundings.",
                 "Load white dinghy in davits.",
@@ -347,8 +347,8 @@ extension Checklist {
                 "Dump dishwater.",
                 "Strip linens.",
                 "Sound water, ice box, and propane.",
-                "Pack: clothing, toiletries, devices and chargers, sunglasses, muck boots, reading materials, instruments.",
-                "Update inventory: snacks, drinks, cleaning supplies, toilet paper, paper towel.",
+                .init("Pack: clothing, toiletries, devices and chargers, sunglasses, muck boots, reading materials, instruments.", action: .cruisePersonal),
+                .init("Update inventory: snacks, drinks, cleaning supplies, toilet paper, paper towel.", action: .cruiseConfirm),
                 "Install forward hatch.",
                 "Adjust flags or bimini.",
                 "Secure breakers and portholes.",
@@ -359,7 +359,7 @@ extension Checklist {
                 "Write up notes for the day. Match tracks to trips.",
                 "Optionally add photos, upload, and share the cruise.",
                 "Purchase diesel and snacks.",
-                "Go back for ice, trash, linens, dehumidifiers, empty water jugs, white dinghy, chainsaw.",
+                .init("Go back for ice, trash, linens, dehumidifiers, empty water jugs, white dinghy, chainsaw.", action: .cruiseCleanup),
                 "Top off water, snacks, and fuel. Update soundings."
             ]
             

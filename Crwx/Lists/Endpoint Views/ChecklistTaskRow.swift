@@ -24,6 +24,9 @@ struct ChecklistTaskRow: View {
                 .onTapGesture {
                     taskToEdit = task
                 }
+            if let action = task.action {
+                TaskActionButton(action: action)
+            }
         }
     }
 }
@@ -51,6 +54,7 @@ fileprivate struct TaskIsCheckedButton: View {
         Image(systemName: isOn ? "checkmark.circle.fill" : "circle")
             .frame(width: 36, height: 36)
             .font(.title)
+            .fontWeight(isOn ? .regular : .thin)
             .contentShape(.circle)
             .onTapGesture {
                 withAnimation {

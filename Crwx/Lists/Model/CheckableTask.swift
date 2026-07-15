@@ -14,17 +14,19 @@ import Foundation
 final class CheckableTask: Identifiable, Codable, Sendable {
     let id: UUID
     var label: String
+    var action: TaskAction?
     var checkedOff: Date?
-    init(id: UUID, label: String, checkedOff: Date? = nil) {
+    init(_ label: String, action: TaskAction? = nil, checkedOff: Date? = nil, id: UUID = .init()) {
         self.id = id
         self.label = label
+        self.action = action
         self.checkedOff = checkedOff
     }
 }
 
 extension CheckableTask: ExpressibleByStringLiteral {
     convenience init(stringLiteral value: String) {
-        self.init(id: .init(), label: value)
+        self.init(value)
     }
     var isChecked: Bool {
         get { checkedOff != nil }

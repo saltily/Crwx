@@ -34,6 +34,8 @@
 		FD443115300720B800976424 /* ChecklistTaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD443114300720B800976424 /* ChecklistTaskRow.swift */; };
 		FD44311830079DB100976424 /* ChecklistEditButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311730079DB100976424 /* ChecklistEditButtonModifier.swift */; };
 		FD44311A3007A79900976424 /* ChecklistTaskEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431193007A79900976424 /* ChecklistTaskEditor.swift */; };
+		FD44311C3007CC4A00976424 /* TaskAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311B3007CC4A00976424 /* TaskAction.swift */; };
+		FD44311E3007CD0700976424 /* TaskActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311D3007CD0700976424 /* TaskActionButton.swift */; };
 		FD463E703006D8CF00B20127 /* ListingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E6F3006D8CF00B20127 /* ListingPath.swift */; };
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
@@ -419,6 +421,8 @@
 		FD443114300720B800976424 /* ChecklistTaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTaskRow.swift; sourceTree = "<group>"; };
 		FD44311730079DB100976424 /* ChecklistEditButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistEditButtonModifier.swift; sourceTree = "<group>"; };
 		FD4431193007A79900976424 /* ChecklistTaskEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTaskEditor.swift; sourceTree = "<group>"; };
+		FD44311B3007CC4A00976424 /* TaskAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAction.swift; sourceTree = "<group>"; };
+		FD44311D3007CD0700976424 /* TaskActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskActionButton.swift; sourceTree = "<group>"; };
 		FD463E6F3006D8CF00B20127 /* ListingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPath.swift; sourceTree = "<group>"; };
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
@@ -862,6 +866,7 @@
 				FD443114300720B800976424 /* ChecklistTaskRow.swift */,
 				FD4431193007A79900976424 /* ChecklistTaskEditor.swift */,
 				FD44311730079DB100976424 /* ChecklistEditButtonModifier.swift */,
+				FD44311D3007CD0700976424 /* TaskActionButton.swift */,
 			);
 			path = "Endpoint Views";
 			sourceTree = "<group>";
@@ -897,6 +902,7 @@
 				FD9DF10A2FF282FD008322E1 /* PackingItemViewModel.swift */,
 				FD9DF1062FF1534A008322E1 /* Checklist.swift */,
 				FD44311030071B3000976424 /* CheckableTask.swift */,
+				FD44311B3007CC4A00976424 /* TaskAction.swift */,
 				FD44311230071BBC00976424 /* ChecklistViewModel.swift */,
 			);
 			path = Model;
@@ -1567,6 +1573,7 @@
 				FDE216552FE5B0CF00F60799 /* PostArrivalViewModel.swift in Sources */,
 				FDE216562FE5B0CF00F60799 /* TripNotesSection.swift in Sources */,
 				FDE216572FE5B0CF00F60799 /* TripRouteViewModel.swift in Sources */,
+				FD44311E3007CD0700976424 /* TaskActionButton.swift in Sources */,
 				FDE216582FE5B0CF00F60799 /* SailingSnapshotForm.swift in Sources */,
 				FDE216592FE5B0CF00F60799 /* PreDepartureViewModel.swift in Sources */,
 				FDE2165A2FE5B0CF00F60799 /* DownloadChartsModifier.swift in Sources */,
@@ -1855,6 +1862,7 @@
 				FD44310F3007001800976424 /* AnyPackingView.swift in Sources */,
 				FD443115300720B800976424 /* ChecklistTaskRow.swift in Sources */,
 				FDE216982FE5B0CF00F60799 /* TripMapOverlays.swift in Sources */,
+				FD44311C3007CC4A00976424 /* TaskAction.swift in Sources */,
 				FDE216992FE5B0CF00F60799 /* TripDestinationPicker.swift in Sources */,
 				FDE2169A2FE5B0CF00F60799 /* TripOverview.swift in Sources */,
 				FDE2169B2FE5B0CF00F60799 /* FuelEditorRow.swift in Sources */,
