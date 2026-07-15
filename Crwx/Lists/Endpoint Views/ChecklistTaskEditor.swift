@@ -45,12 +45,13 @@ struct ChecklistTaskEditor: View {
                 TaskStylePicker(value: $task.style)
             }
             .seaSection()
-            ChecklistTaskDeepEditor(style: task.style)
+            ChecklistTaskDeepEditor(style: task.style, items: $task.packingList)
         }
+        .checklistEditorToolbar(style: task.style, items: $task.packingList)
     }
 }
 #Preview {
-    @Previewable @State var task: CheckableTask = .plain
+    @Previewable @State var task: CheckableTask = .packing
     NavigationStack {
         ChecklistTaskEditor(task: task)
             .seaBackground()

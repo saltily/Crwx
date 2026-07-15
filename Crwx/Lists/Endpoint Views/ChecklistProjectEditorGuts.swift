@@ -10,10 +10,11 @@ import WxSalt
 import FoundationUI
 
 struct ChecklistProjectEditorGuts: View {
+    @Binding var items: [PackableItem]
     var body: some View {
         Section("Equipment") {
-            NavigationLink(destination: ChecklistPackingEditor()) {
-                Text("List, of, items, that, we, are, and packing.")
+            NavigationLink(destination: ChecklistPackingEditor(items: $items)) {
+                Text(items.map(\.label).joined(separator: ", "))
             }
         }
         .seaSection()
@@ -30,9 +31,16 @@ struct ChecklistProjectEditorGuts: View {
 }
 
 #Preview {
+    @Previewable @State var items: [PackableItem] = [
+        "clear coat",
+        "garden sprayer",
+        "foam roller",
+        "step ladder",
+        "nitrile gloves"
+    ]
     NavigationStack {
         List {
-            ChecklistProjectEditorGuts()
+            ChecklistProjectEditorGuts(items: $items)
         }
         .seaBackground()
     }

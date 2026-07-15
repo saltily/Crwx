@@ -9,32 +9,50 @@ import SwiftUI
 import WxSalt
 
 struct ChecklistPackingEditor: View {
+    @Binding var items: [PackableItem]
     var body: some View {
         List {
-            ChecklistPackingEditorGuts()
+            ChecklistPackingEditorGuts(items: $items)
         }
         .seaBackground()
+        .packingItemToolbar(items: $items)
     }
 }
 
 struct ChecklistPackingEditorGuts: View {
-    // likely to take a binding to an ordered set of packable items - or really just definition of such. doesn't need to be classes that can be checked off.
+    @Binding var items: [PackableItem]
     var body: some View {
         Section("Items") {
-            Text("This would be a series of packing items.")
+            ForEach(items) { item in
+                PackingItemRow(item: item)
+            }
+            .onDelete { indices in
+                items.remove(atOffsets: indices)
+            }
+            .onMove { indices, i in
+                items.move(fromOffsets: indices, toOffset: i)
+            }
+        }
+        .seaSection()
+        Section {
             Text("Not for checking off, but for definition.")
-            Text("Add, remove, reorder.")
             Text("Tap for sheet to get more specific and show the specifics underneath.")
             Text("And perhaps organise them by their specifics.")
-            Text("I'm gonna want edit button and add button for these.")
         }
         .seaSection()
     }
 }
 
 #Preview {
+    @Previewable @State var items: [PackableItem] = [
+        "clear coat",
+        "garden sprayer",
+        "foam roller",
+        "step ladder",
+        "nitrile gloves"
+    ]
     NavigationStack {
-        ChecklistPackingEditor()
+        ChecklistPackingEditor(items: $items)
     }
     .environment(\.wxColourScheme, .green)
 }

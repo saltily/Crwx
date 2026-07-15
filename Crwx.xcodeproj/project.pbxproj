@@ -52,6 +52,9 @@
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
 		FD463E773006E28600B20127 /* ListingPathLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E763006E28600B20127 /* ListingPathLink.swift */; };
+		FD9BC54A300833D400FD95A5 /* PackableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BC549300833D400FD95A5 /* PackableItem.swift */; };
+		FD9BC54C300837F500FD95A5 /* PackingItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BC54B300837F500FD95A5 /* PackingItemRow.swift */; };
+		FD9BC54E3008389500FD95A5 /* ChecklistEditorToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BC54D3008389400FD95A5 /* ChecklistEditorToolbarModifier.swift */; };
 		FD9DF1072FF1534A008322E1 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF1062FF1534A008322E1 /* Checklist.swift */; };
 		FD9DF10B2FF282FD008322E1 /* PackingItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF10A2FF282FD008322E1 /* PackingItemViewModel.swift */; };
 		FDB3AA5D2FE5BB2400B4B903 /* FocusOnAppear in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = FDB3AA5C2FE5BB2400B4B903 /* FocusOnAppear */; };
@@ -451,6 +454,9 @@
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
 		FD463E763006E28600B20127 /* ListingPathLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathLink.swift; sourceTree = "<group>"; };
+		FD9BC549300833D400FD95A5 /* PackableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackableItem.swift; sourceTree = "<group>"; };
+		FD9BC54B300837F500FD95A5 /* PackingItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItemRow.swift; sourceTree = "<group>"; };
+		FD9BC54D3008389400FD95A5 /* ChecklistEditorToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistEditorToolbarModifier.swift; sourceTree = "<group>"; };
 		FD9DF1062FF1534A008322E1 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		FD9DF10A2FF282FD008322E1 /* PackingItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItemViewModel.swift; sourceTree = "<group>"; };
 		FDB3AA5E2FE5BBA200B4B903 /* TripMigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMigrationPlan.swift; sourceTree = "<group>"; };
@@ -895,6 +901,8 @@
 				FD44312F300822C100976424 /* TaskStylePicker.swift */,
 				FD44311730079DB100976424 /* ChecklistEditButtonModifier.swift */,
 				FD44311D3007CD0700976424 /* TaskActionButton.swift */,
+				FD9BC54B300837F500FD95A5 /* PackingItemRow.swift */,
+				FD9BC54D3008389400FD95A5 /* ChecklistEditorToolbarModifier.swift */,
 			);
 			path = "Endpoint Views";
 			sourceTree = "<group>";
@@ -932,6 +940,7 @@
 				FD44311030071B3000976424 /* CheckableTask.swift */,
 				FD44311B3007CC4A00976424 /* TaskAction.swift */,
 				FD44311230071BBC00976424 /* ChecklistViewModel.swift */,
+				FD9BC549300833D400FD95A5 /* PackableItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1621,6 +1630,7 @@
 				FDE2165E2FE5B0CF00F60799 /* TripStatsTable.swift in Sources */,
 				FDE2165F2FE5B0CF00F60799 /* TripMapSection.swift in Sources */,
 				FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */,
+				FD9BC54E3008389500FD95A5 /* ChecklistEditorToolbarModifier.swift in Sources */,
 				FDE216602FE5B0CF00F60799 /* LocalForecastLine.swift in Sources */,
 				FDE216612FE5B0CF00F60799 /* NewTripButton.swift in Sources */,
 				FD44312030080EA900976424 /* WeatherPath.swift in Sources */,
@@ -1656,6 +1666,7 @@
 				FDB3AA8C2FE5BBA200B4B903 /* Track.swift in Sources */,
 				FDB3AA8D2FE5BBA200B4B903 /* TripSchemaV19.swift in Sources */,
 				FDB3AA8E2FE5BBA200B4B903 /* TripSchemaV1.swift in Sources */,
+				FD9BC54C300837F500FD95A5 /* PackingItemRow.swift in Sources */,
 				FDBAD4712FEAA3B700C63620 /* NavigationCommandsMenu.swift in Sources */,
 				FDB3AA8F2FE5BBA200B4B903 /* TripSchemaV17.swift in Sources */,
 				FDB3AA902FE5BBA200B4B903 /* TripSchemaV20.swift in Sources */,
@@ -1805,6 +1816,7 @@
 				FDB3ABD12FE6A19800B4B903 /* SoundingViewModel.swift in Sources */,
 				FDB3ABD22FE6A19800B4B903 /* SoundingForm.swift in Sources */,
 				FDB3ABD32FE6A19800B4B903 /* WaterValue.swift in Sources */,
+				FD9BC54A300833D400FD95A5 /* PackableItem.swift in Sources */,
 				FDB3ABD42FE6A19800B4B903 /* AddSoundingButton.swift in Sources */,
 				FDB3ABD52FE6A19800B4B903 /* SoundingsRow.swift in Sources */,
 				FDB3ABD62FE6A19800B4B903 /* DeleteSoundingModifier.swift in Sources */,

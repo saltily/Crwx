@@ -10,12 +10,13 @@ import WxSalt
 
 struct ChecklistTaskDeepEditor: View {
     let style: CheckableTask.S
+    @Binding var items: [PackableItem]
     var body: some View {
         switch style {
         case .packing:
-            ChecklistPackingEditorGuts()
+            ChecklistPackingEditorGuts(items: $items)
         case .project:
-            ChecklistProjectEditorGuts()
+            ChecklistProjectEditorGuts(items: $items)
         case .plain:
             EmptyView()
         }
@@ -23,9 +24,16 @@ struct ChecklistTaskDeepEditor: View {
 }
 
 #Preview {
+    @Previewable @State var items: [PackableItem] = [
+        "clear coat",
+        "garden sprayer",
+        "foam roller",
+        "step ladder",
+        "nitrile gloves"
+    ]
     NavigationStack {
         List {
-            ChecklistTaskDeepEditor(style: .project)
+            ChecklistTaskDeepEditor(style: .project, items: $items)
         }
         .seaBackground()
     }

@@ -18,12 +18,14 @@ final class CheckableTask: Identifiable, Codable, Sendable {
     var checkedOff: Date?
     /// So I know what type of form to display for it, whether it has nested steps and/or packing items.
     var style: S = .plain
-    init(_ label: String, action: TaskAction? = nil, checkedOff: Date? = nil, style: S = .plain, id: UUID = .init()) {
+    var packingList: [PackableItem] = []
+    init(_ label: String, action: TaskAction? = nil, checkedOff: Date? = nil, style: S = .plain, id: UUID = .init(), packingList: [PackableItem] = []) {
         self.id = id
         self.label = label
         self.action = action
         self.checkedOff = checkedOff
         self.style = style
+        self.packingList = packingList
     }
 }
 
@@ -165,5 +167,14 @@ extension CheckableTask {
 extension CheckableTask {
     static var plain: CheckableTask {
         "Do this one thing."
+    }
+    static var packing: CheckableTask {
+        .init("Pack these things.", style: .packing, packingList: [
+            "clear coat",
+            "garden sprayer",
+            "foam roller",
+            "nitrile gloves",
+            "step ladder"
+        ])
     }
 }
