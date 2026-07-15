@@ -16,6 +16,10 @@ struct DaysailChecklistsHome: View {
                 ListingPathLink(.daysailPostArrival)
             }
             .seaSection()
+            Section {
+                Text("This is a lot of empty real estate.  Could I select some att a glance stuff?  Maybe I make the next checlist button taller and have it list like common stuff to pack and how much is in the inventory on the boat.  Stuff that might be in the drilled list but helpful to me at a glance to be thinking about without drilling the rest of the way.")
+            }
+            .seaSection()
         }
     }
 }

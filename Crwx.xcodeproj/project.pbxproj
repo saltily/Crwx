@@ -29,6 +29,8 @@
 		FD44310B3006FA5900976424 /* SeasonalChecklistsHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44310A3006FA5900976424 /* SeasonalChecklistsHome.swift */; };
 		FD44310D3006FD1D00976424 /* AnyInventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44310C3006FD1D00976424 /* AnyInventoryView.swift */; };
 		FD44310F3007001800976424 /* AnyPackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44310E3007001800976424 /* AnyPackingView.swift */; };
+		FD44311130071B3000976424 /* CheckableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311030071B3000976424 /* CheckableTask.swift */; };
+		FD44311330071BBC00976424 /* ChecklistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44311230071BBC00976424 /* ChecklistViewModel.swift */; };
 		FD463E703006D8CF00B20127 /* ListingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E6F3006D8CF00B20127 /* ListingPath.swift */; };
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
@@ -411,6 +413,8 @@
 		FD44310A3006FA5900976424 /* SeasonalChecklistsHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonalChecklistsHome.swift; sourceTree = "<group>"; };
 		FD44310C3006FD1D00976424 /* AnyInventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyInventoryView.swift; sourceTree = "<group>"; };
 		FD44310E3007001800976424 /* AnyPackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyPackingView.swift; sourceTree = "<group>"; };
+		FD44311030071B3000976424 /* CheckableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckableTask.swift; sourceTree = "<group>"; };
+		FD44311230071BBC00976424 /* ChecklistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewModel.swift; sourceTree = "<group>"; };
 		FD463E6F3006D8CF00B20127 /* ListingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPath.swift; sourceTree = "<group>"; };
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
@@ -881,6 +885,8 @@
 				FD9DF10A2FF282FD008322E1 /* PackingItemViewModel.swift */,
 				FD9DF1062FF1534A008322E1 /* Checklist.swift */,
 				FD9DF1082FF15360008322E1 /* TaskType.swift */,
+				FD44311030071B3000976424 /* CheckableTask.swift */,
+				FD44311230071BBC00976424 /* ChecklistViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1576,6 +1582,7 @@
 				FDE216702FE5B0CF00F60799 /* MarineForecastLine.swift in Sources */,
 				FDE216712FE5B0CF00F60799 /* TripSummaryRow.swift in Sources */,
 				FDE216722FE5B0CF00F60799 /* SailingLookaheadViewModel.swift in Sources */,
+				FD44311330071BBC00976424 /* ChecklistViewModel.swift in Sources */,
 				FDE216732FE5B0CF00F60799 /* VoyageEvent.swift in Sources */,
 				FDE216742FE5B0CF00F60799 /* EventRelativeSentence.swift in Sources */,
 				FDE216752FE5B0CF00F60799 /* EventLine.swift in Sources */,
@@ -1801,6 +1808,7 @@
 				FDB3AB6F2FE6A03900B4B903 /* CruiseStats.swift in Sources */,
 				FDB3AB702FE6A03900B4B903 /* RemoveStopButton.swift in Sources */,
 				FDB3AB712FE6A03900B4B903 /* CruisingGuideEditor.swift in Sources */,
+				FD44311130071B3000976424 /* CheckableTask.swift in Sources */,
 				FDE216782FE5B0CF00F60799 /* AllTripsView.swift in Sources */,
 				FD463E773006E28600B20127 /* ListingPathLink.swift in Sources */,
 				FDE216792FE5B0CF00F60799 /* TidePredictionsEditor.swift in Sources */,

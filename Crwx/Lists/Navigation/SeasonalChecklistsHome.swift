@@ -28,7 +28,7 @@ struct SeasonalChecklistsHome: View {
             .seaSection()
             
             Section {
-                Text("Might be nice if app defaults remembers the last seasonal checklist we were doing and then when you first navigate to seasonal checklist, it could auto-drill an extra layer in.")
+                Text("Might be nice if app defaults remembers the last seasonal checklist we were doing and then when you first navigate to seasonal checklist, it could auto-drill an extra layer in.  Or just do the next checklist thing with checkmarks similar to what I discussed for cruising.")
             }
             .seaSection()
         }

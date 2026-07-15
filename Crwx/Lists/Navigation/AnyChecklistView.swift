@@ -10,9 +10,28 @@ import WxSalt
 import FoundationUI
 
 struct AnyChecklistView: View {
+    init(checklist: Checklist) {
+        self.checklist = checklist
+        self._model = .init(initialValue: checklist.viewModel)
+    }
     let checklist: Checklist
+    @State private var model: ChecklistViewModel
+    @Environment(\.editMode) private var editMode
     var body: some View {
         List {
+            Section {
+                ForEach(steps) { step in
+                    Text(step.label)
+                        .multilineTextAlignment(.leading)
+                }
+                .onMove { indices, i in
+                    model.steps.move(fromOffsets: indices, toOffset: i)
+                }
+                .onDelete { indices in
+                    model.steps.remove(atOffsets: indices)
+                }
+            }
+            .seaSection()
             Section {
                 Text("Because most checklists have some common stuff going on.")
                 Text("It's always just the one list of items, though the current state of that list is persisted.  We don't keep previous lists.  So we can wipe the list and start over afresh.  When wiping, it will restore to the default order on the list.")
@@ -24,12 +43,31 @@ struct AnyChecklistView: View {
         }
         .toolbar {
             ToolbarItem {
+                EditButton()
+            }
+            ToolbarItem {
                 Button(systemImage: "arrow.counterclockwise") {
                     // be sure to alert confirmation first
+                    model.reset()
+                }
+            }
+            ToolbarItem {
+                Button(systemImage: "plus") {
+                    
                 }
             }
         }
-        .navigationSubtitle("Last used: 3 days ago")
+        .navigationSubtitle(model.subtitleString)
+        .onChange(of: checklist) { oldValue, newValue in
+            model = newValue.viewModel
+        }
+    }
+    private var steps: [CheckableTask] {
+        if editMode?.wrappedValue == .active {
+            return model.steps
+        } else {
+            return model.orderedSteps
+        }
     }
 }
 

@@ -185,3 +185,32 @@ extension Checklist {
         }
     }
 }
+
+
+// MARK: Daysail
+extension Checklist {
+    var viewModel: ChecklistViewModel {
+        switch self {
+        case .daysailPredeparture:
+            [
+                "Weather and tide confirmed.",
+                "Log pre-departure with marine forecast and passenger list.",
+                "Confirm: snacks, drinks, gerber multi-tool, pfd count, hats and jackets.", // this could involve scanning the inventory and adding stuff to bring out
+                "Pack: sunglasses, muck boots.", // this could involve scanning the inventory and adding stuff to bring out
+                "Check engine.",
+                "Turn on breakers.",
+                "Pass up pillows, navigation basket, and GPS.",
+                "Boot up GPS.",
+                "Start engine.",
+                "Prep mainsail.",
+                "Prep jib.",
+                "Adjust flags or bimini.",
+                "Secure dinghy and lifelines.",
+                "Observe wind and tide and log depart.",
+                "Raise mainsail if appropriate.",
+                "Cast off mooring."
+            ]
+        default: []
+        }
+    }
+}
