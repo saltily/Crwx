@@ -38,6 +38,7 @@ struct ChecklistTaskEditorSheetModifier: ViewModifier {
 }
 struct ChecklistTaskEditor: View {
     @Bindable var task: CheckableTask
+    @State private var itemToEdit: PackableItem?
     var body: some View {
         List {
             Section {
@@ -45,9 +46,10 @@ struct ChecklistTaskEditor: View {
                 TaskStylePicker(value: $task.style)
             }
             .seaSection()
-            ChecklistTaskDeepEditor(style: task.style, items: $task.packingList)
+            ChecklistTaskDeepEditor(style: task.style, items: $task.packingList, itemToEdit: $itemToEdit)
         }
-        .checklistEditorToolbar(style: task.style, items: $task.packingList)
+        .checklistEditorToolbar(style: task.style, items: $task.packingList, itemToEdit: $itemToEdit)
+        .packingItemEditor($itemToEdit)
     }
 }
 #Preview {

@@ -10,21 +10,22 @@ import FoundationUI
 
 
 extension View {
-    func checklistEditorToolbar(style: CheckableTask.S, items: Binding<[PackableItem]>) -> some View {
-        modifier(ChecklistEditorToolbarModifier(style: style, items: items))
+    func checklistEditorToolbar(style: CheckableTask.S, items: Binding<[PackableItem]>, itemToEdit: Binding<PackableItem?>) -> some View {
+        modifier(ChecklistEditorToolbarModifier(style: style, items: items, itemToEdit: itemToEdit))
     }
-    func packingItemToolbar(items: Binding<[PackableItem]>) -> some View {
-        modifier(PackingItemToolbarModifier(items: items))
+    func packingItemToolbar(items: Binding<[PackableItem]>, itemToEdit: Binding<PackableItem?>) -> some View {
+        modifier(PackingItemToolbarModifier(items: items, itemToEdit: itemToEdit))
     }
 }
 
 struct ChecklistEditorToolbarModifier: ViewModifier {
     let style: CheckableTask.S
     @Binding var items: [PackableItem]
+    @Binding var itemToEdit: PackableItem?
     func body(content: Content) -> some View {
         switch style {
         case .packing:
-            content.packingItemToolbar(items: $items)
+            content.packingItemToolbar(items: $items, itemToEdit: $itemToEdit)
         default:
             content
         }
@@ -33,6 +34,7 @@ struct ChecklistEditorToolbarModifier: ViewModifier {
 
 struct PackingItemToolbarModifier: ViewModifier {
     @Binding var items: [PackableItem]
+    @Binding var itemToEdit: PackableItem?
     func body(content: Content) -> some View {
         content
             .toolbar {
@@ -41,9 +43,11 @@ struct PackingItemToolbarModifier: ViewModifier {
                 }
                 ToolbarItem {
                     Button(systemImage: "plus") {
+                        let new: PackableItem = ""
                         withAnimation {
-                            items.insert("", at: 0)
+                            items.insert(new, at: 0)
                         }
+                        itemToEdit = new
                     }
                 }
             }

@@ -11,10 +11,11 @@ import WxSalt
 struct ChecklistTaskDeepEditor: View {
     let style: CheckableTask.S
     @Binding var items: [PackableItem]
+    @Binding var itemToEdit: PackableItem?
     var body: some View {
         switch style {
         case .packing:
-            ChecklistPackingEditorGuts(items: $items)
+            ChecklistPackingEditorGuts(items: $items, itemToEdit: $itemToEdit)
         case .project:
             ChecklistProjectEditorGuts(items: $items)
         case .plain:
@@ -33,7 +34,7 @@ struct ChecklistTaskDeepEditor: View {
     ]
     NavigationStack {
         List {
-            ChecklistTaskDeepEditor(style: .project, items: $items)
+            ChecklistTaskDeepEditor(style: .project, items: $items, itemToEdit: .constant(nil))
         }
         .seaBackground()
     }
