@@ -12,6 +12,7 @@ import FoundationSalt
 struct MobileHomeView: View {
     @AppStorage(.crwxTabKey) private var tab = TabValue.log
     @State private var wx = WxEngine()
+    @State private var router = PlanningRouter()
     var body: some View {
         TabView(selection: $tab) {
             
@@ -30,10 +31,11 @@ struct MobileHomeView: View {
             
             // MARK: 3. Planning
             Tab("Plan", systemImage: "list.bullet.clipboard", value: TabValue.plan) {
-                NavigationStack {
+                NavigationStack(path: $router.path) {
                     PlanningHome()
                         .navigationBarTitleDisplayMode(.inline)
                 }
+                .environment(router)
             }
             
         }

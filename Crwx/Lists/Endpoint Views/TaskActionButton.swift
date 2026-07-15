@@ -10,12 +10,15 @@ import os
 
 struct TaskActionButton: View {
     let action: TaskAction
+    @Environment(PlanningRouter.self) private var router
     var body: some View {
         Image(systemName: "chevron.right.circle")
             .font(.title)
             .fontWeight(.thin)
             .contentShape(.circle)
             .onTapGesture {
+                router.path = .init([ListingPath.loadingAndInventory, .bringIn])
+//                router.path.append(ListingPath.bringIn)
                 logger.trace("Tap that shit for \(action.rawValue).")
             }
     }

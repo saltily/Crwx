@@ -43,6 +43,7 @@
 		FD4431283008148F00976424 /* PlanningPathCountingLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4431273008148F00976424 /* PlanningPathCountingLink.swift */; };
 		FD44312A300815F100976424 /* PlanningPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD443129300815F100976424 /* PlanningPathDestinationView.swift */; };
 		FD44312C300816BD00976424 /* PlanningPathLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44312B300816BD00976424 /* PlanningPathLink.swift */; };
+		FD44312E300818E000976424 /* PlanningRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44312D300818E000976424 /* PlanningRouter.swift */; };
 		FD463E703006D8CF00B20127 /* ListingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E6F3006D8CF00B20127 /* ListingPath.swift */; };
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
@@ -437,6 +438,7 @@
 		FD4431273008148F00976424 /* PlanningPathCountingLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPathCountingLink.swift; sourceTree = "<group>"; };
 		FD443129300815F100976424 /* PlanningPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPathDestinationView.swift; sourceTree = "<group>"; };
 		FD44312B300816BD00976424 /* PlanningPathLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPathLink.swift; sourceTree = "<group>"; };
+		FD44312D300818E000976424 /* PlanningRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningRouter.swift; sourceTree = "<group>"; };
 		FD463E6F3006D8CF00B20127 /* ListingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPath.swift; sourceTree = "<group>"; };
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
@@ -1209,6 +1211,7 @@
 				FDBAD4672FE9F8D800C63620 /* DatabasePlanning.swift */,
 				FDBAD4652FE9F71900C63620 /* HistoryPlanning.swift */,
 				FDBAD4612FE9F3ED00C63620 /* PlanningHome.swift */,
+				FD44312D300818E000976424 /* PlanningRouter.swift */,
 				FD44311F30080EA900976424 /* WeatherPath.swift */,
 				FD4431233008115200976424 /* WeatherPathLink.swift */,
 				FD44312130080EE500976424 /* WeatherPathDestinationView.swift */,
@@ -1717,6 +1720,7 @@
 				FDB3ABBF2FE6A16300B4B903 /* SegmentRow.swift in Sources */,
 				FDB3ABC02FE6A16300B4B903 /* WaypointMap.swift in Sources */,
 				FDB3ABC12FE6A16300B4B903 /* TrackMatcherButton.swift in Sources */,
+				FD44312E300818E000976424 /* PlanningRouter.swift in Sources */,
 				FDB3ABC22FE6A16300B4B903 /* SwipeEditTrackName.swift in Sources */,
 				FD44310D3006FD1D00976424 /* AnyInventoryView.swift in Sources */,
 				FDB3AAA62FE5BBA200B4B903 /* TripSchemaV18.swift in Sources */,

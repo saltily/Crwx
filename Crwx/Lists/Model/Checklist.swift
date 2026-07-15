@@ -232,6 +232,7 @@ extension Checklist {
                 "Update soundings for water and ice box.",
                 "Review weather and update destination for tonight.",
                 "Log pre-departure with marine forecast.",
+                "Consider making ice today.",
                 "Dump dishwater.",
                 "Dry cockpit cushions.",
                 "Pass up swill bucket.",
