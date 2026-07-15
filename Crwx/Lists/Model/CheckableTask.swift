@@ -184,7 +184,7 @@ extension CheckableTask {
         ])
     }
     static var project: CheckableTask {
-        .init("Clear coat hull.", style: .packing, packingList: [
+        .init("Clear coat hull.", style: .project, packingList: [
             "clear coat",
             "garden sprayer",
             "foam roller",

@@ -12,6 +12,8 @@ import FoundationUI
 struct ChecklistProjectEditorGuts: View {
     @Binding var items: [PackableItem]
     @Binding var steps: [CheckableTask]
+    @Binding var taskToEdit: CheckableTask?
+    @Binding var isEditing: Bool
     var body: some View {
         Section("Equipment") {
             NavigationLink(destination: ChecklistPackingEditor(items: $items)) {
@@ -20,13 +22,11 @@ struct ChecklistProjectEditorGuts: View {
         }
         .seaSection()
         Section("Steps") {
-            
-            Text("These can be a full on checkable list just like with a checklist.")
-            Text("You can manually order, see sorted to the bottom as checked.")
-            Text("You can add and remove.")
-            Text("You can further nest and develop.")
+            ChecklistTaskLoop(steps: $steps, taskToEdit: $taskToEdit, isEditing: $isEditing)
+        }
+        .seaSection()
+        Section {
             Text("These don't need to be hidden because they are sub to a project but the project might hide when completed.")
-            Text("The edit and add buttons will need to be differently purposed here.")
         }
         .seaSection()
     }
@@ -50,13 +50,19 @@ struct ChecklistProjectEditorGuts: View {
     ]
     @Previewable @State var taskToEdit: CheckableTask?
     @Previewable @State var isEditing = false
-    NavigationStack {
+    @Previewable @State var router = PlanningRouter()
+    NavigationStack(path: $router.path) {
         List {
-            ChecklistProjectEditorGuts(items: $items, steps: $steps)
+            ChecklistProjectEditorGuts(items: $items, steps: $steps, taskToEdit: $taskToEdit, isEditing: $isEditing)
         }
         .checklistTaskToolbar(steps: $steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: false)
         .checklistTaskEditor($taskToEdit)
         .seaBackground()
+        .navigationDestination(for: CheckableTask.self) { task in
+            ChecklistTaskEditor(task: task)
+                .seaBackground()
+        }
     }
     .environment(\.wxColourScheme, .green)
+    .environment(router)
 }

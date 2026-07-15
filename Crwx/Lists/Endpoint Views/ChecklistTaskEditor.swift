@@ -48,7 +48,7 @@ struct ChecklistTaskEditor: View {
                 TaskStylePicker(value: $task.style)
             }
             .seaSection()
-            ChecklistTaskDeepEditor(style: task.style, items: $task.packingList, itemToEdit: $itemToEdit, steps: $task.steps)
+            ChecklistTaskDeepEditor(style: task.style, items: $task.packingList, itemToEdit: $itemToEdit, steps: $task.steps, taskToEdit: $taskToEdit, isEditing: $isEditing)
         }
         .checklistEditorToolbar(style: task.style, items: $task.packingList, itemToEdit: $itemToEdit, steps: $task.steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: false)
         .packingItemEditor($itemToEdit)
@@ -56,10 +56,16 @@ struct ChecklistTaskEditor: View {
     }
 }
 #Preview {
-    @Previewable @State var task: CheckableTask = .packing
-    NavigationStack {
+    @Previewable @State var task: CheckableTask = .project
+    @Previewable @State var router = PlanningRouter()
+    NavigationStack(path: $router.path) {
         ChecklistTaskEditor(task: task)
             .seaBackground()
+            .navigationDestination(for: CheckableTask.self) { task in
+                ChecklistTaskEditor(task: task)
+                    .seaBackground()
+            }
     }
     .environment(\.wxColourScheme, .green)
+    .environment(router)
 }
