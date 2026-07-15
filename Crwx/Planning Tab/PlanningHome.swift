@@ -35,6 +35,10 @@ struct PlanningHome: View {
             WeatherPathDestinationView(path: path)
                 .seaBackground()
         }
+        .navigationDestination(for: Sounding.T.self) { type in
+            SoundingsList(type: type)
+                .seaBackground()
+        }
     }
 }
 

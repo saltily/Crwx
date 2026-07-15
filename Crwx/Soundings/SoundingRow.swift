@@ -7,13 +7,12 @@
 
 import SwiftUI
 import WxSalt
+import FoundationUI
 
 struct SoundingRow: View {
     let type: Sounding.T
     var body: some View {
-        NavigationLink(destination: SoundingsList(type: type).seaBackground()) {
-            Label(type.title, systemImage: type.systemImage)
-        }
+        NavigationLink(type.title, systemImage: type.systemImage, value: type)
     }
 }
 
@@ -28,5 +27,9 @@ struct SoundingRow: View {
             .seaSection()
         }
         .seaBackground()
+        .navigationDestination(for: Sounding.T.self) { type in
+            SoundingsList(type: type)
+                .seaBackground()
+        }
     }
 }
