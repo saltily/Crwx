@@ -266,6 +266,13 @@
 		FDBAD46E2FEAA04300C63620 /* LegacyTripForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD46D2FEAA04300C63620 /* LegacyTripForm.swift */; };
 		FDBAD4712FEAA3B700C63620 /* NavigationCommandsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4702FEAA3B700C63620 /* NavigationCommandsMenu.swift */; };
 		FDBAD4732FEAA4E100C63620 /* NavigationHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAD4722FEAA4E100C63620 /* NavigationHome.swift */; };
+		FDC5CEA73009313D005E3562 /* ActionTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEA63009313D005E3562 /* ActionTime.swift */; };
+		FDC5CEA9300931AF005E3562 /* PackedLifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEA8300931AF005E3562 /* PackedLifecycle.swift */; };
+		FDC5CEAB30096F30005E3562 /* PackedCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEAA30096F30005E3562 /* PackedCategory.swift */; };
+		FDC5CEAD30097234005E3562 /* StorageLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEAC30097234005E3562 /* StorageLocker.swift */; };
+		FDC5CEAF30098537005E3562 /* PackedStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEAE30098537005E3562 /* PackedStatus.swift */; };
+		FDC5CEB130098674005E3562 /* Item+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEB030098674005E3562 /* Item+Configuration.swift */; };
+		FDC5CEB330098695005E3562 /* Item+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEB230098695005E3562 /* Item+State.swift */; };
 		FDC73A853006E59200877061 /* ListingPathCountingLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73A843006E59200877061 /* ListingPathCountingLink.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
@@ -669,6 +676,13 @@
 		FDBAD46D2FEAA04300C63620 /* LegacyTripForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTripForm.swift; sourceTree = "<group>"; };
 		FDBAD4702FEAA3B700C63620 /* NavigationCommandsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCommandsMenu.swift; sourceTree = "<group>"; };
 		FDBAD4722FEAA4E100C63620 /* NavigationHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHome.swift; sourceTree = "<group>"; };
+		FDC5CEA63009313D005E3562 /* ActionTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTime.swift; sourceTree = "<group>"; };
+		FDC5CEA8300931AF005E3562 /* PackedLifecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackedLifecycle.swift; sourceTree = "<group>"; };
+		FDC5CEAA30096F30005E3562 /* PackedCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackedCategory.swift; sourceTree = "<group>"; };
+		FDC5CEAC30097234005E3562 /* StorageLocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageLocker.swift; sourceTree = "<group>"; };
+		FDC5CEAE30098537005E3562 /* PackedStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackedStatus.swift; sourceTree = "<group>"; };
+		FDC5CEB030098674005E3562 /* Item+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Configuration.swift"; sourceTree = "<group>"; };
+		FDC5CEB230098695005E3562 /* Item+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+State.swift"; sourceTree = "<group>"; };
 		FDC73A843006E59200877061 /* ListingPathCountingLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathCountingLink.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
@@ -947,6 +961,13 @@
 				FD44311B3007CC4A00976424 /* TaskAction.swift */,
 				FD44311230071BBC00976424 /* ChecklistViewModel.swift */,
 				FD9BC549300833D400FD95A5 /* PackableItem.swift */,
+				FDC5CEA63009313D005E3562 /* ActionTime.swift */,
+				FDC5CEA8300931AF005E3562 /* PackedLifecycle.swift */,
+				FDC5CEAE30098537005E3562 /* PackedStatus.swift */,
+				FDC5CEAA30096F30005E3562 /* PackedCategory.swift */,
+				FDC5CEAC30097234005E3562 /* StorageLocker.swift */,
+				FDC5CEB230098695005E3562 /* Item+State.swift */,
+				FDC5CEB030098674005E3562 /* Item+Configuration.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1627,6 +1648,7 @@
 				FD44311E3007CD0700976424 /* TaskActionButton.swift in Sources */,
 				FDE216582FE5B0CF00F60799 /* SailingSnapshotForm.swift in Sources */,
 				FDE216592FE5B0CF00F60799 /* PreDepartureViewModel.swift in Sources */,
+				FDC5CEB130098674005E3562 /* Item+Configuration.swift in Sources */,
 				FDE2165A2FE5B0CF00F60799 /* DownloadChartsModifier.swift in Sources */,
 				FDE2165B2FE5B0CF00F60799 /* TripRouteMap.swift in Sources */,
 				FDE2165C2FE5B0CF00F60799 /* TideSnapshotSnippet.swift in Sources */,
@@ -1701,12 +1723,16 @@
 				FDBAD46A2FEA8DA400C63620 /* AllTripYears.swift in Sources */,
 				FDB3AAA32FE5BBA200B4B903 /* TripMigrationPlan.swift in Sources */,
 				FDB3AAA42FE5BBA200B4B903 /* BackupData.swift in Sources */,
+				FDC5CEAB30096F30005E3562 /* PackedCategory.swift in Sources */,
 				FDB3AAA52FE5BBA200B4B903 /* Photo.swift in Sources */,
 				FDB3AB9C2FE6A16300B4B903 /* TrackBrowserRow.swift in Sources */,
+				FDC5CEA9300931AF005E3562 /* PackedLifecycle.swift in Sources */,
 				FDB3AB9D2FE6A16300B4B903 /* TrackEditorButton.swift in Sources */,
 				FDB3AB9E2FE6A16300B4B903 /* HarboursRow.swift in Sources */,
+				FDC5CEB330098695005E3562 /* Item+State.swift in Sources */,
 				FDB3AB9F2FE6A16300B4B903 /* TrackMap.swift in Sources */,
 				FDB3ABA02FE6A16300B4B903 /* TrackList.swift in Sources */,
+				FDC5CEA73009313D005E3562 /* ActionTime.swift in Sources */,
 				FDB3ABA12FE6A16300B4B903 /* SwipeExtractSegment.swift in Sources */,
 				FDB3ABA22FE6A16300B4B903 /* WaypointSaveHarbourModifier.swift in Sources */,
 				FDB3ABA32FE6A16300B4B903 /* WaypointSummary.swift in Sources */,
@@ -1722,6 +1748,7 @@
 				FDB3ABAB2FE6A16300B4B903 /* TrackSummary.swift in Sources */,
 				FDB3ABAC2FE6A16300B4B903 /* ReceiveGpxModifier.swift in Sources */,
 				FDB3ABAD2FE6A16300B4B903 /* TripPuck.swift in Sources */,
+				FDC5CEAF30098537005E3562 /* PackedStatus.swift in Sources */,
 				FD44312C300816BD00976424 /* PlanningPathLink.swift in Sources */,
 				FDB3ABAE2FE6A16300B4B903 /* RouteSummary.swift in Sources */,
 				FDB3ABAF2FE6A16300B4B903 /* TrackPoint.swift in Sources */,
@@ -1893,6 +1920,7 @@
 				FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */,
 				FDB3AB6F2FE6A03900B4B903 /* CruiseStats.swift in Sources */,
 				FDB3AB702FE6A03900B4B903 /* RemoveStopButton.swift in Sources */,
+				FDC5CEAD30097234005E3562 /* StorageLocker.swift in Sources */,
 				FDB3AB712FE6A03900B4B903 /* CruisingGuideEditor.swift in Sources */,
 				FD44311130071B3000976424 /* CheckableTask.swift in Sources */,
 				FDE216782FE5B0CF00F60799 /* AllTripsView.swift in Sources */,
