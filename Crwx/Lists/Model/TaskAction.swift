@@ -10,4 +10,5 @@ import Foundation
 enum TaskAction: String, Codable, Sendable {
     case daysailConfirm, daysailPack, daysailPostConfirm
     case cruiseConfirm, cruiseFood, cruisePersonal, cruiseCleanup, cruisePostConfirm, cruiseChainsaw
+    case confirm, pack
 }

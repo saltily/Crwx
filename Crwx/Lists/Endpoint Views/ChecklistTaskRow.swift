@@ -29,8 +29,17 @@ struct ChecklistTaskRow: View {
                         router.path.append(task)
                     }
                 }
-            if let action = task.action {
-                TaskActionButton(action: action)
+            if task.style == .project {
+                TaskProjectDrillButton()
+                    .onTapGesture {
+                        router.path.append(task)
+                    }
+            } else if task.style == .packing {
+                if task.action == .confirm {
+                    TaskConfirmInventoryButton()
+                } else {
+                    TaskPackingListButton()
+                }
             }
         }
     }

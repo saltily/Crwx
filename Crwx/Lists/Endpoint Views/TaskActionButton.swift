@@ -8,22 +8,37 @@
 import SwiftUI
 import os
 
-struct TaskActionButton: View {
-    let action: TaskAction
-    @Environment(PlanningRouter.self) private var router
+
+fileprivate struct TaskActionImage: View {
+    let systemName: String
     var body: some View {
-        Image(systemName: "chevron.right.circle")
+        Image(systemName: systemName)
             .font(.title)
             .fontWeight(.thin)
             .contentShape(.circle)
+    }
+}
+
+struct TaskConfirmInventoryButton: View {
+    var body: some View {
+        TaskActionImage(systemName: "pencil.and.list.clipboard")
             .onTapGesture {
-                router.path = .init([ListingPath.loadingAndInventory, .bringIn])
-//                router.path.append(ListingPath.bringIn)
-                logger.trace("Tap that shit for \(action.rawValue).")
+                logger.trace("Pull up inventory review of packable items in this task.")
             }
     }
 }
 
-#Preview {
-    TaskActionButton(action: .daysailPack)
+struct TaskPackingListButton: View {
+    var body: some View {
+        TaskActionImage(systemName: ["plus.circle", "checklist"].randomElement()!)
+            .onTapGesture {
+                logger.trace("Either adding these items to the packing list or going to the packing list to see what's what.")
+            }
+    }
+}
+
+struct TaskProjectDrillButton: View {
+    var body: some View {
+        TaskActionImage(systemName: "chevron.right.circle")
+    }
 }
