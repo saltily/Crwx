@@ -273,6 +273,7 @@
 		FDC5CEAF30098537005E3562 /* PackedStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEAE30098537005E3562 /* PackedStatus.swift */; };
 		FDC5CEB130098674005E3562 /* Item+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEB030098674005E3562 /* Item+Configuration.swift */; };
 		FDC5CEB330098695005E3562 /* Item+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEB230098695005E3562 /* Item+State.swift */; };
+		FDC5CEB530098D07005E3562 /* PackingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEB430098D07005E3562 /* PackingStore.swift */; };
 		FDC73A853006E59200877061 /* ListingPathCountingLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73A843006E59200877061 /* ListingPathCountingLink.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
@@ -683,6 +684,7 @@
 		FDC5CEAE30098537005E3562 /* PackedStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackedStatus.swift; sourceTree = "<group>"; };
 		FDC5CEB030098674005E3562 /* Item+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Configuration.swift"; sourceTree = "<group>"; };
 		FDC5CEB230098695005E3562 /* Item+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+State.swift"; sourceTree = "<group>"; };
+		FDC5CEB430098D07005E3562 /* PackingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingStore.swift; sourceTree = "<group>"; };
 		FDC73A843006E59200877061 /* ListingPathCountingLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathCountingLink.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
@@ -968,6 +970,7 @@
 				FDC5CEAC30097234005E3562 /* StorageLocker.swift */,
 				FDC5CEB230098695005E3562 /* Item+State.swift */,
 				FDC5CEB030098674005E3562 /* Item+Configuration.swift */,
+				FDC5CEB430098D07005E3562 /* PackingStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1842,6 +1845,7 @@
 				FDB3AB3A2FE6A03900B4B903 /* CruisingGuide.swift in Sources */,
 				FDB3AB3B2FE6A03900B4B903 /* AnchorageTidePredictions.swift in Sources */,
 				FDB3AB3C2FE6A03900B4B903 /* SwipeEditHarbour.swift in Sources */,
+				FDC5CEB530098D07005E3562 /* PackingStore.swift in Sources */,
 				FDB3AB3D2FE6A03900B4B903 /* Harbour+Potential.swift in Sources */,
 				FDB3AB3E2FE6A03900B4B903 /* AnchorageRow.swift in Sources */,
 				FDB3AB3F2FE6A03900B4B903 /* WaypointSnippet.swift in Sources */,

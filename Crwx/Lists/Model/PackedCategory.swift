@@ -12,8 +12,8 @@ enum PackedCategory: RawRepresentable, Codable, Sendable {
     case food, freezable, coldStorage, drinks
     case safetyEquipment, cleaningSupplies, electronics, tools
     case filters, fluids, spareParts
-    case linens, clothing, toiletries, entertainment
-    case kitchenware, paperProducts
+    case linens, outerwear, clothing, toiletries, entertainment
+    case kitchenware, paperProducts, energy
     case library, navigation
     case custom(String)
 }
@@ -33,6 +33,8 @@ extension PackedCategory {
         case .fluids: "fluids"
         case .spareParts: "spareParts"
         case .linens: "linens"
+        case .energy: "energy"
+        case .outerwear: "outerwear"
         case .clothing: "clothing"
         case .toiletries: "toiletries"
         case .entertainment: "entertainment"
@@ -57,8 +59,8 @@ extension PackedCategory {
             .food, .freezable, .coldStorage, .drinks,
             .safetyEquipment, .cleaningSupplies, .electronics, .tools,
             .filters, .fluids, .spareParts,
-            .linens, .clothing, .toiletries, .entertainment,
-            .kitchenware, .paperProducts,
+            .linens, .outerwear, .clothing, .toiletries, .entertainment,
+            .kitchenware, .paperProducts, .energy,
             .library, .navigation
         ]
     }

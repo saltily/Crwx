@@ -21,3 +21,13 @@ extension PackableItem {
         var category: PackedCategory?
     }
 }
+
+
+extension PackableItem.Configuration {
+    init(locker: StorageLocker?, category: PackedCategory?, requiresDockside: Bool, lifecycles: Set<PackedLifecycle>) {
+        self.lifecycle = lifecycles
+        self.locker = locker
+        self.category = category
+        self.requiresDockside = requiresDockside
+    }
+}

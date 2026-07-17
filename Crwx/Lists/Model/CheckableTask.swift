@@ -93,10 +93,22 @@ extension CheckableTask {
     
     // MARK: Daysail
     static var daysailPreConfirm: CheckableTask {
-        .confirm("snacks, drinks, gerber multi-tool, pfd count, hats, jackets")
+        .confirm([
+            .snacks,
+            .drinks,
+            .gerber,
+            .init("pfd count", .init(locker: .cockpit, category: .safetyEquipment, requiresDockside: false, lifecycles: [])),
+            .init("hats", .init(locker: .navTable, category: .outerwear, requiresDockside: false, lifecycles: [.seasonal])),
+            .init("jackets", .init(locker: .aftSettee, category: .outerwear, requiresDockside: false, lifecycles: [.seasonal]))
+        ])
+//        .confirm("snacks, drinks, gerber multi-tool, pfd count, hats, jackets")
     }
     static var daysailPostConfirm: CheckableTask {
-        .confirm("snacks, drinks", prefix: "Update inventory")
+        .confirm([
+            .snacks,
+            .drinks
+        ], prefix: "Update inventory")
+//        .confirm("snacks, drinks", prefix: "Update inventory")
     }
     static var daysailPack: CheckableTask {
         .pack("sunglasses, muck boots")
@@ -104,10 +116,32 @@ extension CheckableTask {
     
     // MARK: Cruise
     static var cruisePreConfirm: CheckableTask {
-        .confirm("snacks, drinks, outerwear, trash bags, cleaning supplies, linens, gerber multi-tool, safety equipment, propane, fuel, toilet paper, paper towels")
+        // I should give these ids and the ones I'm reusing should have stable fixed ids
+        .confirm([
+            .snacks,
+            .drinks,
+            .init("outerwear", .init(locker: .aftSettee, category: .outerwear, requiresDockside: false, lifecycles: [.seasonal])),
+            .init("trash bags", .init(locker: .galley, category: .cleaningSupplies, requiresDockside: false, lifecycles: [.consumable])),
+            .cleaningSupplies,
+            .init("linens", .init(locker: .veeBerth, category: .linens, requiresDockside: false, lifecycles: [.seasonal])),
+            .gerber,
+            .init("safety equipment", .init(locker: .aftSettee, category: .safetyEquipment, requiresDockside: false, lifecycles: [])),
+            .init("propane", .init(locker: .galley, category: .energy, requiresDockside: false, lifecycles: [.consumable])),
+            .init("fuel", .init(locker: .onDeck, category: .energy, requiresDockside: false, lifecycles: [.consumable])),
+            .toiletPaper,
+            .paperTowels
+        ])
+//        .confirm("snacks, drinks, outerwear, trash bags, cleaning supplies, linens, gerber multi-tool, safety equipment, propane, fuel, toilet paper, paper towels")
     }
     static var cruisePostConfirm: CheckableTask {
-        .confirm("snacks, drinks, cleaning supplies, toilet paper, paper towel", prefix: "Update inventory")
+        .confirm([
+            .snacks,
+            .drinks,
+            .cleaningSupplies,
+            .toiletPaper,
+            .paperTowels
+        ], prefix: "Update inventory")
+//        .confirm("snacks, drinks, cleaning supplies, toilet paper, paper towel", prefix: "Update inventory")
     }
     static var cruisePackFood: CheckableTask {
         .pack("food")
@@ -154,6 +188,13 @@ extension CheckableTask {
 
 // MARK: Shortcut Builders
 extension CheckableTask {
+    fileprivate static func confirm(_ tuples: [PackingListTuple], prefix: String = "Confirm") -> CheckableTask {
+        let state = PackableItem.State(status: .loadedOnBoat, due: .never)
+        let items: [PackableItem] = tuples.map {
+            PackableItem(id: .init(), label: $0.string, state: state, configuration: $0.configuration)
+        }
+        return .packing("\(prefix):", items: items, action: .confirm)
+    }
     static func confirm(_ itemList: String, prefix: String = "Confirm") -> CheckableTask {
         let itemStrings = itemList.components(separatedBy: ", ")
         let items: [PackableItem] = itemStrings.map {
@@ -179,7 +220,36 @@ extension CheckableTask {
         .init(label, action: action, style: .packing, packingList: items)
     }
 }
-
+fileprivate struct PackingListTuple {
+    init(_ string: String, _ configuration: PackableItem.Configuration, _ id: UUID = .init()) {
+        self.string = string
+        self.configuration = configuration
+        self.id = id
+    }
+    let string: String
+    let configuration: PackableItem.Configuration
+    let id: UUID
+}
+extension PackingListTuple {
+    static var snacks: Self {
+        .init("snacks", .init(locker: .galley, category: .food, requiresDockside: false, lifecycles: [.consumable, .seasonal]), .init(uuidString: "d61f09cf-8420-4378-8d71-de14a2e1f9ed")!)
+    }
+    static var drinks: Self {
+        .init("drinks", .init(locker: .starboardBookshelf, category: .drinks, requiresDockside: false, lifecycles: [.consumable, .seasonal]), .init(uuidString: "62677871-00e5-4279-9ed6-a01b53948492")!)
+    }
+    static var gerber: Self {
+        .init("gerber multi-tool", .init(locker: .navTable, category: .tools, requiresDockside: false, lifecycles: [.seasonal]), .init(uuidString: "cc7f9df7-2ffb-4312-a4e3-f86fb7c00d8c")!)
+    }
+    static var cleaningSupplies: Self {
+        .init("cleaning supplies", .init(locker: .head, category: .cleaningSupplies, requiresDockside: false, lifecycles: [.consumable]), .init(uuidString: "6cfa3307-b982-4a8c-8f71-7eb168e84484")!)
+    }
+    static var toiletPaper: Self {
+        .init("toilet paper", .init(locker: .head, category: .paperProducts, requiresDockside: false, lifecycles: [.consumable, .seasonal]), .init(uuidString: "c92ab410-1d21-4738-8ae6-42147b22deb9")!)
+    }
+    static var paperTowels: Self {
+        .init("paper towels", .init(locker: .closets, category: .paperProducts, requiresDockside: false, lifecycles: [.consumable, .seasonal]), .init(uuidString: "76afe56d-bf1a-4edd-83a4-983724504743")!)
+    }
+}
 
 
 // MARK: Previews
