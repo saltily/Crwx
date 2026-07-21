@@ -19,12 +19,15 @@ extension PackableItem {
         var locker: StorageLocker?
         /// Optional to help grouping in inventory.
         var category: PackedCategory?
+        static var dockside: Self {
+            .init(requiresDockside: true)
+        }
     }
 }
 
 
 extension PackableItem.Configuration {
-    init(locker: StorageLocker?, category: PackedCategory?, requiresDockside: Bool, lifecycles: Set<PackedLifecycle>) {
+    init(locker: StorageLocker? = nil, category: PackedCategory? = nil, requiresDockside: Bool = false, lifecycles: Set<PackedLifecycle> = []) {
         self.lifecycle = lifecycles
         self.locker = locker
         self.category = category

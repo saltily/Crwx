@@ -28,4 +28,6 @@ extension PackedStatus {
         case .loadedOnBoat: self = .shoreOnHand
         }
     }
+    static var takeOut: Self { .shoreOnHand }
+    static var bringIn: Self { .loadedOnBoat }
 }

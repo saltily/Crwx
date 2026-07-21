@@ -10,6 +10,7 @@ import WxSalt
 import FoundationUI
 
 struct PlanningHome: View {
+    @State private var store: PackingStore = .sample
     var body: some View {
         List {
             WeatherPlanning()
@@ -28,6 +29,7 @@ struct PlanningHome: View {
             ListingPathDestinationView(path: path)
                 .seaBackground()
                 .navigationTitle(path.label)
+                .environment(store)
         }
         .navigationDestination(for: WeatherPath.self) { path in
             WeatherPathDestinationView(path: path)
@@ -44,7 +46,9 @@ struct PlanningHome: View {
         .navigationDestination(for: CheckableTask.self) { task in
             ChecklistTaskEditor(task: task)
                 .seaBackground()
+                .environment(store)
         }
+        .environment(store)
     }
 }
 

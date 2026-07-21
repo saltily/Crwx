@@ -13,11 +13,11 @@ struct LoadingAndInventoryHome: View {
         List {
             
             Section("Packing") {
-                ListingPathCountingLink(.takeOut, count: 1)
-                ListingPathCountingLink(.bringIn, count: 1)
-                ListingPathCountingLink(.dockside, count: 1)
-                ListingPathCountingLink(.purchase, count: 1)
-                ListingPathCountingLink(.prepAshore, count: 1)
+                ListingPathCountingLink(.takeOut)
+                ListingPathCountingLink(.bringIn)
+                ListingPathCountingLink(.dockside)
+                ListingPathCountingLink(.purchase)
+                ListingPathCountingLink(.prepAshore)
             }
             .seaSection()
 
@@ -39,6 +39,7 @@ struct LoadingAndInventoryHome: View {
 }
 
 #Preview {
+    @Previewable @State var store = PackingStore()
     NavigationStack {
         LoadingAndInventoryHome()
             .navigationTitle("Loading & Inventory")
@@ -50,4 +51,5 @@ struct LoadingAndInventoryHome: View {
             }
     }
     .environment(\.wxColourScheme, .green)
+    .environment(store)
 }

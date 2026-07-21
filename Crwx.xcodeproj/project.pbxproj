@@ -274,6 +274,7 @@
 		FDC5CEB130098674005E3562 /* Item+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEB030098674005E3562 /* Item+Configuration.swift */; };
 		FDC5CEB330098695005E3562 /* Item+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEB230098695005E3562 /* Item+State.swift */; };
 		FDC5CEB530098D07005E3562 /* PackingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEB430098D07005E3562 /* PackingStore.swift */; };
+		FDC5CEBF300FD30E005E3562 /* PackingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEBE300FD30E005E3562 /* PackingFilter.swift */; };
 		FDC73A853006E59200877061 /* ListingPathCountingLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73A843006E59200877061 /* ListingPathCountingLink.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
@@ -685,6 +686,7 @@
 		FDC5CEB030098674005E3562 /* Item+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Configuration.swift"; sourceTree = "<group>"; };
 		FDC5CEB230098695005E3562 /* Item+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+State.swift"; sourceTree = "<group>"; };
 		FDC5CEB430098D07005E3562 /* PackingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingStore.swift; sourceTree = "<group>"; };
+		FDC5CEBE300FD30E005E3562 /* PackingFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingFilter.swift; sourceTree = "<group>"; };
 		FDC73A843006E59200877061 /* ListingPathCountingLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathCountingLink.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
@@ -971,6 +973,7 @@
 				FDC5CEB230098695005E3562 /* Item+State.swift */,
 				FDC5CEB030098674005E3562 /* Item+Configuration.swift */,
 				FDC5CEB430098D07005E3562 /* PackingStore.swift */,
+				FDC5CEBE300FD30E005E3562 /* PackingFilter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1885,6 +1888,7 @@
 				FDB3AB522FE6A03900B4B903 /* RouteEditor+Button.swift in Sources */,
 				FD44312230080EE500976424 /* WeatherPathDestinationView.swift in Sources */,
 				FDB3AB532FE6A03900B4B903 /* HarbourDestinations.swift in Sources */,
+				FDC5CEBF300FD30E005E3562 /* PackingFilter.swift in Sources */,
 				FDB3AB542FE6A03900B4B903 /* CruiseForm.swift in Sources */,
 				FD4431283008148F00976424 /* PlanningPathCountingLink.swift in Sources */,
 				FDBAD4642FE9F5FA00C63620 /* ChecklistsPlanning.swift in Sources */,

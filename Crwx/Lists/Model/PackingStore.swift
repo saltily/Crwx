@@ -6,15 +6,31 @@
 //
 
 import Foundation
+import FoundationSalt
 
 /// The idea behind this type is to have something I can inject through for development that is view-model based, and then later convert this same type over to be backed by SwiftData to persist between launches.
 @Observable
 final class PackingStore {
     // eventually this should take model context and load up the items from the store
     // unfortunately that single load won't reload when things sync in from the cloud - perhaps have a pull-to-refresh thing
-    init() {}
-    var allItems: [PackableItem] = []
+    convenience init() { self.init(items: []) }
+    var allItems: [PackableItem]
+    private init(items: [PackableItem]) {
+        self.allItems = items
+    }
 }
+
+
+// MARK: Counts
+extension PackingStore {
+    func count(for filter: PackingFilter?) -> Int {
+        guard let filter else { return 0 }
+        return allItems.count { item in
+            filter.matches(item)
+        }
+    }
+}
+
 
 // MARK: Basic Editing Features
 extension PackingStore {
@@ -31,9 +47,41 @@ extension PackingStore {
         })
     }
     func add(items: [PackableItem]) {
-        let allIds = allItems.map(\.id)
+        let allIds = allItems.map(\.id).set
         for item in items {
-            
+            if !allIds.contains(item.id) {
+                allItems.append(item)
+            }
         }
+    }
+}
+
+
+// MARK: Samples
+extension PackingStore: ExpressibleByArrayLiteral {
+    static var sample: PackingStore {
+        [
+            // take out
+            .init("muck boots", status: .takeOut),
+            .init("full water jugs", status: .takeOut),
+            .init("drill", status: .takeOut),
+            .init("nitrile gloves", status: .packed),
+            .init("brush", status: .takeOut),
+            .init("spar urethane", status: .takeOut, configuration: .dockside),
+            .init("chart card", status: .takeOut),
+            // bring in
+            .init("bimini", status: .bringIn, configuration: .dockside),
+            .init("empty water jugs", status: .bringIn),
+            // purchase
+            .init("diesel", status: .purchase),
+            .init("lighter sticks", status: .purchase),
+            .init("can opener", status: .purchase),
+            .init("percolator filters", status: .purchase),
+            // prep
+            .init("chicken salad", status: .prep)
+        ]
+    }
+    convenience init(arrayLiteral elements: PackableItem...) {
+        self.init(items: elements)
     }
 }

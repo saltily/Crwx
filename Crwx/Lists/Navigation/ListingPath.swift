@@ -225,3 +225,18 @@ extension ListingPath {
         }
     }
 }
+
+
+// MARK: Packing
+extension ListingPath {
+    var packingFilter: PackingFilter? {
+        switch self {
+        case .takeOut: .takeOut
+        case .bringIn: .bringIn
+        case .dockside: .dockside
+        case .purchase: .purchase
+        case .prepAshore: .prep
+        default: nil
+        }
+    }
+}

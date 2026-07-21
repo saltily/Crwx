@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct ListingPathCountingLink: View {
-    init(_ value: ListingPath, count: Int) {
+    init(_ value: ListingPath) {
         self.value = value
-        self.count = count
     }
     let value: ListingPath
-    let count: Int
+    @Environment(PackingStore.self) private var store
     var body: some View {
         NavigationLink(value: value) {
             Label(value.label, systemImage: value.systemImage)
-                .badge(count)
+                .badge(store.count(for: value.packingFilter))
         }
     }
 }
 
 #Preview {
-    ListingPathCountingLink(.takeOut, count: 10)
+    @Previewable @State var store = PackingStore()
+    ListingPathCountingLink(.takeOut)
+        .environment(store)
 }

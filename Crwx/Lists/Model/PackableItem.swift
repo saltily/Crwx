@@ -6,16 +6,20 @@
 //
 
 import Foundation
+import FoundationSalt
 
 @Observable
 final class PackableItem: Codable, Sendable, Identifiable {
     var id: UUID
+    /// So we can sort by date added.
+    var created: Date
     var label: String
     var state: State
     var configuration: Configuration = .init()
     var lastInventoried: Date?
     init(id: UUID, label: String, state: State, configuration: Configuration, lastInventoried: Date? = nil) {
         self.id = id
+        self.created = .now
         self.label = label
         self.state = state
         self.configuration = configuration
