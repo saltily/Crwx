@@ -33,10 +33,17 @@ fileprivate struct NestOne: View {
             }
     }
 }
+// MARK: This is the actual view
 fileprivate struct NestTwo: View {
     @Binding var model: PackingListViewModel
     var body: some View {
         List {
+            Section {
+                ForEach(model.items.sorted()) { item in
+                    PackingListRow(item: item)
+                }
+            }
+            .seaSection()
             Section {
                 Text("These are all packing lists that I would like to have be easy to interact with.  The differnce is that each is a filter for a certain subset of packable items.  Would be convenient to be able to reorder these.  And when adding, should apply some defaults based on the current filter.")
                 Text("Then be able to tap on them to see finer grained details and edit those.  These edits might move them to another screen.")

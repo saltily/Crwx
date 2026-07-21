@@ -17,7 +17,7 @@ struct ChecklistTaskRow: View {
     var body: some View {
         HStack(spacing: 10) {
             if editMode?.wrappedValue != .active {
-                TaskIsCheckedButton(isOn: $task.isChecked)
+                CheckToggleButton(isOn: $task.isChecked)
             }
             PlaceholderText(task.label, placeholder: "Untitled")
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -62,19 +62,3 @@ struct ChecklistTaskRow: View {
     .environment(\.wxColourScheme, .green)
 }
 
-fileprivate struct TaskIsCheckedButton: View {
-    @Binding var isOn: Bool
-    var body: some View {
-        Image(systemName: isOn ? "checkmark.circle.fill" : "circle")
-            .frame(width: 36, height: 36)
-            .font(.title)
-            .fontWeight(isOn ? .regular : .thin)
-            .contentShape(.circle)
-            .onTapGesture {
-                withAnimation {
-                    isOn.toggle()
-                }
-            }
-            .foregroundStyle(isOn ? .accentColor : Color.primary)
-    }
-}

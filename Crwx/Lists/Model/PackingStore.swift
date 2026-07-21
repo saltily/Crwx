@@ -70,7 +70,7 @@ extension PackingStore: ExpressibleByArrayLiteral {
             .init("drill", status: .takeOut),
             .init("nitrile gloves", status: .packed),
             .init("brush", status: .takeOut),
-            .init("spar urethane", status: .takeOut, configuration: .dockside),
+            .init("fill water tank", status: .takeOut, configuration: .dockside),
             .init("chart card", status: .takeOut),
             // bring in
             .init("bimini", status: .bringIn, configuration: .dockside),

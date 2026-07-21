@@ -15,6 +15,12 @@ struct PackingFilter: Equatable {
     var countSentence: (Int) -> String
     enum S: Equatable {
         case takeOut, bringIn, dockside, purchase, prep
+        var halfState: Bool {
+            switch self {
+            case .takeOut: true
+            default: false
+            }
+        }
     }
     static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.style == rhs.style
@@ -28,7 +34,7 @@ extension PackingFilter {
         } checkedState: { item in
             switch item.state.status {
             case .packed: .halfchecked
-            case .loadedOnBoat: .checked
+            case .loadedOnBoat: .check
             default: .unchecked
             }
         } countSentence: { i in
@@ -41,7 +47,7 @@ extension PackingFilter {
         } checkedState: { item in
             switch item.state.status {
             case .loadedOnBoat: .unchecked
-            default: .checked
+            default: .check
             }
         } countSentence: { i in
             "\(i) unpacked \(i.echo("item", "items"))"
@@ -62,7 +68,7 @@ extension PackingFilter {
         } checkedState: { item in
             switch item.state.status {
             case .purchase: .unchecked
-            default: .checked
+            default: .check
             }
         } countSentence: { i in
             "\(i.appending("item", "items")) to purchase"
@@ -74,7 +80,7 @@ extension PackingFilter {
         } checkedState: { item in
             switch item.state.status {
             case .prep: .unchecked
-            default: .checked
+            default: .check
             }
         } countSentence: { i in
             "\(i.appending("item", "items")) to prep"
