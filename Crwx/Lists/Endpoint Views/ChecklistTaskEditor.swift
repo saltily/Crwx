@@ -74,7 +74,22 @@ struct ChecklistTaskEditor: View {
         }
         .packingItemEditor($itemToEdit)
         .checklistTaskEditor($taskToEdit)
-        .checklistEditorToolbar(style: task.style, items: $task.packingList, itemToEdit: $itemToEdit, steps: $task.steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: false)
+        .checklistEditorToolbar(style: task.style, steps: $task.steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: false, addOne: addOne, deleteExtraEmpty: deleteExtraEmpty)
+    }
+    private func addOne() {
+        let new: PackableItem = ""
+        withAnimation {
+            task.packingList.insert(new, at: 0)
+        }
+        itemToEdit = new
+    }
+    private func deleteExtraEmpty() {
+        withAnimation {
+            if task.packingList.first?.label.isEmpty == true {
+                task.packingList.remove(at: 0)
+            }
+        }
+        itemToEdit = nil
     }
 }
 #Preview {

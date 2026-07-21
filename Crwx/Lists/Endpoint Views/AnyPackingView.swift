@@ -39,6 +39,7 @@ fileprivate struct NestTwo: View {
     @Binding var model: PackingListViewModel
     @Environment(PackingStore.self) private var store
     @AppStorage(.packDirectlyKey) private var packDirectly = false
+    @State private var itemToEdit: PackableItem?
     private var halfState: Binding<Bool> {
         .init {
             model.filter.style.halfState && packDirectly
@@ -73,40 +74,47 @@ fileprivate struct NestTwo: View {
             }
             .seaSection()
         }
-        .toolbar {
-            if model.filter.style == .takeOut {
-                ToolbarItem {
-                    Menu(systemImage: "ellipsis") {
-                        Picker("", selection: halfState) {
-                            Text("Load Directly (on/off)").tag(false)
-                            Text("Pack First (3 states)").tag(true)
-                        }
-                        let ct = model.countPackedItems
-                        if ct > 0 {
-                            Divider()
-                            Button("Load \(ct.appending("Packed Item", "Packed Items"))") {
-                                withAnimation {
-                                    model.loadPacked()
-                                }
-                            }
-                        }
-                    }
+        .navigationSubtitle(model.subtitleSentence)
+        .environment(\.halfState, halfState.wrappedValue)
+        .packingItemEditor($itemToEdit)
+        .packingItemToolbar(addOne: addOne, deleteExtraEmpty: deleteExtraEmpty) {
+            Menu(systemImage: "ellipsis") {
+                Picker("", selection: halfState) {
+                    Text("Load Directly (on/off)").tag(false)
+                    Text("Pack First (3 states)").tag(true)
                 }
-            }
-            ToolbarItem {
-                Button(systemImage: "plus") {
-                    let new = model.filter.new()
-                    withAnimation {
-                        model.items.append(.init(contents: new, filter: model.filter))
+                let ct = model.countPackedItems
+                if ct > 0 {
+                    Divider()
+                    Button("Load \(ct.appending("Packed Item", "Packed Items"))") {
+                        withAnimation {
+                            model.loadPacked()
+                        }
                     }
-                    store.add(items: [new])
                 }
             }
         }
-        .navigationSubtitle(model.subtitleSentence)
-        .environment(\.halfState, halfState.wrappedValue)
     }
-    // add one
+    private func addOne() {
+        let new = model.filter.new()
+        withAnimation {
+            model.items.append(.init(contents: new, filter: model.filter))
+        }
+        store.add(items: [new])
+        itemToEdit = new
+    }
+    private func deleteExtraEmpty() {
+        withAnimation {
+            if let last = model.items.last,
+               last.contents.label.isEmpty
+            {
+                let id = last.id
+                model.items.removeLast()
+                store.remove(id: id)
+            }
+        }
+        itemToEdit = nil
+    }
 }
 
 #Preview {

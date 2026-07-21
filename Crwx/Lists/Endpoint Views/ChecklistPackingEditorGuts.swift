@@ -17,7 +17,22 @@ struct ChecklistPackingEditor: View {
         }
         .seaBackground()
         .packingItemEditor($itemToEdit)
-        .packingItemToolbar(items: $items, itemToEdit: $itemToEdit)
+        .packingItemToolbar(addOne: addOne, deleteExtraEmpty: deleteExtraEmpty)
+    }
+    private func addOne() {
+        let new: PackableItem = ""
+        withAnimation {
+            items.insert(new, at: 0)
+        }
+        itemToEdit = new
+    }
+    private func deleteExtraEmpty() {
+        withAnimation {
+            if items.first?.label.isEmpty == true {
+                items.remove(at: 0)
+            }
+        }
+        itemToEdit = nil
     }
 }
 

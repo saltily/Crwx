@@ -12,20 +12,27 @@ import FoundationUI
 extension View {
     func checklistEditorToolbar(
         style: CheckableTask.S,
-        items: Binding<[PackableItem]>,
-        itemToEdit: Binding<PackableItem?>,
         steps: Binding<[CheckableTask]>,
         taskToEdit: Binding<CheckableTask?>,
         isEditing: Binding<Bool>,
-        resets: Bool
+        resets: Bool,
+        addOne: @escaping () -> (),
+        deleteExtraEmpty: @escaping () -> ()
     ) -> some View {
-        modifier(ChecklistEditorToolbarModifier(style: style, items: items, itemToEdit: itemToEdit, steps: steps, taskToEdit: taskToEdit, isEditing: isEditing, resets: resets))
+        modifier(ChecklistEditorToolbarModifier(style: style, steps: steps, taskToEdit: taskToEdit, isEditing: isEditing, resets: resets, addOne: addOne, deleteExtraEmpty: deleteExtraEmpty))
     }
     func packingItemToolbar(
-        items: Binding<[PackableItem]>,
-        itemToEdit: Binding<PackableItem?>
+        addOne: @escaping () -> (),
+        deleteExtraEmpty: @escaping () -> ()
     ) -> some View {
-        modifier(PackingItemToolbarModifier(items: items, itemToEdit: itemToEdit))
+        modifier(PackingItemToolbarModifier(addOne: addOne, deleteExtraEmpty: deleteExtraEmpty, button: { EditButton() }))
+    }
+    func packingItemToolbar<Btn>(
+        addOne: @escaping () -> (),
+        deleteExtraEmpty: @escaping () -> (),
+        @ViewBuilder button: @escaping () -> Btn
+    ) -> some View where Btn: View {
+        modifier(PackingItemToolbarModifier(addOne: addOne, deleteExtraEmpty: deleteExtraEmpty, button: button))
     }
     func checklistTaskToolbar(
         steps: Binding<[CheckableTask]>,
@@ -40,16 +47,16 @@ extension View {
 
 struct ChecklistEditorToolbarModifier: ViewModifier {
     let style: CheckableTask.S
-    @Binding var items: [PackableItem]
-    @Binding var itemToEdit: PackableItem?
     @Binding var steps: [CheckableTask]
     @Binding var taskToEdit: CheckableTask?
     @Binding var isEditing: Bool
     let resets: Bool
+    let addOne: () -> ()
+    let deleteExtraEmpty: () -> ()
     func body(content: Content) -> some View {
         switch style {
         case .packing:
-            content.packingItemToolbar(items: $items, itemToEdit: $itemToEdit)
+            content.packingItemToolbar(addOne: addOne, deleteExtraEmpty: deleteExtraEmpty)
         case .project:
             content.checklistTaskToolbar(steps: $steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: resets, order: .forward)
         case .plain:
@@ -58,14 +65,15 @@ struct ChecklistEditorToolbarModifier: ViewModifier {
     }
 }
 
-struct PackingItemToolbarModifier: ViewModifier {
-    @Binding var items: [PackableItem]
-    @Binding var itemToEdit: PackableItem?
+struct PackingItemToolbarModifier<Btn>: ViewModifier where Btn: View {
+    let addOne: () -> ()
+    let deleteExtraEmpty: () -> ()
+    @ViewBuilder var button: () -> Btn
     func body(content: Content) -> some View {
         content
             .toolbar {
                 ToolbarItem {
-                    EditButton()
+                    button()
                 }
                 ToolbarItem {
                     Button(systemImage: "plus") {
@@ -75,19 +83,6 @@ struct PackingItemToolbarModifier: ViewModifier {
             }
             .environment(\.addAnother, addOne)
             .environment(\.deleteExtraEmpty, deleteExtraEmpty)
-    }
-    private func addOne() {
-        let new: PackableItem = ""
-        items.insert(new, at: 0)
-        itemToEdit = new
-    }
-    private func deleteExtraEmpty() {
-        withAnimation {
-            if items.first?.label.isEmpty == true {
-                items.remove(at: 0)
-            }
-        }
-        itemToEdit = nil
     }
 }
 
