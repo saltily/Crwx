@@ -25,6 +25,7 @@ struct CheckToggleButton: View {
 }
 struct CheckStateButton: View {
     @Binding var value: CheckedState
+    @Environment(\.halfState) private var halfState
     var body: some View {
         Image(systemName: value.systemImage)
             .frame(width: 36, height: 36)
@@ -33,7 +34,11 @@ struct CheckStateButton: View {
             .contentShape(.circle)
             .onTapGesture {
                 withAnimation {
-                    value.advance()
+                    if halfState {
+                        value.advance()
+                    } else {
+                        value.isChecked.toggle()
+                    }
                 }
             }
             .foregroundStyle(value.isChecked ? .accentColor : Color.primary)

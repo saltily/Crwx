@@ -82,9 +82,7 @@ fileprivate struct NestTwo: View {
                             Text("Pack First (3 states)").tag(true)
                         }
                         let ct = model.countPackedItems
-                        if ct > 0,
-                           halfState.wrappedValue
-                        {
+                        if ct > 0 {
                             Divider()
                             Button("Load \(ct.appending("Packed Item", "Packed Items"))") {
                                 withAnimation {
