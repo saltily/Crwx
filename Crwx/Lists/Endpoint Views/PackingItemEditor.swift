@@ -54,9 +54,19 @@ struct PackingItemEditor: View {
         List {
             Section {
                 TextField("Untitled", text: $item.label, axis: .vertical)
+                    .lineLimit(2...)
                     .modifier(ConditionalFocusedModifier(focusOnAppear: true, isEmpty: item.label.isEmpty))
+            } footer: {
+                VStack(alignment: .leading) {
+                    Text(item.stepsSummary)
+                    Text("created: ")
+                    Text("loaded: ")
+                    Text("inventoried: ")
+                }
+                .padding(.bottom)
             }
             .seaSection()
+            PackingStateForm(model: $item.state, specs: $item.configuration.specs)
             Section {
                 Text("And then this can get into other stuff like quantity and purchase or move which direction, yada, yada.")
             }

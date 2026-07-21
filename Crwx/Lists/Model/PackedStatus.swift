@@ -8,7 +8,7 @@
 import Foundation
 
 /// Tells me where something currently is, it's current state, and where to advance it to next.
-enum PackedStatus: String, Codable, Sendable {
+enum PackedStatus: String, Codable, Sendable, CaseIterable {
     case purchase, prep
     case shoreOnHand, packed
     case loadedOnBoat
@@ -47,6 +47,28 @@ extension PackedStatus {
         case .shoreOnHand: "load"
         case .packed: "load"
         case .loadedOnBoat: "offload"
+        }
+    }
+}
+
+extension PackedStatus: CustomStringConvertible, Identifiable {
+    var id: String { rawValue }
+    var description: String {
+        switch self {
+        case .purchase: "Purchase"
+        case .prep: "Needs Prep"
+        case .shoreOnHand: "On Hand"
+        case .packed: "Packed"
+        case .loadedOnBoat: "Loaded on Boat"
+        }
+    }
+    var systemImage: String {
+        switch self {
+        case .purchase: "dollarsign"
+        case .prep: "app.gift"
+        case .shoreOnHand: "house"
+        case .packed: "bag"
+        case .loadedOnBoat: "sailboat"
         }
     }
 }

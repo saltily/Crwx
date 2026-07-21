@@ -98,23 +98,7 @@ extension PackableItem {
         }
     }
     private var thisStepPhrase: String {
-        let due = state.due
-        let status = state.status
-        var verb = status.thisVerb
-        if configuration.requiresDockside {
-            verb = "\(verb) dockside"
-        }
-        if due == .never {
-            if status == .loadedOnBoat {
-                return "leave on boat"
-            } else {
-                // wait to load
-                return "wait to \(verb)"
-            }
-        } else {
-            // load dockside anytime
-            return "\(verb) \(due.summary)"
-        }
+        state.stepPhrase(requiresDockside: configuration.requiresDockside)
     }
     private var nextStepPhrase: String? {
         guard state.due != .never else { return nil }

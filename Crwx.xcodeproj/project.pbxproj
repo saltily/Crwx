@@ -281,6 +281,8 @@
 		FDC5CEC7300FE312005E3562 /* IsCheckedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEC6300FE312005E3562 /* IsCheckedButton.swift */; };
 		FDC5CEC9300FE3F4005E3562 /* PackingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEC8300FE3F4005E3562 /* PackingListRow.swift */; };
 		FDC5CECB301014D6005E3562 /* PackingItemGuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CECA301014D6005E3562 /* PackingItemGuts.swift */; };
+		FDC5CECD301028F5005E3562 /* PackingStateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CECC301028F5005E3562 /* PackingStateForm.swift */; };
+		FDC5CECF3010308C005E3562 /* ActionTimeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CECE3010308C005E3562 /* ActionTimeField.swift */; };
 		FDC73A853006E59200877061 /* ListingPathCountingLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73A843006E59200877061 /* ListingPathCountingLink.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
@@ -699,6 +701,8 @@
 		FDC5CEC6300FE312005E3562 /* IsCheckedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsCheckedButton.swift; sourceTree = "<group>"; };
 		FDC5CEC8300FE3F4005E3562 /* PackingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListRow.swift; sourceTree = "<group>"; };
 		FDC5CECA301014D6005E3562 /* PackingItemGuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItemGuts.swift; sourceTree = "<group>"; };
+		FDC5CECC301028F5005E3562 /* PackingStateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingStateForm.swift; sourceTree = "<group>"; };
+		FDC5CECE3010308C005E3562 /* ActionTimeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTimeField.swift; sourceTree = "<group>"; };
 		FDC73A843006E59200877061 /* ListingPathCountingLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathCountingLink.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
@@ -938,6 +942,8 @@
 				FD9BC54B300837F500FD95A5 /* PackingItemRow.swift */,
 				FD9BC54D3008389400FD95A5 /* ChecklistEditorToolbarModifier.swift */,
 				FD9BC54F30083BA000FD95A5 /* PackingItemEditor.swift */,
+				FDC5CECC301028F5005E3562 /* PackingStateForm.swift */,
+				FDC5CECE3010308C005E3562 /* ActionTimeField.swift */,
 				FD89064E3008437400A2B390 /* ChecklistTaskLoop.swift */,
 				FDC5CEC6300FE312005E3562 /* IsCheckedButton.swift */,
 				FDC5CEC8300FE3F4005E3562 /* PackingListRow.swift */,
@@ -1666,6 +1672,7 @@
 				FDE216532FE5B0CF00F60799 /* SailingSnapshotChart.swift in Sources */,
 				FD44310B3006FA5900976424 /* SeasonalChecklistsHome.swift in Sources */,
 				FDE216542FE5B0CF00F60799 /* PredepartureFetchDetail.swift in Sources */,
+				FDC5CECF3010308C005E3562 /* ActionTimeField.swift in Sources */,
 				FDE216552FE5B0CF00F60799 /* PostArrivalViewModel.swift in Sources */,
 				FDE216562FE5B0CF00F60799 /* TripNotesSection.swift in Sources */,
 				FDE216572FE5B0CF00F60799 /* TripRouteViewModel.swift in Sources */,
@@ -1792,6 +1799,7 @@
 				FDB3ABE52FE6A1EB00B4B903 /* WhereWasIButton.swift in Sources */,
 				FDB3ABE62FE6A1EB00B4B903 /* PhotoViewModel.swift in Sources */,
 				FDB3ABB52FE6A16300B4B903 /* ZoomControlsOverlay.swift in Sources */,
+				FDC5CECD301028F5005E3562 /* PackingStateForm.swift in Sources */,
 				FDB3ABB62FE6A16300B4B903 /* WaypointSymbol.swift in Sources */,
 				FD44312A300815F100976424 /* PlanningPathDestinationView.swift in Sources */,
 				FDB3ABB82FE6A16300B4B903 /* RouteMap.swift in Sources */,

@@ -18,5 +18,24 @@ extension PackableItem {
         var quantity: Double = 1
         /// This is a means of keeping checked items visible in the previous list.  If something is on the boat but not confirmed, then it still appears in the list of things to bring out.  It also still appears on other lists.  Mark this true to hide checked items.
         var confirmed: Bool = false
+        func stepPhrase(requiresDockside: Bool) -> String {
+            let due = due
+            let status = status
+            var verb = status.thisVerb
+            if requiresDockside {
+                verb = "\(verb) dockside"
+            }
+            if due == .never {
+                if status == .loadedOnBoat {
+                    return "leave on boat"
+                } else {
+                    // wait to load
+                    return "wait to \(verb)"
+                }
+            } else {
+                // load dockside anytime
+                return "\(verb) \(due.summary)"
+            }
+        }
     }
 }

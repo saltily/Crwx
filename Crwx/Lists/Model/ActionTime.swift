@@ -26,4 +26,10 @@ extension ActionTime {
             "after \(date.formatted(.dateTime.month(.defaultDigits).day()))"
         }
     }
+    var date: Date? {
+        switch self {
+        case .never, .anytime: nil
+        case .on(let d), .before(let d), .after(let d): d
+        }
+    }
 }
