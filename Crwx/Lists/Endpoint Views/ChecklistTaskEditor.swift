@@ -36,9 +36,9 @@ struct ChecklistTaskEditorSheetModifier: ViewModifier {
                     NavigationStack {
                         ChecklistTaskEditor(task: task)
                             .seaBackground()
-                            .saveButton()
+                            .dismissButton("Done", systemImage: "checkmark", role: .confirm, placement: .topBarLeading)
                             .toolbar {
-                                ToolbarItem(placement: .topBarLeading) {
+                                ToolbarItem(placement: .topBarTrailing) {
                                     Button(systemImage: "plus") {
                                         addAnother()
                                     }

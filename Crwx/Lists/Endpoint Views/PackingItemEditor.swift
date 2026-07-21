@@ -34,9 +34,9 @@ struct PackingItemEditorSheetModifier: ViewModifier {
                     NavigationStack {
                         PackingItemEditor(item: item)
                             .seaBackground()
-                            .saveButton()
+                            .dismissButton("Done", systemImage: "checkmark", role: .confirm, placement: .topBarLeading)
                             .toolbar {
-                                ToolbarItem(placement: .topBarLeading) {
+                                ToolbarItem(placement: .topBarTrailing) {
                                     Button(systemImage: "plus") {
                                         addAnother()
                                     }
