@@ -17,6 +17,6 @@ extension PackableItem {
         /// How many are in play with this entry.  Can be representative of any quantity.  Make a note in specs to describe that.
         var quantity: Double = 1
         /// This is a means of keeping checked items visible in the previous list.  If something is on the boat but not confirmed, then it still appears in the list of things to bring out.  It also still appears on other lists.  Mark this true to hide checked items.
-        var comfirmed: Bool = false
+        var confirmed: Bool = false
     }
 }

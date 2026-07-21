@@ -40,7 +40,7 @@ struct ListingPathDestinationView: View {
         case .safetyEquipment, .generalInventory:
             AnyInventoryView()
         case .takeOut, .bringIn, .dockside, .purchase, .prepAshore:
-            AnyPackingView()
+            AnyPackingView(filter: path.packingFilter)
         }
     }
 }

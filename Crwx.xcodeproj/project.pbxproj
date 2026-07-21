@@ -275,6 +275,9 @@
 		FDC5CEB330098695005E3562 /* Item+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEB230098695005E3562 /* Item+State.swift */; };
 		FDC5CEB530098D07005E3562 /* PackingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEB430098D07005E3562 /* PackingStore.swift */; };
 		FDC5CEBF300FD30E005E3562 /* PackingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEBE300FD30E005E3562 /* PackingFilter.swift */; };
+		FDC5CEC1300FD550005E3562 /* PackingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEC0300FD550005E3562 /* PackingListViewModel.swift */; };
+		FDC5CEC3300FD6C1005E3562 /* PackingListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEC2300FD6C1005E3562 /* PackingListItem.swift */; };
+		FDC5CEC5300FD709005E3562 /* CheckedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEC4300FD709005E3562 /* CheckedState.swift */; };
 		FDC73A853006E59200877061 /* ListingPathCountingLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73A843006E59200877061 /* ListingPathCountingLink.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
@@ -687,6 +690,9 @@
 		FDC5CEB230098695005E3562 /* Item+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+State.swift"; sourceTree = "<group>"; };
 		FDC5CEB430098D07005E3562 /* PackingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingStore.swift; sourceTree = "<group>"; };
 		FDC5CEBE300FD30E005E3562 /* PackingFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingFilter.swift; sourceTree = "<group>"; };
+		FDC5CEC0300FD550005E3562 /* PackingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListViewModel.swift; sourceTree = "<group>"; };
+		FDC5CEC2300FD6C1005E3562 /* PackingListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListItem.swift; sourceTree = "<group>"; };
+		FDC5CEC4300FD709005E3562 /* CheckedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckedState.swift; sourceTree = "<group>"; };
 		FDC73A843006E59200877061 /* ListingPathCountingLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathCountingLink.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
@@ -974,6 +980,9 @@
 				FDC5CEB030098674005E3562 /* Item+Configuration.swift */,
 				FDC5CEB430098D07005E3562 /* PackingStore.swift */,
 				FDC5CEBE300FD30E005E3562 /* PackingFilter.swift */,
+				FDC5CEC0300FD550005E3562 /* PackingListViewModel.swift */,
+				FDC5CEC2300FD6C1005E3562 /* PackingListItem.swift */,
+				FDC5CEC4300FD709005E3562 /* CheckedState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1790,6 +1799,7 @@
 				FD44310D3006FD1D00976424 /* AnyInventoryView.swift in Sources */,
 				FDB3AAA62FE5BBA200B4B903 /* TripSchemaV18.swift in Sources */,
 				FD399AD22FE7584900E37AEA /* LocationPointPicker.swift in Sources */,
+				FDC5CEC5300FD709005E3562 /* CheckedState.swift in Sources */,
 				FDB3AAA72FE5BBA200B4B903 /* Trip+Validate.swift in Sources */,
 				FDB3AAA82FE5BBA200B4B903 /* Sounding.swift in Sources */,
 				FDB3AAA92FE5BBA200B4B903 /* TripSchemaV11.swift in Sources */,
@@ -1909,11 +1919,13 @@
 				FDB3AB632FE6A03900B4B903 /* RouteSnippet.swift in Sources */,
 				FDB3AB642FE6A03900B4B903 /* LegAnnotation.swift in Sources */,
 				FDB3AB652FE6A03900B4B903 /* ExposureEditor.swift in Sources */,
+				FDC5CEC3300FD6C1005E3562 /* PackingListItem.swift in Sources */,
 				FDB3AB662FE6A03900B4B903 /* AnchorageBanner.swift in Sources */,
 				FDB3ABED2FE6BE5B00B4B903 /* TrackDot.swift in Sources */,
 				FDB3ABEF2FE6BE5B00B4B903 /* RedDot.swift in Sources */,
 				FDB3ABF02FE6BE5B00B4B903 /* MapMarker+Waypoint.swift in Sources */,
 				FD44311A3007A79900976424 /* ChecklistTaskEditor.swift in Sources */,
+				FDC5CEC1300FD550005E3562 /* PackingListViewModel.swift in Sources */,
 				FDB3ABF12FE6BE5B00B4B903 /* AllRoutePolylines.swift in Sources */,
 				FDB3AB672FE6A03900B4B903 /* VoyageIntent.swift in Sources */,
 				FDB3AB682FE6A03900B4B903 /* AddCruiseButton.swift in Sources */,

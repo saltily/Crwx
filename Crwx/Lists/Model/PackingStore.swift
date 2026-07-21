@@ -29,6 +29,9 @@ extension PackingStore {
             filter.matches(item)
         }
     }
+    func viewModel(for filter: PackingFilter) -> PackingListViewModel {
+        .init(filter: filter, items: allItems.filter({ filter.matches($0) }).map({ .init(contents: $0, filter: filter) }))
+    }
 }
 
 

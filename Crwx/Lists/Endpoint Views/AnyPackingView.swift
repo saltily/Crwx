@@ -10,6 +10,31 @@ import WxSalt
 import FoundationUI
 
 struct AnyPackingView: View {
+    let filter: PackingFilter?
+    @Environment(PackingStore.self) private var store
+    var body: some View {
+        if let filter {
+            NestOne(filter: filter, store: store)
+        }
+    }
+}
+fileprivate struct NestOne: View {
+    init(filter: PackingFilter, store: PackingStore) {
+        let model = store.viewModel(for: filter)
+        self.model = model
+        self._mutable = .init(initialValue: model)
+    }
+    let model: PackingListViewModel
+    @State private var mutable: PackingListViewModel
+    var body: some View {
+        NestTwo(model: $mutable)
+            .onChange(of: model.filter) { oldValue, newValue in
+                mutable = model
+            }
+    }
+}
+fileprivate struct NestTwo: View {
+    @Binding var model: PackingListViewModel
     var body: some View {
         List {
             Section {
@@ -31,15 +56,17 @@ struct AnyPackingView: View {
                 }
             }
         }
-        .navigationSubtitle("1 unpacked item")
+        .navigationSubtitle(model.subtitleSentence)
     }
 }
 
 #Preview {
+    @Previewable @State var store: PackingStore = .sample
     NavigationStack {
-        AnyPackingView()
+        AnyPackingView(filter: .takeOut)
             .navigationTitle("Take Out")
             .seaBackground()
     }
     .environment(\.wxColourScheme, .green)
+    .environment(store)
 }
