@@ -13,6 +13,7 @@ struct PackingFilter: Equatable {
     var matches: (PackableItem) -> Bool
     var checkedState: (PackableItem) -> CheckedState
     var countSentence: (Int) -> String
+    var new: () -> PackableItem
     enum S: Equatable {
         case takeOut, bringIn, dockside, purchase, prep
         var halfState: Bool {
@@ -39,6 +40,8 @@ extension PackingFilter {
             }
         } countSentence: { i in
             "\(i) unpacked \(i.echo("item", "items"))"
+        } new: {
+            .init("", status: .takeOut)
         }
     }
     static var bringIn: Self {
@@ -51,6 +54,8 @@ extension PackingFilter {
             }
         } countSentence: { i in
             "\(i) unpacked \(i.echo("item", "items"))"
+        } new: {
+            .init("", status: .bringIn)
         }
     }
     static var dockside: Self {
@@ -60,6 +65,8 @@ extension PackingFilter {
                 .unchecked
         } countSentence: { i in
             "\(i) unpacked \(i.echo("item", "items"))"
+        } new: {
+            .init("", status: .takeOut, configuration: .dockside)
         }
     }
     static var purchase: Self {
@@ -72,6 +79,8 @@ extension PackingFilter {
             }
         } countSentence: { i in
             "\(i.appending("item", "items")) to purchase"
+        } new: {
+            .init("", status: .purchase)
         }
     }
     static var prep: Self {
@@ -84,6 +93,8 @@ extension PackingFilter {
             }
         } countSentence: { i in
             "\(i.appending("item", "items")) to prep"
+        } new: {
+            .init("", status: .prep)
         }
     }
 }

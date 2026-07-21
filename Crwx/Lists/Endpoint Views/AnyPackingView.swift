@@ -65,11 +65,12 @@ fileprivate struct NestTwo: View {
         }
         .toolbar {
             ToolbarItem {
-                EditButton()
-            }
-            ToolbarItem {
                 Button(systemImage: "plus") {
-                    
+                    let new = model.filter.new()
+                    withAnimation {
+                        model.items.append(.init(contents: new, filter: model.filter))
+                    }
+                    store.add(items: [new])
                 }
             }
         }
