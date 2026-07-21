@@ -16,8 +16,8 @@ struct ChecklistPackingEditor: View {
             ChecklistPackingEditorGuts(items: $items, itemToEdit: $itemToEdit)
         }
         .seaBackground()
-        .packingItemToolbar(items: $items, itemToEdit: $itemToEdit)
         .packingItemEditor($itemToEdit)
+        .packingItemToolbar(items: $items, itemToEdit: $itemToEdit)
     }
 }
 

@@ -17,13 +17,32 @@ extension View {
 
 struct PackingItemEditorSheetModifier: ViewModifier {
     @Binding var itemToEdit: PackableItem?
+    @Environment(\.addAnother) private var addAnother
+    private var isPresentedBinding: Binding<Bool> {
+        .init {
+            itemToEdit != nil
+        } set: { newValue in
+            if !newValue {
+                itemToEdit = nil
+            }
+        }
+    }
     func body(content: Content) -> some View {
         content
-            .sheet(item: $itemToEdit) { item in
-                NavigationStack {
-                    PackingItemEditor(item: item)
-                        .seaBackground()
-                        .saveButton()
+            .sheet(isPresented: isPresentedBinding) {
+                if let item = itemToEdit {
+                    NavigationStack {
+                        PackingItemEditor(item: item)
+                            .seaBackground()
+                            .saveButton()
+                            .toolbar {
+                                ToolbarItem(placement: .topBarLeading) {
+                                    Button(systemImage: "plus") {
+                                        addAnother()
+                                    }
+                                }
+                            }
+                    }
                 }
             }
     }
@@ -35,6 +54,7 @@ struct PackingItemEditor: View {
         List {
             Section {
                 TextField("Untitled", text: $item.label, axis: .vertical)
+                    .modifier(ConditionalFocusedModifier(focusOnAppear: true, isEmpty: item.label.isEmpty))
             }
             .seaSection()
             Section {

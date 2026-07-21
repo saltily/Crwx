@@ -69,12 +69,25 @@ struct PackingItemToolbarModifier: ViewModifier {
                 }
                 ToolbarItem {
                     Button(systemImage: "plus") {
-                        let new: PackableItem = ""
-                        items.insert(new, at: 0)
-                        itemToEdit = new
+                        addOne()
                     }
                 }
             }
+            .environment(\.addAnother, addOne)
+            .environment(\.deleteExtraEmpty, deleteExtraEmpty)
+    }
+    private func addOne() {
+        let new: PackableItem = ""
+        items.insert(new, at: 0)
+        itemToEdit = new
+    }
+    private func deleteExtraEmpty() {
+        withAnimation {
+            if items.first?.label.isEmpty == true {
+                items.remove(at: 0)
+            }
+        }
+        itemToEdit = nil
     }
 }
 

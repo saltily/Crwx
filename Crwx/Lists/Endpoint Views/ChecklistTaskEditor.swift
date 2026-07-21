@@ -27,7 +27,6 @@ struct ChecklistTaskEditorSheetModifier: ViewModifier {
                 taskToEdit = nil
             }
         }
-
     }
     func body(content: Content) -> some View {
         content
@@ -93,7 +92,7 @@ struct ChecklistTaskEditor: View {
     .environment(router)
 }
 
-fileprivate struct ConditionalFocusedModifier: ViewModifier {
+struct ConditionalFocusedModifier: ViewModifier {
     let focusOnAppear: Bool
     let isEmpty: Bool
     @FocusState private var focused
