@@ -10,14 +10,15 @@ import FoundationUI
 
 struct PackingListRow: View {
     @Bindable var item: PackingListItem
+    @Binding var itemToEdit: PackableItem?
     var body: some View {
         HStack(spacing: 10) {
             CheckStateButton(value: $item.checkedState)
-            PlaceholderText(item.contents.label, placeholder: "Untitled")
+            PackingItemGuts(item: item.contents)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .contentShape(.rect)
                 .onTapGesture {
-                    // edit the item
+                    itemToEdit = item.contents
                 }
         }
     }
@@ -25,5 +26,5 @@ struct PackingListRow: View {
 
 #Preview {
     @Previewable @State var item: PackingListItem = .init(contents: .init("cool stuff", status: .takeOut), filter: .takeOut)
-    PackingListRow(item: item)
+    PackingListRow(item: item, itemToEdit: .constant(nil))
 }

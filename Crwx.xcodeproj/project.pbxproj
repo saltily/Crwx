@@ -280,6 +280,7 @@
 		FDC5CEC5300FD709005E3562 /* CheckedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEC4300FD709005E3562 /* CheckedState.swift */; };
 		FDC5CEC7300FE312005E3562 /* IsCheckedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEC6300FE312005E3562 /* IsCheckedButton.swift */; };
 		FDC5CEC9300FE3F4005E3562 /* PackingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CEC8300FE3F4005E3562 /* PackingListRow.swift */; };
+		FDC5CECB301014D6005E3562 /* PackingItemGuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CECA301014D6005E3562 /* PackingItemGuts.swift */; };
 		FDC73A853006E59200877061 /* ListingPathCountingLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73A843006E59200877061 /* ListingPathCountingLink.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
@@ -697,6 +698,7 @@
 		FDC5CEC4300FD709005E3562 /* CheckedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckedState.swift; sourceTree = "<group>"; };
 		FDC5CEC6300FE312005E3562 /* IsCheckedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsCheckedButton.swift; sourceTree = "<group>"; };
 		FDC5CEC8300FE3F4005E3562 /* PackingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListRow.swift; sourceTree = "<group>"; };
+		FDC5CECA301014D6005E3562 /* PackingItemGuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItemGuts.swift; sourceTree = "<group>"; };
 		FDC73A843006E59200877061 /* ListingPathCountingLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathCountingLink.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
@@ -939,6 +941,7 @@
 				FD89064E3008437400A2B390 /* ChecklistTaskLoop.swift */,
 				FDC5CEC6300FE312005E3562 /* IsCheckedButton.swift */,
 				FDC5CEC8300FE3F4005E3562 /* PackingListRow.swift */,
+				FDC5CECA301014D6005E3562 /* PackingItemGuts.swift */,
 			);
 			path = "Endpoint Views";
 			sourceTree = "<group>";
@@ -1971,6 +1974,7 @@
 				FDE216892FE5B0CF00F60799 /* TripNewDestinationButton.swift in Sources */,
 				FDE2168A2FE5B0CF00F60799 /* MarineForecastSection.swift in Sources */,
 				FDE2168B2FE5B0CF00F60799 /* SailingSnapshotSummary.swift in Sources */,
+				FDC5CECB301014D6005E3562 /* PackingItemGuts.swift in Sources */,
 				FDE2168C2FE5B0CF00F60799 /* VoyagelogForm.swift in Sources */,
 				FDE2168D2FE5B0CF00F60799 /* TripView.swift in Sources */,
 				FDE2168E2FE5B0CF00F60799 /* PredepartureButton.swift in Sources */,

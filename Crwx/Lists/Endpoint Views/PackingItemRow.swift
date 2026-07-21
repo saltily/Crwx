@@ -12,17 +12,12 @@ struct PackingItemRow: View {
     @Bindable var item: PackableItem
     @Binding var itemToEdit: PackableItem?
     var body: some View {
-        VStack(alignment: .leading) {
-            PlaceholderText(item.label, placeholder: "Untitled")
-            Text("some other stuff about it")
-                .foregroundStyle(.secondary)
-                .font(.caption)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .contentShape(.rect)
-        .onTapGesture {
-            itemToEdit = item
-        }
+        PackingItemGuts(item: item)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .contentShape(.rect)
+            .onTapGesture {
+                itemToEdit = item
+            }
     }
 }
 

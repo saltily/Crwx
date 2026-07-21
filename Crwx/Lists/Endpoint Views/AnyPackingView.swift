@@ -54,7 +54,7 @@ fileprivate struct NestTwo: View {
         List {
             Section {
                 ForEach(items) { item in
-                    PackingListRow(item: item)
+                    PackingListRow(item: item, itemToEdit: $itemToEdit)
                 }
                 .onDelete { indices in
                     let ids = items[indices].map(\.id).set
