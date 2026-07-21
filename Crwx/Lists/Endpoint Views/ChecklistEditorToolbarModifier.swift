@@ -103,15 +103,33 @@ struct ChecklistTaskToolbarModifier: ViewModifier {
                 }
             }
             .environment(\.addAnother, addOne)
+            .environment(\.deleteExtraEmpty, deleteExtraEmpty)
     }
     private func addOne() {
         let new: CheckableTask = ""
         taskToEdit = new
-        switch order {
-        case .forward:
-            steps.append(new)
-        case .reverse:
-            steps.insert(new, at: 0)
+        withAnimation {
+            switch order {
+            case .forward:
+                steps.append(new)
+            case .reverse:
+                steps.insert(new, at: 0)
+            }
         }
+    }
+    private func deleteExtraEmpty() {
+        withAnimation {
+            switch order {
+            case .forward:
+                if steps.last?.label.isEmpty == true {
+                    steps.remove(at: steps.count - 1)
+                }
+            case .reverse:
+                if steps.first?.label.isEmpty == true {
+                    steps.remove(at: 0)
+                }
+            }
+        }
+        taskToEdit = nil
     }
 }

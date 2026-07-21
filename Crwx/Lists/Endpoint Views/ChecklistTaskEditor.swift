@@ -19,29 +19,39 @@ struct ChecklistTaskEditorSheetModifier: ViewModifier {
     @Binding var taskToEdit: CheckableTask?
     @Environment(PlanningRouter.self) private var router
     @Environment(\.addAnother) private var addAnother
+    private var isPresentedBinding: Binding<Bool> {
+        .init {
+            taskToEdit != nil
+        } set: { newValue in
+            if !newValue {
+                taskToEdit = nil
+            }
+        }
+
+    }
     func body(content: Content) -> some View {
         content
-            .sheet(item: $taskToEdit) { task in
-                @Bindable var task = task
-                NavigationStack {
-                    ChecklistTaskEditor(task: task)
-                        .seaBackground()
-                        .saveButton()
-                        .toolbar {
-                            ToolbarItem(placement: .topBarLeading) {
-                                Button(systemImage: "plus") {
-                                    withoutAnimation {
+            .sheet(isPresented: isPresentedBinding) { // task in
+                if let task = taskToEdit {
+                    @Bindable var task = task
+                    NavigationStack {
+                        ChecklistTaskEditor(task: task)
+                            .seaBackground()
+                            .saveButton()
+                            .toolbar {
+                                ToolbarItem(placement: .topBarLeading) {
+                                    Button(systemImage: "plus") {
                                         addAnother()
                                     }
                                 }
                             }
+                    }
+                    .presentationDetents([.height(300)])
+                    .onChange(of: task.style) { oldValue, newValue in
+                        if newValue != .plain {
+                            taskToEdit = nil
+                            router.path.append(task)
                         }
-                }
-                .presentationDetents([.height(300)])
-                .onChange(of: task.style) { oldValue, newValue in
-                    if newValue != .plain {
-                        taskToEdit = nil
-                        router.path.append(task)
                     }
                 }
             }
@@ -63,9 +73,9 @@ struct ChecklistTaskEditor: View {
             }
             .seaSection()
         }
-        .checklistEditorToolbar(style: task.style, items: $task.packingList, itemToEdit: $itemToEdit, steps: $task.steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: false)
         .packingItemEditor($itemToEdit)
         .checklistTaskEditor($taskToEdit)
+        .checklistEditorToolbar(style: task.style, items: $task.packingList, itemToEdit: $itemToEdit, steps: $task.steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: false)
     }
 }
 #Preview {
@@ -87,14 +97,17 @@ fileprivate struct ConditionalFocusedModifier: ViewModifier {
     let focusOnAppear: Bool
     let isEmpty: Bool
     @FocusState private var focused
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.deleteExtraEmpty) private var deleteExtraEmpty
     @Environment(\.addAnother) private var addAnother
     func body(content: Content) -> some View {
         if focusOnAppear {
             content.focusOnAppear($focused)
                 .onSubmit {
-                    if isEmpty { dismiss() }
-                    else { addAnother() }
+                    if isEmpty { deleteExtraEmpty() }
+                    else {
+                        addAnother()
+                        focused = true
+                    }
                 }
         } else {
             content
@@ -110,6 +123,15 @@ extension EnvironmentValues {
     var addAnother: () -> () {
         get { self[AddAnotherKey.self] }
         set { self[AddAnotherKey.self] = newValue }
+    }
+    struct DeleteExtraEmptyKey: EnvironmentKey {
+        static var defaultValue: () -> () {
+            return {}
+        }
+    }
+    var deleteExtraEmpty: () -> () {
+        get { self[DeleteExtraEmptyKey.self] }
+        set { self[DeleteExtraEmptyKey.self] = newValue }
     }
 }
 
