@@ -28,8 +28,8 @@ struct ProjectsAndRemindersHome: View {
             }
             .seaSection()
         }
-        .checklistTaskToolbar(steps: $model.steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: false)
         .checklistTaskEditor($taskToEdit)
+        .checklistTaskToolbar(steps: $model.steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: false)
     }
 }
 

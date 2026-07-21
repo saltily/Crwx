@@ -18,6 +18,7 @@ extension View {
 struct ChecklistTaskEditorSheetModifier: ViewModifier {
     @Binding var taskToEdit: CheckableTask?
     @Environment(PlanningRouter.self) private var router
+    @Environment(\.addAnother) private var addAnother
     func body(content: Content) -> some View {
         content
             .sheet(item: $taskToEdit) { task in
@@ -26,6 +27,15 @@ struct ChecklistTaskEditorSheetModifier: ViewModifier {
                     ChecklistTaskEditor(task: task)
                         .seaBackground()
                         .saveButton()
+                        .toolbar {
+                            ToolbarItem(placement: .topBarLeading) {
+                                Button(systemImage: "plus") {
+                                    withoutAnimation {
+                                        addAnother()
+                                    }
+                                }
+                            }
+                        }
                 }
                 .presentationDetents([.height(300)])
                 .onChange(of: task.style) { oldValue, newValue in
@@ -48,7 +58,7 @@ struct ChecklistTaskEditor: View {
             ChecklistTaskDeepEditor(style: task.style, items: $task.packingList, itemToEdit: $itemToEdit, steps: $task.steps, taskToEdit: $taskToEdit, isEditing: $isEditing)
             Section {
                 TextField("Untitled", text: $task.label, axis: .vertical)
-                    .modifier(ConditionalFocusedModifier(focusOnAppear: task.style == .plain))
+                    .modifier(ConditionalFocusedModifier(focusOnAppear: task.style == .plain, isEmpty: task.label.isEmpty))
                 TaskStylePicker(value: $task.style)
             }
             .seaSection()
@@ -75,13 +85,31 @@ struct ChecklistTaskEditor: View {
 
 fileprivate struct ConditionalFocusedModifier: ViewModifier {
     let focusOnAppear: Bool
+    let isEmpty: Bool
     @FocusState private var focused
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.addAnother) private var addAnother
     func body(content: Content) -> some View {
         if focusOnAppear {
             content.focusOnAppear($focused)
+                .onSubmit {
+                    if isEmpty { dismiss() }
+                    else { addAnother() }
+                }
         } else {
             content
         }
     }
 }
+extension EnvironmentValues {
+    struct AddAnotherKey: EnvironmentKey {
+        static var defaultValue: () -> () {
+            return {}
+        }
+    }
+    var addAnother: () -> () {
+        get { self[AddAnotherKey.self] }
+        set { self[AddAnotherKey.self] = newValue }
+    }
+}
+

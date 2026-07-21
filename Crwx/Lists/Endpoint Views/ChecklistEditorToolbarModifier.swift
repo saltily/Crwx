@@ -98,16 +98,20 @@ struct ChecklistTaskToolbarModifier: ViewModifier {
                 }
                 ToolbarItem {
                     Button(systemImage: "plus") {
-                        let new: CheckableTask = ""
-                        taskToEdit = new
-                        switch order {
-                        case .forward:
-                            steps.append(new)
-                        case .reverse:
-                            steps.insert(new, at: 0)
-                        }
+                        addOne()
                     }
                 }
             }
+            .environment(\.addAnother, addOne)
+    }
+    private func addOne() {
+        let new: CheckableTask = ""
+        taskToEdit = new
+        switch order {
+        case .forward:
+            steps.append(new)
+        case .reverse:
+            steps.insert(new, at: 0)
+        }
     }
 }
