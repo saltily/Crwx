@@ -10,9 +10,15 @@ import WxSalt
 import FoundationUI
 
 struct ProjectsAndRemindersHome: View {
+    @State var model: ChecklistViewModel = .init(steps: [])
     @State private var isEditing = false
+    @State private var taskToEdit: CheckableTask?
     var body: some View {
         List {
+            Section {
+                ChecklistTaskLoop(steps: $model.steps, taskToEdit: $taskToEdit, isEditing: $isEditing)
+            }
+            .seaSection()
             Section {
                 Text("This will be a general ordered list of tasks to remind myself to do.  Some will be projects.  Some will be repairs.  Some will drill into subtasks.  Some will have lists of items to pack.")
                 Text("I should be able to easily add stuff on the fly, drill in, mark as complete, see completed items filter to the bottom, delete (preferrably with shake to undo).")
@@ -22,13 +28,8 @@ struct ProjectsAndRemindersHome: View {
             }
             .seaSection()
         }
-        .checklistEditButton(isEditing: $isEditing) {
-            ToolbarItem {
-                Button(systemImage: "plus") {
-                    
-                }
-            }
-        }
+        .checklistTaskToolbar(steps: $model.steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: false)
+        .checklistTaskEditor($taskToEdit)
     }
 }
 

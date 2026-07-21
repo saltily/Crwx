@@ -31,9 +31,10 @@ extension View {
         steps: Binding<[CheckableTask]>,
         taskToEdit: Binding<CheckableTask?>,
         isEditing: Binding<Bool>,
-        resets: Bool
+        resets: Bool,
+        order: SortOrder = .reverse
     ) -> some View {
-        modifier(ChecklistTaskToolbarModifier(steps: steps, taskToEdit: taskToEdit, isEditing: isEditing, resets: resets))
+        modifier(ChecklistTaskToolbarModifier(steps: steps, taskToEdit: taskToEdit, isEditing: isEditing, resets: resets, order: order))
     }
 }
 
@@ -50,7 +51,7 @@ struct ChecklistEditorToolbarModifier: ViewModifier {
         case .packing:
             content.packingItemToolbar(items: $items, itemToEdit: $itemToEdit)
         case .project:
-            content.checklistTaskToolbar(steps: $steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: resets)
+            content.checklistTaskToolbar(steps: $steps, taskToEdit: $taskToEdit, isEditing: $isEditing, resets: resets, order: .forward)
         case .plain:
             content
         }
@@ -69,9 +70,7 @@ struct PackingItemToolbarModifier: ViewModifier {
                 ToolbarItem {
                     Button(systemImage: "plus") {
                         let new: PackableItem = ""
-                        withAnimation {
-                            items.insert(new, at: 0)
-                        }
+                        items.insert(new, at: 0)
                         itemToEdit = new
                     }
                 }
@@ -84,6 +83,7 @@ struct ChecklistTaskToolbarModifier: ViewModifier {
     @Binding var taskToEdit: CheckableTask?
     @Binding var isEditing: Bool
     let resets: Bool
+    let order: SortOrder
     func body(content: Content) -> some View {
         content
             .checklistEditButton(isEditing: $isEditing) {
@@ -100,7 +100,12 @@ struct ChecklistTaskToolbarModifier: ViewModifier {
                     Button(systemImage: "plus") {
                         let new: CheckableTask = ""
                         taskToEdit = new
-                        steps.insert(new, at: 0)
+                        switch order {
+                        case .forward:
+                            steps.append(new)
+                        case .reverse:
+                            steps.insert(new, at: 0)
+                        }
                     }
                 }
             }

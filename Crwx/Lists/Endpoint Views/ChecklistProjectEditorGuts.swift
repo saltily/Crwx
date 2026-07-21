@@ -15,14 +15,14 @@ struct ChecklistProjectEditorGuts: View {
     @Binding var taskToEdit: CheckableTask?
     @Binding var isEditing: Bool
     var body: some View {
+        Section("Steps") {
+            ChecklistTaskLoop(steps: $steps, taskToEdit: $taskToEdit, isEditing: $isEditing)
+        }
+        .seaSection()
         Section("Equipment") {
             NavigationLink(destination: ChecklistPackingEditor(items: $items)) {
                 Text(items.map(\.label).joined(separator: ", "))
             }
-        }
-        .seaSection()
-        Section("Steps") {
-            ChecklistTaskLoop(steps: $steps, taskToEdit: $taskToEdit, isEditing: $isEditing)
         }
         .seaSection()
         Section {
