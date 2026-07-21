@@ -14,6 +14,8 @@ struct PackingFilter: Equatable {
     var checkedState: (PackableItem) -> CheckedState
     var countSentence: (Int) -> String
     var new: () -> PackableItem
+    /// Depends on the filter.  Most this is fixed, but for dockside it's the current status of the item.
+    var uncheckedStatus: (PackableItem) -> PackedStatus
     enum S: Equatable {
         case takeOut, bringIn, dockside, purchase, prep
         var halfState: Bool {
@@ -42,6 +44,8 @@ extension PackingFilter {
             "\(i) unpacked \(i.echo("item", "items"))"
         } new: {
             .init("", status: .takeOut)
+        } uncheckedStatus: { _ in
+                .shoreOnHand
         }
     }
     static var bringIn: Self {
@@ -56,6 +60,8 @@ extension PackingFilter {
             "\(i) unpacked \(i.echo("item", "items"))"
         } new: {
             .init("", status: .bringIn)
+        } uncheckedStatus: { _ in
+                .loadedOnBoat
         }
     }
     static var dockside: Self {
@@ -67,6 +73,8 @@ extension PackingFilter {
             "\(i) unpacked \(i.echo("item", "items"))"
         } new: {
             .init("", status: .takeOut, configuration: .dockside)
+        } uncheckedStatus: { item in
+            item.state.status
         }
     }
     static var purchase: Self {
@@ -81,6 +89,8 @@ extension PackingFilter {
             "\(i.appending("item", "items")) to purchase"
         } new: {
             .init("", status: .purchase)
+        } uncheckedStatus: { _ in
+                .purchase
         }
     }
     static var prep: Self {
@@ -95,6 +105,8 @@ extension PackingFilter {
             "\(i.appending("item", "items")) to prep"
         } new: {
             .init("", status: .prep)
+        } uncheckedStatus: { _ in
+                .prep
         }
     }
 }

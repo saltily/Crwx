@@ -28,6 +28,14 @@ extension PackedStatus {
         case .loadedOnBoat: self = .shoreOnHand
         }
     }
+    func adding(state: CheckedState) -> Self {
+        if state == .unchecked { return self }
+        switch self {
+        case .purchase, .prep, .packed, .loadedOnBoat: return .shoreOnHand
+        case .shoreOnHand:
+            return state == .halfchecked ? .packed : .loadedOnBoat
+        }
+    }
     static var takeOut: Self { .shoreOnHand }
     static var bringIn: Self { .loadedOnBoat }
     var isPacked: Bool { self == .packed }

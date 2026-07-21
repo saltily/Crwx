@@ -27,6 +27,30 @@ final class PackableItem: Codable, Sendable, Identifiable {
     }
 }
 
+extension PackableItem {
+    func update(status newValue: PackedStatus) {
+        let oldValue = self.state.status
+        guard newValue != oldValue else { return }
+        let lifecycles = configuration.lifecycle
+        // once loaded, keep it there for now unless fleeting or daysail (briefest known time)
+        if newValue == .loadedOnBoat {
+            if lifecycles.contains(.fleeting) ||
+                lifecycles.contains(.daysail)
+            {
+                self.state.due = .anytime
+            } else {
+                self.state.due = .never
+            }
+        }
+        // if coming off of the boat, we keep it ashore for now
+        else if oldValue == .loadedOnBoat {
+            self.state.due = .never
+        }
+        // else can keep the same due date for advancement
+        self.state.status = newValue
+    }
+}
+
 extension PackableItem: Hashable {
     static func == (lhs: PackableItem, rhs: PackableItem) -> Bool {
         lhs.id == rhs.id &&

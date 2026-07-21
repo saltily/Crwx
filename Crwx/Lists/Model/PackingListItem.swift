@@ -10,17 +10,29 @@ import FoundationSalt
 
 @Observable
 final class PackingListItem {
-    var checkedState: CheckedState
+    var checkedState: CheckedState {
+        didSet {
+            contents.update(status: uncheckedStatus.adding(state: checkedState))
+            if !checkedState.isChecked {
+                contents.state.due = uncheckedDue
+            }
+        }
+    }
+    // support rollback when unchecking
+    let uncheckedStatus: PackedStatus
+    let uncheckedDue: ActionTime
     var contents: PackableItem
-    init(checkedState: CheckedState, contents: PackableItem) {
+    init(checkedState: CheckedState, contents: PackableItem, uncheckedStatus: PackedStatus, uncheckedDue: ActionTime) {
         self.checkedState = checkedState
         self.contents = contents
+        self.uncheckedStatus = uncheckedStatus
+        self.uncheckedDue = uncheckedDue
     }
 }
 
 extension PackingListItem {
     convenience init(contents: PackableItem, filter: PackingFilter) {
-        self.init(checkedState: filter.checkedState(contents), contents: contents)
+        self.init(checkedState: filter.checkedState(contents), contents: contents, uncheckedStatus: filter.uncheckedStatus(contents), uncheckedDue: contents.state.due)
     }
 }
 
