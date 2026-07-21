@@ -31,4 +31,14 @@ extension PackedStatus {
     static var takeOut: Self { .shoreOnHand }
     static var bringIn: Self { .loadedOnBoat }
     var isPacked: Bool { self == .packed }
+    /// As in "wait to load" or "load anytime".
+    var thisVerb: String {
+        switch self {
+        case .purchase: "purchase"
+        case .prep: "prep"
+        case .shoreOnHand: "load"
+        case .packed: "load"
+        case .loadedOnBoat: "offload"
+        }
+    }
 }

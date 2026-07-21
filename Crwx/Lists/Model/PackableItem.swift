@@ -56,3 +56,75 @@ extension PackableItem: ExpressibleByStringLiteral {
         self.init(id: id, label: label, state: .init(status: status, due: due), configuration: configuration)
     }
 }
+
+
+// MARK: Summarise
+extension PackableItem {
+    /// Combines status, due, and lifecycle to describe what will happen when we check it off, and what will happen to it next after that.
+    var stepsSummary: String {
+        let thisStepPhrase = thisStepPhrase
+        if let nextStepPhrase {
+            if thisStepPhrase == "leave on boat" {
+                return "\(thisStepPhrase.capitalized) until \(nextStepPhrase)."
+            } else {
+                return "\(thisStepPhrase.capitalized), then \(nextStepPhrase)."
+            }
+        } else {
+            return "\(thisStepPhrase.capitalized)."
+        }
+    }
+    private var thisStepPhrase: String {
+        let due = state.due
+        let status = state.status
+        var verb = status.thisVerb
+        if configuration.requiresDockside {
+            verb = "\(verb) dockside"
+        }
+        if due == .never {
+            if status == .loadedOnBoat {
+                return "leave on boat"
+            } else {
+                // wait to load
+                return "wait to \(verb)"
+            }
+        } else {
+            // load dockside anytime
+            return "\(verb) \(due.summary)"
+        }
+    }
+    private var nextStepPhrase: String? {
+        guard state.due != .never else { return nil }
+        let status = state.status
+        let lifecycles = configuration.lifecycle
+        switch status {
+        case .purchase, .prep:
+            return "load"
+        case .packed, .shoreOnHand:
+            // when to bring it back
+            if lifecycles.contains(.fleeting) {
+                return "offload anytime"
+            } else if lifecycles.contains(.daysail) {
+                return "offload at end of daysail"
+            } else if lifecycles.contains(.cruise) {
+                return "offload at end of cruise"
+            } else if lifecycles.contains(.project) {
+                return "leave aboard until project is complete"
+            } else if lifecycles.contains(.seasonal) {
+                return "leave aboard until end of season"
+            } else {
+                return "leave aboard"
+            }
+        case .loadedOnBoat:
+            // when to take back out
+            if lifecycles.contains(.daysail) {
+                return "pack for next daysail"
+            } else if lifecycles.contains(.cruise) {
+                return "pack for next cruise"
+            } else if lifecycles.contains(.seasonal) {
+                return "load up next season"
+            } else {
+                return nil
+            }
+        }
+    }
+}

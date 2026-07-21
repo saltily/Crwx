@@ -13,7 +13,7 @@ struct PackingItemGuts: View {
     var body: some View {
         VStack(alignment: .leading) {
             PlaceholderText(item.label, placeholder: "Untitled")
-            Text("some other stuff about it")
+            Text(item.stepsSummary)
                 .foregroundStyle(.secondary)
                 .font(.caption)
         }

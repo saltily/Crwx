@@ -12,4 +12,6 @@ import Foundation
 enum PackedLifecycle: String, Codable, Sendable, Hashable {
     case daysail, cruise, seasonal, project
     case perishable, consumable
+    /// Like as soon as it goes to the boat, think about bringing it back on the next dinghy run.
+    case fleeting
 }

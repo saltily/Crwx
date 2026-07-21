@@ -12,3 +12,18 @@ import Foundation
 enum ActionTime: Hashable, Codable, Sendable {
   case never, anytime, on(Date), before(Date), after(Date)
 }
+
+extension ActionTime {
+    var summary: String {
+        switch self {
+        case .never: "never"
+        case .anytime: "anytime"
+        case .on(let date):
+            "on \(date.formatted(.dateTime.month(.defaultDigits).day()))"
+        case .before(let date):
+            "before \(date.formatted(.dateTime.month(.defaultDigits).day()))"
+        case .after(let date):
+            "after \(date.formatted(.dateTime.month(.defaultDigits).day()))"
+        }
+    }
+}
