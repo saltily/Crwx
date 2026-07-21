@@ -8,6 +8,7 @@
 import SwiftUI
 import WxSalt
 import FoundationUI
+import FoundationSalt
 
 struct AnyPackingView: View {
     let filter: PackingFilter?
@@ -36,11 +37,20 @@ fileprivate struct NestOne: View {
 // MARK: This is the actual view
 fileprivate struct NestTwo: View {
     @Binding var model: PackingListViewModel
+    @Environment(PackingStore.self) private var store
     var body: some View {
+        let items = model.items.sorted()
         List {
             Section {
-                ForEach(model.items.sorted()) { item in
+                ForEach(items) { item in
                     PackingListRow(item: item)
+                }
+                .onDelete { indices in
+                    let ids = items[indices].map(\.id).set
+                    model.items.removeAll(where: {
+                        ids.contains($0.id)
+                    })
+                    store.remove(ids: ids)
                 }
             }
             .seaSection()
