@@ -30,4 +30,5 @@ extension PackedStatus {
     }
     static var takeOut: Self { .shoreOnHand }
     static var bringIn: Self { .loadedOnBoat }
+    var isPacked: Bool { self == .packed }
 }

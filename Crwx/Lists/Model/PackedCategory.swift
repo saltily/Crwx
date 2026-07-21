@@ -8,7 +8,7 @@
 import Foundation
 
 /// The idea is to help organise things into sections when looking at stuff like inventory and packing.
-enum PackedCategory: RawRepresentable, Codable, Sendable {
+enum PackedCategory: RawRepresentable, Codable, Sendable, Hashable {
     case food, freezable, coldStorage, drinks
     case safetyEquipment, cleaningSupplies, electronics, tools
     case filters, fluids, spareParts

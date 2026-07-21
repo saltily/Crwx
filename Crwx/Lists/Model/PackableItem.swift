@@ -30,11 +30,17 @@ final class PackableItem: Codable, Sendable, Identifiable {
 extension PackableItem: Hashable {
     static func == (lhs: PackableItem, rhs: PackableItem) -> Bool {
         lhs.id == rhs.id &&
-        lhs.label == rhs.label
+        lhs.label == rhs.label &&
+        lhs.state == rhs.state &&
+        lhs.configuration == rhs.configuration &&
+        lhs.lastInventoried == rhs.lastInventoried
     }
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
         hasher.combine(label)
+        hasher.combine(state)
+        hasher.combine(configuration)
+        hasher.combine(lastInventoried)
     }
 }
 

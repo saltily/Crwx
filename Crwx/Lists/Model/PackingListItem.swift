@@ -12,18 +12,15 @@ import FoundationSalt
 final class PackingListItem {
     var checkedState: CheckedState
     var contents: PackableItem
-    /// Whether this checks as binary or three states.
-    let halfState: Bool
-    init(checkedState: CheckedState, contents: PackableItem, halfState: Bool) {
+    init(checkedState: CheckedState, contents: PackableItem) {
         self.checkedState = checkedState
         self.contents = contents
-        self.halfState = halfState
     }
 }
 
 extension PackingListItem {
     convenience init(contents: PackableItem, filter: PackingFilter) {
-        self.init(checkedState: filter.checkedState(contents), contents: contents, halfState: filter.style.halfState)
+        self.init(checkedState: filter.checkedState(contents), contents: contents)
     }
 }
 

@@ -10,9 +10,10 @@ import FoundationUI
 
 struct PackingListRow: View {
     @Bindable var item: PackingListItem
+    @Environment(\.halfState) private var halfState
     var body: some View {
         HStack(spacing: 10) {
-            if item.halfState {
+            if halfState {
                 CheckStateButton(value: $item.checkedState)
             } else {
                 CheckToggleButton(isOn: $item.checkedState.isChecked)

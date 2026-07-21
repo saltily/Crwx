@@ -39,3 +39,16 @@ struct CheckStateButton: View {
             .foregroundStyle(value.isChecked ? .accentColor : Color.primary)
     }
 }
+extension EnvironmentValues {
+    struct HalfStateKey: EnvironmentKey {
+        static var defaultValue: Bool {
+            return false
+        }
+    }
+    /// Whether check button supports half state.
+    var halfState: Bool {
+        get { self[HalfStateKey.self] }
+        set { self[HalfStateKey.self] = newValue }
+    }
+}
+

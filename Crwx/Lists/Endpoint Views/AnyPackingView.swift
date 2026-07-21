@@ -38,6 +38,16 @@ fileprivate struct NestOne: View {
 fileprivate struct NestTwo: View {
     @Binding var model: PackingListViewModel
     @Environment(PackingStore.self) private var store
+    @AppStorage(.packDirectlyKey) private var packDirectly = false
+    private var halfState: Binding<Bool> {
+        .init {
+            model.filter.style.halfState && packDirectly
+        } set: { newValue in
+            if model.filter.style.halfState {
+                packDirectly = newValue
+            }
+        }
+    }
     var body: some View {
         let items = model.items.sorted()
         List {
@@ -64,6 +74,27 @@ fileprivate struct NestTwo: View {
             .seaSection()
         }
         .toolbar {
+            if model.filter.style == .takeOut {
+                ToolbarItem {
+                    Menu(systemImage: "ellipsis") {
+                        Picker("", selection: halfState) {
+                            Text("Load Directly (on/off)").tag(false)
+                            Text("Pack First (3 states)").tag(true)
+                        }
+                        let ct = model.countPackedItems
+                        if ct > 0,
+                           halfState.wrappedValue
+                        {
+                            Divider()
+                            Button("Load \(ct.appending("Packed Item", "Packed Items"))") {
+                                withAnimation {
+                                    model.loadPacked()
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             ToolbarItem {
                 Button(systemImage: "plus") {
                     let new = model.filter.new()
@@ -75,6 +106,7 @@ fileprivate struct NestTwo: View {
             }
         }
         .navigationSubtitle(model.subtitleSentence)
+        .environment(\.halfState, halfState.wrappedValue)
     }
 }
 
@@ -87,4 +119,8 @@ fileprivate struct NestTwo: View {
     }
     .environment(\.wxColourScheme, .green)
     .environment(store)
+}
+
+extension String {
+    static let packDirectlyKey = "com.saltily.Crwx.packDirectlyKey"
 }

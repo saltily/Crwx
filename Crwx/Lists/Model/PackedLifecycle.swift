@@ -9,7 +9,7 @@ import Foundation
 
 /// Items that we should automatically look to take out or bring in based upon daysail, cruise, season, completion of project, etc.
 /// Can have more than one match.  Perishable and consumable we're more likely to want to review to see if they need to be purchased or deleted from inventory.
-enum PackedLifecycle: String, Codable, Sendable {
+enum PackedLifecycle: String, Codable, Sendable, Hashable {
     case daysail, cruise, seasonal, project
     case perishable, consumable
 }

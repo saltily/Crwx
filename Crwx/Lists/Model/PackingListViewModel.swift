@@ -19,4 +19,16 @@ extension PackingListViewModel {
         let count = items.count(where: { !$0.checkedState.isChecked })
         return filter.countSentence(count)
     }
+    var countPackedItems: Int {
+        guard filter.style == .takeOut else { return 0 }
+        return items.count(where: { $0.checkedState == .halfchecked })
+    }
+    func loadPacked() {
+        guard filter.style == .takeOut else { return }
+        for item in items {
+            if item.checkedState == .halfchecked {
+                item.checkedState.advance()
+            }
+        }
+    }
 }

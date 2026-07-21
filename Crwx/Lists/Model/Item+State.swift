@@ -9,7 +9,7 @@ import Foundation
 
 extension PackableItem {
     /// Helps me encapsulate what is ever evolving and unique about this instance.
-    struct State: Codable, Sendable {
+    struct State: Codable, Sendable, Hashable {
         /// Where it currently is.
         var status: PackedStatus
         /// Means whether should be in list to advance.  Never would not be in a list.  Anytime would always be in a list.  Else will depend on today's date.  Tends to vary by lifecycle and status.

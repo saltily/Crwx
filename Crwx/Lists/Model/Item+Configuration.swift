@@ -8,7 +8,7 @@
 import Foundation
 
 extension PackableItem {
-    struct Configuration: Codable, Sendable {
+    struct Configuration: Codable, Sendable, Hashable {
         /// Make notes about units we're counting by, brand, where to buy it, expiration or other tips to know.
         var specs: String = ""
         /// Instructions to help determine whether this should be added to the shift list at conclusion of daysail, cruise, project, season, etc.  Most likely multiple would be to also be perishable or consumable.
