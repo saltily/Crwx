@@ -31,4 +31,12 @@ extension PackingListViewModel {
             }
         }
     }
+    /// Ensure the items match and are good to go with their checked state.  Called after closing an editing form.
+    mutating func refresh() {
+        self.items = items.map(\.contents).filter {
+            filter.matches($0) || filter.recentlyCompleted($0)
+        }.map({
+            .init(contents: $0, filter: filter)
+        })
+    }
 }

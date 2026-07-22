@@ -99,6 +99,11 @@ fileprivate struct NestTwo: View {
                 }
             }
         }
+        .onChange(of: itemToEdit) { oldValue, newValue in
+            if newValue == nil {
+                model.refresh() // adjust checked states and items no longer with us
+            }
+        }
     }
     private func addOne() {
         let new = model.filter.new()
