@@ -132,8 +132,8 @@ extension PackableItem {
     var stepsSummary: String {
         let thisStepPhrase = thisStepPhrase
         if let nextStepPhrase {
-            if thisStepPhrase == "leave on boat" {
-                return "\(thisStepPhrase.capitalized) until \(nextStepPhrase)."
+            if state.due == .never {
+                return "\(thisStepPhrase.capitalized) \(nextStepPhrase)."
             } else {
                 return "\(thisStepPhrase.capitalized), then \(nextStepPhrase)."
             }
@@ -145,9 +145,39 @@ extension PackableItem {
         state.stepPhrase(requiresDockside: configuration.requiresDockside)
     }
     private var nextStepPhrase: String? {
-        guard state.due != .never else { return nil }
         let status = state.status
         let lifecycles = configuration.lifecycle
+        if state.due == .never {
+            switch status {
+            case .loadedOnBoat:
+                // Leave on boat…
+                if lifecycles.contains(.daysail) {
+                    return "until end of daysail"
+                } else if lifecycles.contains(.cruise) {
+                    return "until end of cruise"
+                } else if lifecycles.contains(.project) {
+                    return "until project is complete"
+                } else if lifecycles.contains(.seasonal) {
+                    return "until end of season"
+                } else {
+                    return nil
+                }
+            case .shoreOnHand:
+                // Wait to load…
+                if lifecycles.contains(.daysail) {
+                    return "for next daysail"
+                } else if lifecycles.contains(.cruise) {
+                    return "for next cruise"
+                } else if lifecycles.contains(.seasonal) {
+                    return "for next season"
+                } else {
+                    return nil
+                }
+            default:
+                return nil
+            }
+        }
+        guard state.due != .never else { return nil }
         switch status {
         case .purchase, .prep:
             return "load"

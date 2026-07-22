@@ -92,9 +92,11 @@ extension PackingStore: ExpressibleByArrayLiteral {
 
 // MARK: App Events
 extension PackingStore {
+    /// More likely to be called from checklist before sail begins, but also can call when doing pre-departure for a sail.
     func beginDaysail() {
         markDue(lifecycle: .daysail, direction: .out)
     }
+    /// Whenever you arrive at the end of a sail.
     func endDaysail() {
         markDue(lifecycle: .daysail, direction: .in)
     }

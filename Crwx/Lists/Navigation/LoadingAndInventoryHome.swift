@@ -7,8 +7,10 @@
 
 import SwiftUI
 import WxSalt
+import FoundationUI
 
 struct LoadingAndInventoryHome: View {
+    @Environment(PackingStore.self) private var store // only for temporary
     var body: some View {
         List {
             
@@ -34,6 +36,31 @@ struct LoadingAndInventoryHome: View {
             }
             .seaSection()
 
+        }
+//        #warning("This is temporary")
+        .toolbar {
+            ToolbarItem {
+                Menu(systemImage: "testtube.2") {
+                    Button("Start Daysail") {
+                        store.beginDaysail()
+                    }
+                    Button("End Daysail") {
+                        store.endDaysail()
+                    }
+                    Button("Start Cruise") {
+                        store.beginCruise()
+                    }
+                    Button("End Cruise") {
+                        store.endCruise()
+                    }
+                    Button("Start Season") {
+                        store.beginSeason()
+                    }
+                    Button("End Season") {
+                        store.endSeason()
+                    }
+                }
+            }
         }
     }
 }
