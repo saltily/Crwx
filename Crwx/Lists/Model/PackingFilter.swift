@@ -33,6 +33,7 @@ struct PackingFilter: Equatable {
 extension PackingFilter {
     static var takeOut: Self {
         .init(style: .takeOut) { item in
+            item.isDue &&
             item.state.status.isIn(.takeOut, .packed)
         } checkedState: { item in
             switch item.state.status {
@@ -50,6 +51,7 @@ extension PackingFilter {
     }
     static var bringIn: Self {
         .init(style: .bringIn) { item in
+            item.isDue &&
             item.state.status == .bringIn
         } checkedState: { item in
             switch item.state.status {
@@ -66,6 +68,7 @@ extension PackingFilter {
     }
     static var dockside: Self {
         .init(style: .dockside) { item in
+            item.isDue &&
             item.configuration.requiresDockside
         } checkedState: { item in
                 .unchecked
@@ -79,6 +82,7 @@ extension PackingFilter {
     }
     static var purchase: Self {
         .init(style: .purchase) { item in
+            item.isDue &&
             item.state.status == .purchase
         } checkedState: { item in
             switch item.state.status {
@@ -95,6 +99,7 @@ extension PackingFilter {
     }
     static var prep: Self {
         .init(style: .prep) { item in
+            item.isDue &&
             item.state.status == .prep
         } checkedState: { item in
             switch item.state.status {

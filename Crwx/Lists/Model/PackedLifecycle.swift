@@ -12,6 +12,7 @@ import Foundation
 enum PackedLifecycle: String, Codable, Sendable, Hashable, CaseIterable {
     /// Like as soon as it goes to the boat, think about bringing it back on the next dinghy run.
     case fleeting
+    // project might require unique id to know which project, but that will make difficult to choose from a picker
     case daysail, cruise, seasonal, project
     case perishable, consumable
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FoundationSalt
 
 /// Lets me know whether to advance or shift the status of something waiting to be packed.
 /// And can also apply to tasks and whether to include them in lists.
@@ -30,6 +31,18 @@ extension ActionTime {
         switch self {
         case .never, .anytime: nil
         case .on(let d), .before(let d), .after(let d): d
+        }
+    }
+    var isDue: Bool {
+        switch self {
+        case .never: return false
+        case .anytime: return true
+        case .on(let date), .after(let date):
+            return .now > date.withoutTime
+        case .before(let date):
+            return .now < date.withoutTime
+//        case .after(let date):
+//            return .now > date.withoutTime.tomorrow
         }
     }
 }

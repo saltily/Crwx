@@ -74,6 +74,9 @@ extension PackableItem {
         // else can keep the same due date for advancement
         self.state.status = newValue
     }
+    var isDue: Bool {
+        self.state.due.isDue
+    }
 }
 
 extension PackableItem: Hashable {
