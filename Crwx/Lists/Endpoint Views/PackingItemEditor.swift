@@ -93,7 +93,7 @@ struct PackingItemEditor: View {
         PackingItemEditor(item: item)
             .seaBackground()
             .onAppear {
-                item.lastShift = .init(previous: .purchase)
+                item.lastShift = .init(previous: .purchase, previousDue: .anytime)
                 item.lastInventoried = .now.yesterday
             }
             .navigationTitle("Edit Packing Item")

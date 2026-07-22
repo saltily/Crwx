@@ -29,12 +29,14 @@ final class PackableItem: Codable, Sendable, Identifiable {
         self.lastInventoried = lastInventoried
     }
     struct Shift: Codable, Sendable, Hashable {
-        init(previous: PackedStatus) {
+        init(previous: PackedStatus, previousDue: ActionTime) {
             self.date = .now
             self.previousStatus = previous
+            self.previousDue = previousDue
         }
         let date: Date
         let previousStatus: PackedStatus
+        let previousDue: ActionTime
         func verbed(new: PackedStatus) -> String {
             switch previousStatus {
             case .purchase: "Purchased"
@@ -56,6 +58,7 @@ extension PackableItem {
     func update(status newValue: PackedStatus) {
         let oldValue = self.state.status
         guard newValue != oldValue else { return }
+        let oldDue = self.state.due
         let lifecycles = configuration.lifecycle
         // once loaded, keep it there for now unless fleeting or daysail (briefest known time)
         if newValue == .loadedOnBoat {
@@ -73,7 +76,7 @@ extension PackableItem {
         }
         // else can keep the same due date for advancement
         self.state.status = newValue
-        self.lastShift = .init(previous: oldValue)
+        self.lastShift = .init(previous: oldValue, previousDue: oldDue)
     }
     var isDue: Bool {
         self.state.due.isDue

@@ -37,7 +37,17 @@ final class PackingListItem {
 
 extension PackingListItem {
     convenience init(contents: PackableItem, filter: PackingFilter) {
-        self.init(checkedState: filter.checkedState(contents), contents: contents, uncheckedStatus: filter.uncheckedStatus(contents), uncheckedDue: contents.state.due, uncheckedLastShift: contents.lastShift)
+        let currentState = filter.checkedState(contents)
+        let uncheckedDue: ActionTime
+        let uncheckedLastShift: PackableItem.Shift?
+        if currentState.isChecked {
+            uncheckedDue = contents.lastShift?.previousDue ?? .anytime
+            uncheckedLastShift = nil
+        } else {
+            uncheckedDue = contents.state.due
+            uncheckedLastShift = contents.lastShift
+        }
+        self.init(checkedState: filter.checkedState(contents), contents: contents, uncheckedStatus: filter.uncheckedStatus(contents), uncheckedDue: uncheckedDue, uncheckedLastShift: uncheckedLastShift)
     }
 }
 

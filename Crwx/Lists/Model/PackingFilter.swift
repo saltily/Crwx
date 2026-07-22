@@ -10,12 +10,14 @@ import FoundationSalt
 
 struct PackingFilter: Equatable {
     let style: Style
-    var matches: (PackableItem) -> Bool
-    var checkedState: (PackableItem) -> CheckedState
+    var _matches: (_ item: PackableItem) -> Bool
+    var checkedState: (_ item: PackableItem) -> CheckedState
     var countSentence: (Int) -> String
     var new: () -> PackableItem
     /// Depends on the filter.  Most this is fixed, but for dockside it's the current status of the item.
-    var uncheckedStatus: (PackableItem) -> PackedStatus
+    var uncheckedStatus: (_ item: PackableItem) -> PackedStatus
+    /// Completed after the given date, so I can decide how recent in one spot.
+    var _recentlyCompleted: (_ item: PackableItem, _ previousStatus: PackedStatus) -> Bool
     enum Style: Int {
         case takeOut, bringIn, dockside, purchase, prep
     }
@@ -23,11 +25,22 @@ struct PackingFilter: Equatable {
         lhs.style == rhs.style
     }
 }
+extension PackingFilter {
+    private var recentAge: TimeInterval { -10.minute }
+    func matches(_ item: PackableItem) -> Bool {
+        item.isDue && _matches(item)
+    }
+    func recentlyCompleted(_ item: PackableItem) -> Bool {
+        guard let shift = item.lastShift,
+              shift.date.timeIntervalSinceNow > recentAge
+        else { return false }
+        return _recentlyCompleted(item, shift.previousStatus)
+    }
+}
 
 extension PackingFilter {
     static var takeOut: Self {
         .init(style: .takeOut) { item in
-            item.isDue &&
             item.state.status.isIn(.takeOut, .packed)
         } checkedState: { item in
             switch item.state.status {
@@ -41,11 +54,13 @@ extension PackingFilter {
             .init("", status: .takeOut)
         } uncheckedStatus: { _ in
                 .shoreOnHand
+        } _recentlyCompleted: { item, previousStatus in
+            previousStatus.isIn(.takeOut, .packed) &&
+            item.state.status == .loadedOnBoat
         }
     }
     static var bringIn: Self {
         .init(style: .bringIn) { item in
-            item.isDue &&
             item.state.status == .bringIn
         } checkedState: { item in
             switch item.state.status {
@@ -58,11 +73,13 @@ extension PackingFilter {
             .init("", status: .bringIn)
         } uncheckedStatus: { _ in
                 .loadedOnBoat
+        } _recentlyCompleted: { item, previousStatus in
+            previousStatus == .bringIn &&
+            item.state.status == .takeOut
         }
     }
     static var dockside: Self {
         .init(style: .dockside) { item in
-            item.isDue &&
             item.configuration.requiresDockside
         } checkedState: { item in
                 .unchecked
@@ -72,11 +89,12 @@ extension PackingFilter {
             .init("", status: .takeOut, configuration: .dockside)
         } uncheckedStatus: { item in
             item.state.status
+        } _recentlyCompleted: { item, previousStatus in
+            previousStatus.isIn(.bringIn, .takeOut)
         }
     }
     static var purchase: Self {
         .init(style: .purchase) { item in
-            item.isDue &&
             item.state.status == .purchase
         } checkedState: { item in
             switch item.state.status {
@@ -89,11 +107,13 @@ extension PackingFilter {
             .init("", status: .purchase)
         } uncheckedStatus: { _ in
                 .purchase
+        } _recentlyCompleted: { item, previousStatus in
+            previousStatus == .purchase &&
+            item.state.status == .takeOut
         }
     }
     static var prep: Self {
         .init(style: .prep) { item in
-            item.isDue &&
             item.state.status == .prep
         } checkedState: { item in
             switch item.state.status {
@@ -106,6 +126,9 @@ extension PackingFilter {
             .init("", status: .prep)
         } uncheckedStatus: { _ in
                 .prep
+        } _recentlyCompleted: { item, previousStatus in
+            previousStatus == .prep &&
+            item.state.status == .takeOut
         }
     }
 }
