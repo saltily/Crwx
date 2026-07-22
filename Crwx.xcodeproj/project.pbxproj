@@ -288,6 +288,7 @@
 		FDDB36563010454A006DC1F0 /* LifecyclePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB365530104549006DC1F0 /* LifecyclePicker.swift */; };
 		FDDB365830104840006DC1F0 /* CategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB365730104840006DC1F0 /* CategoryPicker.swift */; };
 		FDDB365A3010C99E006DC1F0 /* LockerPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB36593010C99E006DC1F0 /* LockerPicker.swift */; };
+		FDDB365C3010D99E006DC1F0 /* SwipeMoveToList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB365B3010D99E006DC1F0 /* SwipeMoveToList.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -712,6 +713,7 @@
 		FDDB365530104549006DC1F0 /* LifecyclePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecyclePicker.swift; sourceTree = "<group>"; };
 		FDDB365730104840006DC1F0 /* CategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPicker.swift; sourceTree = "<group>"; };
 		FDDB36593010C99E006DC1F0 /* LockerPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerPicker.swift; sourceTree = "<group>"; };
+		FDDB365B3010D99E006DC1F0 /* SwipeMoveToList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeMoveToList.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -960,6 +962,7 @@
 				FDC5CEC6300FE312005E3562 /* IsCheckedButton.swift */,
 				FDC5CEC8300FE3F4005E3562 /* PackingListRow.swift */,
 				FDC5CECA301014D6005E3562 /* PackingItemGuts.swift */,
+				FDDB365B3010D99E006DC1F0 /* SwipeMoveToList.swift */,
 			);
 			path = "Endpoint Views";
 			sourceTree = "<group>";
@@ -1732,6 +1735,7 @@
 				FDB3AA882FE5BBA200B4B903 /* Harbour.swift in Sources */,
 				FD399AD02FE757AC00E37AEA /* PointText.swift in Sources */,
 				FDB3AA892FE5BBA200B4B903 /* BackupActor.swift in Sources */,
+				FDDB365C3010D99E006DC1F0 /* SwipeMoveToList.swift in Sources */,
 				FDB3AA8A2FE5BBA200B4B903 /* Trip+Extended.swift in Sources */,
 				FDB3AA8B2FE5BBA200B4B903 /* TripSchemaV16.swift in Sources */,
 				FDB3AA8C2FE5BBA200B4B903 /* Track.swift in Sources */,

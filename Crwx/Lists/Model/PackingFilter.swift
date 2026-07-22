@@ -9,21 +9,15 @@ import Foundation
 import FoundationSalt
 
 struct PackingFilter: Equatable {
-    let style: S
+    let style: Style
     var matches: (PackableItem) -> Bool
     var checkedState: (PackableItem) -> CheckedState
     var countSentence: (Int) -> String
     var new: () -> PackableItem
     /// Depends on the filter.  Most this is fixed, but for dockside it's the current status of the item.
     var uncheckedStatus: (PackableItem) -> PackedStatus
-    enum S: Equatable {
+    enum Style: Int {
         case takeOut, bringIn, dockside, purchase, prep
-        var halfState: Bool {
-            switch self {
-            case .takeOut: true
-            default: false
-            }
-        }
     }
     static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.style == rhs.style
@@ -112,6 +106,43 @@ extension PackingFilter {
             .init("", status: .prep)
         } uncheckedStatus: { _ in
                 .prep
+        }
+    }
+}
+
+
+// MARK: Filter Style
+extension PackingFilter.Style {
+    var halfState: Bool {
+        switch self {
+        case .takeOut: true
+        default: false
+        }
+    }
+    var moveToOptions: [Self] {
+        switch self {
+        case .takeOut: [.purchase, .prep, .bringIn]
+        case .bringIn: [.purchase, .prep, .takeOut]
+        case .dockside: []
+        case .purchase: [.prep, .takeOut, .bringIn]
+        case .prep: [.purchase, .takeOut, .bringIn]
+        }
+    }
+    var listingPath: ListingPath {
+        switch self {
+        case .takeOut: .takeOut
+        case .bringIn: .bringIn
+        case .dockside: .dockside
+        case .purchase: .purchase
+        case .prep: .prepAshore
+        }
+    }
+    var status: PackedStatus {
+        switch self {
+        case .takeOut, .dockside: .takeOut
+        case .bringIn: .bringIn
+        case .purchase: .purchase
+        case .prep: .prep
         }
     }
 }

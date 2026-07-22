@@ -55,6 +55,11 @@ fileprivate struct NestTwo: View {
             Section {
                 ForEach(items) { item in
                     PackingListRow(item: item, itemToEdit: $itemToEdit)
+                        .swipeMoveToList(options: model.filter.style.moveToOptions, item: item.contents) {
+                            withAnimation {
+                                model.items.removeAll(where: { $0.id == item.id })
+                            }
+                        }
                 }
                 .onDelete { indices in
                     let ids = items[indices].map(\.id).set
