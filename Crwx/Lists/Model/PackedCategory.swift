@@ -23,15 +23,15 @@ extension PackedCategory {
         switch self {
         case .food: "food"
         case .freezable: "freezable"
-        case .coldStorage: "coldStorage"
+        case .coldStorage: "cold storage"
         case .drinks: "drinks"
-        case .safetyEquipment: "safetyEquipment"
-        case .cleaningSupplies: "cleaningSupplies"
+        case .safetyEquipment: "safety equipment"
+        case .cleaningSupplies: "cleaning supplies"
         case .electronics: "electronics"
         case .tools: "tools"
         case .filters: "filters"
         case .fluids: "fluids"
-        case .spareParts: "spareParts"
+        case .spareParts: "spare parts"
         case .linens: "linens"
         case .energy: "energy"
         case .outerwear: "outerwear"
@@ -39,7 +39,7 @@ extension PackedCategory {
         case .toiletries: "toiletries"
         case .entertainment: "entertainment"
         case .kitchenware: "kitchenware"
-        case .paperProducts: "paperProducts"
+        case .paperProducts: "paper products"
         case .library: "library"
         case .navigation: "navigation"
         case .custom(let string): string
@@ -47,7 +47,7 @@ extension PackedCategory {
     }
     init(rawValue: String) {
         if let match = Self.allCases.first(where: {
-            $0.rawValue == rawValue
+            $0.rawValue == rawValue.lowercased()
         }) {
             self = match
         } else {
@@ -63,6 +63,12 @@ extension PackedCategory {
             .kitchenware, .paperProducts, .energy,
             .library, .navigation
         ]
+    }
+    var isCustom: Bool {
+        switch self {
+        case .custom: true
+        default: false
+        }
     }
 }
 

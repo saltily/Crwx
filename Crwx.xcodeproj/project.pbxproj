@@ -286,6 +286,7 @@
 		FDC5CECF3010308C005E3562 /* ActionTimeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5CECE3010308C005E3562 /* ActionTimeField.swift */; };
 		FDC73A853006E59200877061 /* ListingPathCountingLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73A843006E59200877061 /* ListingPathCountingLink.swift */; };
 		FDDB36563010454A006DC1F0 /* LifecyclePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB365530104549006DC1F0 /* LifecyclePicker.swift */; };
+		FDDB365830104840006DC1F0 /* CategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB365730104840006DC1F0 /* CategoryPicker.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -708,6 +709,7 @@
 		FDC5CECE3010308C005E3562 /* ActionTimeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTimeField.swift; sourceTree = "<group>"; };
 		FDC73A843006E59200877061 /* ListingPathCountingLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathCountingLink.swift; sourceTree = "<group>"; };
 		FDDB365530104549006DC1F0 /* LifecyclePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecyclePicker.swift; sourceTree = "<group>"; };
+		FDDB365730104840006DC1F0 /* CategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPicker.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -949,6 +951,7 @@
 				FDC5CECC301028F5005E3562 /* PackingStateForm.swift */,
 				FD363B22301041F800457AD1 /* PackingConfigurationForm.swift */,
 				FDDB365530104549006DC1F0 /* LifecyclePicker.swift */,
+				FDDB365730104840006DC1F0 /* CategoryPicker.swift */,
 				FDC5CECE3010308C005E3562 /* ActionTimeField.swift */,
 				FD89064E3008437400A2B390 /* ChecklistTaskLoop.swift */,
 				FDC5CEC6300FE312005E3562 /* IsCheckedButton.swift */,
@@ -1944,6 +1947,7 @@
 				FDB3AB612FE6A03900B4B903 /* DestinationRow.swift in Sources */,
 				FDB3AB622FE6A03900B4B903 /* HarbourPicker.swift in Sources */,
 				FDB3AB632FE6A03900B4B903 /* RouteSnippet.swift in Sources */,
+				FDDB365830104840006DC1F0 /* CategoryPicker.swift in Sources */,
 				FDB3AB642FE6A03900B4B903 /* LegAnnotation.swift in Sources */,
 				FDB3AB652FE6A03900B4B903 /* ExposureEditor.swift in Sources */,
 				FDC5CEC3300FD6C1005E3562 /* PackingListItem.swift in Sources */,

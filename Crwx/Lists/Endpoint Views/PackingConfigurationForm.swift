@@ -21,7 +21,7 @@ struct PackingConfigurationForm: View {
                 }
             }
             .pickerStyle(.navigationLink)
-            Text("Category").badge("navigation pick or custom")
+            CategoryPicker(value: $model.category)
         } header: {
             Text("Configuration")
         }

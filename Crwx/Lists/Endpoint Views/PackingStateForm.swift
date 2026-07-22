@@ -46,9 +46,9 @@ struct PackingStateForm: View {
             }
         } header: {
             Text("State")
-        } footer: {
-            Text("\(model.stepPhrase(requiresDockside: false).capitalized).")
-                .padding(.bottom)
+//        } footer: {
+//            Text("\(model.stepPhrase(requiresDockside: false).capitalized).")
+//                .padding(.bottom)
         }
         .seaSection()
     }
