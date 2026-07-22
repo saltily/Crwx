@@ -40,6 +40,13 @@ struct LifecyclePicker: View {
             .seaBackground()
             .navigationTitle("Lifecycle")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem {
+                    Button("Clear") {
+                        value = []
+                    }
+                }
+            }
         } label: {
             let values = value.map(\.rawValue).sorted()
             Text("Lifecycle").badge(values.joined(separator: ", ").nilIfEmpty ?? "--")

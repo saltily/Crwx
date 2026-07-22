@@ -21,8 +21,8 @@ extension StorageLocker: CustomStringConvertible {
     var description: String {
         switch self {
         case .veeBerth: "vee berth"
-        case .starboardSettee: "stbd settee"
-        case .starboardBookshelf: "stbd bookshelf"
+        case .starboardSettee: "starboard settee"
+        case .starboardBookshelf: "starboard bookshelf"
         case .portBookshelf: "port bookshelf"
         case .portTable: "port table"
         case .navTable: "nav table"

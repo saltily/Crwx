@@ -14,13 +14,7 @@ struct PackingConfigurationForm: View {
         Section {
             Toggle("Dockside", isOn: $model.requiresDockside)
             LifecyclePicker(value: $model.lifecycle)
-            Picker("Storage Locker", selection: $model.locker) {
-                Text("--").tag(nil as StorageLocker?)
-                ForEach(StorageLocker.allCases, id: \.rawValue) { locker in
-                    Text(locker.description).tag(locker)
-                }
-            }
-            .pickerStyle(.navigationLink)
+            LockerPicker(value: $model.locker)
             CategoryPicker(value: $model.category)
         } header: {
             Text("Configuration")

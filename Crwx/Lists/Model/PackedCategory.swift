@@ -18,7 +18,8 @@ enum PackedCategory: RawRepresentable, Codable, Sendable, Hashable {
     case custom(String)
 }
 
-extension PackedCategory {
+extension PackedCategory: CustomStringConvertible {
+    var description: String { rawValue }
     var rawValue: String {
         switch self {
         case .food: "food"

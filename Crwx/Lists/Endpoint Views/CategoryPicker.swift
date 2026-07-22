@@ -34,15 +34,24 @@ struct CategoryPicker: View {
 fileprivate struct ListForm: View {
     @Binding var value: PackedCategory?
     @State private var searchText = ""
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         List {
-            ListLoop(options: customOptions, value: $value)
-            ListLoop(options: matchingOptions, value: $value)
+            PickerListLoop(options: customOptions, value: $value)
+            PickerListLoop(options: matchingOptions, value: $value)
         }
         .seaBackground()
         .navigationTitle("Category")
         .navigationBarTitleDisplayMode(.inline)
         .searchable(text: $searchText)
+        .toolbar {
+            ToolbarItem {
+                Button("Clear") {
+                    value = nil
+                    dismiss()
+                }
+            }
+        }
     }
     private var customOptions: [PackedCategory] {
         [
@@ -62,9 +71,9 @@ fileprivate struct ListForm: View {
     }
 }
 
-fileprivate struct ListLoop: View {
-    let options: [PackedCategory]
-    @Binding var value: PackedCategory?
+struct PickerListLoop<V>: View where V: RawRepresentable, V.RawValue == String, V: CustomStringConvertible {
+    let options: [V]
+    @Binding var value: V?
     @Environment(\.dismiss) private var dismiss
     var body: some View {
         Section {
@@ -74,9 +83,11 @@ fileprivate struct ListLoop: View {
                     dismiss()
                 } label: {
                     HStack {
-                        Text(o.rawValue)
+                        Text(o.description)
                         Spacer()
-                        if value == o {
+                        if let value,
+                           value == o
+                        {
                             Image(systemName: "checkmark")
                                 .foregroundStyle(.accentColor)
                         }
