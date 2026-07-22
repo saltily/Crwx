@@ -8,6 +8,7 @@
 import SwiftUI
 import WxSalt
 import FoundationUI
+import FoundationSalt
 
 extension View {
     func packingItemEditor(_ itemToEdit: Binding<PackableItem?>) -> some View {
@@ -56,12 +57,17 @@ struct PackingItemEditor: View {
                 TextField("Untitled", text: $item.label, axis: .vertical)
                     .lineLimit(2...)
                     .modifier(ConditionalFocusedModifier(focusOnAppear: true, isEmpty: item.label.isEmpty))
+            } header: {
+                Text("Label")
             } footer: {
                 VStack(alignment: .leading) {
-                    Text(item.stepsSummary)
-                    Text("created: ")
-                    Text("loaded: ")
-                    Text("inventoried: ")
+                    let sentences: [String?] = [
+                        item.stepsSummary,
+                        item.createdSentence,
+                        item.shiftedSentence,
+                        item.inventoriedSentence
+                    ]
+                    Text(sentences.compactMap({ $0 }).joined(separator: "  "))
                 }
                 .padding(.bottom)
             }
@@ -80,6 +86,12 @@ struct PackingItemEditor: View {
     NavigationStack {
         PackingItemEditor(item: item)
             .seaBackground()
+            .onAppear {
+                item.lastShift = .init(previous: .purchase)
+                item.lastInventoried = .now.yesterday
+            }
+            .navigationTitle("Edit Packing Item")
+            .navigationBarTitleDisplayMode(.inline)
     }
     .environment(\.wxColourScheme, .green)
 }

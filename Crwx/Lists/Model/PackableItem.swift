@@ -16,6 +16,9 @@ final class PackableItem: Codable, Sendable, Identifiable {
     var label: String
     var state: State
     var configuration: Configuration = .init()
+    /// To include recently shifted stuff in previous lists.
+    var lastShift: Shift?
+    /// To show in the inventory when this was last done.
     var lastInventoried: Date?
     init(id: UUID, label: String, state: State, configuration: Configuration, lastInventoried: Date? = nil) {
         self.id = id
@@ -24,6 +27,28 @@ final class PackableItem: Codable, Sendable, Identifiable {
         self.state = state
         self.configuration = configuration
         self.lastInventoried = lastInventoried
+    }
+    struct Shift: Codable, Sendable, Hashable {
+        init(previous: PackedStatus) {
+            self.date = .now
+            self.previousStatus = previous
+        }
+        let date: Date
+        let previousStatus: PackedStatus
+        func verbed(new: PackedStatus) -> String {
+            switch previousStatus {
+            case .purchase: "Purchased"
+            case .prep: "Prepared"
+            case .shoreOnHand:
+                if new == .packed {
+                    "Packed"
+                } else {
+                    "Loaded"
+                }
+            case .packed: "Loaded"
+            case .loadedOnBoat: "Offloaded"
+            }
+        }
     }
 }
 
@@ -57,7 +82,8 @@ extension PackableItem: Hashable {
         lhs.label == rhs.label &&
         lhs.state == rhs.state &&
         lhs.configuration == rhs.configuration &&
-        lhs.lastInventoried == rhs.lastInventoried
+        lhs.lastInventoried == rhs.lastInventoried &&
+        lhs.lastShift == rhs.lastShift
     }
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
@@ -65,6 +91,7 @@ extension PackableItem: Hashable {
         hasher.combine(state)
         hasher.combine(configuration)
         hasher.combine(lastInventoried)
+        hasher.combine(lastShift)
     }
 }
 
@@ -84,6 +111,20 @@ extension PackableItem: ExpressibleByStringLiteral {
 
 // MARK: Summarise
 extension PackableItem {
+    private func describe(date: Date) -> String {
+        date.formatted(.relative(presentation: .named))
+    }
+    var createdSentence: String {
+        "Created \(describe(date: created))."
+    }
+    var shiftedSentence: String? {
+        guard let lastShift else { return nil }
+        return "\(lastShift.verbed(new: state.status)) \(describe(date: lastShift.date))."
+    }
+    var inventoriedSentence: String? {
+        guard let lastInventoried else { return nil }
+        return "Inventoried \(describe(date: lastInventoried))."
+    }
     /// Combines status, due, and lifecycle to describe what will happen when we check it off, and what will happen to it next after that.
     var stepsSummary: String {
         let thisStepPhrase = thisStepPhrase
