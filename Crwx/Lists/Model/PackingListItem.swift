@@ -15,24 +15,29 @@ final class PackingListItem {
             contents.update(status: uncheckedStatus.adding(state: checkedState))
             if !checkedState.isChecked {
                 contents.state.due = uncheckedDue
+                if checkedState == .unchecked {
+                    contents.lastShift = uncheckedLastShift
+                }
             }
         }
     }
     // support rollback when unchecking
     let uncheckedStatus: PackedStatus
     let uncheckedDue: ActionTime
+    let uncheckedLastShift: PackableItem.Shift?
     var contents: PackableItem
-    init(checkedState: CheckedState, contents: PackableItem, uncheckedStatus: PackedStatus, uncheckedDue: ActionTime) {
+    init(checkedState: CheckedState, contents: PackableItem, uncheckedStatus: PackedStatus, uncheckedDue: ActionTime, uncheckedLastShift: PackableItem.Shift?) {
         self.checkedState = checkedState
         self.contents = contents
         self.uncheckedStatus = uncheckedStatus
         self.uncheckedDue = uncheckedDue
+        self.uncheckedLastShift = uncheckedLastShift
     }
 }
 
 extension PackingListItem {
     convenience init(contents: PackableItem, filter: PackingFilter) {
-        self.init(checkedState: filter.checkedState(contents), contents: contents, uncheckedStatus: filter.uncheckedStatus(contents), uncheckedDue: contents.state.due)
+        self.init(checkedState: filter.checkedState(contents), contents: contents, uncheckedStatus: filter.uncheckedStatus(contents), uncheckedDue: contents.state.due, uncheckedLastShift: contents.lastShift)
     }
 }
 

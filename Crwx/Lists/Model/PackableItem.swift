@@ -73,6 +73,7 @@ extension PackableItem {
         }
         // else can keep the same due date for advancement
         self.state.status = newValue
+        self.lastShift = .init(previous: oldValue)
     }
     var isDue: Bool {
         self.state.due.isDue

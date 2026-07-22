@@ -51,6 +51,7 @@ struct PackingItemEditorSheetModifier: ViewModifier {
 
 struct PackingItemEditor: View {
     @Bindable var item: PackableItem
+    @State private var currentId: UUID?
     var body: some View {
         List {
             Section {
@@ -72,6 +73,16 @@ struct PackingItemEditor: View {
             .seaSection()
             PackingStateForm(model: $item.state, specs: $item.configuration.specs)
             PackingConfigurationForm(model: $item.configuration)
+        }
+        .onChange(of: item.id, initial: true) { oldValue, newValue in
+            currentId = newValue
+        }
+        .onChange(of: item.state.status) { oldValue, newValue in
+            if item.id == currentId,
+               oldValue != newValue
+            {
+                item.lastShift = nil
+            }
         }
     }
 }

@@ -33,6 +33,7 @@ struct SwipeMoveToList: ViewModifier {
                     let listingPath = o.listingPath
                     Button(listingPath.label, systemImage: listingPath.systemImage) {
                         item.state.status = o.status
+                        item.lastShift = nil
                         // should already be due or wouldn't have appeared in this list
                         //                            item.state.due = .anytime
                         didMove()
