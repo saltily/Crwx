@@ -27,14 +27,20 @@ struct PackingFilter: Equatable {
 }
 extension PackingFilter {
     private var recentAge: TimeInterval { -10.minute }
+    /// Only for unchecked.  Count is based on this.
     func matches(_ item: PackableItem) -> Bool {
         item.isDue && _matches(item)
     }
+    /// Stuff that is checked that is not counted but would be nice to see in the list.
     func recentlyCompleted(_ item: PackableItem) -> Bool {
         guard let shift = item.lastShift,
               shift.date.timeIntervalSinceNow > recentAge
         else { return false }
         return _recentlyCompleted(item, shift.previousStatus)
+    }
+    /// Unchecked match or recently checked match.
+    func appearsInList(_ item: PackableItem) -> Bool {
+        matches(item) || recentlyCompleted(item)
     }
 }
 

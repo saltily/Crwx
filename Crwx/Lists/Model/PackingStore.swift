@@ -31,7 +31,7 @@ extension PackingStore {
     }
     func viewModel(for filter: PackingFilter) -> PackingListViewModel {
         .init(filter: filter, items: allItems.filter({
-            filter.matches($0) || filter.recentlyCompleted($0)
+            filter.appearsInList($0)
         }).map({ .init(contents: $0, filter: filter) }))
     }
 }
