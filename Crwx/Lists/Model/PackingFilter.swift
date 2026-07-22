@@ -82,13 +82,19 @@ extension PackingFilter {
         .init(style: .dockside) { item in
             item.configuration.requiresDockside
         } checkedState: { item in
-                .unchecked
+            if item.lastShift != nil,
+               !item.isDue
+            { return .check }
+            else { return .unchecked }
         } countSentence: { i in
             "\(i) unpacked \(i.echo("item", "items"))"
         } new: {
             .init("", status: .takeOut, configuration: .dockside)
         } uncheckedStatus: { item in
-            item.state.status
+            if let lastShift = item.lastShift,
+               !item.isDue
+            { return lastShift.previousStatus }
+            else { return item.state.status }
         } _recentlyCompleted: { item, previousStatus in
             previousStatus.isIn(.bringIn, .takeOut)
         }
