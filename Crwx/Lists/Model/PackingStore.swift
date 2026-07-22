@@ -88,3 +88,35 @@ extension PackingStore: ExpressibleByArrayLiteral {
         self.init(items: elements)
     }
 }
+
+
+// MARK: App Events
+extension PackingStore {
+    func beginDaysail() {
+        markDue(lifecycle: .daysail, direction: .out)
+    }
+    func endDaysail() {
+        markDue(lifecycle: .daysail, direction: .in)
+    }
+    func beginCruise() {
+        markDue(lifecycle: .cruise, direction: .out)
+    }
+    func endCruise() {
+        markDue(lifecycle: .cruise, direction: .in)
+    }
+    func beginSeason() {
+        markDue(lifecycle: .seasonal, direction: .out)
+    }
+    func endSeason() {
+        markDue(lifecycle: .seasonal, direction: .in)
+    }
+    private func markDue(lifecycle: PackedLifecycle, direction: PackedStatus.Direction) {
+        for item in allItems {
+            if item.configuration.lifecycle.contains(lifecycle),
+               item.state.status.direction == direction
+            {
+                item.state.due = .anytime
+            }
+        }
+    }
+}

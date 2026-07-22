@@ -12,6 +12,9 @@ enum PackedStatus: String, Codable, Sendable, CaseIterable {
     case purchase, prep
     case shoreOnHand, packed
     case loadedOnBoat
+    enum Direction {
+        case `in`, out
+    }
 }
 
 
@@ -47,6 +50,13 @@ extension PackedStatus {
         case .shoreOnHand: "load"
         case .packed: "load"
         case .loadedOnBoat: "offload"
+        }
+    }
+    /// Is it at the boat destined to come in, or elsewhere destined to go out to the boat.
+    var direction: Direction {
+        switch self {
+        case .loadedOnBoat: .in
+        default: .out
         }
     }
 }
