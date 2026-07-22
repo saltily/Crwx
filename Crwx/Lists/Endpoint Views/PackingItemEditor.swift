@@ -60,23 +60,18 @@ struct PackingItemEditor: View {
             } header: {
                 Text("Label")
             } footer: {
-                VStack(alignment: .leading) {
-                    let sentences: [String?] = [
-                        item.stepsSummary,
-                        item.createdSentence,
-                        item.shiftedSentence,
-                        item.inventoriedSentence
-                    ]
-                    Text(sentences.compactMap({ $0 }).joined(separator: "  "))
-                }
-                .padding(.bottom)
+                let sentences: [String?] = [
+                    item.stepsSummary,
+                    item.createdSentence,
+                    item.shiftedSentence,
+                    item.inventoriedSentence
+                ]
+                Text(sentences.compactMap({ $0 }).joined(separator: "  "))
+                    .padding(.bottom)
             }
             .seaSection()
             PackingStateForm(model: $item.state, specs: $item.configuration.specs)
-            Section {
-                Text("And then this can get into other stuff like quantity and purchase or move which direction, yada, yada.")
-            }
-            .seaSection()
+            PackingConfigurationForm(model: $item.configuration)
         }
     }
 }

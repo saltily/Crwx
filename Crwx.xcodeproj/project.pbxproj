@@ -17,6 +17,7 @@
 		FD091F942FE590FA001706D6 /* CrwxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */; };
 		FD35AEFD2FE99B9E00A607FE /* Gpx Import.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD35AEF32FE99B9E00A607FE /* Gpx Import.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FD35AF052FE99BB600A607FE /* FoundationSalt in Frameworks */ = {isa = PBXBuildFile; productRef = FD35AF042FE99BB600A607FE /* FoundationSalt */; };
+		FD363B23301041F800457AD1 /* PackingConfigurationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD363B22301041F800457AD1 /* PackingConfigurationForm.swift */; };
 		FD399ACE2FE721CF00E37AEA /* LocationChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */; };
 		FD399AD02FE757AC00E37AEA /* PointText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399ACF2FE757AC00E37AEA /* PointText.swift */; };
 		FD399AD22FE7584900E37AEA /* LocationPointPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */; };
@@ -438,6 +439,7 @@
 		FD091F902FE590FA001706D6 /* CrwxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITests.swift; sourceTree = "<group>"; };
 		FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FD35AEF32FE99B9E00A607FE /* Gpx Import.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gpx Import.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD363B22301041F800457AD1 /* PackingConfigurationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingConfigurationForm.swift; sourceTree = "<group>"; };
 		FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChoice.swift; sourceTree = "<group>"; };
 		FD399ACF2FE757AC00E37AEA /* PointText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointText.swift; sourceTree = "<group>"; };
 		FD399AD12FE7584900E37AEA /* LocationPointPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPointPicker.swift; sourceTree = "<group>"; };
@@ -943,6 +945,7 @@
 				FD9BC54D3008389400FD95A5 /* ChecklistEditorToolbarModifier.swift */,
 				FD9BC54F30083BA000FD95A5 /* PackingItemEditor.swift */,
 				FDC5CECC301028F5005E3562 /* PackingStateForm.swift */,
+				FD363B22301041F800457AD1 /* PackingConfigurationForm.swift */,
 				FDC5CECE3010308C005E3562 /* ActionTimeField.swift */,
 				FD89064E3008437400A2B390 /* ChecklistTaskLoop.swift */,
 				FDC5CEC6300FE312005E3562 /* IsCheckedButton.swift */,
@@ -1876,6 +1879,7 @@
 				FDB3AB3A2FE6A03900B4B903 /* CruisingGuide.swift in Sources */,
 				FDB3AB3B2FE6A03900B4B903 /* AnchorageTidePredictions.swift in Sources */,
 				FDB3AB3C2FE6A03900B4B903 /* SwipeEditHarbour.swift in Sources */,
+				FD363B23301041F800457AD1 /* PackingConfigurationForm.swift in Sources */,
 				FDC5CEB530098D07005E3562 /* PackingStore.swift in Sources */,
 				FDB3AB3D2FE6A03900B4B903 /* Harbour+Potential.swift in Sources */,
 				FDB3AB3E2FE6A03900B4B903 /* AnchorageRow.swift in Sources */,

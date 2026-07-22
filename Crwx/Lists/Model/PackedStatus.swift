@@ -55,11 +55,11 @@ extension PackedStatus: CustomStringConvertible, Identifiable {
     var id: String { rawValue }
     var description: String {
         switch self {
-        case .purchase: "Purchase"
-        case .prep: "Needs Prep"
-        case .shoreOnHand: "On Hand"
-        case .packed: "Packed"
-        case .loadedOnBoat: "Loaded on Boat"
+        case .purchase: "purchase"
+        case .prep: "needs prep"
+        case .shoreOnHand: "on hand"
+        case .packed: "packed"
+        case .loadedOnBoat: "loaded on boat"
         }
     }
     var systemImage: String {
