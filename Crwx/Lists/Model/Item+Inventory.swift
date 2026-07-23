@@ -8,23 +8,25 @@
 import Foundation
 
 extension PackableItem {
-    struct Inventory {
+    struct Inventory: Codable, Sendable, Hashable {
         var includeInBoatInventory: Bool = true
-        var includeInShoreInventory: Bool = true
+        var includeInShoreInventory: Bool = false
         var quantityOnBoat: Double = 0
         var quantityOnShore: Double = 1
     }
 }
 
 extension PackableItem.Inventory {
-    static func onShore(_ quantity: Double = 1) -> Self {
-        .init(quantityOnShore: quantity)
+    static var noneInInventory: Self {
+        .init(includeInBoatInventory: true, includeInShoreInventory: true, quantityOnBoat: 0, quantityOnShore: 0)
     }
-    static func onBoat(_ quantity: Double = 1) -> Self {
-        .init(quantityOnBoat: quantity)
+    static var onHandToTakeOut: Self {
+        .init(includeInBoatInventory: true, includeInShoreInventory: false, quantityOnBoat: 0, quantityOnShore: 1)
+    }
+    static var loadedOnBoat: Self {
+        .init(includeInBoatInventory: true, includeInShoreInventory: false, quantityOnBoat: 1, quantityOnShore: 0)
     }
 }
-
 
 extension PackableItem.Inventory {
     /// Also needs to know if consumable, perishable, expirable.

@@ -81,6 +81,11 @@ extension PackableItem {
     var isDue: Bool {
         self.state.due.isDue
     }
+    var isConsumable: Bool {
+        self.state.expires != nil ||
+        self.configuration.lifecycle.contains(.perishable) ||
+        self.configuration.lifecycle.contains(.consumable)
+    }
 }
 
 extension PackableItem: Hashable {
@@ -111,7 +116,7 @@ extension PackableItem: ExpressibleByStringLiteral {
     /// So you can setup the current location and when to shift it.
     /// You can also reuse basic configurations for multiple items.
     convenience init(_ label: String, id: UUID = .init(), status: PackedStatus = .shoreOnHand, due: ActionTime = .anytime, configuration: Configuration = .init()) {
-        self.init(id: id, label: label, state: .init(status: status, due: due), configuration: configuration)
+        self.init(id: id, label: label, state: .init(status: status, due: due, inventory: status.defaultInventory), configuration: configuration)
     }
 }
 

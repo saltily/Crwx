@@ -59,6 +59,13 @@ extension PackedStatus {
         default: .out
         }
     }
+    var defaultInventory: PackableItem.Inventory {
+        switch self {
+        case .purchase, .prep: .noneInInventory
+        case .shoreOnHand, .packed: .onHandToTakeOut
+        case .loadedOnBoat: .loadedOnBoat
+        }
+    }
 }
 
 extension PackedStatus: CustomStringConvertible, Identifiable {

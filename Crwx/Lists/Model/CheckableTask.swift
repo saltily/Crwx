@@ -189,7 +189,7 @@ extension CheckableTask {
 // MARK: Shortcut Builders
 extension CheckableTask {
     fileprivate static func confirm(_ tuples: [PackingListTuple], prefix: String = "Confirm") -> CheckableTask {
-        let state = PackableItem.State(status: .loadedOnBoat, due: .never)
+        let state = PackableItem.State(status: .loadedOnBoat, due: .never, inventory: .loadedOnBoat)
         let items: [PackableItem] = tuples.map {
             PackableItem(id: .init(), label: $0.string, state: state, configuration: $0.configuration)
         }
