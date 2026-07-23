@@ -9,10 +9,19 @@ import Foundation
 
 extension PackableItem {
     struct Inventory {
-        var includeInBoatInventory: Bool
-        var includeInShoreInventory: Bool
-        var quantityOnBoat: Double
-        var quantityOnShore: Double
+        var includeInBoatInventory: Bool = true
+        var includeInShoreInventory: Bool = true
+        var quantityOnBoat: Double = 0
+        var quantityOnShore: Double = 1
+    }
+}
+
+extension PackableItem.Inventory {
+    static func onShore(_ quantity: Double = 1) -> Self {
+        .init(quantityOnShore: quantity)
+    }
+    static func onBoat(_ quantity: Double = 1) -> Self {
+        .init(quantityOnBoat: quantity)
     }
 }
 

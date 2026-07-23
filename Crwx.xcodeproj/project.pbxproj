@@ -292,6 +292,7 @@
 		FDDB365E30113B2C006DC1F0 /* Item+Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB365D30113B2C006DC1F0 /* Item+Inventory.swift */; };
 		FDDB366030121F56006DC1F0 /* InventoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB365F30121F56006DC1F0 /* InventoryRow.swift */; };
 		FDDB366230121F72006DC1F0 /* InventoryListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB366130121F72006DC1F0 /* InventoryListItem.swift */; };
+		FDDB366430126D68006DC1F0 /* PackingInventoryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB366330126D68006DC1F0 /* PackingInventoryForm.swift */; };
 		FDE216362FE5B0CF00F60799 /* ForecastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE215CD2FE5B0CF00F60799 /* ForecastSnippet.swift */; };
 		FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2161F2FE5B0CF00F60799 /* TripRouteRow.swift */; };
 		FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2162D2FE5B0CF00F60799 /* WindLine.swift */; };
@@ -720,6 +721,7 @@
 		FDDB365D30113B2C006DC1F0 /* Item+Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Inventory.swift"; sourceTree = "<group>"; };
 		FDDB365F30121F56006DC1F0 /* InventoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryRow.swift; sourceTree = "<group>"; };
 		FDDB366130121F72006DC1F0 /* InventoryListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListItem.swift; sourceTree = "<group>"; };
+		FDDB366330126D68006DC1F0 /* PackingInventoryForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingInventoryForm.swift; sourceTree = "<group>"; };
 		FDE215C62FE5B0CF00F60799 /* LocationSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSnippet.swift; sourceTree = "<group>"; };
 		FDE215C72FE5B0CF00F60799 /* MarineBuoySnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineBuoySnippet.swift; sourceTree = "<group>"; };
 		FDE215C82FE5B0CF00F60799 /* MarineZoneSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarineZoneSnippet.swift; sourceTree = "<group>"; };
@@ -960,6 +962,7 @@
 				FD9BC54F30083BA000FD95A5 /* PackingItemEditor.swift */,
 				FDC5CECC301028F5005E3562 /* PackingStateForm.swift */,
 				FD363B22301041F800457AD1 /* PackingConfigurationForm.swift */,
+				FDDB366330126D68006DC1F0 /* PackingInventoryForm.swift */,
 				FDDB365530104549006DC1F0 /* LifecyclePicker.swift */,
 				FDDB365730104840006DC1F0 /* CategoryPicker.swift */,
 				FDDB36593010C99E006DC1F0 /* LockerPicker.swift */,
@@ -1869,6 +1872,7 @@
 				FDB3AB1B2FE6A03900B4B903 /* CruisesList.swift in Sources */,
 				FDB3AB1C2FE6A03900B4B903 /* CoastalForecasts.swift in Sources */,
 				FDB3AB1D2FE6A03900B4B903 /* HarbourTab.swift in Sources */,
+				FDDB366430126D68006DC1F0 /* PackingInventoryForm.swift in Sources */,
 				FDB3AB1E2FE6A03900B4B903 /* HarbourMap.swift in Sources */,
 				FDB3AB1F2FE6A03900B4B903 /* CruiseStopDetail.swift in Sources */,
 				FDB3AB202FE6A03900B4B903 /* AnchorageFacilitiesFilterMenu.swift in Sources */,
