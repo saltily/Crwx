@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FoundationSalt
 
 extension PackableItem {
     struct Inventory: Codable, Sendable, Hashable {
@@ -54,5 +55,45 @@ extension PackableItem.Inventory {
     }
     mutating func decrementOnShore() {
         incrementOnShore(-1)
+    }
+    mutating func shift(oldStatus: PackedStatus, newStatus: PackedStatus) {
+        switch oldStatus {
+        case .purchase, .prep:
+            // we bought one and adding to shore or boat
+            if newStatus == .loadedOnBoat {
+                quantityOnBoat += 1
+            } else if newStatus.isIn(.shoreOnHand, .packed) {
+                quantityOnShore += 1
+            }
+        case .shoreOnHand, .packed:
+            // we moved from shore to boat
+            if newStatus == .loadedOnBoat {
+                incrementOnBoat() // doesn't matter if consumable and will decrement on shore
+            }
+        case .loadedOnBoat:
+            // we took it off the boat
+            if newStatus.isIn(.shoreOnHand, .packed) {
+                decrementOnBoat(consumable: false) // not consumable else will not add to shore
+            }
+        }
+    }
+    func rollback(from newStatus: PackedStatus, to oldStatus: PackedStatus) -> PackableItem.Inventory {
+        var copy = self
+        switch newStatus {
+        case .loadedOnBoat:
+            // going back to on hand, need to move item off the boat
+            copy.decrementOnBoat(consumable: false)
+        case .shoreOnHand:
+            // depends on the previous
+            if oldStatus.isIn(.purchase, .prep) {
+                copy.decrementOnShore()
+            } else if oldStatus == .loadedOnBoat {
+                copy.incrementOnBoat()
+            }
+        default:
+            // nothing  These are never in a checked state
+            return self
+        }
+        return copy
     }
 }

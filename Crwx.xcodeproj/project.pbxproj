@@ -53,6 +53,7 @@
 		FD463E733006DAE500B20127 /* LoadingAndInventoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */; };
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
 		FD463E773006E28600B20127 /* ListingPathLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E763006E28600B20127 /* ListingPathLink.swift */; };
+		FD5161C430128C0600F70C73 /* CheckedRollbackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5161C330128C0600F70C73 /* CheckedRollbackProtocol.swift */; };
 		FD89064F3008437400A2B390 /* ChecklistTaskLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD89064E3008437400A2B390 /* ChecklistTaskLoop.swift */; };
 		FD9BC54A300833D400FD95A5 /* PackableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BC549300833D400FD95A5 /* PackableItem.swift */; };
 		FD9BC54C300837F500FD95A5 /* PackingItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BC54B300837F500FD95A5 /* PackingItemRow.swift */; };
@@ -483,6 +484,7 @@
 		FD463E723006DAE500B20127 /* LoadingAndInventoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAndInventoryHome.swift; sourceTree = "<group>"; };
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
 		FD463E763006E28600B20127 /* ListingPathLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathLink.swift; sourceTree = "<group>"; };
+		FD5161C330128C0600F70C73 /* CheckedRollbackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckedRollbackProtocol.swift; sourceTree = "<group>"; };
 		FD89064E3008437400A2B390 /* ChecklistTaskLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTaskLoop.swift; sourceTree = "<group>"; };
 		FD9BC549300833D400FD95A5 /* PackableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackableItem.swift; sourceTree = "<group>"; };
 		FD9BC54B300837F500FD95A5 /* PackingItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItemRow.swift; sourceTree = "<group>"; };
@@ -1025,6 +1027,7 @@
 				FDC5CEC2300FD6C1005E3562 /* PackingListItem.swift */,
 				FDC5CEC4300FD709005E3562 /* CheckedState.swift */,
 				FDDB366130121F72006DC1F0 /* InventoryListItem.swift */,
+				FD5161C330128C0600F70C73 /* CheckedRollbackProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1981,6 +1984,7 @@
 				FDB3ABF02FE6BE5B00B4B903 /* MapMarker+Waypoint.swift in Sources */,
 				FD44311A3007A79900976424 /* ChecklistTaskEditor.swift in Sources */,
 				FDC5CEC1300FD550005E3562 /* PackingListViewModel.swift in Sources */,
+				FD5161C430128C0600F70C73 /* CheckedRollbackProtocol.swift in Sources */,
 				FDB3ABF12FE6BE5B00B4B903 /* AllRoutePolylines.swift in Sources */,
 				FDB3AB672FE6A03900B4B903 /* VoyageIntent.swift in Sources */,
 				FDB3AB682FE6A03900B4B903 /* AddCruiseButton.swift in Sources */,

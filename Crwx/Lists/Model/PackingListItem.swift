@@ -9,45 +9,53 @@ import Foundation
 import FoundationSalt
 
 @Observable
-final class PackingListItem {
+final class PackingListItem: CheckedRollbackProtocol {
     var checkedState: CheckedState {
         didSet {
-            contents.update(status: uncheckedStatus.adding(state: checkedState))
-            if !checkedState.isChecked {
-                contents.state.due = uncheckedDue
-                if checkedState == .unchecked {
-                    contents.lastShift = uncheckedLastShift
-                }
-            }
+            contents.update(status: uncheckedRollback.status.adding(state: checkedState))
+            rollback()
         }
     }
     // support rollback when unchecking
-    let uncheckedStatus: PackedStatus
-    let uncheckedDue: ActionTime
-    let uncheckedLastShift: PackableItem.Shift?
+    let uncheckedRollback: Rollback
     var contents: PackableItem
-    init(checkedState: CheckedState, contents: PackableItem, uncheckedStatus: PackedStatus, uncheckedDue: ActionTime, uncheckedLastShift: PackableItem.Shift?) {
+    init(checkedState: CheckedState, contents: PackableItem, rollback: Rollback) {
         self.checkedState = checkedState
         self.contents = contents
-        self.uncheckedStatus = uncheckedStatus
-        self.uncheckedDue = uncheckedDue
-        self.uncheckedLastShift = uncheckedLastShift
+        self.uncheckedRollback = rollback
+    }
+    struct Rollback {
+        let status: PackedStatus
+        let due: ActionTime
+        let inventory: PackableItem.Inventory
+        let lastShift: PackableItem.Shift?
+    }
+    func rollback() {
+        if checkedState == .unchecked {
+            contents.state.due = uncheckedRollback.due
+            contents.state.inventory = uncheckedRollback.inventory
+            contents.lastShift = uncheckedRollback.lastShift
+        }
     }
 }
 
 extension PackingListItem {
     convenience init(contents: PackableItem, filter: PackingFilter) {
         let currentState = filter.checkedState(contents)
+        let uncheckedStatus = filter.uncheckedStatus(contents)
         let uncheckedDue: ActionTime
+        let uncheckedInventory: PackableItem.Inventory
         let uncheckedLastShift: PackableItem.Shift?
         if currentState.isChecked {
             uncheckedDue = contents.lastShift?.previousDue ?? .anytime
+            uncheckedInventory = contents.state.inventory.rollback(from: contents.state.status, to: uncheckedStatus)
             uncheckedLastShift = nil
         } else {
             uncheckedDue = contents.state.due
+            uncheckedInventory = contents.state.inventory
             uncheckedLastShift = contents.lastShift
         }
-        self.init(checkedState: filter.checkedState(contents), contents: contents, uncheckedStatus: filter.uncheckedStatus(contents), uncheckedDue: uncheckedDue, uncheckedLastShift: uncheckedLastShift)
+        self.init(checkedState: filter.checkedState(contents), contents: contents, rollback: .init(status: uncheckedStatus, due: uncheckedDue, inventory: uncheckedInventory, lastShift: uncheckedLastShift))
     }
 }
 

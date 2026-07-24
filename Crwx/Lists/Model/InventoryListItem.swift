@@ -9,6 +9,7 @@ import Foundation
 import FoundationSalt
 
 /// Rough sketch placeholder for a viewmodel.  We'll want this to have a packable item backing.  And it will need to know if we're doing boat or shore inventory.  And update last inventoried when changing stuff.
+/// I want this to rollback like `PackingListItem`.
 @Observable
 final class InventoryListItem {
     init(checked: Bool = false, quantity: Double = 1) {
