@@ -18,8 +18,11 @@ struct InventoryRow: View {
                 HStack(spacing: 10) {
                     Text(item.label)
                     Spacer()
-                    Stepper("quantity", value: $item.quantity)
-                        .labelsHidden()
+                    Stepper("quantity") {
+                        item.increment()
+                    } onDecrement: {
+                        item.decrement()
+                    }
                 }
                 HStack(spacing: 0) {
                     VStack(alignment: .leading) {
@@ -32,15 +35,7 @@ struct InventoryRow: View {
                         if let historySentence = item.historySentence {
                             Text(historySentence)
                         }
-                        if let matchingCountSentence = item.matchingCountSentence {
-                            Text(matchingCountSentence)
-                        }
-//                        if let combinedSentence = [
-//                            item.historySentence,
-//                            item.matchingCountSentence
-//                        ].compactMap({ $0 }).nilIfEmpty {
-//                            Text(combinedSentence.joined(separator: "  "))
-//                        }
+                        Text(item.matchingCountSentence)
                     }
                     .foregroundStyle(.secondary)
                     .font(.caption)
@@ -67,7 +62,7 @@ struct InventoryRow: View {
 }
 
 #Preview {
-    @Previewable @State var item: InventoryListItem = .init()
+    @Previewable @State var item: InventoryListItem = .init(contents: .init("propane bottles", configuration: .init(specs: "Per bottle. Small camping bottles purchased in 4-pack from Amazon.")), style: .boat)
     List {
         InventoryRow(item: item)
             .seaSection()
