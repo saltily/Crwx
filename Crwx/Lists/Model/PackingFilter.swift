@@ -45,6 +45,15 @@ extension PackingFilter {
 }
 
 extension PackingFilter {
+    static var all: [PackingFilter] {
+        [
+            .takeOut,
+            .bringIn,
+            .dockside,
+            .purchase,
+            .prep
+        ]
+    }
     static var takeOut: Self {
         .init(style: .takeOut) { item in
             item.state.status.isIn(.takeOut, .packed)

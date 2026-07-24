@@ -54,6 +54,7 @@
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
 		FD463E773006E28600B20127 /* ListingPathLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E763006E28600B20127 /* ListingPathLink.swift */; };
 		FD5161C430128C0600F70C73 /* CheckedRollbackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5161C330128C0600F70C73 /* CheckedRollbackProtocol.swift */; };
+		FD85BAB33012FBEF002CCBC5 /* InventoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85BAB23012FBEF002CCBC5 /* InventoryListViewModel.swift */; };
 		FD89064F3008437400A2B390 /* ChecklistTaskLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD89064E3008437400A2B390 /* ChecklistTaskLoop.swift */; };
 		FD9BC54A300833D400FD95A5 /* PackableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BC549300833D400FD95A5 /* PackableItem.swift */; };
 		FD9BC54C300837F500FD95A5 /* PackingItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BC54B300837F500FD95A5 /* PackingItemRow.swift */; };
@@ -485,6 +486,7 @@
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
 		FD463E763006E28600B20127 /* ListingPathLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathLink.swift; sourceTree = "<group>"; };
 		FD5161C330128C0600F70C73 /* CheckedRollbackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckedRollbackProtocol.swift; sourceTree = "<group>"; };
+		FD85BAB23012FBEF002CCBC5 /* InventoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListViewModel.swift; sourceTree = "<group>"; };
 		FD89064E3008437400A2B390 /* ChecklistTaskLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTaskLoop.swift; sourceTree = "<group>"; };
 		FD9BC549300833D400FD95A5 /* PackableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackableItem.swift; sourceTree = "<group>"; };
 		FD9BC54B300837F500FD95A5 /* PackingItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItemRow.swift; sourceTree = "<group>"; };
@@ -1026,6 +1028,7 @@
 				FDC5CEC0300FD550005E3562 /* PackingListViewModel.swift */,
 				FDC5CEC2300FD6C1005E3562 /* PackingListItem.swift */,
 				FDC5CEC4300FD709005E3562 /* CheckedState.swift */,
+				FD85BAB23012FBEF002CCBC5 /* InventoryListViewModel.swift */,
 				FDDB366130121F72006DC1F0 /* InventoryListItem.swift */,
 				FD5161C330128C0600F70C73 /* CheckedRollbackProtocol.swift */,
 			);
@@ -1887,6 +1890,7 @@
 				FDBAD4622FE9F3ED00C63620 /* PlanningHome.swift in Sources */,
 				FDB3AB252FE6A03900B4B903 /* DeleteCruiseModifier.swift in Sources */,
 				FDB3AB262FE6A03900B4B903 /* Facility.swift in Sources */,
+				FD85BAB33012FBEF002CCBC5 /* InventoryListViewModel.swift in Sources */,
 				FDB3AB272FE6A03900B4B903 /* HubsLink.swift in Sources */,
 				FDB3AB282FE6A03900B4B903 /* PotentialAnchorages.swift in Sources */,
 				FDB3AB292FE6A03900B4B903 /* RouteLoader.swift in Sources */,

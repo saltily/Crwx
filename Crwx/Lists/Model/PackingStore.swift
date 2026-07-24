@@ -124,3 +124,18 @@ extension PackingStore {
         }
     }
 }
+
+
+// MARK: Inventory
+extension PackingStore {
+    func inventory(_ style: InventoryListItem.Style) -> InventoryListViewModel {
+        .init(style: style, items: allItems.filter({
+            $0.isInInventory(style)
+        }).map({
+            .init(contents: $0, style: style)
+        }))
+    }
+    func strayItems() -> [PackableItem] {
+        allItems.filter(\.isStray)
+    }
+}

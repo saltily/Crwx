@@ -219,3 +219,30 @@ extension PackableItem {
         }
     }
 }
+
+
+// MARK: Is In Inventory
+extension PackableItem {
+    func isInInventory(_ style: InventoryListItem.Style) -> Bool {
+        switch style {
+        case .boat:
+            return state.inventory.includeInBoatInventory ||
+            state.inventory.quantityOnBoat > 0
+        case .shore:
+            return state.inventory.includeInShoreInventory ||
+            state.inventory.quantityOnShore > 0
+        }
+    }
+    func appearsInPackingLists() -> Bool {
+        PackingFilter.all.map({
+            $0.appearsInList(self)
+        }).reduce(false) { partialResult, v in
+            partialResult || v
+        }
+    }
+    var isStray: Bool {
+        !appearsInPackingLists() &&
+        !isInInventory(.boat) &&
+        !isInInventory(.shore)
+    }
+}

@@ -55,7 +55,7 @@ struct InventoryRow: View {
         }
     }
 }
-//
+
 #Preview {
     @Previewable @State var item: InventoryListItem = .init(contents: .init("propane bottles", configuration: .init(specs: "Per bottle. Small camping bottles purchased in 4-pack from Amazon.")), style: .boat)
     List {
