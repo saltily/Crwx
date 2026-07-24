@@ -12,11 +12,11 @@ import FoundationSalt
 /// I want this to rollback like `PackingListItem`.
 @Observable
 final class InventoryListItem: CheckedRollbackProtocol {
-    init(checked: Bool = false, contents: PackableItem, style: Style) {
-        self.checked = checked
+    init(contents: PackableItem, style: Style) {
+        self.checked = false // maybe true if recently inventoried
         self.contents = contents
         self.style = style
-        self.uncheckedRollback = contents.lastInventoried
+        self.uncheckedRollback = .init(inventory: contents.state.inventory, lastInventoried: contents.lastInventoried)
     }
     var checked: Bool {
         didSet {
@@ -25,10 +25,14 @@ final class InventoryListItem: CheckedRollbackProtocol {
         }
     }
     let contents: PackableItem
-    let uncheckedRollback: Date?
+    let uncheckedRollback: Rollback
     let style: Style
     enum Style {
         case shore, boat
+    }
+    struct Rollback {
+        let inventory: PackableItem.Inventory
+        let lastInventoried: Date?
     }
 }
 
@@ -48,6 +52,7 @@ extension InventoryListItem {
             }
             if oldValue != newValue {
                 didChangeQuantity(oldValue: oldValue, newValue: newValue)
+                checked = true
             }
         }
     }
@@ -70,8 +75,8 @@ extension InventoryListItem {
         }
     }
     var historySentence: String? {
-        guard let uncheckedRollback else { return nil }
-        let s = uncheckedRollback.formatted(.relative(presentation: .named))
+        guard let lastInventoried = contents.lastInventoried else { return nil }
+        let s = lastInventoried.formatted(.relative(presentation: .named))
         return "Last inventoried \(s)."
     }
     var isConsumable: Bool {
@@ -79,7 +84,8 @@ extension InventoryListItem {
     }
     func rollback() {
         if !checked {
-            contents.lastInventoried = uncheckedRollback
+            contents.state.inventory = uncheckedRollback.inventory
+            contents.lastInventoried = uncheckedRollback.lastInventoried
         }
     }
     func increment() {
@@ -87,12 +93,14 @@ extension InventoryListItem {
         case .boat: contents.state.inventory.incrementOnBoat()
         case .shore: contents.state.inventory.incrementOnShore()
         }
+        checked = true
     }
     func decrement() {
         switch style {
         case .boat: contents.state.inventory.decrementOnBoat(consumable: contents.isConsumable)
         case .shore: contents.state.inventory.decrementOnShore()
         }
+        checked = true
     }
     private func didChangeQuantity(oldValue: Double, newValue: Double) {
         if style == .boat {

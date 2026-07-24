@@ -23,6 +23,7 @@ struct InventoryRow: View {
                     } onDecrement: {
                         item.decrement()
                     }
+                    .labelsHidden()
                 }
                 HStack(spacing: 0) {
                     VStack(alignment: .leading) {
@@ -49,18 +50,12 @@ struct InventoryRow: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .contentShape(.rect)
             .onTapGesture {
-                item.quantity = 1
 //                    itemToEdit = item.contents
-            }
-        }
-        .onChange(of: item.quantity) { oldValue, newValue in
-            if newValue != oldValue {
-                item.checked = true
             }
         }
     }
 }
-
+//
 #Preview {
     @Previewable @State var item: InventoryListItem = .init(contents: .init("propane bottles", configuration: .init(specs: "Per bottle. Small camping bottles purchased in 4-pack from Amazon.")), style: .boat)
     List {

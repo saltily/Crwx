@@ -32,8 +32,9 @@ extension PackableItem.Inventory {
 extension PackableItem.Inventory {
     /// Also needs to know if consumable, perishable, expirable.
     mutating func incrementOnBoat(_ i: Double = 1, consumable: Bool = false) {
+        let oldValue = quantityOnBoat
         quantityOnBoat = max(0, quantityOnBoat + i)
-        didIncrementOnBoat(i, consumable: consumable)
+        didIncrementOnBoat(quantityOnBoat - oldValue, consumable: consumable)
     }
     /// If manually changed value in interface, then can apply this method to adjust quantity on shore as appropriate.
     mutating func didIncrementOnBoat(_ i: Double, consumable: Bool) {
