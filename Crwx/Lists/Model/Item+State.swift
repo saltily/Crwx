@@ -9,14 +9,7 @@ import Foundation
 
 extension PackableItem {
     /// Helps me encapsulate what is ever evolving and unique about this instance.
-    @Observable
-    final class State: Codable, Sendable, Hashable {
-        init(status: PackedStatus, due: ActionTime, inventory: Inventory, expires: Date? = nil) {
-            self.status = status
-            self.due = due
-            self.inventory = inventory
-            self.expires = expires
-        }
+    struct State: Codable, Sendable, Hashable {
         /// Where it currently is.
         var status: PackedStatus {
             didSet {

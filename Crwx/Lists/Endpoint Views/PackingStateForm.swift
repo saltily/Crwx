@@ -10,7 +10,7 @@ import WxSalt
 import FoundationSalt
 
 struct PackingStateForm: View {
-    @Bindable var model: PackableItem.State
+    @Binding var model: PackableItem.State
     @Binding var specs: String
     var body: some View {
         Section {
@@ -46,7 +46,7 @@ struct PackingStateForm: View {
     @Previewable @State var model: PackableItem.State = .init(status: .takeOut, due: .anytime, inventory: .onHandToTakeOut)
     @Previewable @State var specs: String = ""
     List {
-        PackingStateForm(model: model, specs: $specs)
+        PackingStateForm(model: $model, specs: $specs)
     }
     .seaBackground()
     .environment(\.wxColourScheme, .green)

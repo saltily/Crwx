@@ -33,7 +33,7 @@ final class PackingListItem: CheckedRollbackProtocol {
     func rollback() {
         if checkedState == .unchecked {
             contents.state.due = uncheckedRollback.due
-            contents.state.inventory = uncheckedRollback.inventory
+            contents.state.inventory = uncheckedRollback.inventory.copy()
             contents.lastShift = uncheckedRollback.lastShift
         }
     }

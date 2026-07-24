@@ -9,11 +9,38 @@ import Foundation
 import FoundationSalt
 
 extension PackableItem {
-    struct Inventory: Codable, Sendable, Hashable {
-        var includeInBoatInventory: Bool = true
-        var includeInShoreInventory: Bool = false
-        var quantityOnBoat: Double = 0
-        var quantityOnShore: Double = 1
+    @Observable
+    final class Inventory: Codable, Sendable, Hashable {
+        var includeInBoatInventory: Bool
+        var includeInShoreInventory: Bool
+        var quantityOnBoat: Double
+        var quantityOnShore: Double
+        init(
+            includeInBoatInventory: Bool = true,
+            includeInShoreInventory: Bool = false,
+            quantityOnBoat: Double = 0,
+            quantityOnShore: Double = 1
+        ) {
+            self.includeInBoatInventory = includeInBoatInventory
+            self.includeInShoreInventory = includeInShoreInventory
+            self.quantityOnBoat = quantityOnBoat
+            self.quantityOnShore = quantityOnShore
+        }
+    }
+}
+
+extension PackableItem.Inventory {
+    static func == (lhs: PackableItem.Inventory, rhs: PackableItem.Inventory) -> Bool {
+        lhs.includeInBoatInventory == rhs.includeInBoatInventory &&
+        lhs.includeInShoreInventory == rhs.includeInShoreInventory &&
+        lhs.quantityOnBoat == rhs.quantityOnBoat &&
+        lhs.quantityOnShore == rhs.quantityOnShore
+    }
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(includeInBoatInventory)
+        hasher.combine(includeInShoreInventory)
+        hasher.combine(quantityOnBoat)
+        hasher.combine(quantityOnShore)
     }
 }
 
@@ -31,12 +58,12 @@ extension PackableItem.Inventory {
 
 extension PackableItem.Inventory {
     /// Also needs to know if consumable, perishable, expirable.
-    mutating func incrementOnBoat(_ i: Double = 1, consumable: Bool = false) {
+    func incrementOnBoat(_ i: Double = 1, consumable: Bool = false) {
         quantityOnBoat = max(0, quantityOnBoat + i)
         didIncrementOnBoat(i, consumable: consumable)
     }
     /// If manually changed value in interface, then can apply this method to adjust quantity on shore as appropriate.
-    mutating func didIncrementOnBoat(_ i: Double, consumable: Bool) {
+    func didIncrementOnBoat(_ i: Double, consumable: Bool) {
         // if increasing, assume we're taking from shore
         if i > 0 {
             quantityOnShore = max(0, quantityOnShore - i)
@@ -47,16 +74,16 @@ extension PackableItem.Inventory {
         }
         // else if decreasing and consumable, doesn't effect shore
     }
-    mutating func decrementOnBoat(consumable: Bool) {
+    func decrementOnBoat(consumable: Bool) {
         incrementOnBoat(-1, consumable: consumable)
     }
-    mutating func incrementOnShore(_ i: Double = 1) {
+    func incrementOnShore(_ i: Double = 1) {
         quantityOnShore = max(0, quantityOnShore + i)
     }
-    mutating func decrementOnShore() {
+    func decrementOnShore() {
         incrementOnShore(-1)
     }
-    mutating func shift(oldStatus: PackedStatus, newStatus: PackedStatus) {
+    func shift(oldStatus: PackedStatus, newStatus: PackedStatus) {
         switch oldStatus {
         case .purchase, .prep:
             // we bought one and adding to shore or boat
@@ -77,8 +104,11 @@ extension PackableItem.Inventory {
             }
         }
     }
+    func copy() -> PackableItem.Inventory {
+        .init(includeInBoatInventory: includeInBoatInventory, includeInShoreInventory: includeInShoreInventory, quantityOnBoat: quantityOnBoat, quantityOnShore: quantityOnShore)
+    }
     func rollback(from newStatus: PackedStatus, to oldStatus: PackedStatus) -> PackableItem.Inventory {
-        var copy = self
+        let copy = copy()
         switch newStatus {
         case .loadedOnBoat:
             // going back to on hand, need to move item off the boat
@@ -92,7 +122,7 @@ extension PackableItem.Inventory {
             }
         default:
             // nothing  These are never in a checked state
-            return self
+            return copy
         }
         return copy
     }

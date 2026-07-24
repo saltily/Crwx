@@ -9,7 +9,7 @@ import SwiftUI
 import WxSalt
 
 struct PackingInventoryForm: View {
-    @Binding var value: PackableItem.Inventory
+    @Bindable var value: PackableItem.Inventory
     let isConsumable: Bool
     var body: some View {
         InventoryQuantityValueField("Boat:", value: $value.quantityOnBoat) {
@@ -35,11 +35,11 @@ struct PackingInventoryForm: View {
     @Previewable @State var value: PackableItem.Inventory = .init()
     List {
         Section("Consumable") {
-            PackingInventoryForm(value: $value, isConsumable: true)
+            PackingInventoryForm(value: value, isConsumable: true)
         }
         .seaSection()
         Section("Asset") {
-            PackingInventoryForm(value: $value, isConsumable: false)
+            PackingInventoryForm(value: value, isConsumable: false)
         }
         .seaSection()
     }

@@ -71,9 +71,9 @@ struct PackingItemEditor: View {
                     .padding(.bottom)
             }
             .seaSection()
-            PackingStateForm(model: item.state, specs: $item.configuration.specs)
+            PackingStateForm(model: $item.state, specs: $item.configuration.specs)
             Section("Inventory") {
-                PackingInventoryForm(value: $item.state.inventory, isConsumable: item.isConsumable)
+                PackingInventoryForm(value: item.state.inventory, isConsumable: item.isConsumable)
             }
             .seaSection()
             PackingConfigurationForm(model: $item.configuration)
