@@ -37,10 +37,12 @@ struct ListingPathDestinationView: View {
                     .foregroundStyle(.orange)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-        case .safetyEquipment, .generalInventory:
-            AnyInventoryView()
+        case .safetyEquipment, .boatInventory, .shoreInventory:
+            AnyInventoryView(style: path.inventoryStyle)
         case .takeOut, .bringIn, .dockside, .purchase, .prepAshore:
             AnyPackingView(filter: path.packingFilter)
+        case .hiddenPackable:
+            StrayItemsList()
         }
     }
 }

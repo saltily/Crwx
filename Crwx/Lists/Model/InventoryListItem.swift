@@ -36,6 +36,10 @@ final class InventoryListItem: CheckedRollbackProtocol {
     }
 }
 
+extension InventoryListItem: Identifiable {
+    var id: UUID { contents.id }
+}
+
 extension InventoryListItem {
     var quantity: Double {
         get {
@@ -63,7 +67,7 @@ extension InventoryListItem {
         }
     }
     var label: String { contents.label }
-    var specs: String? { contents.configuration.specs }
+    var specs: String? { contents.configuration.specs.nilIfEmpty }
     var nextStepsSentence: String { contents.stepsSummary }
     var matchingCountSentence: String {
         let s = otherQuantity.formatted(.number)

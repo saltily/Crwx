@@ -32,7 +32,9 @@ struct LoadingAndInventoryHome: View {
             
             Section("Inventory") {
                 ListingPathLink(.safetyEquipment)
-                ListingPathLink(.generalInventory)
+                ListingPathLink(.boatInventory)
+                ListingPathLink(.shoreInventory)
+                ListingPathLink(.hiddenPackable)
             }
             .seaSection()
 

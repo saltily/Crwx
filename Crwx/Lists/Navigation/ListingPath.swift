@@ -18,7 +18,9 @@ enum ListingPath {
     case takeOut
     case bringIn
     case safetyEquipment
-    case generalInventory
+    case boatInventory
+    case shoreInventory
+    case hiddenPackable
     
     // MARK: Projects & Reminders
     case projectsAndReminders
@@ -72,8 +74,12 @@ extension ListingPath {
             "Bring In"
         case .safetyEquipment:
             "Safety Equipment"
-        case .generalInventory:
-            "General Inventory"
+        case .boatInventory:
+            "Boat Inventory"
+        case .shoreInventory:
+            "Shore Inventory"
+        case .hiddenPackable:
+            "Hidden Items"
         case .projectsAndReminders:
             "Projects & Reminders"
         case .daysailChecklists:
@@ -143,8 +149,12 @@ extension ListingPath {
             "fork.knife"
         case .safetyEquipment:
             "fire.extinguisher"
-        case .generalInventory:
+        case .boatInventory:
             "inset.filled.bottomhalf.rectangle"
+        case .shoreInventory:
+            "suitcase.cart"
+        case .hiddenPackable:
+            "eye.slash"
         case .takeOut:
             "arrow.right"
         case .bringIn:
@@ -236,6 +246,13 @@ extension ListingPath {
         case .dockside: .dockside
         case .purchase: .purchase
         case .prepAshore: .prep
+        default: nil
+        }
+    }
+    var inventoryStyle: InventoryListItem.Style? {
+        switch self {
+        case .boatInventory: .boat
+        case .shoreInventory: .shore
         default: nil
         }
     }

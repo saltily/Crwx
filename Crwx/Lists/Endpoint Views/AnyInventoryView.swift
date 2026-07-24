@@ -8,10 +8,43 @@
 import SwiftUI
 import WxSalt
 import FoundationUI
+import FoundationSalt
 
 struct AnyInventoryView: View {
+    let style: InventoryListItem.Style?
+    @Environment(PackingStore.self) private var store
+    var body: some View {
+        if let style {
+            NestOne(style: style, store: store)
+        }
+    }
+}
+fileprivate struct NestOne: View {
+    init(style: InventoryListItem.Style, store: PackingStore) {
+        let model = store.inventory(style)
+        self.model = model
+        self._mutable = .init(initialValue: model)
+    }
+    let model: InventoryListViewModel
+    @State private var mutable: InventoryListViewModel
+    var body: some View {
+        NestTwo(model: $mutable)
+            .onChange(of: model.style) { oldValue, newValue in
+                mutable = model
+            }
+    }
+}
+// MARK: This is the actual view
+fileprivate struct NestTwo: View {
+    @Binding var model: InventoryListViewModel
     var body: some View {
         List {
+            Section {
+                ForEach(model.items) { item in
+                    InventoryRow(item: item)
+                }
+            }
+            .seaSection()
             Section {
                 Text("Inventory is similar to but not the same as a regular checklist or a packing list.  The items in the inventory are related to and match items that are packed and currently on the boat.  But this allows editing a quantity.  It also has some fixed default minimum items, that may be quantity zero like on a predefined checklist.  But also we want to know the individual dates when each inventory item is updated.")
                 Text("It's ok to have a zero quantity but sometimes we might want to delete an item entirely as something we no longer wish to track or have in stock going forward.  Checking off items on packing lists should also attempt to adjust inventory.")
@@ -34,10 +67,12 @@ struct AnyInventoryView: View {
 }
 
 #Preview {
+    @Previewable @State var store: PackingStore = .sample
     NavigationStack {
-        AnyInventoryView()
+        AnyInventoryView(style: .shore)
             .seaBackground()
             .navigationTitle("General Inventory")
     }
     .environment(\.wxColourScheme, .green)
+    .environment(store)
 }
