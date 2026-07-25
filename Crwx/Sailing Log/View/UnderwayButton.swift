@@ -29,7 +29,7 @@ struct UnderwayButton: View {
                 VStack(alignment: .leading, spacing: 8) {
                     
                     if !hasArrived, model.isEmpty {
-                        Label(landing.verb.capitalized, systemImage: landing.symbolName)
+                        Label(landing.verb.capitalised, systemImage: landing.symbolName)
                             .padding(.vertical)
                     }
                     else {
@@ -51,7 +51,7 @@ struct UnderwayButton: View {
                                 Text(model.location?.name ?? "Unnamed Location")
                             }
                             else {
-                                Text("Waiting to \(landing.verb.capitalized)")
+                                Text("Waiting to \(landing.verb.capitalised)")
                             }
                         }
                         .font(.title3)
@@ -129,7 +129,7 @@ struct UnderwayButton: View {
                 }
             }
             .confirmationDialog("Confirm Clear", isPresented: $confirmRevert) {
-                Button("Reverse \(landing.rawValue.capitalized)", role: .destructive) {
+                Button("Reverse \(landing.rawValue.capitalised)", role: .destructive) {
                     switch landing {
                     case .departure:
                         model.trip?.revertDeparture()
@@ -148,7 +148,7 @@ struct UnderwayButton: View {
             })
         } header: {
             HStack {
-                Text(landing.rawValue.capitalized)
+                Text(landing.rawValue.capitalised)
                 Spacer()
                 if model.isCompleted {
                     Image(systemName: "checkmark")

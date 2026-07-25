@@ -34,10 +34,43 @@ final class InventoryListItem: CheckedRollbackProtocol {
         let inventory: PackableItem.Inventory
         let lastInventoried: Date?
     }
+    enum Grouping: Int, CaseIterable {
+        case category, locker
+        struct Value: Comparable, Hashable {
+            let n: String
+            let label: String
+            static func < (lhs: Value, rhs: Value) -> Bool {
+                compare(lhs: lhs, rhs: rhs, using: .init(\.n)) == .orderedAscending
+            }
+        }
+        var systemImage: String {
+            switch self {
+            case .locker: "location"
+            case .category: "swatchpalette"
+            }
+        }
+        var label: String {
+            switch self {
+            case .locker: "locker"
+            case .category: "category"
+            }
+        }
+    }
 }
 
 extension InventoryListItem: Identifiable {
     var id: UUID { contents.id }
+    var categoryKey: Grouping.Value {
+        let category = contents.configuration.category
+        return .init(n: category?.rawValue ?? "zzzzzz", label: category?.description.capitalized ?? "No Category")
+    }
+    var lockerKey: Grouping.Value {
+        let locker = contents.configuration.locker
+        return .init(n: "\(locker?.sortValue ?? 100)", label: locker?.description.capitalized ?? "Unknown Location")
+    }
+    var sortDate: Date {
+        contents.lastShift?.date ?? contents.created
+    }
 }
 
 extension InventoryListItem {
@@ -110,6 +143,28 @@ extension InventoryListItem {
         if style == .boat {
             let delta = newValue - oldValue
             contents.state.inventory.didIncrementOnBoat(delta, consumable: contents.isConsumable)
+        }
+    }
+}
+
+
+// MARK: Sorting
+extension [InventoryListItem] {
+    func organise(by grouping: InventoryListItem.Grouping) -> [SectionGroup<InventoryListItem.Grouping.Value, [InventoryListItem]>] {
+        switch grouping {
+        case .category:
+            return self.sorted(by: [
+                .init(\.categoryKey),
+                .init(\.checked.int),
+                .init(\.sortDate, order: .reverse)
+            ]).grouped(by: \.categoryKey)
+        case .locker:
+            return self.sorted(by: [
+                .init(\.lockerKey),
+                .init(\.checked.int),
+                .init(\.categoryKey),
+                .init(\.sortDate, order: .reverse)
+            ]).grouped(by: \.lockerKey)
         }
     }
 }

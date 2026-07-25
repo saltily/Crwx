@@ -47,7 +47,7 @@ struct UnderwayFetchDetail: View {
                         }
                     }
                 } header: {
-                    Text("\(landing.rawValue.capitalized) Time")
+                    Text("\(landing.rawValue.capitalised) Time")
                 } footer: {
                     VStack {
                         if let tripTime = model.trip?.date {

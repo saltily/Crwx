@@ -90,7 +90,7 @@ struct UnderwayForm: View {
             }
             .listStyle(.grouped)
             .seaBackground(.flat)
-            .navigationTitle(landing.rawValue.capitalized)
+            .navigationTitle(landing.rawValue.capitalised)
             .toolbarTitleDisplayMode(.inline)
             .cancelButton()
             .saveButton {

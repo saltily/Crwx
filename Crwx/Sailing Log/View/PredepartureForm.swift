@@ -34,7 +34,7 @@ struct PredepartureForm: View {
                             .submitLabel(.next)
                         Picker("Dinghy", selection: $model.dinghy) {
                             ForEach(DinghyOption.allCases) { o in
-                                Text(o.rawValue.capitalized).tag(o)
+                                Text(o.rawValue.capitalised).tag(o)
                             }
                         }
                     }

@@ -56,6 +56,7 @@
 		FD5161C430128C0600F70C73 /* CheckedRollbackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5161C330128C0600F70C73 /* CheckedRollbackProtocol.swift */; };
 		FD85BAB33012FBEF002CCBC5 /* InventoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85BAB23012FBEF002CCBC5 /* InventoryListViewModel.swift */; };
 		FD85BAB5301377CC002CCBC5 /* StrayItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85BAB4301377CC002CCBC5 /* StrayItemsList.swift */; };
+		FD85BAB73014D506002CCBC5 /* InventoryGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85BAB63014D506002CCBC5 /* InventoryGroupingPicker.swift */; };
 		FD89064F3008437400A2B390 /* ChecklistTaskLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD89064E3008437400A2B390 /* ChecklistTaskLoop.swift */; };
 		FD9BC54A300833D400FD95A5 /* PackableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BC549300833D400FD95A5 /* PackableItem.swift */; };
 		FD9BC54C300837F500FD95A5 /* PackingItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BC54B300837F500FD95A5 /* PackingItemRow.swift */; };
@@ -489,6 +490,7 @@
 		FD5161C330128C0600F70C73 /* CheckedRollbackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckedRollbackProtocol.swift; sourceTree = "<group>"; };
 		FD85BAB23012FBEF002CCBC5 /* InventoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListViewModel.swift; sourceTree = "<group>"; };
 		FD85BAB4301377CC002CCBC5 /* StrayItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrayItemsList.swift; sourceTree = "<group>"; };
+		FD85BAB63014D506002CCBC5 /* InventoryGroupingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryGroupingPicker.swift; sourceTree = "<group>"; };
 		FD89064E3008437400A2B390 /* ChecklistTaskLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTaskLoop.swift; sourceTree = "<group>"; };
 		FD9BC549300833D400FD95A5 /* PackableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackableItem.swift; sourceTree = "<group>"; };
 		FD9BC54B300837F500FD95A5 /* PackingItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingItemRow.swift; sourceTree = "<group>"; };
@@ -980,6 +982,7 @@
 				FDC5CECA301014D6005E3562 /* PackingItemGuts.swift */,
 				FDDB365B3010D99E006DC1F0 /* SwipeMoveToList.swift */,
 				FDDB365F30121F56006DC1F0 /* InventoryRow.swift */,
+				FD85BAB63014D506002CCBC5 /* InventoryGroupingPicker.swift */,
 			);
 			path = "Endpoint Views";
 			sourceTree = "<group>";
@@ -1799,6 +1802,7 @@
 				FDB3AB9C2FE6A16300B4B903 /* TrackBrowserRow.swift in Sources */,
 				FDC5CEA9300931AF005E3562 /* PackedLifecycle.swift in Sources */,
 				FDB3AB9D2FE6A16300B4B903 /* TrackEditorButton.swift in Sources */,
+				FD85BAB73014D506002CCBC5 /* InventoryGroupingPicker.swift in Sources */,
 				FDB3AB9E2FE6A16300B4B903 /* HarboursRow.swift in Sources */,
 				FDC5CEB330098695005E3562 /* Item+State.swift in Sources */,
 				FDB3AB9F2FE6A16300B4B903 /* TrackMap.swift in Sources */,

@@ -142,12 +142,12 @@ extension PackableItem {
         let thisStepPhrase = thisStepPhrase
         if let nextStepPhrase {
             if state.due == .never {
-                return "\(thisStepPhrase.capitalized) \(nextStepPhrase)."
+                return "\(thisStepPhrase.capitalised) \(nextStepPhrase)."
             } else {
-                return "\(thisStepPhrase.capitalized), then \(nextStepPhrase)."
+                return "\(thisStepPhrase.capitalised), then \(nextStepPhrase)."
             }
         } else {
-            return "\(thisStepPhrase.capitalized)."
+            return "\(thisStepPhrase.capitalised)."
         }
     }
     private var thisStepPhrase: String {

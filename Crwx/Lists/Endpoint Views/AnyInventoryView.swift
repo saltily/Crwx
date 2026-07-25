@@ -37,14 +37,18 @@ fileprivate struct NestOne: View {
 // MARK: This is the actual view
 fileprivate struct NestTwo: View {
     @Binding var model: InventoryListViewModel
+    @AppStorage(.inventoryGroupingKey) private var grouping: InventoryListItem.Grouping = .locker
     var body: some View {
+        let group = model.style == .boat ? grouping : .category
         List {
-            Section {
-                ForEach(model.items) { item in
-                    InventoryRow(item: item)
+            ForEach(model.items.organise(by: group)) { group in
+                Section(group.id.label) {
+                    ForEach(group) { item in
+                        InventoryRow(item: item)
+                    }
                 }
+                .seaSection()
             }
-            .seaSection()
             Section {
                 Text("Inventory is similar to but not the same as a regular checklist or a packing list.  The items in the inventory are related to and match items that are packed and currently on the boat.  But this allows editing a quantity.  It also has some fixed default minimum items, that may be quantity zero like on a predefined checklist.  But also we want to know the individual dates when each inventory item is updated.")
                 Text("It's ok to have a zero quantity but sometimes we might want to delete an item entirely as something we no longer wish to track or have in stock going forward.  Checking off items on packing lists should also attempt to adjust inventory.")
@@ -56,6 +60,11 @@ fileprivate struct NestTwo: View {
             .seaSection()
         }
         .toolbar {
+            if model.style == .boat {
+                ToolbarItem {
+                    InventoryGroupingPickerMenu(value: $grouping)
+                }
+            }
             ToolbarItem {
                 Button(systemImage: "plus") {
                     
@@ -71,8 +80,12 @@ fileprivate struct NestTwo: View {
     NavigationStack {
         AnyInventoryView(style: .shore)
             .seaBackground()
-            .navigationTitle("General Inventory")
+            .navigationTitle("Shore Inventory")
     }
     .environment(\.wxColourScheme, .green)
     .environment(store)
+}
+
+extension String {
+    static let inventoryGroupingKey = "com.saltily.Crwx.inventoryGroupingKey" // InventoryListItem.Grouping: Int
 }
