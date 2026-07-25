@@ -13,7 +13,13 @@ import FoundationSalt
 @Observable
 final class InventoryListItem: CheckedRollbackProtocol {
     init(contents: PackableItem, style: Style) {
-        self.checked = false // maybe true if recently inventoried
+        if let lastInventoried = contents.lastInventoried,
+           lastInventoried.timeIntervalSinceNow > -1.hour
+        {
+            self.checked = true
+        } else {
+            self.checked = false
+        }
         self.contents = contents
         self.style = style
         self.uncheckedRollback = .init(inventory: contents.state.inventory, lastInventoried: contents.lastInventoried)
@@ -151,17 +157,18 @@ extension InventoryListItem {
 // MARK: Sorting
 extension [InventoryListItem] {
     func organise(by grouping: InventoryListItem.Grouping) -> [SectionGroup<InventoryListItem.Grouping.Value, [InventoryListItem]>] {
+        // don't sort by checked else it will move when you're trying to tap the arrows up and down
         switch grouping {
         case .category:
             return self.sorted(by: [
                 .init(\.categoryKey),
-                .init(\.checked.int),
+//                .init(\.checked.int),
                 .init(\.sortDate, order: .reverse)
             ]).grouped(by: \.categoryKey)
         case .locker:
             return self.sorted(by: [
                 .init(\.lockerKey),
-                .init(\.checked.int),
+//                .init(\.checked.int),
                 .init(\.categoryKey),
                 .init(\.sortDate, order: .reverse)
             ]).grouped(by: \.lockerKey)
