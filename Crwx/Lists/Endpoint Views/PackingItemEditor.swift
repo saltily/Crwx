@@ -11,13 +11,14 @@ import FoundationUI
 import FoundationSalt
 
 extension View {
-    func packingItemEditor(_ itemToEdit: Binding<PackableItem?>) -> some View {
-        modifier(PackingItemEditorSheetModifier(itemToEdit: itemToEdit))
+    func packingItemEditor(_ itemToEdit: Binding<PackableItem?>, invertOrder: Bool = false) -> some View {
+        modifier(PackingItemEditorSheetModifier(itemToEdit: itemToEdit, invertOrder: invertOrder))
     }
 }
 
 struct PackingItemEditorSheetModifier: ViewModifier {
     @Binding var itemToEdit: PackableItem?
+    let invertOrder: Bool
     @Environment(\.addAnother) private var addAnother
     private var isPresentedBinding: Binding<Bool> {
         .init {
@@ -44,6 +45,7 @@ struct PackingItemEditorSheetModifier: ViewModifier {
                                 }
                             }
                     }
+                    .environment(\.invertPackingEditor, invertOrder)
                 }
             }
     }
@@ -52,6 +54,7 @@ struct PackingItemEditorSheetModifier: ViewModifier {
 struct PackingItemEditor: View {
     @Bindable var item: PackableItem
     @State private var currentId: UUID?
+    @Environment(\.invertPackingEditor) private var invertOrder
     var body: some View {
         List {
             Section {
@@ -71,12 +74,15 @@ struct PackingItemEditor: View {
                     .padding(.bottom)
             }
             .seaSection()
-            PackingStateForm(model: $item.state, specs: $item.configuration.specs)
-            Section("Inventory") {
+            if invertOrder {
+                PackingConfigurationForm(model: $item.configuration)
                 PackingInventoryForm(value: $item.state.inventory, isConsumable: item.isConsumable)
+                PackingStateForm(model: $item.state, specs: $item.configuration.specs)
+            } else {
+                PackingStateForm(model: $item.state, specs: $item.configuration.specs)
+                PackingInventoryForm(value: $item.state.inventory, isConsumable: item.isConsumable)
+                PackingConfigurationForm(model: $item.configuration)
             }
-            .seaSection()
-            PackingConfigurationForm(model: $item.configuration)
         }
         .onChange(of: item.id, initial: true) { oldValue, newValue in
             currentId = newValue
@@ -105,3 +111,16 @@ struct PackingItemEditor: View {
     }
     .environment(\.wxColourScheme, .green)
 }
+
+extension EnvironmentValues {
+    struct PackingEditorOrderKey: EnvironmentKey {
+        static var defaultValue: Bool {
+            return false
+        }
+    }
+    var invertPackingEditor: Bool {
+        get { self[PackingEditorOrderKey.self] }
+        set { self[PackingEditorOrderKey.self] = newValue }
+    }
+}
+

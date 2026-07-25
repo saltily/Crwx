@@ -38,13 +38,14 @@ fileprivate struct NestOne: View {
 fileprivate struct NestTwo: View {
     @Binding var model: InventoryListViewModel
     @AppStorage(.inventoryGroupingKey) private var grouping: InventoryListItem.Grouping = .locker
+    @State private var itemToEdit: PackableItem?
     var body: some View {
         let group = model.style == .boat ? grouping : .category
         List {
             ForEach(model.items.organise(by: group)) { group in
                 Section(group.id.label) {
                     ForEach(group) { item in
-                        InventoryRow(item: item)
+                        InventoryRow(item: item, itemToEdit: $itemToEdit)
                     }
                 }
                 .seaSection()
@@ -72,6 +73,7 @@ fileprivate struct NestTwo: View {
             }
         }
         .navigationSubtitle("Last updated: 5 weeks ago")
+        .packingItemEditor($itemToEdit, invertOrder: true)
     }
 }
 

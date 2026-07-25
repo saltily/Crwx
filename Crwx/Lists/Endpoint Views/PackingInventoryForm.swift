@@ -12,36 +12,35 @@ struct PackingInventoryForm: View {
     @Binding var value: PackableItem.Inventory
     let isConsumable: Bool
     var body: some View {
-        InventoryQuantityValueField("Boat:", value: $value.quantityOnBoat) {
-            value.incrementOnBoat()
-        } onDecrement: {
-            value.decrementOnBoat(consumable: isConsumable)
+        Section("Inventory") {
+            InventoryQuantityValueField("Boat:", value: $value.quantityOnBoat) {
+                value.incrementOnBoat()
+            } onDecrement: {
+                value.decrementOnBoat(consumable: isConsumable)
+            }
+            .disabled(!value.includeInBoatInventory)
+            .opacity(value.includeInBoatInventory ? 1 : 0.5)
+            InventoryQuantityValueField("Shore:", value: $value.quantityOnShore) {
+                value.incrementOnShore()
+            } onDecrement: {
+                value.decrementOnShore()
+            }
+            .disabled(!value.includeInShoreInventory)
+            .opacity(value.includeInShoreInventory ? 1 : 0.5)
+            Toggle("Include in boat inventory.", isOn: $value.includeInBoatInventory)
+            Toggle("Include in shore inventory.", isOn: $value.includeInShoreInventory)
         }
-        .disabled(!value.includeInBoatInventory)
-        .opacity(value.includeInBoatInventory ? 1 : 0.5)
-        InventoryQuantityValueField("Shore:", value: $value.quantityOnShore) {
-            value.incrementOnShore()
-        } onDecrement: {
-            value.decrementOnShore()
-        }
-        .disabled(!value.includeInShoreInventory)
-        .opacity(value.includeInShoreInventory ? 1 : 0.5)
-        Toggle("Include in boat inventory.", isOn: $value.includeInBoatInventory)
-        Toggle("Include in shore inventory.", isOn: $value.includeInShoreInventory)
+        .seaSection()
     }
 }
 
 #Preview {
     @Previewable @State var value: PackableItem.Inventory = .init()
     List {
-        Section("Consumable") {
-            PackingInventoryForm(value: $value, isConsumable: true)
-        }
-        .seaSection()
-        Section("Asset") {
-            PackingInventoryForm(value: $value, isConsumable: false)
-        }
-        .seaSection()
+        Text("First is consumable, second is not.")
+            .seaSection()
+        PackingInventoryForm(value: $value, isConsumable: true)
+        PackingInventoryForm(value: $value, isConsumable: false)
     }
     .seaBackground()
     .environment(\.wxColourScheme, .green)
