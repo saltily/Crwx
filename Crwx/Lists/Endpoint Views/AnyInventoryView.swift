@@ -39,6 +39,7 @@ fileprivate struct NestTwo: View {
     @Binding var model: InventoryListViewModel
     @AppStorage(.inventoryGroupingKey) private var grouping: InventoryListItem.Grouping = .locker
     @State private var itemToEdit: PackableItem?
+    @Environment(PackingStore.self) private var store
     var body: some View {
         let group = model.style == .boat ? grouping : .category
         List {
@@ -68,12 +69,20 @@ fileprivate struct NestTwo: View {
             }
             ToolbarItem {
                 Button(systemImage: "plus") {
-                    
+                    addOne()
                 }
             }
         }
         .navigationSubtitle("Last updated: 5 weeks ago")
         .packingItemEditor($itemToEdit, invertOrder: true)
+    }
+    private func addOne() {
+        let new: PackableItem = model.style == .boat ? .newBoatInventory : .newShoreInventory
+        withAnimation {
+            model.items.append(.init(contents: new, style: model.style))
+        }
+        store.add(items: [new])
+        itemToEdit = new
     }
 }
 

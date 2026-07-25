@@ -245,4 +245,10 @@ extension PackableItem {
         !isInInventory(.boat) &&
         !isInInventory(.shore)
     }
+    static var newBoatInventory: PackableItem {
+        .init(id: .init(), label: "", state: .init(status: .loadedOnBoat, due: .never, inventory: .init(includeInBoatInventory: true, includeInShoreInventory: false, quantityOnBoat: 1, quantityOnShore: 0)), configuration: .init())
+    }
+    static var newShoreInventory: PackableItem {
+        .init(id: .init(), label: "", state: .init(status: .shoreOnHand, due: .never, inventory: .init(includeInBoatInventory: true, includeInShoreInventory: true, quantityOnBoat: 0, quantityOnShore: 1)), configuration: .init())
+    }
 }
