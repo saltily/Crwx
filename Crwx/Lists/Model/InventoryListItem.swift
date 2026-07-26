@@ -77,6 +77,35 @@ extension InventoryListItem: Identifiable {
     var sortDate: Date {
         contents.lastShift?.date ?? contents.created
     }
+    /// Returns `nil` if there is an issue - chiefly that the status says it is somewhere where there is zero quantity.  Often means we should purchase more or change the status.
+    var systemImage: String? {
+        let status = contents.state.status
+        let isDue = contents.state.due.isDue
+        let inventory = contents.state.inventory
+        switch contents.state.status {
+        case .purchase, .prep:
+            return isDue ? status.systemImage : "clock"
+        case .shoreOnHand, .packed:
+            if inventory.quantityOnShore <= 0 {
+                return nil
+            } else if isDue {
+                return "arrow.right"
+            } else {
+                return status.systemImage
+            }
+        case .loadedOnBoat:
+            // if zero inventory on boat, this is a problem
+            if inventory.quantityOnBoat <= 0 {
+                return nil
+            }
+            // if not ready to move, just show it as here
+            else if isDue {
+                return "arrow.left"
+            } else {
+                return status.systemImage
+            }
+        }
+    }
 }
 
 extension InventoryListItem {

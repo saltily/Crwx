@@ -14,7 +14,19 @@ struct InventoryRow: View {
     @Binding var itemToEdit: PackableItem?
     var body: some View {
         HStack(spacing: 10) {
-            CheckToggleButton(isOn: $item.checked)
+            VStack {
+                CheckToggleButton(isOn: $item.checked)
+                Group {
+                    if let systemImage = item.systemImage {
+                        Image(systemName: systemImage)
+                            .foregroundStyle(.secondary)
+                    } else {
+                        Image(systemName: "minus.circle")
+                            .foregroundStyle(.pink)
+                    }
+                }
+                .frame(height: 15)
+            }
             VStack(alignment: .leading, spacing: 10) {
                 HStack(spacing: 10) {
                     Text(item.label)
