@@ -11,3 +11,10 @@ struct InventoryListViewModel {
     let style: InventoryListItem.Style
     var items: [InventoryListItem]
 }
+
+
+extension InventoryListViewModel {
+    mutating func remove(id: UUID) {
+        items.removeAll(where: { $0.id == id })
+    }
+}

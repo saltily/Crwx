@@ -33,7 +33,7 @@ final class InventoryListItem: CheckedRollbackProtocol {
     let contents: PackableItem
     let uncheckedRollback: Rollback
     let style: Style
-    enum Style {
+    enum Style: String {
         case shore, boat
     }
     struct Rollback {

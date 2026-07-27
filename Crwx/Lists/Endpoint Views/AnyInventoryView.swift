@@ -47,6 +47,9 @@ fileprivate struct NestTwo: View {
                 Section(group.id.label) {
                     ForEach(group) { item in
                         InventoryRow(item: item, itemToEdit: $itemToEdit)
+                            .swipeDeleteFromInventory(item, region: model.style) { id in
+                                model.remove(id: id)
+                            }
                     }
                 }
                 .seaSection()

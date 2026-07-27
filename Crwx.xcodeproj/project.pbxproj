@@ -15,6 +15,7 @@
 		FD091F8F2FE590F6001706D6 /* CrwxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F8D2FE590F6001706D6 /* CrwxTests.swift */; };
 		FD091F932FE590FA001706D6 /* CrwxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F902FE590FA001706D6 /* CrwxUITests.swift */; };
 		FD091F942FE590FA001706D6 /* CrwxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */; };
+		FD30BE9E30162A2D0040F869 /* SwipeDeleteFromInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30BE9D30162A2D0040F869 /* SwipeDeleteFromInventory.swift */; };
 		FD35AEFD2FE99B9E00A607FE /* Gpx Import.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD35AEF32FE99B9E00A607FE /* Gpx Import.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FD35AF052FE99BB600A607FE /* FoundationSalt in Frameworks */ = {isa = PBXBuildFile; productRef = FD35AF042FE99BB600A607FE /* FoundationSalt */; };
 		FD363B23301041F800457AD1 /* PackingConfigurationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD363B22301041F800457AD1 /* PackingConfigurationForm.swift */; };
@@ -450,6 +451,7 @@
 		FD091F8D2FE590F6001706D6 /* CrwxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxTests.swift; sourceTree = "<group>"; };
 		FD091F902FE590FA001706D6 /* CrwxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITests.swift; sourceTree = "<group>"; };
 		FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FD30BE9D30162A2D0040F869 /* SwipeDeleteFromInventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDeleteFromInventory.swift; sourceTree = "<group>"; };
 		FD35AEF32FE99B9E00A607FE /* Gpx Import.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gpx Import.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD363B22301041F800457AD1 /* PackingConfigurationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingConfigurationForm.swift; sourceTree = "<group>"; };
 		FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChoice.swift; sourceTree = "<group>"; };
@@ -982,6 +984,7 @@
 				FDC5CECA301014D6005E3562 /* PackingItemGuts.swift */,
 				FDDB365B3010D99E006DC1F0 /* SwipeMoveToList.swift */,
 				FDDB365F30121F56006DC1F0 /* InventoryRow.swift */,
+				FD30BE9D30162A2D0040F869 /* SwipeDeleteFromInventory.swift */,
 				FD85BAB63014D506002CCBC5 /* InventoryGroupingPicker.swift */,
 			);
 			path = "Endpoint Views";
@@ -1850,6 +1853,7 @@
 				FDB3ABB92FE6A16300B4B903 /* WaypointsMap.swift in Sources */,
 				FDB3ABBA2FE6A16300B4B903 /* NobParser.swift in Sources */,
 				FDB3ABBB2FE6A16300B4B903 /* TrackBrowserList.swift in Sources */,
+				FD30BE9E30162A2D0040F869 /* SwipeDeleteFromInventory.swift in Sources */,
 				FDB3ABBC2FE6A16300B4B903 /* ImportEngine.swift in Sources */,
 				FDDB36563010454A006DC1F0 /* LifecyclePicker.swift in Sources */,
 				FDB3ABBD2FE6A16300B4B903 /* RouteCommands.swift in Sources */,

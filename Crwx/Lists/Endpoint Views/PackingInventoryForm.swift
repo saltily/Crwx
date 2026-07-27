@@ -18,15 +18,11 @@ struct PackingInventoryForm: View {
             } onDecrement: {
                 value.decrementOnBoat(consumable: isConsumable)
             }
-            .disabled(!value.includeInBoatInventory)
-            .opacity(value.includeInBoatInventory ? 1 : 0.5)
             InventoryQuantityValueField("Shore:", value: $value.quantityOnShore) {
                 value.incrementOnShore()
             } onDecrement: {
                 value.decrementOnShore()
             }
-            .disabled(!value.includeInShoreInventory)
-            .opacity(value.includeInShoreInventory ? 1 : 0.5)
             Toggle("Include in boat inventory.", isOn: $value.includeInBoatInventory)
             Toggle("Include in shore inventory.", isOn: $value.includeInShoreInventory)
         }
