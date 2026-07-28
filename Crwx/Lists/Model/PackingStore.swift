@@ -135,7 +135,7 @@ extension PackingStore {
             .init(contents: $0, style: style)
         }))
     }
-    func strayItems() -> [PackableItem] {
-        allItems.filter(\.isStray)
+    func strayItems() -> StrayItemsViewModel {
+        .init(items: allItems.filter(\.isStray))
     }
 }

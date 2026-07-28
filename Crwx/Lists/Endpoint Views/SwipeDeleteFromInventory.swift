@@ -30,26 +30,26 @@ struct SwipeDeleteFromInventory: ViewModifier {
             .confirmationDialog("Delete from where?", isPresented: $confirm) {
                 let id = item.id
                 Button("Don't Track in \(region.rawValue.capitalized) Inventory") {
-                    switch region {
-                    case .boat:
-                        item.contents.state.inventory.quantityOnBoat = 0
-                        item.contents.state.inventory.includeInBoatInventory = false
-                    case .shore:
-                        item.contents.state.inventory.quantityOnShore = 0
-                        item.contents.state.inventory.includeInShoreInventory = false
-                    }
                     Task {
                         withAnimation {
                             removeFromView(id)
+                        }
+                        switch region {
+                        case .boat:
+                            item.contents.state.inventory.quantityOnBoat = 0
+                            item.contents.state.inventory.includeInBoatInventory = false
+                        case .shore:
+                            item.contents.state.inventory.quantityOnShore = 0
+                            item.contents.state.inventory.includeInShoreInventory = false
                         }
                     }
                 }
                 Button("Delete Everywhere", role: .destructive) {
-                    store.remove(id: id)
                     Task {
                         withAnimation {
                             removeFromView(id)
                         }
+                        store.remove(id: id)
                     }
                 }
             }
