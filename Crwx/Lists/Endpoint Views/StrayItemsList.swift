@@ -43,7 +43,7 @@ fileprivate struct NestTwo: View {
             .seaSection()
             Section {
                 ForEach(model.items) { item in
-                    PackingItemGuts(item: item)
+                        PackingItemGuts(item: item)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .contentShape(.rect)
                         .onTapGesture {
@@ -57,6 +57,7 @@ fileprivate struct NestTwo: View {
                                 store.remove(id: item.id)
                             }
                         }
+                        .swipeOrderUpShift(item: item)
                 }
             }
             .seaSection()

@@ -17,6 +17,7 @@
 		FD091F942FE590FA001706D6 /* CrwxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */; };
 		FD30BE9E30162A2D0040F869 /* SwipeDeleteFromInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30BE9D30162A2D0040F869 /* SwipeDeleteFromInventory.swift */; };
 		FD30BEA03018C2F80040F869 /* StrayItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30BE9F3018C2F80040F869 /* StrayItemsViewModel.swift */; };
+		FD30BEA23018CD930040F869 /* SwipeOrderUpShiftModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30BEA13018CD930040F869 /* SwipeOrderUpShiftModifier.swift */; };
 		FD35AEFD2FE99B9E00A607FE /* Gpx Import.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD35AEF32FE99B9E00A607FE /* Gpx Import.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FD35AF052FE99BB600A607FE /* FoundationSalt in Frameworks */ = {isa = PBXBuildFile; productRef = FD35AF042FE99BB600A607FE /* FoundationSalt */; };
 		FD363B23301041F800457AD1 /* PackingConfigurationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD363B22301041F800457AD1 /* PackingConfigurationForm.swift */; };
@@ -454,6 +455,7 @@
 		FD091F912FE590FA001706D6 /* CrwxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrwxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FD30BE9D30162A2D0040F869 /* SwipeDeleteFromInventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDeleteFromInventory.swift; sourceTree = "<group>"; };
 		FD30BE9F3018C2F80040F869 /* StrayItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrayItemsViewModel.swift; sourceTree = "<group>"; };
+		FD30BEA13018CD930040F869 /* SwipeOrderUpShiftModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeOrderUpShiftModifier.swift; sourceTree = "<group>"; };
 		FD35AEF32FE99B9E00A607FE /* Gpx Import.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gpx Import.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD363B22301041F800457AD1 /* PackingConfigurationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingConfigurationForm.swift; sourceTree = "<group>"; };
 		FD399ACD2FE721CF00E37AEA /* LocationChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChoice.swift; sourceTree = "<group>"; };
@@ -988,6 +990,7 @@
 				FDDB365F30121F56006DC1F0 /* InventoryRow.swift */,
 				FD30BE9D30162A2D0040F869 /* SwipeDeleteFromInventory.swift */,
 				FD85BAB63014D506002CCBC5 /* InventoryGroupingPicker.swift */,
+				FD30BEA13018CD930040F869 /* SwipeOrderUpShiftModifier.swift */,
 			);
 			path = "Endpoint Views";
 			sourceTree = "<group>";
@@ -1924,6 +1927,7 @@
 				FDB3AB352FE6A03900B4B903 /* MarineWeatherRow.swift in Sources */,
 				FDB3AB362FE6A03900B4B903 /* HarbourViewModel.swift in Sources */,
 				FDB3AB372FE6A03900B4B903 /* HarbourChooserMap.swift in Sources */,
+				FD30BEA23018CD930040F869 /* SwipeOrderUpShiftModifier.swift in Sources */,
 				FD4430FF3006E78300976424 /* ProjectsAndRemindersHome.swift in Sources */,
 				FDB3AB382FE6A03900B4B903 /* AnchorageDetail.swift in Sources */,
 				FDB3AB392FE6A03900B4B903 /* CoastalRegion.swift in Sources */,

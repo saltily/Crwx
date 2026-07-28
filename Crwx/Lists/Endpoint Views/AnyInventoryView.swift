@@ -50,6 +50,7 @@ fileprivate struct NestTwo: View {
                             .swipeDeleteFromInventory(item, region: model.style) { id in
                                 model.remove(id: id)
                             }
+                            .swipeOrderUpShift(item: item.contents)
                     }
                 }
                 .seaSection()
