@@ -28,6 +28,12 @@ struct PackingStateForm: View {
                     .foregroundStyle(.secondary)
             }
             ActionTimeField(value: $model.due)
+            HStack {
+                Text("Expires")
+                TextField("e.g. 7/31/28", value: $model.expires, format: .dateTime.month(.defaultDigits).day().year(.twoDigits))
+                    .multilineTextAlignment(.trailing)
+                    .keyboardType(.numbersAndPunctuation)
+            }
             VStack(alignment: .leading) {
                 TextField("Specs", text: $specs, axis: .vertical)
                     .lineLimit(3...)

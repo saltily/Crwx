@@ -14,7 +14,7 @@ struct ActionTimeField: View {
     @State private var date: Date = .now
     var body: some View {
         VStack(alignment: .leading) {
-            Picker("Due", selection: $option) {
+            Picker("Due to Shift", selection: $option) {
                 ForEach(Option.allCases, id: \.rawValue) { o in
                     Text(o.rawValue).tag(o)
                 }
