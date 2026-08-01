@@ -57,6 +57,10 @@
 		FD463E753006DBF600B20127 /* ListingPathDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */; };
 		FD463E773006E28600B20127 /* ListingPathLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD463E763006E28600B20127 /* ListingPathLink.swift */; };
 		FD5161C430128C0600F70C73 /* CheckedRollbackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5161C330128C0600F70C73 /* CheckedRollbackProtocol.swift */; };
+		FD690676301E0D8800B02A3F /* PackableItemDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD690675301E0D8800B02A3F /* PackableItemDefinition.swift */; };
+		FD690679301E332000B02A3F /* Library+Clothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD690678301E332000B02A3F /* Library+Clothing.swift */; };
+		FD69067B301E41F100B02A3F /* ImportPackableItemDefinitionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69067A301E41F100B02A3F /* ImportPackableItemDefinitionsButton.swift */; };
+		FD69067D301E5B1600B02A3F /* Library+Boatswain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69067C301E5B1600B02A3F /* Library+Boatswain.swift */; };
 		FD85BAB33012FBEF002CCBC5 /* InventoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85BAB23012FBEF002CCBC5 /* InventoryListViewModel.swift */; };
 		FD85BAB5301377CC002CCBC5 /* StrayItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85BAB4301377CC002CCBC5 /* StrayItemsList.swift */; };
 		FD85BAB73014D506002CCBC5 /* InventoryGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85BAB63014D506002CCBC5 /* InventoryGroupingPicker.swift */; };
@@ -494,6 +498,10 @@
 		FD463E743006DBF600B20127 /* ListingPathDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathDestinationView.swift; sourceTree = "<group>"; };
 		FD463E763006E28600B20127 /* ListingPathLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPathLink.swift; sourceTree = "<group>"; };
 		FD5161C330128C0600F70C73 /* CheckedRollbackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckedRollbackProtocol.swift; sourceTree = "<group>"; };
+		FD690675301E0D8800B02A3F /* PackableItemDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackableItemDefinition.swift; sourceTree = "<group>"; };
+		FD690678301E332000B02A3F /* Library+Clothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library+Clothing.swift"; sourceTree = "<group>"; };
+		FD69067A301E41F100B02A3F /* ImportPackableItemDefinitionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPackableItemDefinitionsButton.swift; sourceTree = "<group>"; };
+		FD69067C301E5B1600B02A3F /* Library+Boatswain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library+Boatswain.swift"; sourceTree = "<group>"; };
 		FD85BAB23012FBEF002CCBC5 /* InventoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListViewModel.swift; sourceTree = "<group>"; };
 		FD85BAB4301377CC002CCBC5 /* StrayItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrayItemsList.swift; sourceTree = "<group>"; };
 		FD85BAB63014D506002CCBC5 /* InventoryGroupingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryGroupingPicker.swift; sourceTree = "<group>"; };
@@ -1010,6 +1018,17 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		FD690677301E330F00B02A3F /* PackableItemLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				FD690675301E0D8800B02A3F /* PackableItemDefinition.swift */,
+				FD69067C301E5B1600B02A3F /* Library+Boatswain.swift */,
+				FD690678301E332000B02A3F /* Library+Clothing.swift */,
+				FD69067A301E41F100B02A3F /* ImportPackableItemDefinitionsButton.swift */,
+			);
+			path = PackableItemLibrary;
+			sourceTree = "<group>";
+		};
 		FD9DF1022FF152F9008322E1 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
@@ -1029,6 +1048,7 @@
 				FD44311B3007CC4A00976424 /* TaskAction.swift */,
 				FD44311230071BBC00976424 /* ChecklistViewModel.swift */,
 				FD9BC549300833D400FD95A5 /* PackableItem.swift */,
+				FD690677301E330F00B02A3F /* PackableItemLibrary */,
 				FDC5CEA63009313D005E3562 /* ActionTime.swift */,
 				FDC5CEA8300931AF005E3562 /* PackedLifecycle.swift */,
 				FDC5CEAE30098537005E3562 /* PackedStatus.swift */,
@@ -1706,6 +1726,7 @@
 				FDE216452FE5B0CF00F60799 /* WaveSnippet.swift in Sources */,
 				FDE216462FE5B0CF00F60799 /* CurrentTideView.swift in Sources */,
 				FDE216472FE5B0CF00F60799 /* WindsText.swift in Sources */,
+				FD690676301E0D8800B02A3F /* PackableItemDefinition.swift in Sources */,
 				FDE216482FE5B0CF00F60799 /* EventForm.swift in Sources */,
 				FDE216492FE5B0CF00F60799 /* RouteInspector.swift in Sources */,
 				FDE2164A2FE5B0CF00F60799 /* MarineZoneSnippet.swift in Sources */,
@@ -1731,6 +1752,7 @@
 				FDE2165A2FE5B0CF00F60799 /* DownloadChartsModifier.swift in Sources */,
 				FDE2165B2FE5B0CF00F60799 /* TripRouteMap.swift in Sources */,
 				FDE2165C2FE5B0CF00F60799 /* TideSnapshotSnippet.swift in Sources */,
+				FD69067B301E41F100B02A3F /* ImportPackableItemDefinitionsButton.swift in Sources */,
 				FD4431323008253600976424 /* ChecklistTaskDeepEditor.swift in Sources */,
 				FD4431093006F7A800976424 /* AnyChecklistView.swift in Sources */,
 				FDE2165D2FE5B0CF00F60799 /* WindEditor.swift in Sources */,
@@ -1839,6 +1861,7 @@
 				FDB3ABAF2FE6A16300B4B903 /* TrackPoint.swift in Sources */,
 				FDB3ABB02FE6A16300B4B903 /* TrackHintsOverlay.swift in Sources */,
 				FDB3ABB12FE6A16300B4B903 /* TrackNameViewModel.swift in Sources */,
+				FD690679301E332000B02A3F /* Library+Clothing.swift in Sources */,
 				FD4431073006F56B00976424 /* VoyagePlanHome.swift in Sources */,
 				FDB3ABB22FE6A16300B4B903 /* WaypointList.swift in Sources */,
 				FDB3ABB32FE6A16300B4B903 /* ImportProgressView.swift in Sources */,
@@ -1894,6 +1917,7 @@
 				FDB3AB1A2FE6A03900B4B903 /* HarbourRoutesSublist.swift in Sources */,
 				FDB3AB1B2FE6A03900B4B903 /* CruisesList.swift in Sources */,
 				FDB3AB1C2FE6A03900B4B903 /* CoastalForecasts.swift in Sources */,
+				FD69067D301E5B1600B02A3F /* Library+Boatswain.swift in Sources */,
 				FDB3AB1D2FE6A03900B4B903 /* HarbourTab.swift in Sources */,
 				FDDB366430126D68006DC1F0 /* PackingInventoryForm.swift in Sources */,
 				FDB3AB1E2FE6A03900B4B903 /* HarbourMap.swift in Sources */,

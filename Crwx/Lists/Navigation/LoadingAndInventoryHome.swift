@@ -20,6 +20,7 @@ struct LoadingAndInventoryHome: View {
                 ListingPathCountingLink(.dockside)
                 ListingPathCountingLink(.purchase)
                 ListingPathCountingLink(.prepAshore)
+                ImportPackableItemDefinitionsButton()
             }
             .seaSection()
 

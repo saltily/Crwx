@@ -11,7 +11,7 @@ import Foundation
 enum StorageLocker: String, Codable, Sendable, Hashable, CaseIterable {
     case veeBerth, closets, head
     case starboardSettee, starboardBookshelf
-    case portBookshelf, portTable
+    case portBookshelf, portTable, boatswainDrawer
     case navTable, aftSettee
     case galley, iceBox
     case cockpit, onDeck
@@ -25,6 +25,7 @@ extension StorageLocker: CustomStringConvertible {
         case .starboardBookshelf: "starboard bookshelf"
         case .portBookshelf: "port bookshelf"
         case .portTable: "port table"
+        case .boatswainDrawer: "boatswain drawer"
         case .navTable: "nav table"
         case .aftSettee: "aft settee"
         case .iceBox: "ice box"
@@ -41,12 +42,13 @@ extension StorageLocker: CustomStringConvertible {
         case .starboardBookshelf: 5
         case .portBookshelf: 6
         case .portTable: 7
-        case .navTable: 8
-        case .aftSettee: 9
-        case .galley: 10
-        case .iceBox: 11
-        case .cockpit: 12
-        case .onDeck: 13
+        case .boatswainDrawer: 8
+        case .navTable: 9
+        case .aftSettee: 10
+        case .galley: 11
+        case .iceBox: 12
+        case .cockpit: 13
+        case .onDeck: 14
         }
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 enum PackedCategory: RawRepresentable, Codable, Sendable, Hashable {
     case food, freezable, coldStorage, drinks
     case safetyEquipment, cleaningSupplies, electronics, tools
-    case filters, fluids, spareParts
+    case filters, fluids, spareParts, boatswain
     case linens, outerwear, clothing, toiletries, entertainment
     case kitchenware, paperProducts, energy
     case library, navigation
@@ -33,6 +33,7 @@ extension PackedCategory: CustomStringConvertible {
         case .filters: "filters"
         case .fluids: "fluids"
         case .spareParts: "spare parts"
+        case .boatswain: "boatswain"
         case .linens: "linens"
         case .energy: "energy"
         case .outerwear: "outerwear"
@@ -59,7 +60,7 @@ extension PackedCategory: CustomStringConvertible {
         [
             .food, .freezable, .coldStorage, .drinks,
             .safetyEquipment, .cleaningSupplies, .electronics, .tools,
-            .filters, .fluids, .spareParts,
+            .filters, .fluids, .spareParts, .boatswain,
             .linens, .outerwear, .clothing, .toiletries, .entertainment,
             .kitchenware, .paperProducts, .energy,
             .library, .navigation
