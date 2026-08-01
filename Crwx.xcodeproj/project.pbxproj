@@ -61,6 +61,11 @@
 		FD690679301E332000B02A3F /* Library+Clothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD690678301E332000B02A3F /* Library+Clothing.swift */; };
 		FD69067B301E41F100B02A3F /* ImportPackableItemDefinitionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69067A301E41F100B02A3F /* ImportPackableItemDefinitionsButton.swift */; };
 		FD69067D301E5B1600B02A3F /* Library+Boatswain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69067C301E5B1600B02A3F /* Library+Boatswain.swift */; };
+		FD69067F301E710E00B02A3F /* Library+CleaningSupplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD69067E301E710E00B02A3F /* Library+CleaningSupplies.swift */; };
+		FD690681301E72B600B02A3F /* Library+Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD690680301E72B600B02A3F /* Library+Food.swift */; };
+		FD690683301E735100B02A3F /* Library+Electronics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD690682301E735100B02A3F /* Library+Electronics.swift */; };
+		FD690685301E737700B02A3F /* Library+Energy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD690684301E737700B02A3F /* Library+Energy.swift */; };
+		FD690687301E739B00B02A3F /* Library+Entertainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD690686301E739B00B02A3F /* Library+Entertainment.swift */; };
 		FD85BAB33012FBEF002CCBC5 /* InventoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85BAB23012FBEF002CCBC5 /* InventoryListViewModel.swift */; };
 		FD85BAB5301377CC002CCBC5 /* StrayItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85BAB4301377CC002CCBC5 /* StrayItemsList.swift */; };
 		FD85BAB73014D506002CCBC5 /* InventoryGroupingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85BAB63014D506002CCBC5 /* InventoryGroupingPicker.swift */; };
@@ -502,6 +507,11 @@
 		FD690678301E332000B02A3F /* Library+Clothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library+Clothing.swift"; sourceTree = "<group>"; };
 		FD69067A301E41F100B02A3F /* ImportPackableItemDefinitionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportPackableItemDefinitionsButton.swift; sourceTree = "<group>"; };
 		FD69067C301E5B1600B02A3F /* Library+Boatswain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library+Boatswain.swift"; sourceTree = "<group>"; };
+		FD69067E301E710E00B02A3F /* Library+CleaningSupplies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library+CleaningSupplies.swift"; sourceTree = "<group>"; };
+		FD690680301E72B600B02A3F /* Library+Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library+Food.swift"; sourceTree = "<group>"; };
+		FD690682301E735100B02A3F /* Library+Electronics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library+Electronics.swift"; sourceTree = "<group>"; };
+		FD690684301E737700B02A3F /* Library+Energy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library+Energy.swift"; sourceTree = "<group>"; };
+		FD690686301E739B00B02A3F /* Library+Entertainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Library+Entertainment.swift"; sourceTree = "<group>"; };
 		FD85BAB23012FBEF002CCBC5 /* InventoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListViewModel.swift; sourceTree = "<group>"; };
 		FD85BAB4301377CC002CCBC5 /* StrayItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrayItemsList.swift; sourceTree = "<group>"; };
 		FD85BAB63014D506002CCBC5 /* InventoryGroupingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryGroupingPicker.swift; sourceTree = "<group>"; };
@@ -1023,7 +1033,12 @@
 			children = (
 				FD690675301E0D8800B02A3F /* PackableItemDefinition.swift */,
 				FD69067C301E5B1600B02A3F /* Library+Boatswain.swift */,
+				FD69067E301E710E00B02A3F /* Library+CleaningSupplies.swift */,
 				FD690678301E332000B02A3F /* Library+Clothing.swift */,
+				FD690680301E72B600B02A3F /* Library+Food.swift */,
+				FD690682301E735100B02A3F /* Library+Electronics.swift */,
+				FD690684301E737700B02A3F /* Library+Energy.swift */,
+				FD690686301E739B00B02A3F /* Library+Entertainment.swift */,
 				FD69067A301E41F100B02A3F /* ImportPackableItemDefinitionsButton.swift */,
 			);
 			path = PackableItemLibrary;
@@ -1711,6 +1726,7 @@
 				FDE216372FE5B0CF00F60799 /* TripRouteRow.swift in Sources */,
 				FDE216A12FE5B10E00F60799 /* MobileHomeView.swift in Sources */,
 				FDE216382FE5B0CF00F60799 /* WindLine.swift in Sources */,
+				FD69067F301E710E00B02A3F /* Library+CleaningSupplies.swift in Sources */,
 				FDE216392FE5B0CF00F60799 /* FuelSounding.swift in Sources */,
 				FDE2163A2FE5B0CF00F60799 /* AddEventButton.swift in Sources */,
 				FDE2163B2FE5B0CF00F60799 /* VoyageLogViewModel.swift in Sources */,
@@ -1815,6 +1831,7 @@
 				FDB3AA982FE5BBA200B4B903 /* BackupButton.swift in Sources */,
 				FDB3AA992FE5BBA200B4B903 /* BackModelActor.swift in Sources */,
 				FDB3AA9A2FE5BBA200B4B903 /* TripSchemaV4.swift in Sources */,
+				FD690683301E735100B02A3F /* Library+Electronics.swift in Sources */,
 				FDDB365A3010C99E006DC1F0 /* LockerPicker.swift in Sources */,
 				FDB3AA9B2FE5BBA200B4B903 /* LocationProfile.swift in Sources */,
 				FD9DF10B2FF282FD008322E1 /* PackingItemViewModel.swift in Sources */,
@@ -1906,6 +1923,7 @@
 				FDB3AB102FE6A03900B4B903 /* Harbour+LookupName.swift in Sources */,
 				FDB3AB112FE6A03900B4B903 /* CruiseViewModel.swift in Sources */,
 				FDB3AB122FE6A03900B4B903 /* ProtectionPicker.swift in Sources */,
+				FD690685301E737700B02A3F /* Library+Energy.swift in Sources */,
 				FDB3AB132FE6A03900B4B903 /* CruisesRow.swift in Sources */,
 				FDB3AB142FE6A03900B4B903 /* HubInfo.swift in Sources */,
 				FDB3AB152FE6A03900B4B903 /* HarbourAtAGlance.swift in Sources */,
@@ -1997,6 +2015,7 @@
 				FDB3AB4E2FE6A03900B4B903 /* CompassQuadrant.swift in Sources */,
 				FDB3AB4F2FE6A03900B4B903 /* RouteEditor+MapContent.swift in Sources */,
 				FDB3AB502FE6A03900B4B903 /* HarbourDetail.swift in Sources */,
+				FD690681301E72B600B02A3F /* Library+Food.swift in Sources */,
 				FDB3AB512FE6A03900B4B903 /* ChooseAnchorageButton.swift in Sources */,
 				FDB3AB522FE6A03900B4B903 /* RouteEditor+Button.swift in Sources */,
 				FD44312230080EE500976424 /* WeatherPathDestinationView.swift in Sources */,
@@ -2086,6 +2105,7 @@
 				FD44310F3007001800976424 /* AnyPackingView.swift in Sources */,
 				FD443115300720B800976424 /* ChecklistTaskRow.swift in Sources */,
 				FDE216982FE5B0CF00F60799 /* TripMapOverlays.swift in Sources */,
+				FD690687301E739B00B02A3F /* Library+Entertainment.swift in Sources */,
 				FD44311C3007CC4A00976424 /* TaskAction.swift in Sources */,
 				FDE216992FE5B0CF00F60799 /* TripDestinationPicker.swift in Sources */,
 				FDE2169A2FE5B0CF00F60799 /* TripOverview.swift in Sources */,

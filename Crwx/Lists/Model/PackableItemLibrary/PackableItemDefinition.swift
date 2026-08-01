@@ -68,7 +68,32 @@ extension PackableItemDefinition {
     static var allCases: [PackableItemDefinition] {
         [
             // Boatswain
-            .windlassHandle, .flags, .marline, .seineTwine, .whippingTwine, .sailNeedles, .sailPalm, .shackles, .mousingWire, .wireCutters, .antiSeize, .divingMask, .snorkel, .wetsuit, .weightBelt, .fins, .underwaterGloves, .spareRope, .smallStuff, .spareLobsterBuoys, .fenders, .twoAnchors, .dinghyOffhaulAndLongRope, .boardingLadder, .boatswainsChair, .knife, .gerberTool, .boatHook, .winchHandles, .boomCrutch, .davits, .stanchions, .lifelines, .mainSheet, .mainHalyardBlocks, .lazyjacks, .flagHalyards, .screens, .clevisPins, .cotterPins, .cotterRings, .fiftyTwoHundred, .liquidWeld, .patchingMaterialsTapesAndLumber, .woodenPlugs, .drogue, .dinghyBailer, .sailTies
+            .windlassHandle, .flags, .marline, .seineTwine, .whippingTwine, .sailNeedles, .sailPalm, .shackles, .mousingWire, .wireCutters, .antiSeize, .divingMask, .snorkel, .wetsuit, .weightBelt, .fins, .underwaterGloves, .spareRope, .smallStuff, .spareLobsterBuoys, .fenders, .twoAnchors, .dinghyOffhaulAndLongRope, .boardingLadder, .boatswainsChair, .knife, .gerberTool, .boatHook, .winchHandles, .boomCrutch, .davits, .stanchions, .lifelines, .mainSheet, .mainHalyardBlocks, .lazyjacks, .flagHalyards, .screens, .clevisPins, .cotterPins, .cotterRings, .fiftyTwoHundred, .liquidWeld, .patchingMaterialsTapesAndLumber, .woodenPlugs, .drogue, .dinghyBailer, .sailTies,
+            
+            // Cleaning Supplies
+            .mopBucket, .mop, .nitrileGloves, .rags, .recyclingTrashBin, .recyclingTrashLiners, .deckBuckets, .deckBrushes, .largeSponges, .dishSoap, .galleyTrashCan, .trashCanLiners, .dishwashingGloves, .dishSponge, .dishBrush, .surfaceCleaner, .windex, .airFresheners, .dehumidifiers, .handSoap, .toiletBrush, .foxTail, .vacuum, .oilSoakPadsDiapers, .chamoisCloth, .squeegee, .broom,
+            
+            // Clothing
+            .spareSocksPantsUndershirtsOrangeSweater, .socks, .underwear, .pants, .shirts, .swimmingCostume,
+            
+            // Cold Storage
+            .iceJugs, .iceBoxThermometer, .iceBoxTrays, .yetiCooler,
+            
+            // Drinks
+            .gallonWaterJugs, .waterBottles, .sparklingWaters, .gingerBeer,
+            
+            // Food
+            .cherries, .pistachios, .granolaBars, .crackers, .peanutButter, .oatmeal, .ramen, .bakedBeans, .soupCans, .coffee, .tea, .sugar, .salt, .pepper,
+            
+            // Electronics
+            .flashlights, .spotlightFlashlight, .phoneChargingCords, .vhfRadios, .phone, .appleWatch, .appleWatchingChargingBattery,
+
+            // Energy
+            .fuelBottle, .houseBatteries, .starterBattery, .lighterStick, .propaneBottles, .waterHeater, .batteries, .matches,
+            
+            // Entertainment
+            .lanterns, .playingCards, .cribbageBoard, .guitar, .readingMaterials, .laptop
+
         ]
     }
 }

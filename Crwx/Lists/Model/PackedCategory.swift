@@ -19,20 +19,29 @@ enum PackedCategory: RawRepresentable, Codable, Sendable, Hashable {
 }
 
 extension PackedCategory: CustomStringConvertible {
-    var description: String { rawValue }
+    var description: String {
+        switch self {
+        case .coldStorage: "cold storage"
+        case .safetyEquipment: "safety equipment"
+        case .cleaningSupplies: "cleaning supplies"
+        case .spareParts: "spare parts"
+        case .paperProducts: "paper products"
+        default: rawValue
+        }
+    }
     var rawValue: String {
         switch self {
         case .food: "food"
         case .freezable: "freezable"
-        case .coldStorage: "cold storage"
+        case .coldStorage: "coldStorage"
         case .drinks: "drinks"
-        case .safetyEquipment: "safety equipment"
-        case .cleaningSupplies: "cleaning supplies"
+        case .safetyEquipment: "safetyEquipment"
+        case .cleaningSupplies: "cleaningSupplies"
         case .electronics: "electronics"
         case .tools: "tools"
         case .filters: "filters"
         case .fluids: "fluids"
-        case .spareParts: "spare parts"
+        case .spareParts: "spareParts"
         case .boatswain: "boatswain"
         case .linens: "linens"
         case .energy: "energy"
@@ -41,7 +50,7 @@ extension PackedCategory: CustomStringConvertible {
         case .toiletries: "toiletries"
         case .entertainment: "entertainment"
         case .kitchenware: "kitchenware"
-        case .paperProducts: "paper products"
+        case .paperProducts: "paperProducts"
         case .library: "library"
         case .navigation: "navigation"
         case .custom(let string): string
@@ -49,7 +58,8 @@ extension PackedCategory: CustomStringConvertible {
     }
     init(rawValue: String) {
         if let match = Self.allCases.first(where: {
-            $0.rawValue == rawValue.lowercased()
+            $0.rawValue == rawValue ||
+            $0.description == rawValue.lowercased()
         }) {
             self = match
         } else {

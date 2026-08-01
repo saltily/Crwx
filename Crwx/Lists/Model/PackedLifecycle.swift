@@ -15,6 +15,6 @@ enum PackedLifecycle: String, Codable, Sendable, Hashable, CaseIterable {
     // project might require unique id to know which project, but that will make difficult to choose from a picker
     // perhaps when you start or finish a project, it can show you everything to take out or bring in and let you mark them as due if appropriate - "Should any of these items come in?"
     case daysail, cruise, seasonal, project
-    case perishable, consumable
+    case perishable, consumable, expiring
     case permanent
 }
